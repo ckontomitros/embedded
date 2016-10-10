@@ -9,23 +9,29 @@
  * @author konto
  */
 package com.example.web;
+
 import javax.servlet.*;
 import javax.servlet.http.*;
 import java.io.*;
 import java.util.*;
 
-
-
+import com.example.model.BeerExpert; // notice this
 public class BeerSelect extends HttpServlet {
-    @Override
-    public void doPost(HttpServletRequest request,
+
+     public void doPost(HttpServletRequest request,
                        HttpServletResponse response)
             throws IOException, ServletException {
         
         String c = request.getParameter("color");
         PrintWriter out=response.getWriter();
-        out.println("Beer selection advice <br>");
-        out.println("<br>Got beer color "+c);
-       
+        BeerExpert be = new BeerExpert();
+        List result = be.getBrands(c);
+        int k=result.size();
+        while(k!=0){
+           out.println("try:"+result.get(k-1));
+           k--;
+        }
+        
     }
+
 }
