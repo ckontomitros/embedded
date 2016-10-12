@@ -26,11 +26,11 @@ public class BeerSelect extends HttpServlet {
         PrintWriter out=response.getWriter();
         BeerExpert be = new BeerExpert();
         List result = be.getBrands(c);
-        int k=result.size();
-        while(k!=0){
-           out.println("try:"+result.get(k-1));
-           k--;
-        }
+        request.setAttribute("styles",result);
+        RequestDispatcher view=
+          request.getRequestDispatcher("result.jsp");
+        view.forward(request,response);
+        
         
     }
 
