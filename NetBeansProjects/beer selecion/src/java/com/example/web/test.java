@@ -8,8 +8,8 @@ package com.example.web;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import java.io.*;
+import java.util.*;
 import com.example.model.Uthldap;
-
  // notice this
 public class test extends HttpServlet {
 @Override
@@ -22,8 +22,16 @@ public class test extends HttpServlet {
          String user = request.getParameter("fname");
          Uthldap auth=new Uthldap(user,passwd);
          PrintWriter out=response.getWriter();
-         out.println(auth.getName());
-         
+         List info=new ArrayList();
+         if(auth.auth()){
+         info.add(auth.getName());
+         info.add(auth.getBirthYear());
+         info.add(auth.getMail());
+         }
+         request.setAttribute("info",info);
+         RequestDispatcher view=
+          request.getRequestDispatcher("login.jsp");
+        view.forward(request,response);
          
      }
         
