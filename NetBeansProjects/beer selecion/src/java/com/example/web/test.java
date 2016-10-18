@@ -10,6 +10,7 @@ import javax.servlet.http.*;
 import java.io.*;
 import java.util.*;
 import com.example.model.Uthldap;
+import com.example.model.SessionCounterListener;
  // notice this
 public class test extends HttpServlet {
 @Override
@@ -17,7 +18,7 @@ public class test extends HttpServlet {
                        HttpServletResponse response)
             throws IOException, ServletException {
          response.setContentType("text/html");
-         
+         SessionCounterListener act_session=new SessionCounterListener();
          String passwd = request.getParameter("lname");
          String user = request.getParameter("fname");
          Uthldap auth=new Uthldap(user,passwd);
@@ -29,6 +30,8 @@ public class test extends HttpServlet {
          info.add(auth.getMail());
          }
          request.setAttribute("info",info);
+         int total=act_session.getTotalActiveSession();
+         request.setAttribute("total_ses",total );
          RequestDispatcher view=
           request.getRequestDispatcher("login.jsp");
         view.forward(request,response);

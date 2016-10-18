@@ -24,4 +24,7 @@
     <servlet-name>test</servlet-name>
     <url-pattern>/test.do</url-pattern>
 </servlet-mapping>
+<listener>
+		<listener-class>com.example.model.SessionCounterListener</listener-class>
+	</listener>
    </web-app>

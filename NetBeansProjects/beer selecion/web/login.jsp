@@ -24,6 +24,8 @@
         else{
         out.println("wrong username or password");
         }
+        int sessions=(Integer)request.getAttribute("total_ses");
+        out.println("there are "+sessions+" active sessions");
         %>
        </center>
     </body>
