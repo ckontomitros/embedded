@@ -10,9 +10,18 @@
         com.example.web.BeerSelect
     </servlet-class>
 </servlet>
-  
+  <servlet>
+    <servlet-name>test</servlet-name>
+    <servlet-class>
+        com.example.web.test
+    </servlet-class>
+</servlet>
 <servlet-mapping>
     <servlet-name>Ch3 Beer</servlet-name>
     <url-pattern>/SelectBeer.do</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+    <servlet-name>test</servlet-name>
+    <url-pattern>/test.do</url-pattern>
 </servlet-mapping>
    </web-app>
