@@ -21,6 +21,16 @@
             30
         </session-timeout>
     </session-config>
+    <servlet-mapping>
+    <servlet-name>test</servlet-name>
+    <url-pattern>/test.do</url-pattern>
+    </servlet-mapping>
+    <servlet>
+    <servlet-name>test</servlet-name>
+    <servlet-class>
+        com.web.ldapweb
+    </servlet-class>
+    </servlet>
     <welcome-file-list>
         <welcome-file>index.html</welcome-file>
     </welcome-file-list>
