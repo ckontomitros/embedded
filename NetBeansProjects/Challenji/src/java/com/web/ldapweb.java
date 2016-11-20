@@ -30,6 +30,9 @@ public class ldapweb extends HttpServlet {
          info.add(auth.getBirthYear());
          info.add(auth.getMail());
          }
+         else{
+             info.add("xaxa");
+         }
          request.setAttribute("info",info);
          RequestDispatcher view=
           request.getRequestDispatcher("profile.jsp");
