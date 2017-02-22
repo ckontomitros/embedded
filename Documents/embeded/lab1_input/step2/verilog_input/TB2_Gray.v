@@ -14,26 +14,35 @@
 module TB2;
   parameter N = 4;
   reg clk, rst, clk_en;
-  reg [3:0] leds;
+  wire [3:0] leds;
   integer EndOfSimulation;  
   integer i;
 
   parameter ONE = 1'b1; 
 							 
   // Initial statement for signal initialization (reset, clk, EndOfSimulation)
+               
+  // Initial statement for signal initialization (reset, clk, EndOfSimulation)
    initial 
      begin
-      // ....
-	  $finish
-     end;
-	 
+      clk=1'b0;
+      rst=1'b1;
+      #(4.25*`cycle) rst = 1'b0;
+      for (i = 0; i < 15; i=i +1) 
+      begin
+        $display("na to %b",leds);
+        #(`cycle);
+      end
+
+      
+     end
+   
   // Always statement to drive the clock goes here
   always 
-    begin
-	// ...
-    end
-	
-   // Instantiation of the gray_Nbits goes here
+     #(`cycle / 2) clk=~clk;
+   
+
+   // Instantiation of the gray_4bits 
+  gray_Nbits DUT(.clk(clk), .clk_en(ONE), .rst(rst), .gray_out(leds));   
   
-  
-end module;
+endmodule
