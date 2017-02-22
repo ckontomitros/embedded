@@ -22,9 +22,12 @@ module gray_Nbits (clk, clk_en, rst, gray_out);
 	     	begin
 		   state=Zeros; // Initialize state with 1000..00
 		   toggle={Zeros[N-1:0],1'b1};
+		   acc=0;
 		end
 	     else
+	      	
 		    state<=state^toggle;
+
 	 end
   
   
@@ -35,11 +38,12 @@ module gray_Nbits (clk, clk_en, rst, gray_out);
         toggle[1] <= state[0];	
         for (i=2; i<N; i=i+1) 
 	   	  begin	
-	   		acc=0;
+	   	  	acc<=0;
 	   		for (j=0; j<=i-2; j=j+1) begin
+	   			
 	   			acc<=acc||state[j];
 	   		end
-            toggle[i]<=state[i-1]&&(~acc)	;   
+            toggle[i]<=state[i-1]&&(~(acc));   
            end 
 	   toggle[N]<=~|state[N-1:0];
 	end
