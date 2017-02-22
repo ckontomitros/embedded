@@ -8,11 +8,11 @@ module gray_Nbits (clk, clk_en, rst, gray_out);
   parameter N = 4;
   parameter SIZE =(N+1);
   parameter Zeros = {SIZE{1'b0}};
-  integer i;
+  reg [N:0] i;
   // Place the definition of wires and regs here
   reg [N:0] state,toggle;
   input clk,clk_en,rst;
-  output gray_out;
+  output[N:1] gray_out;
 
   // The state of the Gray counter
   always @(posedge clk, negedge rst)
@@ -31,11 +31,11 @@ module gray_Nbits (clk, clk_en, rst, gray_out);
         toggle[0] <=  1'b1;
         toggle[1] <= state[0];	
         for (i=2; i<N; i=i+1) 
-	   begin	
+	     begin	
             toggle[i]<=toggle[i-1]&&(~|toggle[i-2:0]);   
-           end 
-         toggle[N]<=(~|toggle[N-1:0]);
-	  
+         end 
+        toggle[N]<=(~|toggle[N-1:0]);
+	  end
     assign gray_out=state[N:1];
 	 
 endmodule
