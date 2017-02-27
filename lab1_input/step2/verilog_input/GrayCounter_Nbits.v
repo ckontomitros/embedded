@@ -17,7 +17,7 @@ module gray_Nbits (clk, clk_en, rst, gray_out);
 	     if (rst == 1'b1)begin
 		    // Initialize state with 1000..00
         counter=0;
-        state=0;
+      
         end
 	     else
 		    // Main part of code
