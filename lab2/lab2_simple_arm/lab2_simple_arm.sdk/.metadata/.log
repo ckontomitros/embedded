@@ -4041,3 +4041,83 @@ Don't forget to modify blconfig.h to reflect the offset where your SREC image re
 
 !ENTRY com.xilinx.sdk.utils 0 0 2017-03-08 20:59:41.957
 !MESSAGE XSCT command with result: [::hsi::utils::closesw C:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.sdk/lab2_simple_bsp_0/system.mss], Result: [null, ]. Thread: main
+!SESSION 2017-03-09 11:28:38.408 -----------------------------------------------
+eclipse.buildId=2016.4
+java.version=1.8.0_66
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data C:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.sdk
+
+!ENTRY org.eclipse.ui 2 0 2017-03-09 11:29:23.499
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-03-09 11:29:23.499
+!MESSAGE Commands should really have a category: plug-in='com.xilinx.sdk.appwiz', id='com.xilinx.sdk.app.commands.ChangeAtfBuiltReferences', categoryId='com.xilinx.sdk.app.commands.category'
+
+!ENTRY org.eclipse.ui 2 0 2017-03-09 11:29:29.481
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-03-09 11:29:29.481
+!MESSAGE Commands should really have a category: plug-in='com.xilinx.sdk.appwiz', id='com.xilinx.sdk.app.commands.ChangeAtfBuiltReferences', categoryId='com.xilinx.sdk.app.commands.category'
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-03-09 11:30:12.337
+!MESSAGE XSCT Command: [set sdk::sdk_chan tcfchan#0], Thread: Thread-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-03-09 11:30:12.477
+!MESSAGE XSCT Command: [::hsi::utils::init_repo], Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-03-09 11:30:12.540
+!MESSAGE XSCT command with result: [set sdk::sdk_chan tcfchan#0], Result: [null, tcfchan#0]. Thread: Thread-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-03-09 11:30:12.556
+!MESSAGE XSCT Command: [setws C:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.sdk], Thread: Thread-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-03-09 11:30:39.378
+!MESSAGE XSCT command with result: [::hsi::utils::init_repo], Result: [null, ]. Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-03-09 11:30:39.410
+!MESSAGE XSCT command with result: [setws C:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.sdk], Result: [null, ]. Thread: Thread-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-03-09 11:30:39.644
+!MESSAGE XSCT Command: [::hsi::utils::openhw C:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.sdk/arm_wrapper_hw_platform_0/system.hdf], Thread: Worker-2
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-03-09 11:30:49.162
+!MESSAGE XSCT command with result: [::hsi::utils::openhw C:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.sdk/arm_wrapper_hw_platform_0/system.hdf], Result: [null, ]. Thread: Worker-2
+!SESSION 2017-03-13 18:06:10.162 -----------------------------------------------
+eclipse.buildId=2016.4
+java.version=1.8.0_66
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data C:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.sdk
+
+!ENTRY org.eclipse.ui 2 0 2017-03-13 18:06:49.713
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-03-13 18:06:49.713
+!MESSAGE Commands should really have a category: plug-in='com.xilinx.sdk.appwiz', id='com.xilinx.sdk.app.commands.ChangeAtfBuiltReferences', categoryId='com.xilinx.sdk.app.commands.category'
+
+!ENTRY org.eclipse.ui 2 0 2017-03-13 18:06:57.933
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-03-13 18:06:57.933
+!MESSAGE Commands should really have a category: plug-in='com.xilinx.sdk.appwiz', id='com.xilinx.sdk.app.commands.ChangeAtfBuiltReferences', categoryId='com.xilinx.sdk.app.commands.category'
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-03-13 18:07:49.438
+!MESSAGE XSCT Command: [set sdk::sdk_chan tcfchan#0], Thread: Thread-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-03-13 18:07:49.526
+!MESSAGE XSCT Command: [::hsi::utils::init_repo], Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-03-13 18:08:12.060
+!MESSAGE XSCT command with result: [::hsi::utils::init_repo], Result: [null, ]. Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-03-13 18:08:12.067
+!MESSAGE XSCT command with result: [set sdk::sdk_chan tcfchan#0], Result: [null, tcfchan#0]. Thread: Thread-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-03-13 18:08:12.075
+!MESSAGE XSCT Command: [setws C:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.sdk], Thread: Thread-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-03-13 18:08:12.085
+!MESSAGE XSCT command with result: [setws C:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.sdk], Result: [null, ]. Thread: Thread-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-03-13 18:08:12.487
+!MESSAGE XSCT Command: [::hsi::utils::openhw C:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.sdk/arm_wrapper_hw_platform_0/system.hdf], Thread: Worker-5
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-03-13 18:08:22.110
+!MESSAGE XSCT command with result: [::hsi::utils::openhw C:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.sdk/arm_wrapper_hw_platform_0/system.hdf], Result: [null, ]. Thread: Worker-5
