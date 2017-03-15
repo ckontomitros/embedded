@@ -61,12 +61,14 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
+        <CompFileExtendedInfo CompFileName="arm.bd" FileRelPathName="hdl/arm.hwdef"/>
+        <CompFileExtendedInfo CompFileName="arm.bd" FileRelPathName="hw_handoff/arm.hwh"/>
+        <CompFileExtendedInfo CompFileName="arm.bd" FileRelPathName="arm_ooc.xdc"/>
+        <CompFileExtendedInfo CompFileName="arm.bd" FileRelPathName="ip/arm_auto_pc_0/arm_auto_pc_0.xci"/>
+        <CompFileExtendedInfo CompFileName="arm.bd" FileRelPathName="hw_handoff/arm_bd.tcl"/>
         <CompFileExtendedInfo CompFileName="arm.bd" FileRelPathName="hdl/arm.v"/>
         <CompFileExtendedInfo CompFileName="arm.bd" FileRelPathName="ip/arm_xbar_0/arm_xbar_0.xci">
           <Proxy FileSetName="arm_xbar_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="arm.bd" FileRelPathName="ip/arm_processing_system7_0_0/arm_processing_system7_0_0.xci">
-          <Proxy FileSetName="arm_processing_system7_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="arm.bd" FileRelPathName="ip/arm_axi_gpio_0_2/arm_axi_gpio_0_2.xci">
           <Proxy FileSetName="arm_axi_gpio_0_2"/>
@@ -78,10 +80,9 @@
         <CompFileExtendedInfo CompFileName="arm.bd" FileRelPathName="ip/arm_axi_gpio_0_0/arm_axi_gpio_0_0.xci">
           <Proxy FileSetName="arm_axi_gpio_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="arm.bd" FileRelPathName="arm_ooc.xdc"/>
-        <CompFileExtendedInfo CompFileName="arm.bd" FileRelPathName="hdl/arm.hwdef"/>
-        <CompFileExtendedInfo CompFileName="arm.bd" FileRelPathName="hw_handoff/arm.hwh"/>
-        <CompFileExtendedInfo CompFileName="arm.bd" FileRelPathName="hw_handoff/arm_bd.tcl"/>
+        <CompFileExtendedInfo CompFileName="arm.bd" FileRelPathName="ip/arm_processing_system7_0_0/arm_processing_system7_0_0.xci">
+          <Proxy FileSetName="arm_processing_system7_0_0"/>
+        </CompFileExtendedInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/arm/hdl/arm_wrapper.v">
         <FileInfo>
