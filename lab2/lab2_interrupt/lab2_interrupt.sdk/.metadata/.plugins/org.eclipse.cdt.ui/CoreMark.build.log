@@ -1,8 +1,8 @@
-11:56:49 **** Incremental Build of configuration Debug for project CoreMark ****
+19:05:35 **** Incremental Build of configuration Debug for project CoreMark ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
 make: Nothing to be done for `main-build'.
 
-11:56:52 Build Finished (took 2s.891ms)
+19:05:38 Build Finished (took 2s.859ms)
 

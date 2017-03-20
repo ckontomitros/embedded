@@ -20,6 +20,7 @@ El Dorado Hills, CA, 95762
 	This file contains the framework to acquire a block of memory, seed initial parameters, tun the benchmark and report the results.
 */
 #include "coremark.h"
+#include <stdlib.h>
 
 /* Function: iterate
 	Run the benchmark for a specified number of iterations.
@@ -41,11 +42,12 @@ void *iterate(void *pres) {
 	core_results *res=(core_results *)pres;
 	ee_u32 iterations=res->iterations;
 	res->crc=0;
-	res->crclist=0;
-	res->crcmatrix=0;
-	res->crcstate=0;
+	res->crclist=0xe714;
+	res->crcmatrix=0x1fd7;
+	res->crcstate=0x8e3a;
 
 	for (i=0; i<iterations; i++) {
+		//crc=core_bench_matrix(&res->mat,res->seed1,res->crc);
 		crc=core_bench_list(res,1);
 		res->crc=crcu16(crc,res->crc);
 		crc=core_bench_list(res,-1);
@@ -92,6 +94,10 @@ MAIN_RETURN_TYPE main(void) {
 #else
 MAIN_RETURN_TYPE main(int argc, char *argv[]) {
 #endif
+	ee_u16 A[16]={5,6,8,9,7,9,8,7,4,5,6,9,8,7,3,3};
+	ee_u16 B[16]={5,6,8,9,7,9,8,7,4,5,6,9,8,7,3,3};
+	ee_u16 val=5;
+	ee_u16 C[16];
 	ee_u16 i,j=0,num_algorithms=0;
 	ee_s16 known_id=-1,total_errors=0;
 	ee_u16 seedcrc=0;
@@ -302,7 +308,7 @@ MAIN_RETURN_TYPE main(int argc, char *argv[]) {
 
 	ee_printf("Iterations       : %lu\n",(ee_u32)default_num_contexts*results[0].iterations);
 	ee_printf("Compiler version : %s\n",COMPILER_VERSION);
-	ee_printf("Compiler flags   : %s \n",COMPILER_FLAGS);
+	//ee_printf("Compiler flags   : %s \n",COMPILER_FLAGS);
 #if (MULTITHREAD>1)
 	ee_printf("Parallel %s : %d\n",PARALLEL_METHOD,default_num_contexts);
 #endif
@@ -324,7 +330,7 @@ MAIN_RETURN_TYPE main(int argc, char *argv[]) {
 		ee_printf("Correct operation validated. See readme.txt for run and reporting rules.\n");
 #if HAS_FLOAT
 		if (known_id==3) {
-			ee_printf("CoreMark 1.0 : %f / %s %s",default_num_contexts*results[0].iterations/time_in_secs(total_time),COMPILER_VERSION,COMPILER_FLAGS);
+			ee_printf("CoreMark 1.0 : %f / %s ",default_num_contexts*results[0].iterations/time_in_secs(total_time),COMPILER_VERSION);//,COMPILER_FLAGS);
 #if defined(MEM_LOCATION) && !defined(MEM_LOCATION_UNSPEC)
 			ee_printf(" / %s",MEM_LOCATION);
 #else
@@ -342,7 +348,19 @@ MAIN_RETURN_TYPE main(int argc, char *argv[]) {
 		ee_printf("Errors detected\n");
 	if (total_errors<0)
 		ee_printf("Cannot validate operation for these seed values, please compare with results on a known platform.\n");
+	start_time();
+	for(i=0;i<ITERATIONS;i++){
+		matrix_test(16,&C,&A,&A,val);
 
+
+	}
+
+
+
+
+	stop_time();
+	total_time=get_time();
+	ee_printf("O xronos pou pire itan %f",time_in_secs(total_time));
 #if (MEM_METHOD==MEM_MALLOC)
 	for (i=0 ; i<MULTITHREAD; i++) 
 		portable_free(results[i].memblock[0]);

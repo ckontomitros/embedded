@@ -30,7 +30,7 @@
 								</option>
 								<option id="xilinx.gnu.compiler.misc.other.1464149021" name="Other flags" superClass="xilinx.gnu.compiler.misc.other" value="-O3 -c -fmessage-length=0 -MT&quot;$@&quot; -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard" valueType="string"/>
 								<option id="xilinx.gnu.compiler.symbols.defined.66284677" name="Defined symbols (-D)" superClass="xilinx.gnu.compiler.symbols.defined" valueType="definedSymbols">
-									<listOptionValue builtIn="false" value="ITERATIONS=200000"/>
+									<listOptionValue builtIn="false" value="ITERATIONS=60000"/>
 									<listOptionValue builtIn="false" value="PERFORMANCE_RUN=1"/>
 									<listOptionValue builtIn="false" value="COMPILER_FLAGS='-O3'"/>
 								</option>

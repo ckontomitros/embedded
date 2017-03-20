@@ -332,3 +332,1446 @@ make pre-build main-build
 a9-linaro-pre-build-step
 ' '
 make: Nothing to be done for `main-build'.
+17:11:52 **** Auto Build of configuration Debug for project CoreMark ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/core_main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -DITERATIONS=200000 -DPERFORMANCE_RUN=1 -DCOMPILER_FLAGS='-O3' -Wall -O3 -g3 -O3 -c -fmessage-length=0 -MT"src/core_main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../CoreMark_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/core_main.d" -MT"src/core_main.o" -o "src/core_main.o" "../src/core_main.c"
+../src/core_main.c: In function 'main':
+../src/core_main.c:288:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+  ee_printf("CoreMark Size    : %lu\n",(ee_u32)results[0].size);
+            ^
+../src/core_main.c:288:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+../src/core_main.c:289:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+  ee_printf("Total ticks      : %lu\n",(ee_u32)total_time);
+            ^
+../src/core_main.c:289:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+../src/core_main.c:304:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+  ee_printf("Iterations       : %lu\n",(ee_u32)default_num_contexts*results[0].iterations);
+            ^
+../src/core_main.c:304:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+../src/core_main.c:306:39: warning: multi-character character constant [-Wmultichar]
+  ee_printf("Compiler flags   : %s \n",COMPILER_FLAGS);
+                                       ^
+../src/core_main.c:306:12: warning: format '%s' expects argument of type 'char *', but argument 2 has type 'int' [-Wformat=]
+  ee_printf("Compiler flags   : %s \n",COMPILER_FLAGS);
+            ^
+../src/core_main.c:306:12: warning: format '%s' expects argument of type 'char *', but argument 2 has type 'int' [-Wformat=]
+../src/core_main.c:328:127: warning: multi-character character constant [-Wmultichar]
+    ee_printf("CoreMark 1.0 : %f / %s %s",default_num_contexts*results[0].iterations/time_in_secs(total_time),COMPILER_VERSION,COMPILER_FLAGS);
+                                                                                                                               ^
+../src/core_main.c:328:14: warning: format '%s' expects argument of type 'char *', but argument 4 has type 'int' [-Wformat=]
+    ee_printf("CoreMark 1.0 : %f / %s %s",default_num_contexts*results[0].iterations/time_in_secs(total_time),COMPILER_VERSION,COMPILER_FLAGS);
+              ^
+../src/core_main.c:328:14: warning: format '%s' expects argument of type 'char *', but argument 4 has type 'int' [-Wformat=]
+'Finished building: ../src/core_main.c'
+' '
+'Building target: CoreMark.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../CoreMark_bsp/ps7_cortexa9_0/lib -o "CoreMark.elf"  ./src/core_list_join.o ./src/core_main.o ./src/core_matrix.o ./src/core_state.o ./src/core_util.o ./src/helloworld.o ./src/platform.o ./src/timer_util.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: CoreMark.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size CoreMark.elf  |tee "CoreMark.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  94404	   2616	  23376	 120396	  1d64c	CoreMark.elf
+'Finished building: CoreMark.elf.size'
+' '
+17:17:33 **** Incremental Build of configuration Debug for project CoreMark ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+17:20:45 **** Auto Build of configuration Debug for project CoreMark ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/core_main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -DITERATIONS=200000 -DPERFORMANCE_RUN=1 -DCOMPILER_FLAGS='-O3' -Wall -O3 -g3 -O3 -c -fmessage-length=0 -MT"src/core_main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../CoreMark_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/core_main.d" -MT"src/core_main.o" -o "src/core_main.o" "../src/core_main.c"
+../src/core_main.c: In function 'iterate':
+../src/core_main.c:49:37: error: 'core_results {aka struct RESULTS_S}' has no member named 'seed'
+   crc=core_bench_matrix(res->mat,res->seed,res->crc);
+                                     ^
+../src/core_main.c:49:25: error: incompatible type for argument 1 of 'core_bench_matrix'
+   crc=core_bench_matrix(res->mat,res->seed,res->crc);
+                         ^
+In file included from ../src/core_main.c:22:0:
+../src/coremark.h:173:8: note: expected 'mat_params * {aka struct MAT_PARAMS_S *}' but argument is of type 'mat_params {aka struct MAT_PARAMS_S}'
+ ee_u16 core_bench_matrix(mat_params *p, ee_s16 seed, ee_u16 crc);
+        ^
+../src/core_main.c: In function 'main':
+../src/core_main.c:288:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+  ee_printf("CoreMark Size    : %lu\n",(ee_u32)results[0].size);
+            ^
+../src/core_main.c:288:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+../src/core_main.c:289:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+  ee_printf("Total ticks      : %lu\n",(ee_u32)total_time);
+            ^
+../src/core_main.c:289:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+../src/core_main.c:304:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+  ee_printf("Iterations       : %lu\n",(ee_u32)default_num_contexts*results[0].iterations);
+            ^
+../src/core_main.c:304:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+../src/core_main.c:306:39: warning: multi-character character constant [-Wmultichar]
+  ee_printf("Compiler flags   : %s \n",COMPILER_FLAGS);
+                                       ^
+../src/core_main.c:306:12: warning: format '%s' expects argument of type 'char *', but argument 2 has type 'int' [-Wformat=]
+  ee_printf("Compiler flags   : %s \n",COMPILER_FLAGS);
+            ^
+../src/core_main.c:306:12: warning: format '%s' expects argument of type 'char *', but argument 2 has type 'int' [-Wformat=]
+../src/core_main.c:328:127: warning: multi-character character constant [-Wmultichar]
+    ee_printf("CoreMark 1.0 : %f / %s %s",default_num_contexts*results[0].iterations/time_in_secs(total_time),COMPILER_VERSION,COMPILER_FLAGS);
+                                                                                                                               ^
+../src/core_main.c:328:14: warning: format '%s' expects argument of type 'char *', but argument 4 has type 'int' [-Wformat=]
+    ee_printf("CoreMark 1.0 : %f / %s %s",default_num_contexts*results[0].iterations/time_in_secs(total_time),COMPILER_VERSION,COMPILER_FLAGS);
+              ^
+../src/core_main.c:328:14: warning: format '%s' expects argument of type 'char *', but argument 4 has type 'int' [-Wformat=]
+make: *** [src/core_main.o] Error 1
+17:23:35 **** Auto Build of configuration Debug for project CoreMark ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/core_main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -DITERATIONS=200000 -DPERFORMANCE_RUN=1 -DCOMPILER_FLAGS='-O3' -Wall -O3 -g3 -O3 -c -fmessage-length=0 -MT"src/core_main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../CoreMark_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/core_main.d" -MT"src/core_main.o" -o "src/core_main.o" "../src/core_main.c"
+../src/core_main.c: In function 'iterate':
+../src/core_main.c:49:25: error: incompatible type for argument 1 of 'core_bench_matrix'
+   crc=core_bench_matrix(res->mat,res->seed1,res->crc);
+                         ^
+In file included from ../src/core_main.c:22:0:
+../src/coremark.h:173:8: note: expected 'mat_params * {aka struct MAT_PARAMS_S *}' but argument is of type 'mat_params {aka struct MAT_PARAMS_S}'
+ ee_u16 core_bench_matrix(mat_params *p, ee_s16 seed, ee_u16 crc);
+        ^
+../src/core_main.c: In function 'main':
+../src/core_main.c:288:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+  ee_printf("CoreMark Size    : %lu\n",(ee_u32)results[0].size);
+            ^
+../src/core_main.c:288:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+../src/core_main.c:289:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+  ee_printf("Total ticks      : %lu\n",(ee_u32)total_time);
+            ^
+../src/core_main.c:289:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+../src/core_main.c:304:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+  ee_printf("Iterations       : %lu\n",(ee_u32)default_num_contexts*results[0].iterations);
+            ^
+../src/core_main.c:304:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+../src/core_main.c:306:39: warning: multi-character character constant [-Wmultichar]
+  ee_printf("Compiler flags   : %s \n",COMPILER_FLAGS);
+                                       ^
+../src/core_main.c:306:12: warning: format '%s' expects argument of type 'char *', but argument 2 has type 'int' [-Wformat=]
+  ee_printf("Compiler flags   : %s \n",COMPILER_FLAGS);
+            ^
+../src/core_main.c:306:12: warning: format '%s' expects argument of type 'char *', but argument 2 has type 'int' [-Wformat=]
+../src/core_main.c:328:127: warning: multi-character character constant [-Wmultichar]
+    ee_printf("CoreMark 1.0 : %f / %s %s",default_num_contexts*results[0].iterations/time_in_secs(total_time),COMPILER_VERSION,COMPILER_FLAGS);
+                                                                                                                               ^
+../src/core_main.c:328:14: warning: format '%s' expects argument of type 'char *', but argument 4 has type 'int' [-Wformat=]
+    ee_printf("CoreMark 1.0 : %f / %s %s",default_num_contexts*results[0].iterations/time_in_secs(total_time),COMPILER_VERSION,COMPILER_FLAGS);
+              ^
+../src/core_main.c:328:14: warning: format '%s' expects argument of type 'char *', but argument 4 has type 'int' [-Wformat=]
+make: *** [src/core_main.o] Error 1
+17:24:02 **** Auto Build of configuration Debug for project CoreMark ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/core_main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -DITERATIONS=200000 -DPERFORMANCE_RUN=1 -DCOMPILER_FLAGS='-O3' -Wall -O3 -g3 -O3 -c -fmessage-length=0 -MT"src/core_main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../CoreMark_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/core_main.d" -MT"src/core_main.o" -o "src/core_main.o" "../src/core_main.c"
+../src/core_main.c: In function 'iterate':
+../src/core_main.c:49:28: error: 'core_results {aka struct RESULTS_S}' has no member named 'seed'
+   crc=core_bench_matrix(res->seed,res->seed1,res->crc);
+                            ^
+../src/core_main.c: In function 'main':
+../src/core_main.c:288:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+  ee_printf("CoreMark Size    : %lu\n",(ee_u32)results[0].size);
+            ^
+../src/core_main.c:288:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+../src/core_main.c:289:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+  ee_printf("Total ticks      : %lu\n",(ee_u32)total_time);
+            ^
+../src/core_main.c:289:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+../src/core_main.c:304:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+  ee_printf("Iterations       : %lu\n",(ee_u32)default_num_contexts*results[0].iterations);
+            ^
+../src/core_main.c:304:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+../src/core_main.c:306:39: warning: multi-character character constant [-Wmultichar]
+  ee_printf("Compiler flags   : %s \n",COMPILER_FLAGS);
+                                       ^
+../src/core_main.c:306:12: warning: format '%s' expects argument of type 'char *', but argument 2 has type 'int' [-Wformat=]
+  ee_printf("Compiler flags   : %s \n",COMPILER_FLAGS);
+            ^
+../src/core_main.c:306:12: warning: format '%s' expects argument of type 'char *', but argument 2 has type 'int' [-Wformat=]
+../src/core_main.c:328:127: warning: multi-character character constant [-Wmultichar]
+    ee_printf("CoreMark 1.0 : %f / %s %s",default_num_contexts*results[0].iterations/time_in_secs(total_time),COMPILER_VERSION,COMPILER_FLAGS);
+                                                                                                                               ^
+../src/core_main.c:328:14: warning: format '%s' expects argument of type 'char *', but argument 4 has type 'int' [-Wformat=]
+    ee_printf("CoreMark 1.0 : %f / %s %s",default_num_contexts*results[0].iterations/time_in_secs(total_time),COMPILER_VERSION,COMPILER_FLAGS);
+              ^
+../src/core_main.c:328:14: warning: format '%s' expects argument of type 'char *', but argument 4 has type 'int' [-Wformat=]
+make: *** [src/core_main.o] Error 1
+17:24:30 **** Auto Build of configuration Debug for project CoreMark ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/core_main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -DITERATIONS=200000 -DPERFORMANCE_RUN=1 -DCOMPILER_FLAGS='-O3' -Wall -O3 -g3 -O3 -c -fmessage-length=0 -MT"src/core_main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../CoreMark_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/core_main.d" -MT"src/core_main.o" -o "src/core_main.o" "../src/core_main.c"
+../src/core_main.c: In function 'iterate':
+../src/core_main.c:49:25: warning: passing argument 1 of 'core_bench_matrix' makes pointer from integer without a cast [-Wint-conversion]
+   crc=core_bench_matrix(res->seed1,res->seed1,res->crc);
+                         ^
+In file included from ../src/core_main.c:22:0:
+../src/coremark.h:173:8: note: expected 'mat_params * {aka struct MAT_PARAMS_S *}' but argument is of type 'ee_s16 {aka short int}'
+ ee_u16 core_bench_matrix(mat_params *p, ee_s16 seed, ee_u16 crc);
+        ^
+../src/core_main.c: In function 'main':
+../src/core_main.c:288:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+  ee_printf("CoreMark Size    : %lu\n",(ee_u32)results[0].size);
+            ^
+../src/core_main.c:288:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+../src/core_main.c:289:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+  ee_printf("Total ticks      : %lu\n",(ee_u32)total_time);
+            ^
+../src/core_main.c:289:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+../src/core_main.c:304:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+  ee_printf("Iterations       : %lu\n",(ee_u32)default_num_contexts*results[0].iterations);
+            ^
+../src/core_main.c:304:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+../src/core_main.c:306:39: warning: multi-character character constant [-Wmultichar]
+  ee_printf("Compiler flags   : %s \n",COMPILER_FLAGS);
+                                       ^
+../src/core_main.c:306:12: warning: format '%s' expects argument of type 'char *', but argument 2 has type 'int' [-Wformat=]
+  ee_printf("Compiler flags   : %s \n",COMPILER_FLAGS);
+            ^
+../src/core_main.c:306:12: warning: format '%s' expects argument of type 'char *', but argument 2 has type 'int' [-Wformat=]
+../src/core_main.c:328:127: warning: multi-character character constant [-Wmultichar]
+    ee_printf("CoreMark 1.0 : %f / %s %s",default_num_contexts*results[0].iterations/time_in_secs(total_time),COMPILER_VERSION,COMPILER_FLAGS);
+                                                                                                                               ^
+../src/core_main.c:328:14: warning: format '%s' expects argument of type 'char *', but argument 4 has type 'int' [-Wformat=]
+    ee_printf("CoreMark 1.0 : %f / %s %s",default_num_contexts*results[0].iterations/time_in_secs(total_time),COMPILER_VERSION,COMPILER_FLAGS);
+              ^
+../src/core_main.c:328:14: warning: format '%s' expects argument of type 'char *', but argument 4 has type 'int' [-Wformat=]
+'Finished building: ../src/core_main.c'
+' '
+'Building target: CoreMark.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../CoreMark_bsp/ps7_cortexa9_0/lib -o "CoreMark.elf"  ./src/core_list_join.o ./src/core_main.o ./src/core_matrix.o ./src/core_state.o ./src/core_util.o ./src/helloworld.o ./src/platform.o ./src/timer_util.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: CoreMark.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size CoreMark.elf  |tee "CoreMark.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  94480	   2616	  23376	 120472	  1d698	CoreMark.elf
+'Finished building: CoreMark.elf.size'
+' '
+17:25:09 **** Auto Build of configuration Debug for project CoreMark ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/core_main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -DITERATIONS=200000 -DPERFORMANCE_RUN=1 -DCOMPILER_FLAGS='-O3' -Wall -O3 -g3 -O3 -c -fmessage-length=0 -MT"src/core_main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../CoreMark_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/core_main.d" -MT"src/core_main.o" -o "src/core_main.o" "../src/core_main.c"
+../src/core_main.c: In function 'iterate':
+../src/core_main.c:49:25: error: incompatible type for argument 1 of 'core_bench_matrix'
+   crc=core_bench_matrix(res->mat,res->seed1,res->crc);
+                         ^
+In file included from ../src/core_main.c:22:0:
+../src/coremark.h:173:8: note: expected 'mat_params * {aka struct MAT_PARAMS_S *}' but argument is of type 'mat_params {aka struct MAT_PARAMS_S}'
+ ee_u16 core_bench_matrix(mat_params *p, ee_s16 seed, ee_u16 crc);
+        ^
+../src/core_main.c: In function 'main':
+../src/core_main.c:288:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+  ee_printf("CoreMark Size    : %lu\n",(ee_u32)results[0].size);
+            ^
+../src/core_main.c:288:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+../src/core_main.c:289:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+  ee_printf("Total ticks      : %lu\n",(ee_u32)total_time);
+            ^
+../src/core_main.c:289:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+../src/core_main.c:304:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+  ee_printf("Iterations       : %lu\n",(ee_u32)default_num_contexts*results[0].iterations);
+            ^
+../src/core_main.c:304:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+../src/core_main.c:306:39: warning: multi-character character constant [-Wmultichar]
+  ee_printf("Compiler flags   : %s \n",COMPILER_FLAGS);
+                                       ^
+../src/core_main.c:306:12: warning: format '%s' expects argument of type 'char *', but argument 2 has type 'int' [-Wformat=]
+  ee_printf("Compiler flags   : %s \n",COMPILER_FLAGS);
+            ^
+../src/core_main.c:306:12: warning: format '%s' expects argument of type 'char *', but argument 2 has type 'int' [-Wformat=]
+../src/core_main.c:328:127: warning: multi-character character constant [-Wmultichar]
+    ee_printf("CoreMark 1.0 : %f / %s %s",default_num_contexts*results[0].iterations/time_in_secs(total_time),COMPILER_VERSION,COMPILER_FLAGS);
+                                                                                                                               ^
+../src/core_main.c:328:14: warning: format '%s' expects argument of type 'char *', but argument 4 has type 'int' [-Wformat=]
+    ee_printf("CoreMark 1.0 : %f / %s %s",default_num_contexts*results[0].iterations/time_in_secs(total_time),COMPILER_VERSION,COMPILER_FLAGS);
+              ^
+../src/core_main.c:328:14: warning: format '%s' expects argument of type 'char *', but argument 4 has type 'int' [-Wformat=]
+make: *** [src/core_main.o] Error 1
+17:28:07 **** Auto Build of configuration Debug for project CoreMark ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/core_main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -DITERATIONS=200000 -DPERFORMANCE_RUN=1 -DCOMPILER_FLAGS='-O3' -Wall -O3 -g3 -O3 -c -fmessage-length=0 -MT"src/core_main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../CoreMark_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/core_main.d" -MT"src/core_main.o" -o "src/core_main.o" "../src/core_main.c"
+../src/core_main.c: In function 'main':
+../src/core_main.c:288:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+  ee_printf("CoreMark Size    : %lu\n",(ee_u32)results[0].size);
+            ^
+../src/core_main.c:288:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+../src/core_main.c:289:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+  ee_printf("Total ticks      : %lu\n",(ee_u32)total_time);
+            ^
+../src/core_main.c:289:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+../src/core_main.c:304:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+  ee_printf("Iterations       : %lu\n",(ee_u32)default_num_contexts*results[0].iterations);
+            ^
+../src/core_main.c:304:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+../src/core_main.c:306:39: warning: multi-character character constant [-Wmultichar]
+  ee_printf("Compiler flags   : %s \n",COMPILER_FLAGS);
+                                       ^
+../src/core_main.c:306:12: warning: format '%s' expects argument of type 'char *', but argument 2 has type 'int' [-Wformat=]
+  ee_printf("Compiler flags   : %s \n",COMPILER_FLAGS);
+            ^
+../src/core_main.c:306:12: warning: format '%s' expects argument of type 'char *', but argument 2 has type 'int' [-Wformat=]
+../src/core_main.c:328:127: warning: multi-character character constant [-Wmultichar]
+    ee_printf("CoreMark 1.0 : %f / %s %s",default_num_contexts*results[0].iterations/time_in_secs(total_time),COMPILER_VERSION,COMPILER_FLAGS);
+                                                                                                                               ^
+../src/core_main.c:328:14: warning: format '%s' expects argument of type 'char *', but argument 4 has type 'int' [-Wformat=]
+    ee_printf("CoreMark 1.0 : %f / %s %s",default_num_contexts*results[0].iterations/time_in_secs(total_time),COMPILER_VERSION,COMPILER_FLAGS);
+              ^
+../src/core_main.c:328:14: warning: format '%s' expects argument of type 'char *', but argument 4 has type 'int' [-Wformat=]
+'Finished building: ../src/core_main.c'
+' '
+'Building target: CoreMark.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../CoreMark_bsp/ps7_cortexa9_0/lib -o "CoreMark.elf"  ./src/core_list_join.o ./src/core_main.o ./src/core_matrix.o ./src/core_state.o ./src/core_util.o ./src/helloworld.o ./src/platform.o ./src/timer_util.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: CoreMark.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size CoreMark.elf  |tee "CoreMark.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  94484	   2616	  23376	 120476	  1d69c	CoreMark.elf
+'Finished building: CoreMark.elf.size'
+' '
+17:29:08 **** Incremental Build of configuration Debug for project CoreMark ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+17:31:48 **** Auto Build of configuration Debug for project CoreMark ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/core_main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -DITERATIONS=200000 -DPERFORMANCE_RUN=1 -DCOMPILER_FLAGS='-O3' -Wall -O3 -g3 -O3 -c -fmessage-length=0 -MT"src/core_main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../CoreMark_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/core_main.d" -MT"src/core_main.o" -o "src/core_main.o" "../src/core_main.c"
+../src/core_main.c: In function 'main':
+../src/core_main.c:288:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+  ee_printf("CoreMark Size    : %lu\n",(ee_u32)results[0].size);
+            ^
+../src/core_main.c:288:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+../src/core_main.c:289:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+  ee_printf("Total ticks      : %lu\n",(ee_u32)total_time);
+            ^
+../src/core_main.c:289:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+../src/core_main.c:304:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+  ee_printf("Iterations       : %lu\n",(ee_u32)default_num_contexts*results[0].iterations);
+            ^
+../src/core_main.c:304:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+../src/core_main.c:306:39: warning: multi-character character constant [-Wmultichar]
+  ee_printf("Compiler flags   : %s \n",COMPILER_FLAGS);
+                                       ^
+../src/core_main.c:306:12: warning: format '%s' expects argument of type 'char *', but argument 2 has type 'int' [-Wformat=]
+  ee_printf("Compiler flags   : %s \n",COMPILER_FLAGS);
+            ^
+../src/core_main.c:306:12: warning: format '%s' expects argument of type 'char *', but argument 2 has type 'int' [-Wformat=]
+../src/core_main.c:328:127: warning: multi-character character constant [-Wmultichar]
+    ee_printf("CoreMark 1.0 : %f / %s %s",default_num_contexts*results[0].iterations/time_in_secs(total_time),COMPILER_VERSION,COMPILER_FLAGS);
+                                                                                                                               ^
+../src/core_main.c:328:14: warning: format '%s' expects argument of type 'char *', but argument 4 has type 'int' [-Wformat=]
+    ee_printf("CoreMark 1.0 : %f / %s %s",default_num_contexts*results[0].iterations/time_in_secs(total_time),COMPILER_VERSION,COMPILER_FLAGS);
+              ^
+../src/core_main.c:328:14: warning: format '%s' expects argument of type 'char *', but argument 4 has type 'int' [-Wformat=]
+'Finished building: ../src/core_main.c'
+' '
+'Building target: CoreMark.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../CoreMark_bsp/ps7_cortexa9_0/lib -o "CoreMark.elf"  ./src/core_list_join.o ./src/core_main.o ./src/core_matrix.o ./src/core_state.o ./src/core_util.o ./src/helloworld.o ./src/platform.o ./src/timer_util.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: CoreMark.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size CoreMark.elf  |tee "CoreMark.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  94388	   2616	  23376	 120380	  1d63c	CoreMark.elf
+'Finished building: CoreMark.elf.size'
+' '
+17:32:25 **** Incremental Build of configuration Debug for project CoreMark ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+17:34:38 **** Auto Build of configuration Debug for project CoreMark ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/core_main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -DITERATIONS=200000 -DPERFORMANCE_RUN=1 -DCOMPILER_FLAGS='-O3' -Wall -O3 -g3 -O3 -c -fmessage-length=0 -MT"src/core_main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../CoreMark_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/core_main.d" -MT"src/core_main.o" -o "src/core_main.o" "../src/core_main.c"
+../src/core_main.c: In function 'iterate':
+../src/core_main.c:44:15: error: expected expression before ';' token
+  res->crclist=;
+               ^
+../src/core_main.c:45:17: error: expected expression before ';' token
+  res->crcmatrix=;
+                 ^
+../src/core_main.c:46:16: error: expected expression before ';' token
+  res->crcstate=;
+                ^
+../src/core_main.c:40:9: warning: variable 'crc' set but not used [-Wunused-but-set-variable]
+  ee_u16 crc;
+         ^
+../src/core_main.c: In function 'main':
+../src/core_main.c:288:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+  ee_printf("CoreMark Size    : %lu\n",(ee_u32)results[0].size);
+            ^
+../src/core_main.c:288:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+../src/core_main.c:289:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+  ee_printf("Total ticks      : %lu\n",(ee_u32)total_time);
+            ^
+../src/core_main.c:289:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+../src/core_main.c:304:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+  ee_printf("Iterations       : %lu\n",(ee_u32)default_num_contexts*results[0].iterations);
+            ^
+../src/core_main.c:304:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+../src/core_main.c:306:39: warning: multi-character character constant [-Wmultichar]
+  ee_printf("Compiler flags   : %s \n",COMPILER_FLAGS);
+                                       ^
+../src/core_main.c:306:12: warning: format '%s' expects argument of type 'char *', but argument 2 has type 'int' [-Wformat=]
+  ee_printf("Compiler flags   : %s \n",COMPILER_FLAGS);
+            ^
+../src/core_main.c:306:12: warning: format '%s' expects argument of type 'char *', but argument 2 has type 'int' [-Wformat=]
+../src/core_main.c:328:127: warning: multi-character character constant [-Wmultichar]
+    ee_printf("CoreMark 1.0 : %f / %s %s",default_num_contexts*results[0].iterations/time_in_secs(total_time),COMPILER_VERSION,COMPILER_FLAGS);
+                                                                                                                               ^
+../src/core_main.c:328:14: warning: format '%s' expects argument of type 'char *', but argument 4 has type 'int' [-Wformat=]
+    ee_printf("CoreMark 1.0 : %f / %s %s",default_num_contexts*results[0].iterations/time_in_secs(total_time),COMPILER_VERSION,COMPILER_FLAGS);
+              ^
+../src/core_main.c:328:14: warning: format '%s' expects argument of type 'char *', but argument 4 has type 'int' [-Wformat=]
+make: *** [src/core_main.o] Error 1
+17:36:21 **** Auto Build of configuration Debug for project CoreMark ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/core_main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -DITERATIONS=200000 -DPERFORMANCE_RUN=1 -DCOMPILER_FLAGS='-O3' -Wall -O3 -g3 -O3 -c -fmessage-length=0 -MT"src/core_main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../CoreMark_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/core_main.d" -MT"src/core_main.o" -o "src/core_main.o" "../src/core_main.c"
+../src/core_main.c: In function 'iterate':
+../src/core_main.c:40:9: warning: variable 'crc' set but not used [-Wunused-but-set-variable]
+  ee_u16 crc;
+         ^
+../src/core_main.c: In function 'main':
+../src/core_main.c:288:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+  ee_printf("CoreMark Size    : %lu\n",(ee_u32)results[0].size);
+            ^
+../src/core_main.c:288:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+../src/core_main.c:289:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+  ee_printf("Total ticks      : %lu\n",(ee_u32)total_time);
+            ^
+../src/core_main.c:289:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+../src/core_main.c:304:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+  ee_printf("Iterations       : %lu\n",(ee_u32)default_num_contexts*results[0].iterations);
+            ^
+../src/core_main.c:304:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+../src/core_main.c:306:39: warning: multi-character character constant [-Wmultichar]
+  ee_printf("Compiler flags   : %s \n",COMPILER_FLAGS);
+                                       ^
+../src/core_main.c:306:12: warning: format '%s' expects argument of type 'char *', but argument 2 has type 'int' [-Wformat=]
+  ee_printf("Compiler flags   : %s \n",COMPILER_FLAGS);
+            ^
+../src/core_main.c:306:12: warning: format '%s' expects argument of type 'char *', but argument 2 has type 'int' [-Wformat=]
+../src/core_main.c:328:127: warning: multi-character character constant [-Wmultichar]
+    ee_printf("CoreMark 1.0 : %f / %s %s",default_num_contexts*results[0].iterations/time_in_secs(total_time),COMPILER_VERSION,COMPILER_FLAGS);
+                                                                                                                               ^
+../src/core_main.c:328:14: warning: format '%s' expects argument of type 'char *', but argument 4 has type 'int' [-Wformat=]
+    ee_printf("CoreMark 1.0 : %f / %s %s",default_num_contexts*results[0].iterations/time_in_secs(total_time),COMPILER_VERSION,COMPILER_FLAGS);
+              ^
+../src/core_main.c:328:14: warning: format '%s' expects argument of type 'char *', but argument 4 has type 'int' [-Wformat=]
+'Finished building: ../src/core_main.c'
+' '
+'Building target: CoreMark.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../CoreMark_bsp/ps7_cortexa9_0/lib -o "CoreMark.elf"  ./src/core_list_join.o ./src/core_main.o ./src/core_matrix.o ./src/core_state.o ./src/core_util.o ./src/helloworld.o ./src/platform.o ./src/timer_util.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: CoreMark.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size CoreMark.elf  |tee "CoreMark.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  94400	   2616	  23376	 120392	  1d648	CoreMark.elf
+'Finished building: CoreMark.elf.size'
+' '
+17:37:53 **** Incremental Build of configuration Debug for project CoreMark ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+17:40:32 **** Clean-only build of configuration Debug for project CoreMark ****
+make clean 
+rm -rf  ./src/core_list_join.o ./src/core_main.o ./src/core_matrix.o ./src/core_state.o ./src/core_util.o ./src/helloworld.o ./src/platform.o ./src/timer_util.o  ./src/core_list_join.d ./src/core_main.d ./src/core_matrix.d ./src/core_state.d ./src/core_util.d ./src/helloworld.d ./src/platform.d ./src/timer_util.d  CoreMark.elf.size  CoreMark.elf
+' '
+17:40:34 **** Auto Build of configuration Debug for project CoreMark ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/core_list_join.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -DITERATIONS=600000 -DPERFORMANCE_RUN=1 -DCOMPILER_FLAGS='-O3' -Wall -O3 -g3 -O3 -c -fmessage-length=0 -MT"src/core_list_join.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../CoreMark_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/core_list_join.d" -MT"src/core_list_join.o" -o "src/core_list_join.o" "../src/core_list_join.c"
+../src/core_list_join.c: In function 'core_bench_list':
+../src/core_list_join.c:139:12: warning: 'info.data16' may be used uninitialized in this function [-Wmaybe-uninitialized]
+  list_data info;
+            ^
+'Finished building: ../src/core_list_join.c'
+' '
+'Building file: ../src/core_main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -DITERATIONS=600000 -DPERFORMANCE_RUN=1 -DCOMPILER_FLAGS='-O3' -Wall -O3 -g3 -O3 -c -fmessage-length=0 -MT"src/core_main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../CoreMark_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/core_main.d" -MT"src/core_main.o" -o "src/core_main.o" "../src/core_main.c"
+../src/core_main.c: In function 'iterate':
+../src/core_main.c:40:9: warning: variable 'crc' set but not used [-Wunused-but-set-variable]
+  ee_u16 crc;
+         ^
+../src/core_main.c: In function 'main':
+../src/core_main.c:288:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+  ee_printf("CoreMark Size    : %lu\n",(ee_u32)results[0].size);
+            ^
+../src/core_main.c:288:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+../src/core_main.c:289:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+  ee_printf("Total ticks      : %lu\n",(ee_u32)total_time);
+            ^
+../src/core_main.c:289:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+../src/core_main.c:304:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+  ee_printf("Iterations       : %lu\n",(ee_u32)default_num_contexts*results[0].iterations);
+            ^
+../src/core_main.c:304:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+../src/core_main.c:306:39: warning: multi-character character constant [-Wmultichar]
+  ee_printf("Compiler flags   : %s \n",COMPILER_FLAGS);
+                                       ^
+../src/core_main.c:306:12: warning: format '%s' expects argument of type 'char *', but argument 2 has type 'int' [-Wformat=]
+  ee_printf("Compiler flags   : %s \n",COMPILER_FLAGS);
+            ^
+../src/core_main.c:306:12: warning: format '%s' expects argument of type 'char *', but argument 2 has type 'int' [-Wformat=]
+../src/core_main.c:328:127: warning: multi-character character constant [-Wmultichar]
+    ee_printf("CoreMark 1.0 : %f / %s %s",default_num_contexts*results[0].iterations/time_in_secs(total_time),COMPILER_VERSION,COMPILER_FLAGS);
+                                                                                                                               ^
+../src/core_main.c:328:14: warning: format '%s' expects argument of type 'char *', but argument 4 has type 'int' [-Wformat=]
+    ee_printf("CoreMark 1.0 : %f / %s %s",default_num_contexts*results[0].iterations/time_in_secs(total_time),COMPILER_VERSION,COMPILER_FLAGS);
+              ^
+../src/core_main.c:328:14: warning: format '%s' expects argument of type 'char *', but argument 4 has type 'int' [-Wformat=]
+'Finished building: ../src/core_main.c'
+' '
+'Building file: ../src/core_matrix.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -DITERATIONS=600000 -DPERFORMANCE_RUN=1 -DCOMPILER_FLAGS='-O3' -Wall -O3 -g3 -O3 -c -fmessage-length=0 -MT"src/core_matrix.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../CoreMark_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/core_matrix.d" -MT"src/core_matrix.o" -o "src/core_matrix.o" "../src/core_matrix.c"
+'Finished building: ../src/core_matrix.c'
+' '
+'Building file: ../src/core_state.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -DITERATIONS=600000 -DPERFORMANCE_RUN=1 -DCOMPILER_FLAGS='-O3' -Wall -O3 -g3 -O3 -c -fmessage-length=0 -MT"src/core_state.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../CoreMark_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/core_state.d" -MT"src/core_state.o" -o "src/core_state.o" "../src/core_state.c"
+'Finished building: ../src/core_state.c'
+' '
+'Building file: ../src/core_util.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -DITERATIONS=600000 -DPERFORMANCE_RUN=1 -DCOMPILER_FLAGS='-O3' -Wall -O3 -g3 -O3 -c -fmessage-length=0 -MT"src/core_util.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../CoreMark_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/core_util.d" -MT"src/core_util.o" -o "src/core_util.o" "../src/core_util.c"
+'Finished building: ../src/core_util.c'
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -DITERATIONS=600000 -DPERFORMANCE_RUN=1 -DCOMPILER_FLAGS='-O3' -Wall -O3 -g3 -O3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../CoreMark_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -DITERATIONS=600000 -DPERFORMANCE_RUN=1 -DCOMPILER_FLAGS='-O3' -Wall -O3 -g3 -O3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../CoreMark_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building file: ../src/timer_util.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -DITERATIONS=600000 -DPERFORMANCE_RUN=1 -DCOMPILER_FLAGS='-O3' -Wall -O3 -g3 -O3 -c -fmessage-length=0 -MT"src/timer_util.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../CoreMark_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/timer_util.d" -MT"src/timer_util.o" -o "src/timer_util.o" "../src/timer_util.c"
+'Finished building: ../src/timer_util.c'
+' '
+'Building target: CoreMark.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../CoreMark_bsp/ps7_cortexa9_0/lib -o "CoreMark.elf"  ./src/core_list_join.o ./src/core_main.o ./src/core_matrix.o ./src/core_state.o ./src/core_util.o ./src/helloworld.o ./src/platform.o ./src/timer_util.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: CoreMark.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size CoreMark.elf  |tee "CoreMark.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  94400	   2616	  23376	 120392	  1d648	CoreMark.elf
+'Finished building: CoreMark.elf.size'
+' '
+17:42:45 **** Incremental Build of configuration Debug for project CoreMark ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+17:47:52 **** Auto Build of configuration Debug for project CoreMark ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/core_main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -DITERATIONS=600000 -DPERFORMANCE_RUN=1 -DCOMPILER_FLAGS='-O3' -Wall -O3 -g3 -O3 -c -fmessage-length=0 -MT"src/core_main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../CoreMark_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/core_main.d" -MT"src/core_main.o" -o "src/core_main.o" "../src/core_main.c"
+../src/core_main.c: In function 'iterate':
+../src/core_main.c:40:9: warning: variable 'crc' set but not used [-Wunused-but-set-variable]
+  ee_u16 crc;
+         ^
+../src/core_main.c: In function 'main':
+../src/core_main.c:288:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+  ee_printf("CoreMark Size    : %lu\n",(ee_u32)results[0].size);
+            ^
+../src/core_main.c:288:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+../src/core_main.c:289:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+  ee_printf("Total ticks      : %lu\n",(ee_u32)total_time);
+            ^
+../src/core_main.c:289:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+../src/core_main.c:304:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+  ee_printf("Iterations       : %lu\n",(ee_u32)default_num_contexts*results[0].iterations);
+            ^
+../src/core_main.c:304:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+../src/core_main.c:306:39: warning: multi-character character constant [-Wmultichar]
+  ee_printf("Compiler flags   : %s \n",COMPILER_FLAGS);
+                                       ^
+../src/core_main.c:306:12: warning: format '%s' expects argument of type 'char *', but argument 2 has type 'int' [-Wformat=]
+  ee_printf("Compiler flags   : %s \n",COMPILER_FLAGS);
+            ^
+../src/core_main.c:306:12: warning: format '%s' expects argument of type 'char *', but argument 2 has type 'int' [-Wformat=]
+../src/core_main.c:328:127: warning: multi-character character constant [-Wmultichar]
+    ee_printf("CoreMark 1.0 : %f / %s %s",default_num_contexts*results[0].iterations/time_in_secs(total_time),COMPILER_VERSION,COMPILER_FLAGS);
+                                                                                                                               ^
+../src/core_main.c:328:14: warning: format '%s' expects argument of type 'char *', but argument 4 has type 'int' [-Wformat=]
+    ee_printf("CoreMark 1.0 : %f / %s %s",default_num_contexts*results[0].iterations/time_in_secs(total_time),COMPILER_VERSION,COMPILER_FLAGS);
+              ^
+../src/core_main.c:328:14: warning: format '%s' expects argument of type 'char *', but argument 4 has type 'int' [-Wformat=]
+'Finished building: ../src/core_main.c'
+' '
+'Building target: CoreMark.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../CoreMark_bsp/ps7_cortexa9_0/lib -o "CoreMark.elf"  ./src/core_list_join.o ./src/core_main.o ./src/core_matrix.o ./src/core_state.o ./src/core_util.o ./src/helloworld.o ./src/platform.o ./src/timer_util.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: CoreMark.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size CoreMark.elf  |tee "CoreMark.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  94396	   2616	  23376	 120388	  1d644	CoreMark.elf
+'Finished building: CoreMark.elf.size'
+' '
+17:48:20 **** Incremental Build of configuration Debug for project CoreMark ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+17:51:32 **** Auto Build of configuration Debug for project CoreMark ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/core_main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -DITERATIONS=600000 -DPERFORMANCE_RUN=1 -DCOMPILER_FLAGS='-O3' -Wall -O3 -g3 -O3 -c -fmessage-length=0 -MT"src/core_main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../CoreMark_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/core_main.d" -MT"src/core_main.o" -o "src/core_main.o" "../src/core_main.c"
+../src/core_main.c: In function 'iterate':
+../src/core_main.c:40:9: warning: variable 'crc' set but not used [-Wunused-but-set-variable]
+  ee_u16 crc;
+         ^
+../src/core_main.c: In function 'main':
+../src/core_main.c:288:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+  ee_printf("CoreMark Size    : %lu\n",(ee_u32)results[0].size);
+            ^
+../src/core_main.c:288:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+../src/core_main.c:289:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+  ee_printf("Total ticks      : %lu\n",(ee_u32)total_time);
+            ^
+../src/core_main.c:289:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+../src/core_main.c:304:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+  ee_printf("Iterations       : %lu\n",(ee_u32)default_num_contexts*results[0].iterations);
+            ^
+../src/core_main.c:304:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+../src/core_main.c:306:39: warning: multi-character character constant [-Wmultichar]
+  ee_printf("Compiler flags   : %s \n",COMPILER_FLAGS);
+                                       ^
+../src/core_main.c:306:12: warning: format '%s' expects argument of type 'char *', but argument 2 has type 'int' [-Wformat=]
+  ee_printf("Compiler flags   : %s \n",COMPILER_FLAGS);
+            ^
+../src/core_main.c:306:12: warning: format '%s' expects argument of type 'char *', but argument 2 has type 'int' [-Wformat=]
+../src/core_main.c:328:127: warning: multi-character character constant [-Wmultichar]
+    ee_printf("CoreMark 1.0 : %f / %s %s",default_num_contexts*results[0].iterations/time_in_secs(total_time),COMPILER_VERSION,COMPILER_FLAGS);
+                                                                                                                               ^
+../src/core_main.c:328:14: warning: format '%s' expects argument of type 'char *', but argument 4 has type 'int' [-Wformat=]
+    ee_printf("CoreMark 1.0 : %f / %s %s",default_num_contexts*results[0].iterations/time_in_secs(total_time),COMPILER_VERSION,COMPILER_FLAGS);
+              ^
+../src/core_main.c:328:14: warning: format '%s' expects argument of type 'char *', but argument 4 has type 'int' [-Wformat=]
+'Finished building: ../src/core_main.c'
+' '
+'Building target: CoreMark.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../CoreMark_bsp/ps7_cortexa9_0/lib -o "CoreMark.elf"  ./src/core_list_join.o ./src/core_main.o ./src/core_matrix.o ./src/core_state.o ./src/core_util.o ./src/helloworld.o ./src/platform.o ./src/timer_util.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: CoreMark.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size CoreMark.elf  |tee "CoreMark.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  94400	   2616	  23376	 120392	  1d648	CoreMark.elf
+'Finished building: CoreMark.elf.size'
+' '
+17:57:15 **** Auto Build of configuration Debug for project CoreMark ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/core_main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -DITERATIONS=600000 -DPERFORMANCE_RUN=1 -DCOMPILER_FLAGS='-O3' -Wall -O3 -g3 -O3 -c -fmessage-length=0 -MT"src/core_main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../CoreMark_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/core_main.d" -MT"src/core_main.o" -o "src/core_main.o" "../src/core_main.c"
+../src/core_main.c: In function 'iterate':
+../src/core_main.c:40:9: warning: variable 'crc' set but not used [-Wunused-but-set-variable]
+  ee_u16 crc;
+         ^
+../src/core_main.c: In function 'main':
+../src/core_main.c:288:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+  ee_printf("CoreMark Size    : %lu\n",(ee_u32)results[0].size);
+            ^
+../src/core_main.c:288:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+../src/core_main.c:289:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+  ee_printf("Total ticks      : %lu\n",(ee_u32)total_time);
+            ^
+../src/core_main.c:289:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+../src/core_main.c:304:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+  ee_printf("Iterations       : %lu\n",(ee_u32)default_num_contexts*results[0].iterations);
+            ^
+../src/core_main.c:304:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+../src/core_main.c:328:127: warning: multi-character character constant [-Wmultichar]
+    ee_printf("CoreMark 1.0 : %f / %s %s",default_num_contexts*results[0].iterations/time_in_secs(total_time),COMPILER_VERSION,COMPILER_FLAGS);
+                                                                                                                               ^
+../src/core_main.c:328:14: warning: format '%s' expects argument of type 'char *', but argument 4 has type 'int' [-Wformat=]
+    ee_printf("CoreMark 1.0 : %f / %s %s",default_num_contexts*results[0].iterations/time_in_secs(total_time),COMPILER_VERSION,COMPILER_FLAGS);
+              ^
+../src/core_main.c:328:14: warning: format '%s' expects argument of type 'char *', but argument 4 has type 'int' [-Wformat=]
+'Finished building: ../src/core_main.c'
+' '
+'Building target: CoreMark.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../CoreMark_bsp/ps7_cortexa9_0/lib -o "CoreMark.elf"  ./src/core_list_join.o ./src/core_main.o ./src/core_matrix.o ./src/core_state.o ./src/core_util.o ./src/helloworld.o ./src/platform.o ./src/timer_util.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: CoreMark.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size CoreMark.elf  |tee "CoreMark.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  94356	   2616	  23376	 120348	  1d61c	CoreMark.elf
+'Finished building: CoreMark.elf.size'
+' '
+17:58:19 **** Auto Build of configuration Debug for project CoreMark ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/core_main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -DITERATIONS=600000 -DPERFORMANCE_RUN=1 -DCOMPILER_FLAGS='-O3' -Wall -O3 -g3 -O3 -c -fmessage-length=0 -MT"src/core_main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../CoreMark_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/core_main.d" -MT"src/core_main.o" -o "src/core_main.o" "../src/core_main.c"
+../src/core_main.c: In function 'iterate':
+../src/core_main.c:40:9: warning: variable 'crc' set but not used [-Wunused-but-set-variable]
+  ee_u16 crc;
+         ^
+../src/core_main.c: In function 'main':
+../src/core_main.c:288:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+  ee_printf("CoreMark Size    : %lu\n",(ee_u32)results[0].size);
+            ^
+../src/core_main.c:288:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+../src/core_main.c:289:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+  ee_printf("Total ticks      : %lu\n",(ee_u32)total_time);
+            ^
+../src/core_main.c:289:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+../src/core_main.c:304:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+  ee_printf("Iterations       : %lu\n",(ee_u32)default_num_contexts*results[0].iterations);
+            ^
+../src/core_main.c:304:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+'Finished building: ../src/core_main.c'
+' '
+'Building target: CoreMark.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../CoreMark_bsp/ps7_cortexa9_0/lib -o "CoreMark.elf"  ./src/core_list_join.o ./src/core_main.o ./src/core_matrix.o ./src/core_state.o ./src/core_util.o ./src/helloworld.o ./src/platform.o ./src/timer_util.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: CoreMark.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size CoreMark.elf  |tee "CoreMark.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  94340	   2616	  23376	 120332	  1d60c	CoreMark.elf
+'Finished building: CoreMark.elf.size'
+' '
+17:59:44 **** Incremental Build of configuration Debug for project CoreMark ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+18:29:44 **** Auto Build of configuration Debug for project CoreMark ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/core_matrix.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -DITERATIONS=600000 -DPERFORMANCE_RUN=1 -DCOMPILER_FLAGS='-O3' -Wall -O3 -g3 -O3 -c -fmessage-length=0 -MT"src/core_matrix.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../CoreMark_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/core_matrix.d" -MT"src/core_matrix.o" -o "src/core_matrix.o" "../src/core_matrix.c"
+'Finished building: ../src/core_matrix.c'
+' '
+'Building target: CoreMark.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../CoreMark_bsp/ps7_cortexa9_0/lib -o "CoreMark.elf"  ./src/core_list_join.o ./src/core_main.o ./src/core_matrix.o ./src/core_state.o ./src/core_util.o ./src/helloworld.o ./src/platform.o ./src/timer_util.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: CoreMark.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size CoreMark.elf  |tee "CoreMark.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  94340	   2616	  23376	 120332	  1d60c	CoreMark.elf
+'Finished building: CoreMark.elf.size'
+' '
+18:38:04 **** Auto Build of configuration Debug for project CoreMark ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/core_main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -DITERATIONS=600000 -DPERFORMANCE_RUN=1 -DCOMPILER_FLAGS='-O3' -Wall -O3 -g3 -O3 -c -fmessage-length=0 -MT"src/core_main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../CoreMark_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/core_main.d" -MT"src/core_main.o" -o "src/core_main.o" "../src/core_main.c"
+../src/core_main.c: In function 'iterate':
+../src/core_main.c:41:9: warning: variable 'crc' set but not used [-Wunused-but-set-variable]
+  ee_u16 crc;
+         ^
+../src/core_main.c: In function 'main':
+../src/core_main.c:291:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+  ee_printf("CoreMark Size    : %lu\n",(ee_u32)results[0].size);
+            ^
+../src/core_main.c:291:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+../src/core_main.c:292:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+  ee_printf("Total ticks      : %lu\n",(ee_u32)total_time);
+            ^
+../src/core_main.c:292:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+../src/core_main.c:307:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+  ee_printf("Iterations       : %lu\n",(ee_u32)default_num_contexts*results[0].iterations);
+            ^
+../src/core_main.c:307:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+../src/core_main.c:98:9: warning: unused variable 'B' [-Wunused-variable]
+  ee_u16 B[16]={5,6,8,9,7,9,8,7,4,5,6,9,8,7,3,3};
+         ^
+../src/core_main.c:97:9: warning: unused variable 'A' [-Wunused-variable]
+  ee_u16 A[16]={5,6,8,9,7,9,8,7,4,5,6,9,8,7,3,3};
+         ^
+'Finished building: ../src/core_main.c'
+' '
+'Building target: CoreMark.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../CoreMark_bsp/ps7_cortexa9_0/lib -o "CoreMark.elf"  ./src/core_list_join.o ./src/core_main.o ./src/core_matrix.o ./src/core_state.o ./src/core_util.o ./src/helloworld.o ./src/platform.o ./src/timer_util.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: CoreMark.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size CoreMark.elf  |tee "CoreMark.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  94340	   2616	  23376	 120332	  1d60c	CoreMark.elf
+'Finished building: CoreMark.elf.size'
+' '
+18:43:22 **** Auto Build of configuration Debug for project CoreMark ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/core_main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -DITERATIONS=600000 -DPERFORMANCE_RUN=1 -DCOMPILER_FLAGS='-O3' -Wall -O3 -g3 -O3 -c -fmessage-length=0 -MT"src/core_main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../CoreMark_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/core_main.d" -MT"src/core_main.o" -o "src/core_main.o" "../src/core_main.c"
+../src/core_main.c: In function 'iterate':
+../src/core_main.c:41:9: warning: variable 'crc' set but not used [-Wunused-but-set-variable]
+  ee_u16 crc;
+         ^
+../src/core_main.c: In function 'main':
+../src/core_main.c:292:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+  ee_printf("CoreMark Size    : %lu\n",(ee_u32)results[0].size);
+            ^
+../src/core_main.c:292:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+../src/core_main.c:293:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+  ee_printf("Total ticks      : %lu\n",(ee_u32)total_time);
+            ^
+../src/core_main.c:293:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+../src/core_main.c:308:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+  ee_printf("Iterations       : %lu\n",(ee_u32)default_num_contexts*results[0].iterations);
+            ^
+../src/core_main.c:308:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+../src/core_main.c:99:9: warning: unused variable 'val' [-Wunused-variable]
+  ee_u16 val=5;
+         ^
+../src/core_main.c:98:9: warning: unused variable 'B' [-Wunused-variable]
+  ee_u16 B[16]={5,6,8,9,7,9,8,7,4,5,6,9,8,7,3,3};
+         ^
+../src/core_main.c:97:9: warning: unused variable 'A' [-Wunused-variable]
+  ee_u16 A[16]={5,6,8,9,7,9,8,7,4,5,6,9,8,7,3,3};
+         ^
+'Finished building: ../src/core_main.c'
+' '
+'Building target: CoreMark.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../CoreMark_bsp/ps7_cortexa9_0/lib -o "CoreMark.elf"  ./src/core_list_join.o ./src/core_main.o ./src/core_matrix.o ./src/core_state.o ./src/core_util.o ./src/helloworld.o ./src/platform.o ./src/timer_util.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: CoreMark.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size CoreMark.elf  |tee "CoreMark.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  94256	   2616	  23376	 120248	  1d5b8	CoreMark.elf
+'Finished building: CoreMark.elf.size'
+' '
+18:48:35 **** Auto Build of configuration Debug for project CoreMark ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/core_main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -DITERATIONS=600000 -DPERFORMANCE_RUN=1 -DCOMPILER_FLAGS='-O3' -Wall -O3 -g3 -O3 -c -fmessage-length=0 -MT"src/core_main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../CoreMark_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/core_main.d" -MT"src/core_main.o" -o "src/core_main.o" "../src/core_main.c"
+../src/core_main.c: In function 'iterate':
+../src/core_main.c:41:9: warning: variable 'crc' set but not used [-Wunused-but-set-variable]
+  ee_u16 crc;
+         ^
+../src/core_main.c: In function 'main':
+../src/core_main.c:293:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+  ee_printf("CoreMark Size    : %lu\n",(ee_u32)results[0].size);
+            ^
+../src/core_main.c:293:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+../src/core_main.c:294:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+  ee_printf("Total ticks      : %lu\n",(ee_u32)total_time);
+            ^
+../src/core_main.c:294:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+../src/core_main.c:309:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+  ee_printf("Iterations       : %lu\n",(ee_u32)default_num_contexts*results[0].iterations);
+            ^
+../src/core_main.c:309:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+../src/core_main.c:353:3: warning: implicit declaration of function 'matrix_test' [-Wimplicit-function-declaration]
+   matrix_test(16,&C,&A,&B,val);
+   ^
+'Finished building: ../src/core_main.c'
+' '
+'Building target: CoreMark.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../CoreMark_bsp/ps7_cortexa9_0/lib -o "CoreMark.elf"  ./src/core_list_join.o ./src/core_main.o ./src/core_matrix.o ./src/core_state.o ./src/core_util.o ./src/helloworld.o ./src/platform.o ./src/timer_util.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: CoreMark.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size CoreMark.elf  |tee "CoreMark.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  94416	   2616	  23376	 120408	  1d658	CoreMark.elf
+'Finished building: CoreMark.elf.size'
+' '
+18:51:27 **** Auto Build of configuration Debug for project CoreMark ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/core_main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -DITERATIONS=600000 -DPERFORMANCE_RUN=1 -DCOMPILER_FLAGS='-O3' -Wall -O3 -g3 -O3 -c -fmessage-length=0 -MT"src/core_main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../CoreMark_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/core_main.d" -MT"src/core_main.o" -o "src/core_main.o" "../src/core_main.c"
+../src/core_main.c: In function 'iterate':
+../src/core_main.c:41:9: warning: variable 'crc' set but not used [-Wunused-but-set-variable]
+  ee_u16 crc;
+         ^
+../src/core_main.c: In function 'main':
+../src/core_main.c:293:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+  ee_printf("CoreMark Size    : %lu\n",(ee_u32)results[0].size);
+            ^
+../src/core_main.c:293:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+../src/core_main.c:294:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+  ee_printf("Total ticks      : %lu\n",(ee_u32)total_time);
+            ^
+../src/core_main.c:294:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+../src/core_main.c:309:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+  ee_printf("Iterations       : %lu\n",(ee_u32)default_num_contexts*results[0].iterations);
+            ^
+../src/core_main.c:309:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+../src/core_main.c:353:3: warning: implicit declaration of function 'matrix_test' [-Wimplicit-function-declaration]
+   matrix_test(16,&C,&A,&B,val);
+   ^
+../src/core_main.c:363:12: warning: format '%d' expects argument of type 'int', but argument 2 has type 'secs_ret {aka double}' [-Wformat=]
+  ee_printf("O xronos pou pire itan %d",time_in_secs(total_time));
+            ^
+../src/core_main.c:363:12: warning: format '%d' expects argument of type 'int', but argument 2 has type 'secs_ret {aka double}' [-Wformat=]
+'Finished building: ../src/core_main.c'
+' '
+'Building target: CoreMark.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../CoreMark_bsp/ps7_cortexa9_0/lib -o "CoreMark.elf"  ./src/core_list_join.o ./src/core_main.o ./src/core_matrix.o ./src/core_state.o ./src/core_util.o ./src/helloworld.o ./src/platform.o ./src/timer_util.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: CoreMark.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size CoreMark.elf  |tee "CoreMark.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  94416	   2616	  23376	 120408	  1d658	CoreMark.elf
+'Finished building: CoreMark.elf.size'
+' '
+18:53:11 **** Auto Build of configuration Debug for project CoreMark ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/core_list_join.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -DITERATIONS=600000 -DPERFORMANCE_RUN=1 -DCOMPILER_FLAGS='-O3' -Wall -O3 -g3 -O3 -c -fmessage-length=0 -MT"src/core_list_join.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../CoreMark_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/core_list_join.d" -MT"src/core_list_join.o" -o "src/core_list_join.o" "../src/core_list_join.c"
+../src/core_list_join.c: In function 'core_bench_list':
+../src/core_list_join.c:139:12: warning: 'info.data16' may be used uninitialized in this function [-Wmaybe-uninitialized]
+  list_data info;
+            ^
+'Finished building: ../src/core_list_join.c'
+' '
+'Building file: ../src/core_main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -DITERATIONS=600000 -DPERFORMANCE_RUN=1 -DCOMPILER_FLAGS='-O3' -Wall -O3 -g3 -O3 -c -fmessage-length=0 -MT"src/core_main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../CoreMark_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/core_main.d" -MT"src/core_main.o" -o "src/core_main.o" "../src/core_main.c"
+../src/core_main.c: In function 'iterate':
+../src/core_main.c:41:9: warning: variable 'crc' set but not used [-Wunused-but-set-variable]
+  ee_u16 crc;
+         ^
+../src/core_main.c: In function 'main':
+../src/core_main.c:293:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+  ee_printf("CoreMark Size    : %lu\n",(ee_u32)results[0].size);
+            ^
+../src/core_main.c:293:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+../src/core_main.c:294:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+  ee_printf("Total ticks      : %lu\n",(ee_u32)total_time);
+            ^
+../src/core_main.c:294:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+../src/core_main.c:309:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+  ee_printf("Iterations       : %lu\n",(ee_u32)default_num_contexts*results[0].iterations);
+            ^
+../src/core_main.c:309:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+../src/core_main.c:353:18: warning: passing argument 2 of 'matrix_test' from incompatible pointer type [-Wincompatible-pointer-types]
+   matrix_test(16,&C,&A,&B,val);
+                  ^
+In file included from ../src/core_main.c:22:0:
+../src/coremark.h:165:8: note: expected 'MATRES * {aka int *}' but argument is of type 'ee_u16 (*)[16] {aka short unsigned int (*)[16]}'
+ ee_s16 matrix_test(ee_u32 N, MATRES *C, MATDAT *A, MATDAT *B, MATDAT val);
+        ^
+../src/core_main.c:353:21: warning: passing argument 3 of 'matrix_test' from incompatible pointer type [-Wincompatible-pointer-types]
+   matrix_test(16,&C,&A,&B,val);
+                     ^
+In file included from ../src/core_main.c:22:0:
+../src/coremark.h:165:8: note: expected 'MATDAT * {aka short int *}' but argument is of type 'ee_u16 (*)[16] {aka short unsigned int (*)[16]}'
+ ee_s16 matrix_test(ee_u32 N, MATRES *C, MATDAT *A, MATDAT *B, MATDAT val);
+        ^
+../src/core_main.c:353:24: warning: passing argument 4 of 'matrix_test' from incompatible pointer type [-Wincompatible-pointer-types]
+   matrix_test(16,&C,&A,&B,val);
+                        ^
+In file included from ../src/core_main.c:22:0:
+../src/coremark.h:165:8: note: expected 'MATDAT * {aka short int *}' but argument is of type 'ee_u16 (*)[16] {aka short unsigned int (*)[16]}'
+ ee_s16 matrix_test(ee_u32 N, MATRES *C, MATDAT *A, MATDAT *B, MATDAT val);
+        ^
+../src/core_main.c:363:12: warning: format '%d' expects argument of type 'int', but argument 2 has type 'secs_ret {aka double}' [-Wformat=]
+  ee_printf("O xronos pou pire itan %d",time_in_secs(total_time));
+            ^
+../src/core_main.c:363:12: warning: format '%d' expects argument of type 'int', but argument 2 has type 'secs_ret {aka double}' [-Wformat=]
+'Finished building: ../src/core_main.c'
+' '
+'Building file: ../src/core_matrix.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -DITERATIONS=600000 -DPERFORMANCE_RUN=1 -DCOMPILER_FLAGS='-O3' -Wall -O3 -g3 -O3 -c -fmessage-length=0 -MT"src/core_matrix.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../CoreMark_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/core_matrix.d" -MT"src/core_matrix.o" -o "src/core_matrix.o" "../src/core_matrix.c"
+'Finished building: ../src/core_matrix.c'
+' '
+'Building file: ../src/core_state.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -DITERATIONS=600000 -DPERFORMANCE_RUN=1 -DCOMPILER_FLAGS='-O3' -Wall -O3 -g3 -O3 -c -fmessage-length=0 -MT"src/core_state.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../CoreMark_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/core_state.d" -MT"src/core_state.o" -o "src/core_state.o" "../src/core_state.c"
+'Finished building: ../src/core_state.c'
+' '
+'Building file: ../src/core_util.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -DITERATIONS=600000 -DPERFORMANCE_RUN=1 -DCOMPILER_FLAGS='-O3' -Wall -O3 -g3 -O3 -c -fmessage-length=0 -MT"src/core_util.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../CoreMark_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/core_util.d" -MT"src/core_util.o" -o "src/core_util.o" "../src/core_util.c"
+'Finished building: ../src/core_util.c'
+' '
+'Building file: ../src/timer_util.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -DITERATIONS=600000 -DPERFORMANCE_RUN=1 -DCOMPILER_FLAGS='-O3' -Wall -O3 -g3 -O3 -c -fmessage-length=0 -MT"src/timer_util.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../CoreMark_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/timer_util.d" -MT"src/timer_util.o" -o "src/timer_util.o" "../src/timer_util.c"
+'Finished building: ../src/timer_util.c'
+' '
+'Building target: CoreMark.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../CoreMark_bsp/ps7_cortexa9_0/lib -o "CoreMark.elf"  ./src/core_list_join.o ./src/core_main.o ./src/core_matrix.o ./src/core_state.o ./src/core_util.o ./src/helloworld.o ./src/platform.o ./src/timer_util.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: CoreMark.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size CoreMark.elf  |tee "CoreMark.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  94416	   2616	  23376	 120408	  1d658	CoreMark.elf
+'Finished building: CoreMark.elf.size'
+' '
+18:56:04 **** Auto Build of configuration Debug for project CoreMark ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/core_main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -DITERATIONS=600000 -DPERFORMANCE_RUN=1 -DCOMPILER_FLAGS='-O3' -Wall -O3 -g3 -O3 -c -fmessage-length=0 -MT"src/core_main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../CoreMark_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/core_main.d" -MT"src/core_main.o" -o "src/core_main.o" "../src/core_main.c"
+../src/core_main.c: In function 'iterate':
+../src/core_main.c:41:9: warning: variable 'crc' set but not used [-Wunused-but-set-variable]
+  ee_u16 crc;
+         ^
+../src/core_main.c: In function 'main':
+../src/core_main.c:293:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+  ee_printf("CoreMark Size    : %lu\n",(ee_u32)results[0].size);
+            ^
+../src/core_main.c:293:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+../src/core_main.c:294:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+  ee_printf("Total ticks      : %lu\n",(ee_u32)total_time);
+            ^
+../src/core_main.c:294:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+../src/core_main.c:309:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+  ee_printf("Iterations       : %lu\n",(ee_u32)default_num_contexts*results[0].iterations);
+            ^
+../src/core_main.c:309:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+../src/core_main.c:353:18: warning: passing argument 2 of 'matrix_test' from incompatible pointer type [-Wincompatible-pointer-types]
+   matrix_test(16,&C,&A,&A,val);
+                  ^
+In file included from ../src/core_main.c:22:0:
+../src/coremark.h:165:8: note: expected 'MATRES * {aka int *}' but argument is of type 'ee_u16 (*)[16] {aka short unsigned int (*)[16]}'
+ ee_s16 matrix_test(ee_u32 N, MATRES *C, MATDAT *A, MATDAT *B, MATDAT val);
+        ^
+../src/core_main.c:353:21: warning: passing argument 3 of 'matrix_test' from incompatible pointer type [-Wincompatible-pointer-types]
+   matrix_test(16,&C,&A,&A,val);
+                     ^
+In file included from ../src/core_main.c:22:0:
+../src/coremark.h:165:8: note: expected 'MATDAT * {aka short int *}' but argument is of type 'ee_u16 (*)[16] {aka short unsigned int (*)[16]}'
+ ee_s16 matrix_test(ee_u32 N, MATRES *C, MATDAT *A, MATDAT *B, MATDAT val);
+        ^
+../src/core_main.c:353:24: warning: passing argument 4 of 'matrix_test' from incompatible pointer type [-Wincompatible-pointer-types]
+   matrix_test(16,&C,&A,&A,val);
+                        ^
+In file included from ../src/core_main.c:22:0:
+../src/coremark.h:165:8: note: expected 'MATDAT * {aka short int *}' but argument is of type 'ee_u16 (*)[16] {aka short unsigned int (*)[16]}'
+ ee_s16 matrix_test(ee_u32 N, MATRES *C, MATDAT *A, MATDAT *B, MATDAT val);
+        ^
+../src/core_main.c:98:9: warning: unused variable 'B' [-Wunused-variable]
+  ee_u16 B[16]={5,6,8,9,7,9,8,7,4,5,6,9,8,7,3,3};
+         ^
+'Finished building: ../src/core_main.c'
+' '
+'Building target: CoreMark.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../CoreMark_bsp/ps7_cortexa9_0/lib -o "CoreMark.elf"  ./src/core_list_join.o ./src/core_main.o ./src/core_matrix.o ./src/core_state.o ./src/core_util.o ./src/helloworld.o ./src/platform.o ./src/timer_util.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: CoreMark.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size CoreMark.elf  |tee "CoreMark.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  94372	   2616	  23376	 120364	  1d62c	CoreMark.elf
+'Finished building: CoreMark.elf.size'
+' '
+18:56:41 **** Auto Build of configuration Debug for project CoreMark ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/core_main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -DITERATIONS=600000 -DPERFORMANCE_RUN=1 -DCOMPILER_FLAGS='-O3' -Wall -O3 -g3 -O3 -c -fmessage-length=0 -MT"src/core_main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../CoreMark_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/core_main.d" -MT"src/core_main.o" -o "src/core_main.o" "../src/core_main.c"
+../src/core_main.c: In function 'iterate':
+../src/core_main.c:41:9: warning: variable 'crc' set but not used [-Wunused-but-set-variable]
+  ee_u16 crc;
+         ^
+../src/core_main.c: In function 'main':
+../src/core_main.c:293:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+  ee_printf("CoreMark Size    : %lu\n",(ee_u32)results[0].size);
+            ^
+../src/core_main.c:293:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+../src/core_main.c:294:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+  ee_printf("Total ticks      : %lu\n",(ee_u32)total_time);
+            ^
+../src/core_main.c:294:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+../src/core_main.c:309:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+  ee_printf("Iterations       : %lu\n",(ee_u32)default_num_contexts*results[0].iterations);
+            ^
+../src/core_main.c:309:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+../src/core_main.c:353:18: warning: passing argument 2 of 'matrix_test' from incompatible pointer type [-Wincompatible-pointer-types]
+   matrix_test(16,&C,&A,&A,&val);
+                  ^
+In file included from ../src/core_main.c:22:0:
+../src/coremark.h:165:8: note: expected 'MATRES * {aka int *}' but argument is of type 'ee_u16 (*)[16] {aka short unsigned int (*)[16]}'
+ ee_s16 matrix_test(ee_u32 N, MATRES *C, MATDAT *A, MATDAT *B, MATDAT val);
+        ^
+../src/core_main.c:353:21: warning: passing argument 3 of 'matrix_test' from incompatible pointer type [-Wincompatible-pointer-types]
+   matrix_test(16,&C,&A,&A,&val);
+                     ^
+In file included from ../src/core_main.c:22:0:
+../src/coremark.h:165:8: note: expected 'MATDAT * {aka short int *}' but argument is of type 'ee_u16 (*)[16] {aka short unsigned int (*)[16]}'
+ ee_s16 matrix_test(ee_u32 N, MATRES *C, MATDAT *A, MATDAT *B, MATDAT val);
+        ^
+../src/core_main.c:353:24: warning: passing argument 4 of 'matrix_test' from incompatible pointer type [-Wincompatible-pointer-types]
+   matrix_test(16,&C,&A,&A,&val);
+                        ^
+In file included from ../src/core_main.c:22:0:
+../src/coremark.h:165:8: note: expected 'MATDAT * {aka short int *}' but argument is of type 'ee_u16 (*)[16] {aka short unsigned int (*)[16]}'
+ ee_s16 matrix_test(ee_u32 N, MATRES *C, MATDAT *A, MATDAT *B, MATDAT val);
+        ^
+../src/core_main.c:353:27: warning: passing argument 5 of 'matrix_test' makes integer from pointer without a cast [-Wint-conversion]
+   matrix_test(16,&C,&A,&A,&val);
+                           ^
+In file included from ../src/core_main.c:22:0:
+../src/coremark.h:165:8: note: expected 'MATDAT {aka short int}' but argument is of type 'ee_u16 * {aka short unsigned int *}'
+ ee_s16 matrix_test(ee_u32 N, MATRES *C, MATDAT *A, MATDAT *B, MATDAT val);
+        ^
+../src/core_main.c:98:9: warning: unused variable 'B' [-Wunused-variable]
+  ee_u16 B[16]={5,6,8,9,7,9,8,7,4,5,6,9,8,7,3,3};
+         ^
+'Finished building: ../src/core_main.c'
+' '
+'Building target: CoreMark.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../CoreMark_bsp/ps7_cortexa9_0/lib -o "CoreMark.elf"  ./src/core_list_join.o ./src/core_main.o ./src/core_matrix.o ./src/core_state.o ./src/core_util.o ./src/helloworld.o ./src/platform.o ./src/timer_util.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: CoreMark.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size CoreMark.elf  |tee "CoreMark.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  94384	   2616	  23376	 120376	  1d638	CoreMark.elf
+'Finished building: CoreMark.elf.size'
+' '
+18:57:08 **** Auto Build of configuration Debug for project CoreMark ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/core_main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -DITERATIONS=600000 -DPERFORMANCE_RUN=1 -DCOMPILER_FLAGS='-O3' -Wall -O3 -g3 -O3 -c -fmessage-length=0 -MT"src/core_main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../CoreMark_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/core_main.d" -MT"src/core_main.o" -o "src/core_main.o" "../src/core_main.c"
+../src/core_main.c: In function 'iterate':
+../src/core_main.c:41:9: warning: variable 'crc' set but not used [-Wunused-but-set-variable]
+  ee_u16 crc;
+         ^
+../src/core_main.c: In function 'main':
+../src/core_main.c:293:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+  ee_printf("CoreMark Size    : %lu\n",(ee_u32)results[0].size);
+            ^
+../src/core_main.c:293:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+../src/core_main.c:294:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+  ee_printf("Total ticks      : %lu\n",(ee_u32)total_time);
+            ^
+../src/core_main.c:294:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+../src/core_main.c:309:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+  ee_printf("Iterations       : %lu\n",(ee_u32)default_num_contexts*results[0].iterations);
+            ^
+../src/core_main.c:309:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+../src/core_main.c:353:18: warning: passing argument 2 of 'matrix_test' from incompatible pointer type [-Wincompatible-pointer-types]
+   matrix_test(16,&C,&A,&A,val);
+                  ^
+In file included from ../src/core_main.c:22:0:
+../src/coremark.h:165:8: note: expected 'MATRES * {aka int *}' but argument is of type 'ee_u16 (*)[16] {aka short unsigned int (*)[16]}'
+ ee_s16 matrix_test(ee_u32 N, MATRES *C, MATDAT *A, MATDAT *B, MATDAT val);
+        ^
+../src/core_main.c:353:21: warning: passing argument 3 of 'matrix_test' from incompatible pointer type [-Wincompatible-pointer-types]
+   matrix_test(16,&C,&A,&A,val);
+                     ^
+In file included from ../src/core_main.c:22:0:
+../src/coremark.h:165:8: note: expected 'MATDAT * {aka short int *}' but argument is of type 'ee_u16 (*)[16] {aka short unsigned int (*)[16]}'
+ ee_s16 matrix_test(ee_u32 N, MATRES *C, MATDAT *A, MATDAT *B, MATDAT val);
+        ^
+../src/core_main.c:353:24: warning: passing argument 4 of 'matrix_test' from incompatible pointer type [-Wincompatible-pointer-types]
+   matrix_test(16,&C,&A,&A,val);
+                        ^
+In file included from ../src/core_main.c:22:0:
+../src/coremark.h:165:8: note: expected 'MATDAT * {aka short int *}' but argument is of type 'ee_u16 (*)[16] {aka short unsigned int (*)[16]}'
+ ee_s16 matrix_test(ee_u32 N, MATRES *C, MATDAT *A, MATDAT *B, MATDAT val);
+        ^
+../src/core_main.c:98:9: warning: unused variable 'B' [-Wunused-variable]
+  ee_u16 B[16]={5,6,8,9,7,9,8,7,4,5,6,9,8,7,3,3};
+         ^
+'Finished building: ../src/core_main.c'
+' '
+'Building target: CoreMark.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../CoreMark_bsp/ps7_cortexa9_0/lib -o "CoreMark.elf"  ./src/core_list_join.o ./src/core_main.o ./src/core_matrix.o ./src/core_state.o ./src/core_util.o ./src/helloworld.o ./src/platform.o ./src/timer_util.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: CoreMark.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size CoreMark.elf  |tee "CoreMark.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  94372	   2616	  23376	 120364	  1d62c	CoreMark.elf
+'Finished building: CoreMark.elf.size'
+' '
+18:57:36 **** Auto Build of configuration Debug for project CoreMark ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/core_matrix.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -DITERATIONS=600000 -DPERFORMANCE_RUN=1 -DCOMPILER_FLAGS='-O3' -Wall -O3 -g3 -O3 -c -fmessage-length=0 -MT"src/core_matrix.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../CoreMark_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/core_matrix.d" -MT"src/core_matrix.o" -o "src/core_matrix.o" "../src/core_matrix.c"
+'Finished building: ../src/core_matrix.c'
+' '
+'Building target: CoreMark.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../CoreMark_bsp/ps7_cortexa9_0/lib -o "CoreMark.elf"  ./src/core_list_join.o ./src/core_main.o ./src/core_matrix.o ./src/core_state.o ./src/core_util.o ./src/helloworld.o ./src/platform.o ./src/timer_util.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: CoreMark.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size CoreMark.elf  |tee "CoreMark.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  94372	   2616	  23376	 120364	  1d62c	CoreMark.elf
+'Finished building: CoreMark.elf.size'
+' '
+18:58:50 **** Clean-only build of configuration Debug for project CoreMark ****
+make clean 
+rm -rf  ./src/core_list_join.o ./src/core_main.o ./src/core_matrix.o ./src/core_state.o ./src/core_util.o ./src/helloworld.o ./src/platform.o ./src/timer_util.o  ./src/core_list_join.d ./src/core_main.d ./src/core_matrix.d ./src/core_state.d ./src/core_util.d ./src/helloworld.d ./src/platform.d ./src/timer_util.d  CoreMark.elf.size  CoreMark.elf
+' '
+18:58:52 **** Auto Build of configuration Debug for project CoreMark ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/core_list_join.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -DITERATIONS=60000 -DPERFORMANCE_RUN=1 -DCOMPILER_FLAGS='-O3' -Wall -O3 -g3 -O3 -c -fmessage-length=0 -MT"src/core_list_join.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../CoreMark_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/core_list_join.d" -MT"src/core_list_join.o" -o "src/core_list_join.o" "../src/core_list_join.c"
+../src/core_list_join.c: In function 'core_bench_list':
+../src/core_list_join.c:139:12: warning: 'info.data16' may be used uninitialized in this function [-Wmaybe-uninitialized]
+  list_data info;
+            ^
+'Finished building: ../src/core_list_join.c'
+' '
+'Building file: ../src/core_main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -DITERATIONS=60000 -DPERFORMANCE_RUN=1 -DCOMPILER_FLAGS='-O3' -Wall -O3 -g3 -O3 -c -fmessage-length=0 -MT"src/core_main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../CoreMark_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/core_main.d" -MT"src/core_main.o" -o "src/core_main.o" "../src/core_main.c"
+../src/core_main.c: In function 'iterate':
+../src/core_main.c:41:9: warning: variable 'crc' set but not used [-Wunused-but-set-variable]
+  ee_u16 crc;
+         ^
+../src/core_main.c: In function 'main':
+../src/core_main.c:293:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+  ee_printf("CoreMark Size    : %lu\n",(ee_u32)results[0].size);
+            ^
+../src/core_main.c:293:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+../src/core_main.c:294:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+  ee_printf("Total ticks      : %lu\n",(ee_u32)total_time);
+            ^
+../src/core_main.c:294:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+../src/core_main.c:309:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+  ee_printf("Iterations       : %lu\n",(ee_u32)default_num_contexts*results[0].iterations);
+            ^
+../src/core_main.c:309:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+../src/core_main.c:353:18: warning: passing argument 2 of 'matrix_test' from incompatible pointer type [-Wincompatible-pointer-types]
+   matrix_test(16,&C,&A,&A,val);
+                  ^
+In file included from ../src/core_main.c:22:0:
+../src/coremark.h:165:8: note: expected 'MATRES * {aka int *}' but argument is of type 'ee_u16 (*)[16] {aka short unsigned int (*)[16]}'
+ ee_s16 matrix_test(ee_u32 N, MATRES *C, MATDAT *A, MATDAT *B, MATDAT val);
+        ^
+../src/core_main.c:353:21: warning: passing argument 3 of 'matrix_test' from incompatible pointer type [-Wincompatible-pointer-types]
+   matrix_test(16,&C,&A,&A,val);
+                     ^
+In file included from ../src/core_main.c:22:0:
+../src/coremark.h:165:8: note: expected 'MATDAT * {aka short int *}' but argument is of type 'ee_u16 (*)[16] {aka short unsigned int (*)[16]}'
+ ee_s16 matrix_test(ee_u32 N, MATRES *C, MATDAT *A, MATDAT *B, MATDAT val);
+        ^
+../src/core_main.c:353:24: warning: passing argument 4 of 'matrix_test' from incompatible pointer type [-Wincompatible-pointer-types]
+   matrix_test(16,&C,&A,&A,val);
+                        ^
+In file included from ../src/core_main.c:22:0:
+../src/coremark.h:165:8: note: expected 'MATDAT * {aka short int *}' but argument is of type 'ee_u16 (*)[16] {aka short unsigned int (*)[16]}'
+ ee_s16 matrix_test(ee_u32 N, MATRES *C, MATDAT *A, MATDAT *B, MATDAT val);
+        ^
+../src/core_main.c:98:9: warning: unused variable 'B' [-Wunused-variable]
+  ee_u16 B[16]={5,6,8,9,7,9,8,7,4,5,6,9,8,7,3,3};
+         ^
+'Finished building: ../src/core_main.c'
+' '
+'Building file: ../src/core_matrix.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -DITERATIONS=60000 -DPERFORMANCE_RUN=1 -DCOMPILER_FLAGS='-O3' -Wall -O3 -g3 -O3 -c -fmessage-length=0 -MT"src/core_matrix.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../CoreMark_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/core_matrix.d" -MT"src/core_matrix.o" -o "src/core_matrix.o" "../src/core_matrix.c"
+'Finished building: ../src/core_matrix.c'
+' '
+'Building file: ../src/core_state.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -DITERATIONS=60000 -DPERFORMANCE_RUN=1 -DCOMPILER_FLAGS='-O3' -Wall -O3 -g3 -O3 -c -fmessage-length=0 -MT"src/core_state.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../CoreMark_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/core_state.d" -MT"src/core_state.o" -o "src/core_state.o" "../src/core_state.c"
+'Finished building: ../src/core_state.c'
+' '
+'Building file: ../src/core_util.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -DITERATIONS=60000 -DPERFORMANCE_RUN=1 -DCOMPILER_FLAGS='-O3' -Wall -O3 -g3 -O3 -c -fmessage-length=0 -MT"src/core_util.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../CoreMark_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/core_util.d" -MT"src/core_util.o" -o "src/core_util.o" "../src/core_util.c"
+'Finished building: ../src/core_util.c'
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -DITERATIONS=60000 -DPERFORMANCE_RUN=1 -DCOMPILER_FLAGS='-O3' -Wall -O3 -g3 -O3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../CoreMark_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -DITERATIONS=60000 -DPERFORMANCE_RUN=1 -DCOMPILER_FLAGS='-O3' -Wall -O3 -g3 -O3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../CoreMark_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building file: ../src/timer_util.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -DITERATIONS=60000 -DPERFORMANCE_RUN=1 -DCOMPILER_FLAGS='-O3' -Wall -O3 -g3 -O3 -c -fmessage-length=0 -MT"src/timer_util.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../CoreMark_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/timer_util.d" -MT"src/timer_util.o" -o "src/timer_util.o" "../src/timer_util.c"
+'Finished building: ../src/timer_util.c'
+' '
+'Building target: CoreMark.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../CoreMark_bsp/ps7_cortexa9_0/lib -o "CoreMark.elf"  ./src/core_list_join.o ./src/core_main.o ./src/core_matrix.o ./src/core_state.o ./src/core_util.o ./src/helloworld.o ./src/platform.o ./src/timer_util.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: CoreMark.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size CoreMark.elf  |tee "CoreMark.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  94532	   2616	  23376	 120524	  1d6cc	CoreMark.elf
+'Finished building: CoreMark.elf.size'
+' '
+19:00:06 **** Incremental Build of configuration Debug for project CoreMark ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+19:05:08 **** Auto Build of configuration Debug for project CoreMark ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/core_main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -DITERATIONS=60000 -DPERFORMANCE_RUN=1 -DCOMPILER_FLAGS='-O3' -Wall -O3 -g3 -O3 -c -fmessage-length=0 -MT"src/core_main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../CoreMark_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/core_main.d" -MT"src/core_main.o" -o "src/core_main.o" "../src/core_main.c"
+../src/core_main.c: In function 'main':
+../src/core_main.c:293:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+  ee_printf("CoreMark Size    : %lu\n",(ee_u32)results[0].size);
+            ^
+../src/core_main.c:293:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+../src/core_main.c:294:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+  ee_printf("Total ticks      : %lu\n",(ee_u32)total_time);
+            ^
+../src/core_main.c:294:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+../src/core_main.c:309:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+  ee_printf("Iterations       : %lu\n",(ee_u32)default_num_contexts*results[0].iterations);
+            ^
+../src/core_main.c:309:12: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'unsigned int' [-Wformat=]
+../src/core_main.c:353:18: warning: passing argument 2 of 'matrix_test' from incompatible pointer type [-Wincompatible-pointer-types]
+   matrix_test(16,&C,&A,&A,val);
+                  ^
+In file included from ../src/core_main.c:22:0:
+../src/coremark.h:165:8: note: expected 'MATRES * {aka int *}' but argument is of type 'ee_u16 (*)[16] {aka short unsigned int (*)[16]}'
+ ee_s16 matrix_test(ee_u32 N, MATRES *C, MATDAT *A, MATDAT *B, MATDAT val);
+        ^
+../src/core_main.c:353:21: warning: passing argument 3 of 'matrix_test' from incompatible pointer type [-Wincompatible-pointer-types]
+   matrix_test(16,&C,&A,&A,val);
+                     ^
+In file included from ../src/core_main.c:22:0:
+../src/coremark.h:165:8: note: expected 'MATDAT * {aka short int *}' but argument is of type 'ee_u16 (*)[16] {aka short unsigned int (*)[16]}'
+ ee_s16 matrix_test(ee_u32 N, MATRES *C, MATDAT *A, MATDAT *B, MATDAT val);
+        ^
+../src/core_main.c:353:24: warning: passing argument 4 of 'matrix_test' from incompatible pointer type [-Wincompatible-pointer-types]
+   matrix_test(16,&C,&A,&A,val);
+                        ^
+In file included from ../src/core_main.c:22:0:
+../src/coremark.h:165:8: note: expected 'MATDAT * {aka short int *}' but argument is of type 'ee_u16 (*)[16] {aka short unsigned int (*)[16]}'
+ ee_s16 matrix_test(ee_u32 N, MATRES *C, MATDAT *A, MATDAT *B, MATDAT val);
+        ^
+../src/core_main.c:98:9: warning: unused variable 'B' [-Wunused-variable]
+  ee_u16 B[16]={5,6,8,9,7,9,8,7,4,5,6,9,8,7,3,3};
+         ^
+'Finished building: ../src/core_main.c'
+' '
+'Building target: CoreMark.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../CoreMark_bsp/ps7_cortexa9_0/lib -o "CoreMark.elf"  ./src/core_list_join.o ./src/core_main.o ./src/core_matrix.o ./src/core_state.o ./src/core_util.o ./src/helloworld.o ./src/platform.o ./src/timer_util.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: CoreMark.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size CoreMark.elf  |tee "CoreMark.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  94620	   2616	  23376	 120612	  1d724	CoreMark.elf
+'Finished building: CoreMark.elf.size'
+' '
+19:05:35 **** Incremental Build of configuration Debug for project CoreMark ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
