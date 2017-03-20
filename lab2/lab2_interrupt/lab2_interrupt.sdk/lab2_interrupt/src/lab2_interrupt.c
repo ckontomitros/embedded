@@ -15,7 +15,7 @@ XGpio BTNInst;
 XScuGic INTCInst;  // Generic Interrupt Controller
 static int btn_value;
 static int counter_value = 0;
-
+static int flag = 0;
 //----------------------------------------------------
 // PROTOTYPE FUNCTIONS
 //----------------------------------------------------
@@ -44,6 +44,7 @@ void BTN_Intr_Handler(void *InstancePtr)
 	// Reset if center button pressed
         // Place your code here
         // .....
+
 	if (btn_value!=1)
 	{
 		counter_value++;
@@ -52,6 +53,7 @@ void BTN_Intr_Handler(void *InstancePtr)
 		counter_value=0;
 	}
 	xil_printf("H timi tou counter einai %x\r\n", counter_value);
+
     (void)XGpio_InterruptClear(&BTNInst, BTN_INT);
 
     // Enable GPIO interrupts
