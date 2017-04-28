@@ -1,0 +1,828 @@
+
+*** Running vivado
+    with args -log accelero.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source accelero.tcl
+
+
+****** Vivado v2016.4 (64-bit)
+  **** SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
+  **** IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source accelero.tcl -notrace
+create_project: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 239.750 ; gain = 29.098
+Command: synth_design -top accelero -part xc7z020clg484-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 7936 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:12 ; elapsed = 00:00:36 . Memory (MB): peak = 322.523 ; gain = 111.871
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'accelero' [C:/Users/konto/Documents/embeded/lab4/accelero.v:3]
+	Parameter S0 bound to: 3'b000 
+	Parameter S1 bound to: 3'b001 
+	Parameter S2 bound to: 3'b010 
+	Parameter S3 bound to: 3'b011 
+	Parameter S4 bound to: 3'b100 
+	Parameter S5 bound to: 3'b101 
+	Parameter a bound to: 5 - type: integer 
+WARNING: [Synth 8-567] referenced signal 'memB' should be on the sensitivity list [C:/Users/konto/Documents/embeded/lab4/accelero.v:19]
+WARNING: [Synth 8-151] case item 3'b100 is unreachable [C:/Users/konto/Documents/embeded/lab4/accelero.v:76]
+INFO: [Synth 8-226] default block is never used [C:/Users/konto/Documents/embeded/lab4/accelero.v:28]
+WARNING: [Synth 8-567] referenced signal 'rst' should be on the sensitivity list [C:/Users/konto/Documents/embeded/lab4/accelero.v:26]
+WARNING: [Synth 8-567] referenced signal 'Nin' should be on the sensitivity list [C:/Users/konto/Documents/embeded/lab4/accelero.v:26]
+WARNING: [Synth 8-567] referenced signal 'Nout' should be on the sensitivity list [C:/Users/konto/Documents/embeded/lab4/accelero.v:26]
+WARNING: [Synth 8-567] referenced signal 'Ninput' should be on the sensitivity list [C:/Users/konto/Documents/embeded/lab4/accelero.v:26]
+WARNING: [Synth 8-567] referenced signal 'x' should be on the sensitivity list [C:/Users/konto/Documents/embeded/lab4/accelero.v:26]
+WARNING: [Synth 8-567] referenced signal 'memA' should be on the sensitivity list [C:/Users/konto/Documents/embeded/lab4/accelero.v:26]
+INFO: [Synth 8-256] done synthesizing module 'accelero' (1#1) [C:/Users/konto/Documents/embeded/lab4/accelero.v:3]
+WARNING: [Synth 8-3331] design accelero has unconnected port Nout
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:19 ; elapsed = 00:00:44 . Memory (MB): peak = 446.547 ; gain = 235.895
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:45 . Memory (MB): peak = 446.547 ; gain = 235.895
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:45 . Memory (MB): peak = 446.547 ; gain = 235.895
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Synth 8-5545] ROM "memA_reg[0]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memA_reg[1]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memA_reg[2]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memA_reg[3]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memA_reg[4]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memA_reg[5]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memA_reg[6]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memA_reg[7]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memA_reg[8]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memA_reg[9]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memA_reg[10]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memA_reg[11]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memA_reg[12]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memA_reg[13]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memA_reg[14]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memA_reg[15]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memA_reg[16]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memA_reg[17]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memA_reg[18]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memA_reg[19]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memA_reg[20]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memA_reg[21]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memA_reg[22]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memA_reg[23]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memA_reg[24]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memA_reg[25]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memA_reg[26]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memA_reg[27]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memA_reg[28]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memA_reg[29]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memA_reg[30]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memA_reg[31]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memA_reg[32]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memA_reg[33]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memA_reg[34]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memA_reg[35]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memA_reg[36]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memA_reg[37]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memA_reg[38]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memA_reg[39]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memA_reg[40]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memA_reg[41]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memA_reg[42]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memA_reg[43]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memA_reg[44]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memA_reg[45]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memA_reg[46]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memA_reg[47]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memA_reg[48]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memA_reg[49]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memA_reg[50]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memA_reg[51]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memA_reg[52]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memA_reg[53]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memA_reg[54]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memA_reg[55]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memA_reg[56]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memA_reg[57]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memA_reg[58]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memA_reg[59]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memA_reg[60]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memA_reg[61]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memA_reg[62]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memA_reg[63]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memA_reg[64]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memA_reg[65]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memA_reg[66]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memA_reg[67]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memA_reg[68]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memA_reg[69]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memA_reg[70]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memA_reg[71]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memA_reg[72]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memA_reg[73]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memA_reg[74]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memA_reg[75]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memA_reg[76]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memA_reg[77]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memA_reg[78]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memA_reg[79]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memA_reg[80]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memA_reg[81]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memA_reg[82]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memA_reg[83]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memA_reg[84]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memA_reg[85]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memA_reg[86]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memA_reg[87]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memA_reg[88]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memA_reg[89]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memA_reg[90]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memA_reg[91]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memA_reg[92]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memA_reg[93]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memA_reg[94]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memA_reg[95]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memA_reg[96]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memA_reg[97]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memA_reg[98]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memA_reg[99]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Common 17-14] Message 'Synth 8-5545' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-327] inferring latch for variable 'Y_reg' [C:/Users/konto/Documents/embeded/lab4/accelero.v:24]
+WARNING: [Synth 8-327] inferring latch for variable 'memB_reg[0]' [C:/Users/konto/Documents/embeded/lab4/accelero.v:67]
+WARNING: [Synth 8-327] inferring latch for variable 'memB_reg[1]' [C:/Users/konto/Documents/embeded/lab4/accelero.v:67]
+WARNING: [Synth 8-327] inferring latch for variable 'memB_reg[2]' [C:/Users/konto/Documents/embeded/lab4/accelero.v:67]
+WARNING: [Synth 8-327] inferring latch for variable 'memB_reg[3]' [C:/Users/konto/Documents/embeded/lab4/accelero.v:67]
+WARNING: [Synth 8-327] inferring latch for variable 'memB_reg[4]' [C:/Users/konto/Documents/embeded/lab4/accelero.v:67]
+WARNING: [Synth 8-327] inferring latch for variable 'memB_reg[5]' [C:/Users/konto/Documents/embeded/lab4/accelero.v:67]
+WARNING: [Synth 8-327] inferring latch for variable 'memB_reg[6]' [C:/Users/konto/Documents/embeded/lab4/accelero.v:67]
+WARNING: [Synth 8-327] inferring latch for variable 'memB_reg[7]' [C:/Users/konto/Documents/embeded/lab4/accelero.v:67]
+WARNING: [Synth 8-327] inferring latch for variable 'memB_reg[8]' [C:/Users/konto/Documents/embeded/lab4/accelero.v:67]
+WARNING: [Synth 8-327] inferring latch for variable 'memB_reg[9]' [C:/Users/konto/Documents/embeded/lab4/accelero.v:67]
+WARNING: [Synth 8-327] inferring latch for variable 'memB_reg[10]' [C:/Users/konto/Documents/embeded/lab4/accelero.v:67]
+WARNING: [Synth 8-327] inferring latch for variable 'memB_reg[11]' [C:/Users/konto/Documents/embeded/lab4/accelero.v:67]
+WARNING: [Synth 8-327] inferring latch for variable 'memB_reg[12]' [C:/Users/konto/Documents/embeded/lab4/accelero.v:67]
+WARNING: [Synth 8-327] inferring latch for variable 'memB_reg[13]' [C:/Users/konto/Documents/embeded/lab4/accelero.v:67]
+WARNING: [Synth 8-327] inferring latch for variable 'memB_reg[14]' [C:/Users/konto/Documents/embeded/lab4/accelero.v:67]
+WARNING: [Synth 8-327] inferring latch for variable 'memB_reg[15]' [C:/Users/konto/Documents/embeded/lab4/accelero.v:67]
+WARNING: [Synth 8-327] inferring latch for variable 'memB_reg[16]' [C:/Users/konto/Documents/embeded/lab4/accelero.v:67]
+WARNING: [Synth 8-327] inferring latch for variable 'memB_reg[17]' [C:/Users/konto/Documents/embeded/lab4/accelero.v:67]
+WARNING: [Synth 8-327] inferring latch for variable 'memB_reg[18]' [C:/Users/konto/Documents/embeded/lab4/accelero.v:67]
+WARNING: [Synth 8-327] inferring latch for variable 'memB_reg[19]' [C:/Users/konto/Documents/embeded/lab4/accelero.v:67]
+WARNING: [Synth 8-327] inferring latch for variable 'memB_reg[20]' [C:/Users/konto/Documents/embeded/lab4/accelero.v:67]
+WARNING: [Synth 8-327] inferring latch for variable 'memB_reg[21]' [C:/Users/konto/Documents/embeded/lab4/accelero.v:67]
+WARNING: [Synth 8-327] inferring latch for variable 'memB_reg[22]' [C:/Users/konto/Documents/embeded/lab4/accelero.v:67]
+WARNING: [Synth 8-327] inferring latch for variable 'memB_reg[23]' [C:/Users/konto/Documents/embeded/lab4/accelero.v:67]
+WARNING: [Synth 8-327] inferring latch for variable 'memB_reg[24]' [C:/Users/konto/Documents/embeded/lab4/accelero.v:67]
+WARNING: [Synth 8-327] inferring latch for variable 'memB_reg[25]' [C:/Users/konto/Documents/embeded/lab4/accelero.v:67]
+WARNING: [Synth 8-327] inferring latch for variable 'memB_reg[26]' [C:/Users/konto/Documents/embeded/lab4/accelero.v:67]
+WARNING: [Synth 8-327] inferring latch for variable 'memB_reg[27]' [C:/Users/konto/Documents/embeded/lab4/accelero.v:67]
+WARNING: [Synth 8-327] inferring latch for variable 'memB_reg[28]' [C:/Users/konto/Documents/embeded/lab4/accelero.v:67]
+WARNING: [Synth 8-327] inferring latch for variable 'memB_reg[29]' [C:/Users/konto/Documents/embeded/lab4/accelero.v:67]
+WARNING: [Synth 8-327] inferring latch for variable 'memB_reg[30]' [C:/Users/konto/Documents/embeded/lab4/accelero.v:67]
+WARNING: [Synth 8-327] inferring latch for variable 'memB_reg[31]' [C:/Users/konto/Documents/embeded/lab4/accelero.v:67]
+WARNING: [Synth 8-327] inferring latch for variable 'ready_reg' [C:/Users/konto/Documents/embeded/lab4/accelero.v:37]
+WARNING: [Synth 8-327] inferring latch for variable 'memA_reg[0]' [C:/Users/konto/Documents/embeded/lab4/accelero.v:52]
+WARNING: [Synth 8-327] inferring latch for variable 'memA_reg[1]' [C:/Users/konto/Documents/embeded/lab4/accelero.v:52]
+WARNING: [Synth 8-327] inferring latch for variable 'memA_reg[2]' [C:/Users/konto/Documents/embeded/lab4/accelero.v:52]
+WARNING: [Synth 8-327] inferring latch for variable 'memA_reg[3]' [C:/Users/konto/Documents/embeded/lab4/accelero.v:52]
+WARNING: [Synth 8-327] inferring latch for variable 'memA_reg[4]' [C:/Users/konto/Documents/embeded/lab4/accelero.v:52]
+WARNING: [Synth 8-327] inferring latch for variable 'memA_reg[5]' [C:/Users/konto/Documents/embeded/lab4/accelero.v:52]
+WARNING: [Synth 8-327] inferring latch for variable 'memA_reg[6]' [C:/Users/konto/Documents/embeded/lab4/accelero.v:52]
+WARNING: [Synth 8-327] inferring latch for variable 'memA_reg[7]' [C:/Users/konto/Documents/embeded/lab4/accelero.v:52]
+WARNING: [Synth 8-327] inferring latch for variable 'memA_reg[8]' [C:/Users/konto/Documents/embeded/lab4/accelero.v:52]
+WARNING: [Synth 8-327] inferring latch for variable 'memA_reg[9]' [C:/Users/konto/Documents/embeded/lab4/accelero.v:52]
+WARNING: [Synth 8-327] inferring latch for variable 'memA_reg[10]' [C:/Users/konto/Documents/embeded/lab4/accelero.v:52]
+WARNING: [Synth 8-327] inferring latch for variable 'memA_reg[11]' [C:/Users/konto/Documents/embeded/lab4/accelero.v:52]
+WARNING: [Synth 8-327] inferring latch for variable 'memA_reg[12]' [C:/Users/konto/Documents/embeded/lab4/accelero.v:52]
+WARNING: [Synth 8-327] inferring latch for variable 'memA_reg[13]' [C:/Users/konto/Documents/embeded/lab4/accelero.v:52]
+WARNING: [Synth 8-327] inferring latch for variable 'memA_reg[14]' [C:/Users/konto/Documents/embeded/lab4/accelero.v:52]
+WARNING: [Synth 8-327] inferring latch for variable 'memA_reg[15]' [C:/Users/konto/Documents/embeded/lab4/accelero.v:52]
+WARNING: [Synth 8-327] inferring latch for variable 'memA_reg[16]' [C:/Users/konto/Documents/embeded/lab4/accelero.v:52]
+WARNING: [Synth 8-327] inferring latch for variable 'memA_reg[17]' [C:/Users/konto/Documents/embeded/lab4/accelero.v:52]
+WARNING: [Synth 8-327] inferring latch for variable 'memA_reg[18]' [C:/Users/konto/Documents/embeded/lab4/accelero.v:52]
+WARNING: [Synth 8-327] inferring latch for variable 'memA_reg[19]' [C:/Users/konto/Documents/embeded/lab4/accelero.v:52]
+WARNING: [Synth 8-327] inferring latch for variable 'memA_reg[20]' [C:/Users/konto/Documents/embeded/lab4/accelero.v:52]
+WARNING: [Synth 8-327] inferring latch for variable 'memA_reg[21]' [C:/Users/konto/Documents/embeded/lab4/accelero.v:52]
+WARNING: [Synth 8-327] inferring latch for variable 'memA_reg[22]' [C:/Users/konto/Documents/embeded/lab4/accelero.v:52]
+WARNING: [Synth 8-327] inferring latch for variable 'memA_reg[23]' [C:/Users/konto/Documents/embeded/lab4/accelero.v:52]
+WARNING: [Synth 8-327] inferring latch for variable 'memA_reg[24]' [C:/Users/konto/Documents/embeded/lab4/accelero.v:52]
+WARNING: [Synth 8-327] inferring latch for variable 'memA_reg[25]' [C:/Users/konto/Documents/embeded/lab4/accelero.v:52]
+WARNING: [Synth 8-327] inferring latch for variable 'memA_reg[26]' [C:/Users/konto/Documents/embeded/lab4/accelero.v:52]
+WARNING: [Synth 8-327] inferring latch for variable 'memA_reg[27]' [C:/Users/konto/Documents/embeded/lab4/accelero.v:52]
+WARNING: [Synth 8-327] inferring latch for variable 'memA_reg[28]' [C:/Users/konto/Documents/embeded/lab4/accelero.v:52]
+WARNING: [Synth 8-327] inferring latch for variable 'memA_reg[29]' [C:/Users/konto/Documents/embeded/lab4/accelero.v:52]
+WARNING: [Synth 8-327] inferring latch for variable 'memA_reg[30]' [C:/Users/konto/Documents/embeded/lab4/accelero.v:52]
+WARNING: [Synth 8-327] inferring latch for variable 'memA_reg[31]' [C:/Users/konto/Documents/embeded/lab4/accelero.v:52]
+WARNING: [Synth 8-327] inferring latch for variable 'memA_reg[32]' [C:/Users/konto/Documents/embeded/lab4/accelero.v:52]
+WARNING: [Synth 8-327] inferring latch for variable 'memA_reg[33]' [C:/Users/konto/Documents/embeded/lab4/accelero.v:52]
+WARNING: [Synth 8-327] inferring latch for variable 'memA_reg[34]' [C:/Users/konto/Documents/embeded/lab4/accelero.v:52]
+WARNING: [Synth 8-327] inferring latch for variable 'memA_reg[35]' [C:/Users/konto/Documents/embeded/lab4/accelero.v:52]
+WARNING: [Synth 8-327] inferring latch for variable 'memA_reg[36]' [C:/Users/konto/Documents/embeded/lab4/accelero.v:52]
+WARNING: [Synth 8-327] inferring latch for variable 'memA_reg[37]' [C:/Users/konto/Documents/embeded/lab4/accelero.v:52]
+WARNING: [Synth 8-327] inferring latch for variable 'memA_reg[38]' [C:/Users/konto/Documents/embeded/lab4/accelero.v:52]
+WARNING: [Synth 8-327] inferring latch for variable 'memA_reg[39]' [C:/Users/konto/Documents/embeded/lab4/accelero.v:52]
+WARNING: [Synth 8-327] inferring latch for variable 'memA_reg[40]' [C:/Users/konto/Documents/embeded/lab4/accelero.v:52]
+WARNING: [Synth 8-327] inferring latch for variable 'memA_reg[41]' [C:/Users/konto/Documents/embeded/lab4/accelero.v:52]
+WARNING: [Synth 8-327] inferring latch for variable 'memA_reg[42]' [C:/Users/konto/Documents/embeded/lab4/accelero.v:52]
+WARNING: [Synth 8-327] inferring latch for variable 'memA_reg[43]' [C:/Users/konto/Documents/embeded/lab4/accelero.v:52]
+WARNING: [Synth 8-327] inferring latch for variable 'memA_reg[44]' [C:/Users/konto/Documents/embeded/lab4/accelero.v:52]
+WARNING: [Synth 8-327] inferring latch for variable 'memA_reg[45]' [C:/Users/konto/Documents/embeded/lab4/accelero.v:52]
+WARNING: [Synth 8-327] inferring latch for variable 'memA_reg[46]' [C:/Users/konto/Documents/embeded/lab4/accelero.v:52]
+WARNING: [Synth 8-327] inferring latch for variable 'memA_reg[47]' [C:/Users/konto/Documents/embeded/lab4/accelero.v:52]
+WARNING: [Synth 8-327] inferring latch for variable 'memA_reg[48]' [C:/Users/konto/Documents/embeded/lab4/accelero.v:52]
+WARNING: [Synth 8-327] inferring latch for variable 'memA_reg[49]' [C:/Users/konto/Documents/embeded/lab4/accelero.v:52]
+WARNING: [Synth 8-327] inferring latch for variable 'memA_reg[50]' [C:/Users/konto/Documents/embeded/lab4/accelero.v:52]
+WARNING: [Synth 8-327] inferring latch for variable 'memA_reg[51]' [C:/Users/konto/Documents/embeded/lab4/accelero.v:52]
+WARNING: [Synth 8-327] inferring latch for variable 'memA_reg[52]' [C:/Users/konto/Documents/embeded/lab4/accelero.v:52]
+WARNING: [Synth 8-327] inferring latch for variable 'memA_reg[53]' [C:/Users/konto/Documents/embeded/lab4/accelero.v:52]
+WARNING: [Synth 8-327] inferring latch for variable 'memA_reg[54]' [C:/Users/konto/Documents/embeded/lab4/accelero.v:52]
+WARNING: [Synth 8-327] inferring latch for variable 'memA_reg[55]' [C:/Users/konto/Documents/embeded/lab4/accelero.v:52]
+WARNING: [Synth 8-327] inferring latch for variable 'memA_reg[56]' [C:/Users/konto/Documents/embeded/lab4/accelero.v:52]
+WARNING: [Synth 8-327] inferring latch for variable 'memA_reg[57]' [C:/Users/konto/Documents/embeded/lab4/accelero.v:52]
+WARNING: [Synth 8-327] inferring latch for variable 'memA_reg[58]' [C:/Users/konto/Documents/embeded/lab4/accelero.v:52]
+WARNING: [Synth 8-327] inferring latch for variable 'memA_reg[59]' [C:/Users/konto/Documents/embeded/lab4/accelero.v:52]
+WARNING: [Synth 8-327] inferring latch for variable 'memA_reg[60]' [C:/Users/konto/Documents/embeded/lab4/accelero.v:52]
+WARNING: [Synth 8-327] inferring latch for variable 'memA_reg[61]' [C:/Users/konto/Documents/embeded/lab4/accelero.v:52]
+WARNING: [Synth 8-327] inferring latch for variable 'memA_reg[62]' [C:/Users/konto/Documents/embeded/lab4/accelero.v:52]
+WARNING: [Synth 8-327] inferring latch for variable 'memA_reg[63]' [C:/Users/konto/Documents/embeded/lab4/accelero.v:52]
+WARNING: [Synth 8-327] inferring latch for variable 'memA_reg[64]' [C:/Users/konto/Documents/embeded/lab4/accelero.v:52]
+WARNING: [Synth 8-327] inferring latch for variable 'memA_reg[65]' [C:/Users/konto/Documents/embeded/lab4/accelero.v:52]
+INFO: [Common 17-14] Message 'Synth 8-327' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:52 ; elapsed = 00:01:16 . Memory (MB): peak = 592.094 ; gain = 381.441
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+--------------+------------+----------+
+|      |RTL Partition |Replication |Instances |
++------+--------------+------------+----------+
+|1     |muxpart       |           1|     32736|
+|2     |accelero__GB1 |           1|      2720|
+|3     |accelero__GB2 |           1|      9783|
+|4     |accelero__GB3 |           1|     13120|
+|5     |accelero__GB4 |           1|     18085|
+|6     |accelero__GB5 |           1|     30600|
+|7     |accelero__GB6 |           1|     25696|
+|8     |accelero__GB7 |           1|     24896|
+|9     |accelero__GB8 |           1|     16448|
++------+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Multipliers : 
+	                 3x32  Multipliers := 1     
+	                32x32  Multipliers := 1     
++---Muxes : 
+	   4 Input     32 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 1     
+	   4 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1027  
+	   4 Input      1 Bit        Muxes := 1060  
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module accelero 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Multipliers : 
+	                 3x32  Multipliers := 1     
+	                32x32  Multipliers := 1     
++---Muxes : 
+	   4 Input     32 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 1     
+	   4 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1027  
+	   4 Input      1 Bit        Muxes := 1060  
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5580] Multithreading enabled for synth_design using a maximum of 2 processes.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3331] design accelero has unconnected port Y[1550]
+WARNING: [Synth 8-3331] design accelero has unconnected port Y[1549]
+WARNING: [Synth 8-3331] design accelero has unconnected port Y[1548]
+WARNING: [Synth 8-3331] design accelero has unconnected port Y[1547]
+WARNING: [Synth 8-3331] design accelero has unconnected port Y[1546]
+WARNING: [Synth 8-3331] design accelero has unconnected port Y[1545]
+WARNING: [Synth 8-3331] design accelero has unconnected port Y[1544]
+WARNING: [Synth 8-3331] design accelero has unconnected port Y[1543]
+WARNING: [Synth 8-3331] design accelero has unconnected port Y[1542]
+WARNING: [Synth 8-3331] design accelero has unconnected port Y[1541]
+WARNING: [Synth 8-3331] design accelero has unconnected port Y[1540]
+WARNING: [Synth 8-3331] design accelero has unconnected port Y[1539]
+WARNING: [Synth 8-3331] design accelero has unconnected port Y[1538]
+WARNING: [Synth 8-3331] design accelero has unconnected port Y[1537]
+WARNING: [Synth 8-3331] design accelero has unconnected port Y[1536]
+WARNING: [Synth 8-3331] design accelero has unconnected port Y[1535]
+WARNING: [Synth 8-3331] design accelero has unconnected port Y[1534]
+WARNING: [Synth 8-3331] design accelero has unconnected port Y[1533]
+WARNING: [Synth 8-3331] design accelero has unconnected port Y[1532]
+WARNING: [Synth 8-3331] design accelero has unconnected port Y[1531]
+WARNING: [Synth 8-3331] design accelero has unconnected port Y[1530]
+WARNING: [Synth 8-3331] design accelero has unconnected port Y[1529]
+WARNING: [Synth 8-3331] design accelero has unconnected port Y[1528]
+WARNING: [Synth 8-3331] design accelero has unconnected port Y[1527]
+WARNING: [Synth 8-3331] design accelero has unconnected port Y[1526]
+WARNING: [Synth 8-3331] design accelero has unconnected port Y[1525]
+WARNING: [Synth 8-3331] design accelero has unconnected port Y[1524]
+WARNING: [Synth 8-3331] design accelero has unconnected port Y[1523]
+WARNING: [Synth 8-3331] design accelero has unconnected port Y[1522]
+WARNING: [Synth 8-3331] design accelero has unconnected port Y[1521]
+WARNING: [Synth 8-3331] design accelero has unconnected port Y[1520]
+WARNING: [Synth 8-3331] design accelero has unconnected port Y[1519]
+WARNING: [Synth 8-3331] design accelero has unconnected port Y[1518]
+WARNING: [Synth 8-3331] design accelero has unconnected port Y[1517]
+WARNING: [Synth 8-3331] design accelero has unconnected port Y[1516]
+WARNING: [Synth 8-3331] design accelero has unconnected port Y[1515]
+WARNING: [Synth 8-3331] design accelero has unconnected port Y[1514]
+WARNING: [Synth 8-3331] design accelero has unconnected port Y[1513]
+WARNING: [Synth 8-3331] design accelero has unconnected port Y[1512]
+WARNING: [Synth 8-3331] design accelero has unconnected port Y[1511]
+WARNING: [Synth 8-3331] design accelero has unconnected port Y[1510]
+WARNING: [Synth 8-3331] design accelero has unconnected port Y[1509]
+WARNING: [Synth 8-3331] design accelero has unconnected port Y[1508]
+WARNING: [Synth 8-3331] design accelero has unconnected port Y[1507]
+WARNING: [Synth 8-3331] design accelero has unconnected port Y[1506]
+WARNING: [Synth 8-3331] design accelero has unconnected port Y[1505]
+WARNING: [Synth 8-3331] design accelero has unconnected port Y[1504]
+WARNING: [Synth 8-3331] design accelero has unconnected port Y[1503]
+WARNING: [Synth 8-3331] design accelero has unconnected port Y[1502]
+WARNING: [Synth 8-3331] design accelero has unconnected port Y[1501]
+WARNING: [Synth 8-3331] design accelero has unconnected port Y[1500]
+WARNING: [Synth 8-3331] design accelero has unconnected port Y[1499]
+WARNING: [Synth 8-3331] design accelero has unconnected port Y[1498]
+WARNING: [Synth 8-3331] design accelero has unconnected port Y[1497]
+WARNING: [Synth 8-3331] design accelero has unconnected port Y[1496]
+WARNING: [Synth 8-3331] design accelero has unconnected port Y[1495]
+WARNING: [Synth 8-3331] design accelero has unconnected port Y[1494]
+WARNING: [Synth 8-3331] design accelero has unconnected port Y[1493]
+WARNING: [Synth 8-3331] design accelero has unconnected port Y[1492]
+WARNING: [Synth 8-3331] design accelero has unconnected port Y[1491]
+WARNING: [Synth 8-3331] design accelero has unconnected port Y[1490]
+WARNING: [Synth 8-3331] design accelero has unconnected port Y[1489]
+WARNING: [Synth 8-3331] design accelero has unconnected port Y[1488]
+WARNING: [Synth 8-3331] design accelero has unconnected port Y[1487]
+WARNING: [Synth 8-3331] design accelero has unconnected port Y[1486]
+WARNING: [Synth 8-3331] design accelero has unconnected port Y[1485]
+WARNING: [Synth 8-3331] design accelero has unconnected port Y[1484]
+WARNING: [Synth 8-3331] design accelero has unconnected port Y[1483]
+WARNING: [Synth 8-3331] design accelero has unconnected port Y[1482]
+WARNING: [Synth 8-3331] design accelero has unconnected port Y[1481]
+WARNING: [Synth 8-3331] design accelero has unconnected port Y[1480]
+WARNING: [Synth 8-3331] design accelero has unconnected port Y[1479]
+WARNING: [Synth 8-3331] design accelero has unconnected port Y[1478]
+WARNING: [Synth 8-3331] design accelero has unconnected port Y[1477]
+WARNING: [Synth 8-3331] design accelero has unconnected port Y[1476]
+WARNING: [Synth 8-3331] design accelero has unconnected port Y[1475]
+WARNING: [Synth 8-3331] design accelero has unconnected port Y[1474]
+WARNING: [Synth 8-3331] design accelero has unconnected port Y[1473]
+WARNING: [Synth 8-3331] design accelero has unconnected port Y[1472]
+WARNING: [Synth 8-3331] design accelero has unconnected port Y[1471]
+WARNING: [Synth 8-3331] design accelero has unconnected port Y[1470]
+WARNING: [Synth 8-3331] design accelero has unconnected port Y[1469]
+WARNING: [Synth 8-3331] design accelero has unconnected port Y[1468]
+WARNING: [Synth 8-3331] design accelero has unconnected port Y[1467]
+WARNING: [Synth 8-3331] design accelero has unconnected port Y[1466]
+WARNING: [Synth 8-3331] design accelero has unconnected port Y[1465]
+WARNING: [Synth 8-3331] design accelero has unconnected port Y[1464]
+WARNING: [Synth 8-3331] design accelero has unconnected port Y[1463]
+WARNING: [Synth 8-3331] design accelero has unconnected port Y[1462]
+WARNING: [Synth 8-3331] design accelero has unconnected port Y[1461]
+WARNING: [Synth 8-3331] design accelero has unconnected port Y[1460]
+WARNING: [Synth 8-3331] design accelero has unconnected port Y[1459]
+WARNING: [Synth 8-3331] design accelero has unconnected port Y[1458]
+WARNING: [Synth 8-3331] design accelero has unconnected port Y[1457]
+WARNING: [Synth 8-3331] design accelero has unconnected port Y[1456]
+WARNING: [Synth 8-3331] design accelero has unconnected port Y[1455]
+WARNING: [Synth 8-3331] design accelero has unconnected port Y[1454]
+WARNING: [Synth 8-3331] design accelero has unconnected port Y[1453]
+WARNING: [Synth 8-3331] design accelero has unconnected port Y[1452]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Common 17-14] Message 'Synth 8-5545' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Common 17-14] Message 'Synth 8-5545' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/konto/Documents/embeded/lab4/accelero.v:67]
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+WARNING: [Synth 8-3917] design accelero__GB5 has port P[4] driven by constant 0
+WARNING: [Synth 8-3917] design accelero__GB5 has port P[3] driven by constant 0
+WARNING: [Synth 8-3917] design accelero__GB5 has port P[2] driven by constant 0
+WARNING: [Synth 8-3917] design accelero__GB5 has port P[1] driven by constant 0
+WARNING: [Synth 8-3917] design accelero__GB5 has port P[0] driven by constant 0
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[22] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[23] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[26] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[27] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[33] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[34] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[35] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[36] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[37] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[38] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[39] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[40] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[41] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[42] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[43] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[44] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[45] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[46] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[47] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[48] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[49] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[50] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[51] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[52] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[53] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[54] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[55] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[56] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[57] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[58] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[59] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[60] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[61] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[62] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[63] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[65] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[66] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[67] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[68] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[69] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[70] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[71] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[72] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[73] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[74] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[75] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[76] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[77] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[78] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[79] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[80] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[81] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[82] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[83] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[84] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[85] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[86] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[87] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[88] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[89] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[90] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[91] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[92] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[93] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[94] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[95] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[97] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[98] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[99] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[100] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[101] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[102] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Y_reg[103] )
+INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:49 ; elapsed = 00:04:17 . Memory (MB): peak = 634.250 ; gain = 423.598
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping  Report (see note below)
++--------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name   | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++--------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|accelero__GB5 | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|accelero__GB5 | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|accelero__GB5 | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|accelero__GB5 | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++--------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+--------------+------------+----------+
+|      |RTL Partition |Replication |Instances |
++------+--------------+------------+----------+
+|1     |muxpart       |           1|     32736|
+|2     |accelero__GB1 |           1|      2720|
+|3     |accelero__GB2 |           1|      7938|
+|4     |accelero__GB3 |           1|     13120|
+|5     |accelero__GB4 |           1|      9711|
+|6     |accelero__GB5 |           1|      2073|
+|7     |accelero__GB6 |           1|      1733|
+|8     |accelero__GB7 |           1|      1925|
+|9     |accelero__GB8 |           1|      1328|
++------+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:49 ; elapsed = 00:04:18 . Memory (MB): peak = 634.250 ; gain = 423.598
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+--------------+------------+----------+
+|      |RTL Partition |Replication |Instances |
++------+--------------+------------+----------+
+|1     |muxpart       |           1|     32736|
+|2     |accelero__GB1 |           1|      2720|
+|3     |accelero__GB2 |           1|      7938|
+|4     |accelero__GB3 |           1|     13120|
+|5     |accelero__GB4 |           1|      9711|
+|6     |accelero__GB5 |           1|      2073|
+|7     |accelero__GB6 |           1|      1733|
+|8     |accelero__GB7 |           1|      1925|
+|9     |accelero__GB8 |           1|      1328|
++------+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3332] Sequential element (memB_reg[31][31]) is unused and will be removed from module accelero.
+WARNING: [Synth 8-3332] Sequential element (memB_reg[30][31]) is unused and will be removed from module accelero.
+WARNING: [Synth 8-3332] Sequential element (memB_reg[29][31]) is unused and will be removed from module accelero.
+WARNING: [Synth 8-3332] Sequential element (memB_reg[28][31]) is unused and will be removed from module accelero.
+WARNING: [Synth 8-3332] Sequential element (memB_reg[27][31]) is unused and will be removed from module accelero.
+WARNING: [Synth 8-3332] Sequential element (memB_reg[26][31]) is unused and will be removed from module accelero.
+WARNING: [Synth 8-3332] Sequential element (memB_reg[25][31]) is unused and will be removed from module accelero.
+WARNING: [Synth 8-3332] Sequential element (memB_reg[24][31]) is unused and will be removed from module accelero.
+WARNING: [Synth 8-3332] Sequential element (memB_reg[23][31]) is unused and will be removed from module accelero.
+WARNING: [Synth 8-3332] Sequential element (memB_reg[22][31]) is unused and will be removed from module accelero.
+WARNING: [Synth 8-3332] Sequential element (memB_reg[21][31]) is unused and will be removed from module accelero.
+WARNING: [Synth 8-3332] Sequential element (memB_reg[20][31]) is unused and will be removed from module accelero.
+WARNING: [Synth 8-3332] Sequential element (memB_reg[19][31]) is unused and will be removed from module accelero.
+WARNING: [Synth 8-3332] Sequential element (memB_reg[18][31]) is unused and will be removed from module accelero.
+WARNING: [Synth 8-3332] Sequential element (memB_reg[17][31]) is unused and will be removed from module accelero.
+WARNING: [Synth 8-3332] Sequential element (memB_reg[16][31]) is unused and will be removed from module accelero.
+WARNING: [Synth 8-3332] Sequential element (memB_reg[15][31]) is unused and will be removed from module accelero.
+WARNING: [Synth 8-3332] Sequential element (memB_reg[14][31]) is unused and will be removed from module accelero.
+WARNING: [Synth 8-3332] Sequential element (memB_reg[13][31]) is unused and will be removed from module accelero.
+WARNING: [Synth 8-3332] Sequential element (memB_reg[12][31]) is unused and will be removed from module accelero.
+WARNING: [Synth 8-3332] Sequential element (memB_reg[11][31]) is unused and will be removed from module accelero.
+WARNING: [Synth 8-3332] Sequential element (memB_reg[10][31]) is unused and will be removed from module accelero.
+WARNING: [Synth 8-3332] Sequential element (memB_reg[9][31]) is unused and will be removed from module accelero.
+WARNING: [Synth 8-3332] Sequential element (memB_reg[8][31]) is unused and will be removed from module accelero.
+WARNING: [Synth 8-3332] Sequential element (memB_reg[7][31]) is unused and will be removed from module accelero.
+WARNING: [Synth 8-3332] Sequential element (memB_reg[6][31]) is unused and will be removed from module accelero.
+WARNING: [Synth 8-3332] Sequential element (memB_reg[5][31]) is unused and will be removed from module accelero.
+WARNING: [Synth 8-3332] Sequential element (memB_reg[4][31]) is unused and will be removed from module accelero.
+WARNING: [Synth 8-3332] Sequential element (memB_reg[3][31]) is unused and will be removed from module accelero.
+WARNING: [Synth 8-3332] Sequential element (memB_reg[2][31]) is unused and will be removed from module accelero.
+WARNING: [Synth 8-3332] Sequential element (memB_reg[1][31]) is unused and will be removed from module accelero.
+WARNING: [Synth 8-3332] Sequential element (memB_reg[0][31]) is unused and will be removed from module accelero.
+WARNING: [Synth 8-3332] Sequential element (Y_reg[992]) is unused and will be removed from module accelero.
+WARNING: [Synth 8-3332] Sequential element (Y_reg[960]) is unused and will be removed from module accelero.
+WARNING: [Synth 8-3332] Sequential element (Y_reg[928]) is unused and will be removed from module accelero.
+WARNING: [Synth 8-3332] Sequential element (Y_reg[896]) is unused and will be removed from module accelero.
+WARNING: [Synth 8-3332] Sequential element (Y_reg[864]) is unused and will be removed from module accelero.
+WARNING: [Synth 8-3332] Sequential element (Y_reg[832]) is unused and will be removed from module accelero.
+WARNING: [Synth 8-3332] Sequential element (Y_reg[800]) is unused and will be removed from module accelero.
+WARNING: [Synth 8-3332] Sequential element (Y_reg[768]) is unused and will be removed from module accelero.
+WARNING: [Synth 8-3332] Sequential element (Y_reg[736]) is unused and will be removed from module accelero.
+WARNING: [Synth 8-3332] Sequential element (Y_reg[704]) is unused and will be removed from module accelero.
+WARNING: [Synth 8-3332] Sequential element (Y_reg[672]) is unused and will be removed from module accelero.
+WARNING: [Synth 8-3332] Sequential element (Y_reg[640]) is unused and will be removed from module accelero.
+WARNING: [Synth 8-3332] Sequential element (Y_reg[608]) is unused and will be removed from module accelero.
+WARNING: [Synth 8-3332] Sequential element (Y_reg[576]) is unused and will be removed from module accelero.
+WARNING: [Synth 8-3332] Sequential element (Y_reg[544]) is unused and will be removed from module accelero.
+WARNING: [Synth 8-3332] Sequential element (Y_reg[512]) is unused and will be removed from module accelero.
+WARNING: [Synth 8-3332] Sequential element (Y_reg[480]) is unused and will be removed from module accelero.
+WARNING: [Synth 8-3332] Sequential element (Y_reg[448]) is unused and will be removed from module accelero.
+WARNING: [Synth 8-3332] Sequential element (Y_reg[416]) is unused and will be removed from module accelero.
+WARNING: [Synth 8-3332] Sequential element (Y_reg[384]) is unused and will be removed from module accelero.
+WARNING: [Synth 8-3332] Sequential element (Y_reg[352]) is unused and will be removed from module accelero.
+WARNING: [Synth 8-3332] Sequential element (Y_reg[320]) is unused and will be removed from module accelero.
+WARNING: [Synth 8-3332] Sequential element (Y_reg[288]) is unused and will be removed from module accelero.
+WARNING: [Synth 8-3332] Sequential element (Y_reg[256]) is unused and will be removed from module accelero.
+WARNING: [Synth 8-3332] Sequential element (Y_reg[224]) is unused and will be removed from module accelero.
+WARNING: [Synth 8-3332] Sequential element (Y_reg[192]) is unused and will be removed from module accelero.
+WARNING: [Synth 8-3332] Sequential element (Y_reg[160]) is unused and will be removed from module accelero.
+WARNING: [Synth 8-3332] Sequential element (Y_reg[128]) is unused and will be removed from module accelero.
+WARNING: [Synth 8-3332] Sequential element (Y_reg[96]) is unused and will be removed from module accelero.
+WARNING: [Synth 8-3332] Sequential element (Y_reg[64]) is unused and will be removed from module accelero.
+WARNING: [Synth 8-3332] Sequential element (Y_reg[32]) is unused and will be removed from module accelero.
+WARNING: [Synth 8-3332] Sequential element (Y_reg[0]) is unused and will be removed from module accelero.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:57 ; elapsed = 00:04:28 . Memory (MB): peak = 652.238 ; gain = 441.586
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+--------------+------------+----------+
+|      |RTL Partition |Replication |Instances |
++------+--------------+------------+----------+
+|1     |muxpart       |           1|     15264|
+|2     |accelero__GB3 |           1|     13120|
++------+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3332] Sequential element (memA_reg[230][31]) is unused and will be removed from module accelero.
+WARNING: [Synth 8-3332] Sequential element (memA_reg[230][30]) is unused and will be removed from module accelero.
+WARNING: [Synth 8-3332] Sequential element (memA_reg[230][29]) is unused and will be removed from module accelero.
+WARNING: [Synth 8-3332] Sequential element (memA_reg[230][28]) is unused and will be removed from module accelero.
+WARNING: [Synth 8-3332] Sequential element (memA_reg[230][27]) is unused and will be removed from module accelero.
+WARNING: [Synth 8-3332] Sequential element (memA_reg[230][26]) is unused and will be removed from module accelero.
+WARNING: [Synth 8-3332] Sequential element (memA_reg[230][25]) is unused and will be removed from module accelero.
+WARNING: [Synth 8-3332] Sequential element (memA_reg[230][24]) is unused and will be removed from module accelero.
+WARNING: [Synth 8-3332] Sequential element (memA_reg[230][23]) is unused and will be removed from module accelero.
+WARNING: [Synth 8-3332] Sequential element (memA_reg[230][22]) is unused and will be removed from module accelero.
+WARNING: [Synth 8-3332] Sequential element (memA_reg[230][21]) is unused and will be removed from module accelero.
+WARNING: [Synth 8-3332] Sequential element (memA_reg[230][20]) is unused and will be removed from module accelero.
+WARNING: [Synth 8-3332] Sequential element (memA_reg[230][19]) is unused and will be removed from module accelero.
+WARNING: [Synth 8-3332] Sequential element (memA_reg[230][18]) is unused and will be removed from module accelero.
+WARNING: [Synth 8-3332] Sequential element (memA_reg[230][17]) is unused and will be removed from module accelero.
+WARNING: [Synth 8-3332] Sequential element (memA_reg[230][16]) is unused and will be removed from module accelero.
+WARNING: [Synth 8-3332] Sequential element (memA_reg[230][15]) is unused and will be removed from module accelero.
+WARNING: [Synth 8-3332] Sequential element (memA_reg[230][14]) is unused and will be removed from module accelero.
+WARNING: [Synth 8-3332] Sequential element (memA_reg[230][13]) is unused and will be removed from module accelero.
+WARNING: [Synth 8-3332] Sequential element (memA_reg[230][12]) is unused and will be removed from module accelero.
+WARNING: [Synth 8-3332] Sequential element (memA_reg[230][11]) is unused and will be removed from module accelero.
+WARNING: [Synth 8-3332] Sequential element (memA_reg[230][10]) is unused and will be removed from module accelero.
+WARNING: [Synth 8-3332] Sequential element (memA_reg[230][9]) is unused and will be removed from module accelero.
+WARNING: [Synth 8-3332] Sequential element (memA_reg[230][8]) is unused and will be removed from module accelero.
+WARNING: [Synth 8-3332] Sequential element (memA_reg[230][7]) is unused and will be removed from module accelero.
+WARNING: [Synth 8-3332] Sequential element (memA_reg[230][6]) is unused and will be removed from module accelero.
+WARNING: [Synth 8-3332] Sequential element (memA_reg[230][5]) is unused and will be removed from module accelero.
+WARNING: [Synth 8-3332] Sequential element (memA_reg[230][4]) is unused and will be removed from module accelero.
+WARNING: [Synth 8-3332] Sequential element (memA_reg[230][3]) is unused and will be removed from module accelero.
+WARNING: [Synth 8-3332] Sequential element (memA_reg[230][2]) is unused and will be removed from module accelero.
+WARNING: [Synth 8-3332] Sequential element (memA_reg[230][1]) is unused and will be removed from module accelero.
+WARNING: [Synth 8-3332] Sequential element (memA_reg[230][0]) is unused and will be removed from module accelero.
+WARNING: [Synth 8-3332] Sequential element (memA_reg[155][31]) is unused and will be removed from module accelero.
+WARNING: [Synth 8-3332] Sequential element (memA_reg[155][30]) is unused and will be removed from module accelero.
+WARNING: [Synth 8-3332] Sequential element (memA_reg[155][29]) is unused and will be removed from module accelero.
+WARNING: [Synth 8-3332] Sequential element (memA_reg[155][28]) is unused and will be removed from module accelero.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:02:01 ; elapsed = 00:04:34 . Memory (MB): peak = 652.238 ; gain = 441.586
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:01 ; elapsed = 00:04:34 . Memory (MB): peak = 652.238 ; gain = 441.586
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:01 ; elapsed = 00:04:35 . Memory (MB): peak = 652.238 ; gain = 441.586
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:01 ; elapsed = 00:04:35 . Memory (MB): peak = 652.238 ; gain = 441.586
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:01 ; elapsed = 00:04:35 . Memory (MB): peak = 652.238 ; gain = 441.586
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:01 ; elapsed = 00:04:35 . Memory (MB): peak = 652.238 ; gain = 441.586
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+------+------+
+|      |Cell  |Count |
++------+------+------+
+|1     |OBUF  |  1024|
+|2     |OBUFT |   527|
++------+------+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |  1551|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:01 ; elapsed = 00:04:35 . Memory (MB): peak = 652.238 ; gain = 441.586
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 34505 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:55 ; elapsed = 00:04:33 . Memory (MB): peak = 652.238 ; gain = 402.621
+Synthesis Optimization Complete : Time (s): cpu = 00:02:02 ; elapsed = 00:04:57 . Memory (MB): peak = 652.238 ; gain = 441.586
+INFO: [Project 1-571] Translating synthesized netlist
+WARNING: [Netlist 29-101] Netlist 'accelero' is not ideal for floorplanning, since the cellview 'accelero' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+221 Infos, 314 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:59 ; elapsed = 00:04:53 . Memory (MB): peak = 652.238 ; gain = 412.488
+INFO: [Common 17-1381] The checkpoint 'C:/Users/konto/Documents/embeded/lab4a/lab4a.runs/synth_1/accelero.dcp' has been generated.
+report_utilization: Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 652.238 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri Apr 28 11:45:22 2017...

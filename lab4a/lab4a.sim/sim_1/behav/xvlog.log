@@ -1,0 +1,6 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/konto/Documents/embeded/lab4/accelero.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module accelero
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/konto/Documents/embeded/lab4a/lab4a.srcs/sim_1/new/Tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/konto/Documents/embeded/lab4a/lab4a.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
