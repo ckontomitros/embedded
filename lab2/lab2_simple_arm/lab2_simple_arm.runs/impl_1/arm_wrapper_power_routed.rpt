@@ -1,7 +1,7 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
-| Date             : Wed Mar 08 19:46:52 2017
+| Date             : Wed May 24 21:38:22 2017
 | Host             : chris running 64-bit major release  (build 9200)
 | Command          : report_power -file arm_wrapper_power_routed.rpt -pb arm_wrapper_power_summary_routed.pb -rpx arm_wrapper_power_routed.rpx
 | Design           : arm_wrapper
@@ -30,8 +30,8 @@ Table of Contents
 ----------
 
 +--------------------------+-------+
-| Total On-Chip Power (W)  | 1.691 |
-| Dynamic (W)              | 1.534 |
+| Total On-Chip Power (W)  | 1.692 |
+| Dynamic (W)              | 1.535 |
 | Device Static (W)        | 0.157 |
 | Effective TJA (C/W)      | 11.5  |
 | Max Ambient (C)          | 65.5  |
@@ -60,7 +60,7 @@ Table of Contents
 | I/O                     |    <0.001 |       13 |       200 |            6.50 |
 | PS7                     |     1.527 |        1 |       --- |             --- |
 | Static Power            |     0.157 |          |           |                 |
-| Total                   |     1.691 |          |           |                 |
+| Total                   |     1.692 |          |           |                 |
 +-------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -84,11 +84,11 @@ Table of Contents
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
 | MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vccpint   |       1.000 |     0.753 |       0.723 |      0.030 |
-| Vccpaux   |       1.800 |     0.060 |       0.050 |      0.010 |
+| Vccpaux   |       1.800 |     0.061 |       0.050 |      0.010 |
 | Vccpll    |       1.800 |     0.018 |       0.015 |      0.003 |
 | Vcco_ddr  |       1.500 |     0.459 |       0.457 |      0.002 |
 | Vcco_mio0 |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vcco_mio1 |       1.800 |     0.001 |       0.000 |      0.001 |
+| Vcco_mio1 |       1.800 |     0.002 |       0.001 |      0.001 |
 | Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
 +-----------+-------------+-----------+-------------+------------+
 
@@ -146,8 +146,8 @@ Table of Contents
 +--------------------------------------------------+-----------+
 | Name                                             | Power (W) |
 +--------------------------------------------------+-----------+
-| arm_wrapper                                      |     1.534 |
-|   arm_i                                          |     1.534 |
+| arm_wrapper                                      |     1.535 |
+|   arm_i                                          |     1.535 |
 |     btns_5bit                                    |    <0.001 |
 |       U0                                         |    <0.001 |
 |         AXI_LITE_IPIF_I                          |    <0.001 |
@@ -155,8 +155,8 @@ Table of Contents
 |             I_DECODER                            |    <0.001 |
 |         gpio_core_1                              |    <0.001 |
 |           Not_Dual.INPUT_DOUBLE_REGS3            |    <0.001 |
-|     processing_system7_0                         |     1.527 |
-|       inst                                       |     1.527 |
+|     processing_system7_0                         |     1.528 |
+|       inst                                       |     1.528 |
 |     ps7_0_axi_periph                             |     0.006 |
 |       s00_couplers                               |     0.005 |
 |         auto_pc                                  |     0.005 |

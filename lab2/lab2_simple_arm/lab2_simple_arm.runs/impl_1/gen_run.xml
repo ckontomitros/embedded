@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z020clg484-1" LaunchTime="1488995052">
-  <File Type="PLACE-DCP" Name="arm_wrapper_placed.dcp"/>
-  <File Type="PA-DCP" Name="arm_wrapper.dcp"/>
+<GenRun Id="impl_1" LaunchPart="xc7z020clg484-1" LaunchTime="1495650618">
+  <File Type="PWROPT-DRC" Name="arm_wrapper_drc_pwropted.rpt"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="arm_wrapper_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="arm_wrapper_timing_summary_init.rpt"/>
   <File Type="ROUTE-PWR-RPX" Name="arm_wrapper_power_routed.rpx"/>
@@ -12,8 +11,8 @@
   <File Type="OPT-DRC" Name="arm_wrapper_drc_opted.rpt"/>
   <File Type="OPT-TIMING" Name="arm_wrapper_timing_summary_opted.rpt"/>
   <File Type="PWROPT-DCP" Name="arm_wrapper_pwropt.dcp"/>
-  <File Type="PWROPT-DRC" Name="arm_wrapper_drc_pwropted.rpt"/>
   <File Type="PWROPT-TIMING" Name="arm_wrapper_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="arm_wrapper_placed.dcp"/>
   <File Type="PLACE-IO" Name="arm_wrapper_io_placed.rpt"/>
   <File Type="PLACE-CLK" Name="arm_wrapper_clock_utilization_placed.rpt"/>
   <File Type="PLACE-UTIL" Name="arm_wrapper_utilization_placed.rpt"/>
@@ -90,9 +89,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016">
-      <Desc>Default settings for Implementation.</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016"/>
     <Step Id="init_design"/>
     <Step Id="opt_design"/>
     <Step Id="power_opt_design"/>
@@ -103,7 +100,6 @@
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="arm_auto_pc_0"/>
   <BlockFileSet Type="BlockSrcs" Name="arm_processing_system7_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="arm_axi_gpio_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="arm_axi_gpio_0_2"/>

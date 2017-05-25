@@ -42,8 +42,15 @@ void BTN_Intr_Handler(void *InstancePtr)
 	btn_value = XGpio_DiscreteRead(&BTNInst, 1);
 	// Increment counter based on button value
 	// Reset if center button pressed
-        // Place your code here
+        // Place your code herec
         // .....
+	if (btn_value!=1)
+	{
+		counter_value++;
+	}
+	else{
+		counter=0;
+	}
 
     (void)XGpio_InterruptClear(&BTNInst, BTN_INT);
 

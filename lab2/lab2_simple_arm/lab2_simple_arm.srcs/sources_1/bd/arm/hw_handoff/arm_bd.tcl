@@ -181,7 +181,7 @@ CONFIG.PCW_ACT_FPGA2_PERIPHERAL_FREQMHZ {10.000000} \
 CONFIG.PCW_ACT_FPGA3_PERIPHERAL_FREQMHZ {10.000000} \
 CONFIG.PCW_ACT_PCAP_PERIPHERAL_FREQMHZ {200.000000} \
 CONFIG.PCW_ACT_QSPI_PERIPHERAL_FREQMHZ {10.000000} \
-CONFIG.PCW_ACT_SDIO_PERIPHERAL_FREQMHZ {10.000000} \
+CONFIG.PCW_ACT_SDIO_PERIPHERAL_FREQMHZ {50.000000} \
 CONFIG.PCW_ACT_SMC_PERIPHERAL_FREQMHZ {10.000000} \
 CONFIG.PCW_ACT_SPI_PERIPHERAL_FREQMHZ {10.000000} \
 CONFIG.PCW_ACT_TPIU_PERIPHERAL_FREQMHZ {200.000000} \
@@ -262,6 +262,7 @@ CONFIG.PCW_ENET_RESET_POLARITY {Active Low} \
 CONFIG.PCW_ENET_RESET_SELECT {<Select>} \
 CONFIG.PCW_EN_4K_TIMER {0} \
 CONFIG.PCW_EN_GPIO {0} \
+CONFIG.PCW_EN_SDIO0 {1} \
 CONFIG.PCW_EN_UART1 {1} \
 CONFIG.PCW_FCLK0_PERIPHERAL_CLKSRC {IO PLL} \
 CONFIG.PCW_FCLK0_PERIPHERAL_DIVISOR0 {4} \
@@ -281,7 +282,7 @@ CONFIG.PCW_FCLK_CLK2_BUF {FALSE} \
 CONFIG.PCW_FCLK_CLK3_BUF {FALSE} \
 CONFIG.PCW_FPGA0_PERIPHERAL_FREQMHZ {100.000000} \
 CONFIG.PCW_FPGA1_PERIPHERAL_FREQMHZ {150.000000} \
-CONFIG.PCW_FPGA2_PERIPHERAL_FREQMHZ {50.000000} \
+CONFIG.PCW_FPGA2_PERIPHERAL_FREQMHZ {50} \
 CONFIG.PCW_FPGA3_PERIPHERAL_FREQMHZ {50} \
 CONFIG.PCW_FPGA_FCLK0_ENABLE {1} \
 CONFIG.PCW_GPIO_EMIO_GPIO_ENABLE {0} \
@@ -443,38 +444,38 @@ CONFIG.PCW_MIO_3_DIRECTION {<Select>} \
 CONFIG.PCW_MIO_3_IOTYPE {<Select>} \
 CONFIG.PCW_MIO_3_PULLUP {<Select>} \
 CONFIG.PCW_MIO_3_SLEW {<Select>} \
-CONFIG.PCW_MIO_40_DIRECTION {<Select>} \
-CONFIG.PCW_MIO_40_IOTYPE {<Select>} \
-CONFIG.PCW_MIO_40_PULLUP {<Select>} \
-CONFIG.PCW_MIO_40_SLEW {<Select>} \
-CONFIG.PCW_MIO_41_DIRECTION {<Select>} \
-CONFIG.PCW_MIO_41_IOTYPE {<Select>} \
-CONFIG.PCW_MIO_41_PULLUP {<Select>} \
-CONFIG.PCW_MIO_41_SLEW {<Select>} \
-CONFIG.PCW_MIO_42_DIRECTION {<Select>} \
-CONFIG.PCW_MIO_42_IOTYPE {<Select>} \
-CONFIG.PCW_MIO_42_PULLUP {<Select>} \
-CONFIG.PCW_MIO_42_SLEW {<Select>} \
-CONFIG.PCW_MIO_43_DIRECTION {<Select>} \
-CONFIG.PCW_MIO_43_IOTYPE {<Select>} \
-CONFIG.PCW_MIO_43_PULLUP {<Select>} \
-CONFIG.PCW_MIO_43_SLEW {<Select>} \
-CONFIG.PCW_MIO_44_DIRECTION {<Select>} \
-CONFIG.PCW_MIO_44_IOTYPE {<Select>} \
-CONFIG.PCW_MIO_44_PULLUP {<Select>} \
-CONFIG.PCW_MIO_44_SLEW {<Select>} \
-CONFIG.PCW_MIO_45_DIRECTION {<Select>} \
-CONFIG.PCW_MIO_45_IOTYPE {<Select>} \
-CONFIG.PCW_MIO_45_PULLUP {<Select>} \
-CONFIG.PCW_MIO_45_SLEW {<Select>} \
-CONFIG.PCW_MIO_46_DIRECTION {<Select>} \
-CONFIG.PCW_MIO_46_IOTYPE {<Select>} \
-CONFIG.PCW_MIO_46_PULLUP {<Select>} \
-CONFIG.PCW_MIO_46_SLEW {<Select>} \
-CONFIG.PCW_MIO_47_DIRECTION {<Select>} \
-CONFIG.PCW_MIO_47_IOTYPE {<Select>} \
-CONFIG.PCW_MIO_47_PULLUP {<Select>} \
-CONFIG.PCW_MIO_47_SLEW {<Select>} \
+CONFIG.PCW_MIO_40_DIRECTION {inout} \
+CONFIG.PCW_MIO_40_IOTYPE {LVCMOS 1.8V} \
+CONFIG.PCW_MIO_40_PULLUP {disabled} \
+CONFIG.PCW_MIO_40_SLEW {fast} \
+CONFIG.PCW_MIO_41_DIRECTION {inout} \
+CONFIG.PCW_MIO_41_IOTYPE {LVCMOS 1.8V} \
+CONFIG.PCW_MIO_41_PULLUP {disabled} \
+CONFIG.PCW_MIO_41_SLEW {fast} \
+CONFIG.PCW_MIO_42_DIRECTION {inout} \
+CONFIG.PCW_MIO_42_IOTYPE {LVCMOS 1.8V} \
+CONFIG.PCW_MIO_42_PULLUP {disabled} \
+CONFIG.PCW_MIO_42_SLEW {fast} \
+CONFIG.PCW_MIO_43_DIRECTION {inout} \
+CONFIG.PCW_MIO_43_IOTYPE {LVCMOS 1.8V} \
+CONFIG.PCW_MIO_43_PULLUP {disabled} \
+CONFIG.PCW_MIO_43_SLEW {fast} \
+CONFIG.PCW_MIO_44_DIRECTION {inout} \
+CONFIG.PCW_MIO_44_IOTYPE {LVCMOS 1.8V} \
+CONFIG.PCW_MIO_44_PULLUP {disabled} \
+CONFIG.PCW_MIO_44_SLEW {fast} \
+CONFIG.PCW_MIO_45_DIRECTION {inout} \
+CONFIG.PCW_MIO_45_IOTYPE {LVCMOS 1.8V} \
+CONFIG.PCW_MIO_45_PULLUP {disabled} \
+CONFIG.PCW_MIO_45_SLEW {fast} \
+CONFIG.PCW_MIO_46_DIRECTION {in} \
+CONFIG.PCW_MIO_46_IOTYPE {LVCMOS 1.8V} \
+CONFIG.PCW_MIO_46_PULLUP {enabled} \
+CONFIG.PCW_MIO_46_SLEW {slow} \
+CONFIG.PCW_MIO_47_DIRECTION {in} \
+CONFIG.PCW_MIO_47_IOTYPE {LVCMOS 1.8V} \
+CONFIG.PCW_MIO_47_PULLUP {enabled} \
+CONFIG.PCW_MIO_47_SLEW {slow} \
 CONFIG.PCW_MIO_48_DIRECTION {out} \
 CONFIG.PCW_MIO_48_IOTYPE {LVCMOS 1.8V} \
 CONFIG.PCW_MIO_48_PULLUP {disabled} \
@@ -523,8 +524,8 @@ CONFIG.PCW_MIO_9_DIRECTION {<Select>} \
 CONFIG.PCW_MIO_9_IOTYPE {<Select>} \
 CONFIG.PCW_MIO_9_PULLUP {<Select>} \
 CONFIG.PCW_MIO_9_SLEW {<Select>} \
-CONFIG.PCW_MIO_TREE_PERIPHERALS {unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#UART 1#UART 1#unassigned#unassigned#unassigned#unassigned} \
-CONFIG.PCW_MIO_TREE_SIGNALS {unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#tx#rx#unassigned#unassigned#unassigned#unassigned} \
+CONFIG.PCW_MIO_TREE_PERIPHERALS {unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#SD 0#SD 0#SD 0#SD 0#SD 0#SD 0#SD 0#SD 0#UART 1#UART 1#unassigned#unassigned#unassigned#unassigned} \
+CONFIG.PCW_MIO_TREE_SIGNALS {unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#clk#cmd#data[0]#data[1]#data[2]#data[3]#wp#cd#tx#rx#unassigned#unassigned#unassigned#unassigned} \
 CONFIG.PCW_NAND_CYCLES_T_AR {1} \
 CONFIG.PCW_NAND_CYCLES_T_CLR {1} \
 CONFIG.PCW_NAND_CYCLES_T_RC {11} \
@@ -608,14 +609,14 @@ CONFIG.PCW_QSPI_PERIPHERAL_DIVISOR0 {1} \
 CONFIG.PCW_QSPI_PERIPHERAL_ENABLE {0} \
 CONFIG.PCW_QSPI_PERIPHERAL_FREQMHZ {200} \
 CONFIG.PCW_QSPI_QSPI_IO {<Select>} \
-CONFIG.PCW_SD0_GRP_CD_ENABLE {0} \
-CONFIG.PCW_SD0_GRP_CD_IO {<Select>} \
+CONFIG.PCW_SD0_GRP_CD_ENABLE {1} \
+CONFIG.PCW_SD0_GRP_CD_IO {MIO 47} \
 CONFIG.PCW_SD0_GRP_POW_ENABLE {0} \
 CONFIG.PCW_SD0_GRP_POW_IO {<Select>} \
-CONFIG.PCW_SD0_GRP_WP_ENABLE {0} \
-CONFIG.PCW_SD0_GRP_WP_IO {<Select>} \
-CONFIG.PCW_SD0_PERIPHERAL_ENABLE {0} \
-CONFIG.PCW_SD0_SD0_IO {<Select>} \
+CONFIG.PCW_SD0_GRP_WP_ENABLE {1} \
+CONFIG.PCW_SD0_GRP_WP_IO {MIO 46} \
+CONFIG.PCW_SD0_PERIPHERAL_ENABLE {1} \
+CONFIG.PCW_SD0_SD0_IO {MIO 40 .. 45} \
 CONFIG.PCW_SD1_GRP_CD_ENABLE {0} \
 CONFIG.PCW_SD1_GRP_CD_IO {<Select>} \
 CONFIG.PCW_SD1_GRP_POW_ENABLE {0} \
@@ -625,8 +626,9 @@ CONFIG.PCW_SD1_GRP_WP_IO {<Select>} \
 CONFIG.PCW_SD1_PERIPHERAL_ENABLE {0} \
 CONFIG.PCW_SD1_SD1_IO {<Select>} \
 CONFIG.PCW_SDIO_PERIPHERAL_CLKSRC {IO PLL} \
-CONFIG.PCW_SDIO_PERIPHERAL_DIVISOR0 {1} \
+CONFIG.PCW_SDIO_PERIPHERAL_DIVISOR0 {32} \
 CONFIG.PCW_SDIO_PERIPHERAL_FREQMHZ {50} \
+CONFIG.PCW_SDIO_PERIPHERAL_VALID {1} \
 CONFIG.PCW_SMC_PERIPHERAL_CLKSRC {IO PLL} \
 CONFIG.PCW_SMC_PERIPHERAL_DIVISOR0 {1} \
 CONFIG.PCW_SMC_PERIPHERAL_FREQMHZ {100} \
@@ -892,6 +894,7 @@ CONFIG.PCW_ENET_RESET_POLARITY.VALUE_SRC {DEFAULT} \
 CONFIG.PCW_ENET_RESET_SELECT.VALUE_SRC {DEFAULT} \
 CONFIG.PCW_EN_4K_TIMER.VALUE_SRC {DEFAULT} \
 CONFIG.PCW_EN_GPIO.VALUE_SRC {DEFAULT} \
+CONFIG.PCW_EN_SDIO0.VALUE_SRC {DEFAULT} \
 CONFIG.PCW_EN_UART1.VALUE_SRC {DEFAULT} \
 CONFIG.PCW_FCLK0_PERIPHERAL_CLKSRC.VALUE_SRC {DEFAULT} \
 CONFIG.PCW_FCLK0_PERIPHERAL_DIVISOR0.VALUE_SRC {DEFAULT} \
@@ -1074,28 +1077,16 @@ CONFIG.PCW_MIO_3_PULLUP.VALUE_SRC {DEFAULT} \
 CONFIG.PCW_MIO_3_SLEW.VALUE_SRC {DEFAULT} \
 CONFIG.PCW_MIO_40_DIRECTION.VALUE_SRC {DEFAULT} \
 CONFIG.PCW_MIO_40_IOTYPE.VALUE_SRC {DEFAULT} \
-CONFIG.PCW_MIO_40_PULLUP.VALUE_SRC {DEFAULT} \
-CONFIG.PCW_MIO_40_SLEW.VALUE_SRC {DEFAULT} \
 CONFIG.PCW_MIO_41_DIRECTION.VALUE_SRC {DEFAULT} \
 CONFIG.PCW_MIO_41_IOTYPE.VALUE_SRC {DEFAULT} \
-CONFIG.PCW_MIO_41_PULLUP.VALUE_SRC {DEFAULT} \
-CONFIG.PCW_MIO_41_SLEW.VALUE_SRC {DEFAULT} \
 CONFIG.PCW_MIO_42_DIRECTION.VALUE_SRC {DEFAULT} \
 CONFIG.PCW_MIO_42_IOTYPE.VALUE_SRC {DEFAULT} \
-CONFIG.PCW_MIO_42_PULLUP.VALUE_SRC {DEFAULT} \
-CONFIG.PCW_MIO_42_SLEW.VALUE_SRC {DEFAULT} \
 CONFIG.PCW_MIO_43_DIRECTION.VALUE_SRC {DEFAULT} \
 CONFIG.PCW_MIO_43_IOTYPE.VALUE_SRC {DEFAULT} \
-CONFIG.PCW_MIO_43_PULLUP.VALUE_SRC {DEFAULT} \
-CONFIG.PCW_MIO_43_SLEW.VALUE_SRC {DEFAULT} \
 CONFIG.PCW_MIO_44_DIRECTION.VALUE_SRC {DEFAULT} \
 CONFIG.PCW_MIO_44_IOTYPE.VALUE_SRC {DEFAULT} \
-CONFIG.PCW_MIO_44_PULLUP.VALUE_SRC {DEFAULT} \
-CONFIG.PCW_MIO_44_SLEW.VALUE_SRC {DEFAULT} \
 CONFIG.PCW_MIO_45_DIRECTION.VALUE_SRC {DEFAULT} \
 CONFIG.PCW_MIO_45_IOTYPE.VALUE_SRC {DEFAULT} \
-CONFIG.PCW_MIO_45_PULLUP.VALUE_SRC {DEFAULT} \
-CONFIG.PCW_MIO_45_SLEW.VALUE_SRC {DEFAULT} \
 CONFIG.PCW_MIO_46_DIRECTION.VALUE_SRC {DEFAULT} \
 CONFIG.PCW_MIO_46_IOTYPE.VALUE_SRC {DEFAULT} \
 CONFIG.PCW_MIO_46_PULLUP.VALUE_SRC {DEFAULT} \
@@ -1235,12 +1226,8 @@ CONFIG.PCW_QSPI_PERIPHERAL_CLKSRC.VALUE_SRC {DEFAULT} \
 CONFIG.PCW_QSPI_PERIPHERAL_DIVISOR0.VALUE_SRC {DEFAULT} \
 CONFIG.PCW_QSPI_PERIPHERAL_FREQMHZ.VALUE_SRC {DEFAULT} \
 CONFIG.PCW_QSPI_QSPI_IO.VALUE_SRC {DEFAULT} \
-CONFIG.PCW_SD0_GRP_CD_ENABLE.VALUE_SRC {DEFAULT} \
-CONFIG.PCW_SD0_GRP_CD_IO.VALUE_SRC {DEFAULT} \
 CONFIG.PCW_SD0_GRP_POW_ENABLE.VALUE_SRC {DEFAULT} \
 CONFIG.PCW_SD0_GRP_POW_IO.VALUE_SRC {DEFAULT} \
-CONFIG.PCW_SD0_GRP_WP_ENABLE.VALUE_SRC {DEFAULT} \
-CONFIG.PCW_SD0_GRP_WP_IO.VALUE_SRC {DEFAULT} \
 CONFIG.PCW_SD0_SD0_IO.VALUE_SRC {DEFAULT} \
 CONFIG.PCW_SD1_GRP_CD_ENABLE.VALUE_SRC {DEFAULT} \
 CONFIG.PCW_SD1_GRP_CD_IO.VALUE_SRC {DEFAULT} \
@@ -1253,6 +1240,7 @@ CONFIG.PCW_SD1_SD1_IO.VALUE_SRC {DEFAULT} \
 CONFIG.PCW_SDIO_PERIPHERAL_CLKSRC.VALUE_SRC {DEFAULT} \
 CONFIG.PCW_SDIO_PERIPHERAL_DIVISOR0.VALUE_SRC {DEFAULT} \
 CONFIG.PCW_SDIO_PERIPHERAL_FREQMHZ.VALUE_SRC {DEFAULT} \
+CONFIG.PCW_SDIO_PERIPHERAL_VALID.VALUE_SRC {DEFAULT} \
 CONFIG.PCW_SMC_PERIPHERAL_CLKSRC.VALUE_SRC {DEFAULT} \
 CONFIG.PCW_SMC_PERIPHERAL_DIVISOR0.VALUE_SRC {DEFAULT} \
 CONFIG.PCW_SMC_PERIPHERAL_FREQMHZ.VALUE_SRC {DEFAULT} \
@@ -1464,27 +1452,27 @@ CONFIG.GPIO_BOARD_INTERFACE {sws_8bits} \
   regenerate_bd_layout -layout_string {
    guistr: "# # String gsaved with Nlview 6.6.5b  2016-09-06 bk=1.3687 VDI=39 GEI=35 GUI=JA:1.6
 #  -string -flagsOSRD
-preplace port DDR -pg 1 -y -430 -defaultsOSRD
-preplace port btns_5bits -pg 1 -y -850 -defaultsOSRD
-preplace port FIXED_IO -pg 1 -y -410 -defaultsOSRD
-preplace port sw_8bits -pg 1 -y -560 -defaultsOSRD
-preplace inst btns_5bit -pg 1 -lvl 1 -y -850 -defaultsOSRD
-preplace inst sw_8bit -pg 1 -lvl 1 -y -560 -defaultsOSRD
-preplace inst ps7_0_axi_periph -pg 1 -lvl 3 -y -520 -defaultsOSRD
-preplace inst rst_ps7_0_100M -pg 1 -lvl 2 -y -540 -defaultsOSRD
-preplace inst processing_system7_0 -pg 1 -lvl 1 -y -350 -defaultsOSRD
-preplace netloc processing_system7_0_DDR 1 1 3 390J -690 NJ -690 1050J
-preplace netloc processing_system7_0_M_AXI_GP0 1 1 2 NJ -350 730
-preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 0 3 10 -440 NJ -440 750
-preplace netloc sw_8bit_GPIO 1 1 3 400J -660 NJ -660 1040J
-preplace netloc processing_system7_0_FCLK_RESET0_N 1 1 1 410
-preplace netloc ps7_0_axi_periph_M01_AXI 1 0 4 0 -780 NJ -780 NJ -780 1030
-preplace netloc btns_5bit_GPIO 1 1 3 NJ -850 NJ -850 NJ
-preplace netloc processing_system7_0_FIXED_IO 1 1 3 NJ -370 NJ -370 1040J
-preplace netloc processing_system7_0_FCLK_CLK0 1 0 3 -10 -640 380 -640 760
-preplace netloc ps7_0_axi_periph_M00_AXI 1 0 4 20 -670 NJ -670 NJ -670 1020
-preplace netloc rst_ps7_0_100M_interconnect_aresetn 1 2 1 740
-levelinfo -pg 1 -30 200 570 890 1080 -top -930 -bot 170
+preplace port DDR -pg 1 -y 40 -defaultsOSRD
+preplace port btns_5bits -pg 1 -y 330 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -y 60 -defaultsOSRD
+preplace port sw_8bits -pg 1 -y 210 -defaultsOSRD
+preplace inst btns_5bit -pg 1 -lvl 3 -y 330 -defaultsOSRD
+preplace inst sw_8bit -pg 1 -lvl 3 -y 210 -defaultsOSRD
+preplace inst ps7_0_axi_periph -pg 1 -lvl 2 -y 200 -defaultsOSRD
+preplace inst rst_ps7_0_100M -pg 1 -lvl 1 -y 270 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 1 -y 80 -defaultsOSRD
+preplace netloc processing_system7_0_DDR 1 1 3 NJ 40 NJ 40 NJ
+preplace netloc processing_system7_0_M_AXI_GP0 1 1 1 400
+preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 1 2 410 350 690
+preplace netloc sw_8bit_GPIO 1 3 1 NJ
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 2 20 180 380
+preplace netloc ps7_0_axi_periph_M01_AXI 1 2 1 670
+preplace netloc btns_5bit_GPIO 1 3 1 NJ
+preplace netloc processing_system7_0_FIXED_IO 1 1 3 NJ 60 NJ 60 NJ
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 3 10 170 390 340 680
+preplace netloc ps7_0_axi_periph_M00_AXI 1 2 1 N
+preplace netloc rst_ps7_0_100M_interconnect_aresetn 1 1 1 400
+levelinfo -pg 1 -10 200 540 790 910 -top 0 -bot 400
 ",
 }
 

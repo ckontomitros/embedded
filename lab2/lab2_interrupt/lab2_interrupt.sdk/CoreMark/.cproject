@@ -23,16 +23,16 @@
 								<inputType id="xilinx.gnu.assembler.input.1621615864" superClass="xilinx.gnu.assembler.input"/>
 							</tool>
 							<tool id="xilinx.gnu.armv7.c.toolchain.compiler.debug.344820237" name="ARM v7 gcc compiler" superClass="xilinx.gnu.armv7.c.toolchain.compiler.debug">
-								<option defaultValue="gnu.c.optimization.level.none" id="xilinx.gnu.compiler.option.optimization.level.1729695883" name="Optimization Level" superClass="xilinx.gnu.compiler.option.optimization.level" value="gnu.c.optimization.level.most" valueType="enumerated"/>
+								<option defaultValue="gnu.c.optimization.level.none" id="xilinx.gnu.compiler.option.optimization.level.1729695883" name="Optimization Level" superClass="xilinx.gnu.compiler.option.optimization.level" value="gnu.c.optimization.level.none" valueType="enumerated"/>
 								<option id="xilinx.gnu.compiler.option.debugging.level.1860635113" name="Debug Level" superClass="xilinx.gnu.compiler.option.debugging.level" value="gnu.c.debugging.level.max" valueType="enumerated"/>
 								<option id="xilinx.gnu.compiler.inferred.swplatform.includes.1287829199" name="Software Platform Include Path" superClass="xilinx.gnu.compiler.inferred.swplatform.includes" valueType="includePath">
 									<listOptionValue builtIn="false" value="../../CoreMark_bsp/ps7_cortexa9_0/include"/>
 								</option>
 								<option id="xilinx.gnu.compiler.misc.other.1464149021" name="Other flags" superClass="xilinx.gnu.compiler.misc.other" value="-O3 -c -fmessage-length=0 -MT&quot;$@&quot; -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard" valueType="string"/>
 								<option id="xilinx.gnu.compiler.symbols.defined.66284677" name="Defined symbols (-D)" superClass="xilinx.gnu.compiler.symbols.defined" valueType="definedSymbols">
-									<listOptionValue builtIn="false" value="ITERATIONS=60000"/>
+									<listOptionValue builtIn="false" value="ITERATIONS=10"/>
 									<listOptionValue builtIn="false" value="PERFORMANCE_RUN=1"/>
-									<listOptionValue builtIn="false" value="COMPILER_FLAGS='-O3'"/>
+									<listOptionValue builtIn="false" value="COMPILER_FLAGS='-O2'"/>
 								</option>
 								<inputType id="xilinx.gnu.armv7.c.compiler.input.353965105" name="C source files" superClass="xilinx.gnu.armv7.c.compiler.input"/>
 							</tool>

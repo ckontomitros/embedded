@@ -49,13 +49,43 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  reset_param project.defaultXPMLibraries 
-  open_checkpoint C:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.runs/impl_1/arm_wrapper.dcp
+  create_project -in_memory -part xc7z020clg484-1
+  set_property board_part em.avnet.com:zed:part0:1.3 [current_project]
+  set_property design_mode GateLvl [current_fileset]
+  set_param project.singleFileAddWarning.threshold 0
   set_property webtalk.parent_dir C:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.cache/wt [current_project]
   set_property parent.project_path C:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.xpr [current_project]
   set_property ip_output_repo C:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES XPM_CDC [current_project]
+  add_files -quiet C:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.runs/synth_1/arm_wrapper.dcp
+  add_files -quiet C:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ip/arm_processing_system7_0_0/arm_processing_system7_0_0.dcp
+  set_property netlist_only true [get_files C:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ip/arm_processing_system7_0_0/arm_processing_system7_0_0.dcp]
+  add_files -quiet c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ip/arm_axi_gpio_0_0/arm_axi_gpio_0_0.dcp
+  set_property netlist_only true [get_files c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ip/arm_axi_gpio_0_0/arm_axi_gpio_0_0.dcp]
+  add_files -quiet c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ip/arm_rst_ps7_0_100M_0/arm_rst_ps7_0_100M_0.dcp
+  set_property netlist_only true [get_files c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ip/arm_rst_ps7_0_100M_0/arm_rst_ps7_0_100M_0.dcp]
+  add_files -quiet c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ip/arm_axi_gpio_0_2/arm_axi_gpio_0_2.dcp
+  set_property netlist_only true [get_files c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ip/arm_axi_gpio_0_2/arm_axi_gpio_0_2.dcp]
+  add_files -quiet c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ip/arm_xbar_0/arm_xbar_0.dcp
+  set_property netlist_only true [get_files c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ip/arm_xbar_0/arm_xbar_0.dcp]
+  add_files -quiet c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ip/arm_auto_pc_0/arm_auto_pc_0.dcp
+  set_property netlist_only true [get_files c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ip/arm_auto_pc_0/arm_auto_pc_0.dcp]
+  read_xdc -ref arm_processing_system7_0_0 -cells inst c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ip/arm_processing_system7_0_0/arm_processing_system7_0_0.xdc
+  set_property processing_order EARLY [get_files c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ip/arm_processing_system7_0_0/arm_processing_system7_0_0.xdc]
+  read_xdc -prop_thru_buffers -ref arm_axi_gpio_0_0 -cells U0 c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ip/arm_axi_gpio_0_0/arm_axi_gpio_0_0_board.xdc
+  set_property processing_order EARLY [get_files c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ip/arm_axi_gpio_0_0/arm_axi_gpio_0_0_board.xdc]
+  read_xdc -ref arm_axi_gpio_0_0 -cells U0 c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ip/arm_axi_gpio_0_0/arm_axi_gpio_0_0.xdc
+  set_property processing_order EARLY [get_files c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ip/arm_axi_gpio_0_0/arm_axi_gpio_0_0.xdc]
+  read_xdc -prop_thru_buffers -ref arm_rst_ps7_0_100M_0 -cells U0 c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ip/arm_rst_ps7_0_100M_0/arm_rst_ps7_0_100M_0_board.xdc
+  set_property processing_order EARLY [get_files c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ip/arm_rst_ps7_0_100M_0/arm_rst_ps7_0_100M_0_board.xdc]
+  read_xdc -ref arm_rst_ps7_0_100M_0 -cells U0 c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ip/arm_rst_ps7_0_100M_0/arm_rst_ps7_0_100M_0.xdc
+  set_property processing_order EARLY [get_files c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ip/arm_rst_ps7_0_100M_0/arm_rst_ps7_0_100M_0.xdc]
+  read_xdc -prop_thru_buffers -ref arm_axi_gpio_0_2 -cells U0 c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ip/arm_axi_gpio_0_2/arm_axi_gpio_0_2_board.xdc
+  set_property processing_order EARLY [get_files c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ip/arm_axi_gpio_0_2/arm_axi_gpio_0_2_board.xdc]
+  read_xdc -ref arm_axi_gpio_0_2 -cells U0 c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ip/arm_axi_gpio_0_2/arm_axi_gpio_0_2.xdc
+  set_property processing_order EARLY [get_files c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ip/arm_axi_gpio_0_2/arm_axi_gpio_0_2.xdc]
+  link_design -top arm_wrapper -part xc7z020clg484-1
   write_hwdef -file arm_wrapper.hwdef
   close_msg_db -file init_design.pb
 } RESULT]

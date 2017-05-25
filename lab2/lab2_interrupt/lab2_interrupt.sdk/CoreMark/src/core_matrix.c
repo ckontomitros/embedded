@@ -40,7 +40,10 @@ void matrix_mul_vect(ee_u32 N, MATRES *C, MATDAT *A, MATDAT *B);
 void matrix_mul_matrix(ee_u32 N, MATRES *C, MATDAT *A, MATDAT *B);
 void matrix_mul_matrix_bitextract(ee_u32 N, MATRES *C, MATDAT *A, MATDAT *B);
 void matrix_add_const(ee_u32 N, MATDAT *A, MATDAT val);
-
+void matrix_mul_const1(ee_u32 N, MATRES *C, MATDAT *A, MATDAT val);
+void matrix_mul_matrix_bitextract1(ee_u32 N,MATRES *C,MATDAT *A,MATDAT *B);
+void matrix_add_const1(ee_u32 N,MATDAT *A,MATDAT val);
+void matrix_mul_matrix1(ee_u32 N,MATRES *C,MATDAT *A,MATDAT * B);
 #define matrix_test_next(x) (x+1)
 #define matrix_clip(x,y) ((y) ? (x) & 0x0ff : (x) & 0x0ffff)
 #define matrix_big(x) (0xf000 | (x))
@@ -146,7 +149,38 @@ ee_s16 matrix_test(ee_u32 N, MATRES *C, MATDAT *A, MATDAT *B, MATDAT val) {
 	matrix_add_const(N,A,-val); /* return matrix to initial value */
 	return crc;
 }
+ee_s16 matrix_test1(ee_u32 N, MATRES *C, MATDAT *A, MATDAT *B, MATDAT val) {
+	ee_u16 crc=0;
+	MATDAT clipval=matrix_big(val);
 
+	matrix_add_const1(N,A,val); /* make sure data changes  */
+#if CORE_DEBUG
+	printmat(A,N,"matrix_add_const");
+#endif
+	matrix_mul_const1(N,C,A,val);
+	crc=crc16(matrix_sum(N,C,clipval),crc);
+#if CORE_DEBUG
+	printmatC(C,N,"matrix_mul_const");
+#endif
+	matrix_mul_vect(N,C,A,B);
+	crc=crc16(matrix_sum(N,C,clipval),crc);
+#if CORE_DEBUG
+	printmatC(C,N,"matrix_mul_vect");
+#endif
+	matrix_mul_matrix1(N,C,A,B);
+	crc=crc16(matrix_sum(N,C,clipval),crc);
+#if CORE_DEBUG
+	printmatC(C,N,"matrix_mul_matrix");
+#endif
+	matrix_mul_matrix_bitextract1(N,C,A,B);
+	crc=crc16(matrix_sum(N,C,clipval),crc);
+#if CORE_DEBUG
+	printmatC(C,N,"matrix_mul_matrix_bitextract");
+#endif
+
+	matrix_add_const1(N,A,-val); /* return matrix to initial value */
+	return crc;
+}
 /* Function : matrix_init
 	Initialize the memory block for matrix benchmarking.
 
@@ -239,25 +273,51 @@ ee_s16 matrix_sum(ee_u32 N, MATRES *C, MATDAT clipval) {
 */
 void matrix_mul_const(ee_u32 N, MATRES *C, MATDAT *A, MATDAT val) {
 	ee_u32 i,j;
+	//for (j=0; j<N; j++) {
+	//for (i=0; i<N; i++) {
+
 	for (i=0; i<N; i++) {
 		for (j=0; j<N; j++) {
 			C[i*N+j]=(MATRES)A[i*N+j] * (MATRES)val;
 		}
 	}
 }
+void matrix_mul_const1(ee_u32 N, MATRES *C, MATDAT *A, MATDAT val) {
+	ee_u32 i,j;
+	for (j=0; j<N; j++) {
+	for (i=0; i<N; i++) {
 
+	//for (i=0; i<N; i++) {
+		//for (j=0; j<N; j++) {
+			C[i*N+j]=(MATRES)A[i*N+j] * (MATRES)val;
+		}
+	}
+}
 /* Function: matrix_add_const
 	Add a constant value to all elements of a matrix.
 */
 void matrix_add_const(ee_u32 N, MATDAT *A, MATDAT val) {
 	ee_u32 i,j;
+	//for (j=0; j<N; j++) {
+	//for (i=0; i<N; i++) {
+
 	for (i=0; i<N; i++) {
 		for (j=0; j<N; j++) {
 			A[i*N+j] += val;
 		}
 	}
 }
+void matrix_add_const1(ee_u32 N, MATDAT *A, MATDAT val) {
+	ee_u32 i,j;
+	for (j=0; j<N; j++) {
+	for (i=0; i<N; i++) {
 
+	//for (i=0; i<N; i++) {
+		//for (j=0; j<N; j++) {
+			A[i*N+j] += val;
+		}
+	}
+}
 /* Function: matrix_mul_vect
 	Multiply a matrix by a vector.
 	This is common in many simple filters (e.g. fir where a vector of coefficients is applied to the matrix.)
@@ -278,6 +338,9 @@ void matrix_mul_vect(ee_u32 N, MATRES *C, MATDAT *A, MATDAT *B) {
 */
 void matrix_mul_matrix(ee_u32 N, MATRES *C, MATDAT *A, MATDAT *B) {
 	ee_u32 i,j,k;
+	//for (j=0; j<N; j++) {
+	//for (i=0; i<N; i++) {
+
 	for (i=0; i<N; i++) {
 		for (j=0; j<N; j++) {
 			C[i*N+j]=0;
@@ -288,15 +351,48 @@ void matrix_mul_matrix(ee_u32 N, MATRES *C, MATDAT *A, MATDAT *B) {
 		}
 	}
 }
+void matrix_mul_matrix1(ee_u32 N, MATRES *C, MATDAT *A, MATDAT *B) {
+	ee_u32 i,j,k;
+	for (j=0; j<N; j++) {
+	for (i=0; i<N; i++) {
 
+	//for (i=0; i<N; i++) {
+		//for (j=0; j<N; j++) {
+			C[i*N+j]=0;
+			for(k=0;k<N;k++)
+			{
+				C[i*N+j]+=(MATRES)A[i*N+k] * (MATRES)B[k*N+j];
+			}
+		}
+	}
+}
 /* Function: matrix_mul_matrix_bitextract
 	Multiply a matrix by a matrix, and extract some bits from the result.
 	Basic code is used in many algorithms, mostly with minor changes such as scaling.
 */
 void matrix_mul_matrix_bitextract(ee_u32 N, MATRES *C, MATDAT *A, MATDAT *B) {
 	ee_u32 i,j,k;
+	//for (j=0; j<N; j++) {
+	//for (i=0; i<N; i++) {
+
 	for (i=0; i<N; i++) {
 		for (j=0; j<N; j++) {
+			C[i*N+j]=0;
+			for(k=0;k<N;k++)
+			{
+				MATRES tmp=(MATRES)A[i*N+k] * (MATRES)B[k*N+j];
+				C[i*N+j]+=bit_extract(tmp,2,4)*bit_extract(tmp,5,7);
+			}
+		}
+	}
+}
+void matrix_mul_matrix_bitextract1(ee_u32 N, MATRES *C, MATDAT *A, MATDAT *B) {
+	ee_u32 i,j,k;
+	for (j=0; j<N; j++) {
+		for (i=0; i<N; i++) {
+
+	//for (i=0; i<N; i++) {
+		//for (j=0; j<N; j++) {
 			C[i*N+j]=0;
 			for(k=0;k<N;k++)
 			{

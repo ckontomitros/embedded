@@ -1,10 +1,10 @@
 -- Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
--- Date        : Wed Mar 08 19:32:52 2017
+-- Date        : Wed May 24 21:32:47 2017
 -- Host        : chris running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub
---               c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ip/arm_processing_system7_0_0/arm_processing_system7_0_0_stub.vhdl
+--               C:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ip/arm_processing_system7_0_0/arm_processing_system7_0_0_stub.vhdl
 -- Design      : arm_processing_system7_0_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z020clg484-1
