@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTMG 210-274] Memory 'sobel_vert_operator' is read-only, switch it to a ROM." projectName="sobel" solutionName="solution1" date="2017-06-01T12:17:54.233+0300" type="Warning"/>
+        <logs message="WARNING: [RTMG 210-274] Memory 'sobel_horiz_operacud' is read-only, switch it to a ROM." projectName="sobel" solutionName="solution1" date="2017-06-01T12:17:54.171+0300" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'vert_operator' will not be exposed as RTL port." projectName="sobel" solutionName="solution1" date="2017-06-01T12:17:49.762+0300" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'horiz_operator' will not be exposed as RTL port." projectName="sobel" solutionName="solution1" date="2017-06-01T12:17:49.731+0300" type="Warning"/>
+        <logs message="WARNING: [SYN 201-107] Renaming port name 'sobel/output' to 'sobel/output_r' to avoid the conflict with HDL keywords or other object names." projectName="sobel" solutionName="solution1" date="2017-06-01T12:17:45.074+0300" type="Warning"/>
+        <logs message="WARNING: [SYN 201-107] Renaming port name 'sobel/input' to 'sobel/input_r' to avoid the conflict with HDL keywords or other object names." projectName="sobel" solutionName="solution1" date="2017-06-01T12:17:45.059+0300" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog>
+        <logs message="WARNING: [SIM 211-51] HLS only supports CLANG compiler in Linux." projectName="sobel" solutionName="solution1" date="2017-06-01T12:22:11.887+0300" type="Warning"/>
+      </csimLog>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

@@ -1,0 +1,13 @@
+sobel_mul_8ns_32sbkb
+sobel_dadd_64ns_6dEe
+sobel_dmul_64ns_6eOg
+sobel_ddiv_64ns_6fYi
+sobel_uitodp_32nsg8j
+sobel_sitodp_32s_hbi
+sobel_dsqrt_64ns_ibs
+sobel_dlog_64ns_6jbC
+sobel_mul_32s_32skbM
+sobel_horiz_operacud
+sobel_vert_operator
+convolution2D
+sobel

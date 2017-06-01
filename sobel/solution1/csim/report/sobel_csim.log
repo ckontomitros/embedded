@@ -1,0 +1,20 @@
+INFO: [SIM 2] *************** CSIM start ***************
+WARNING: [SIM 51] HLS only supports CLANG compiler in Linux.
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling(apcc) ../../../../sobel_sw.c in debug mode
+INFO: [HLS 200-10] Running 'c:/Xilinx2/Vivado_HLS/2016.4/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'konto' on host 'chris' (Windows NT_amd64 version 6.2) on Thu Jun 01 12:22:14 +0300 2017
+INFO: [HLS 200-10] In directory 'C:/Users/konto/Documents/embeded/sobel/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Generating csim.exe
+Sobel filter start!
+readbytes = 410616
+Just read from golden with start 0040F100
+Read:4111 bytes
+PSNR of original Sobel and computed Sobel image: 0
+Create the output image with:$convert -depth 8 -size 1024x1024 GRAY:output_sobel.grey output_sobel.jpg
+Just written to output with start 0060F100
+Written:0 bytes
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

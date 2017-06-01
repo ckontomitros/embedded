@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="sobel_sw.c" path="C:\Users\konto\Documents\embeded\sobel_sw.c"/>
+  </source>
+  <testbench>
+    <originFiles name="sobel_test.c" path="C:\Users\konto\Documents\embeded\sobel\sobel_test.c"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

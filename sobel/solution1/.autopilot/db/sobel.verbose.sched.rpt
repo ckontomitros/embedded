@@ -1,0 +1,2243 @@
+
+
+================================================================
+== Vivado HLS Report for 'sobel'
+================================================================
+* Date:           Thu Jun 01 12:17:47 2017
+
+* Version:        2016.4 (Build 1756540 on Mon Jan 23 19:31:01 MST 2017)
+* Project:        sobel
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      8.62|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----------+-----------+-----------+-----------+---------+
+    |        Latency        |        Interval       | Pipeline|
+    |    min    |    max    |    min    |    max    |   Type  |
+    +-----------+-----------+-----------+-----------+---------+
+    |  198457152|  198457152|  198457153|  198457153|   none  |
+    +-----------+-----------+-----------+-----------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------+-----------+-----------+----------+-----------+-----------+------+----------+
+        |             |        Latency        | Iteration|  Initiation Interval  | Trip |          |
+        |  Loop Name  |    min    |    max    |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------+-----------+-----------+----------+-----------+-----------+------+----------+
+        |- Loop 1     |       1022|       1022|         1|          -|          -|  1022|    no    |
+        |- Loop 2     |  177564324|  177564324|    173742|          -|          -|  1022|    no    |
+        | + Loop 2.1  |     173740|     173740|       170|          -|          -|  1022|    no    |
+        |- Loop 3     |   20891724|   20891724|     20442|          -|          -|  1022|    no    |
+        | + Loop 3.1  |      20440|      20440|        20|          -|          -|  1022|    no    |
+        +-------------+-----------+-----------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 151
+* Pipeline: 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	2  / (!exitcond5)
+	3  / (exitcond5)
+3 --> 
+	4  / (!exitcond3)
+	52  / (exitcond3)
+4 --> 
+	5  / (!exitcond2)
+	3  / (exitcond2)
+5 --> 
+	6  / true
+6 --> 
+	7  / true
+7 --> 
+	8  / true
+8 --> 
+	9  / true
+9 --> 
+	10  / true
+10 --> 
+	11  / true
+11 --> 
+	12  / true
+12 --> 
+	13  / true
+13 --> 
+	14  / true
+14 --> 
+	15  / true
+15 --> 
+	16  / true
+16 --> 
+	17  / true
+17 --> 
+	18  / true
+18 --> 
+	19  / true
+19 --> 
+	20  / true
+20 --> 
+	21  / true
+21 --> 
+	22  / true
+22 --> 
+	23  / true
+23 --> 
+	24  / true
+24 --> 
+	25  / true
+25 --> 
+	26  / true
+26 --> 
+	27  / true
+27 --> 
+	28  / true
+28 --> 
+	29  / true
+29 --> 
+	30  / true
+30 --> 
+	31  / true
+31 --> 
+	32  / true
+32 --> 
+	33  / true
+33 --> 
+	34  / true
+34 --> 
+	35  / true
+35 --> 
+	36  / true
+36 --> 
+	37  / true
+37 --> 
+	38  / true
+38 --> 
+	39  / true
+39 --> 
+	40  / true
+40 --> 
+	41  / true
+41 --> 
+	42  / true
+42 --> 
+	43  / true
+43 --> 
+	44  / true
+44 --> 
+	45  / true
+45 --> 
+	46  / true
+46 --> 
+	47  / true
+47 --> 
+	48  / true
+48 --> 
+	49  / true
+49 --> 
+	50  / true
+50 --> 
+	51  / true
+51 --> 
+	4  / true
+52 --> 
+	73  / (exitcond1)
+	53  / (!exitcond1)
+53 --> 
+	54  / (!exitcond)
+	52  / (exitcond)
+54 --> 
+	55  / true
+55 --> 
+	56  / true
+56 --> 
+	57  / true
+57 --> 
+	58  / true
+58 --> 
+	59  / true
+59 --> 
+	60  / true
+60 --> 
+	61  / true
+61 --> 
+	62  / true
+62 --> 
+	63  / true
+63 --> 
+	64  / true
+64 --> 
+	65  / true
+65 --> 
+	66  / true
+66 --> 
+	67  / true
+67 --> 
+	68  / true
+68 --> 
+	69  / true
+69 --> 
+	70  / true
+70 --> 
+	71  / true
+71 --> 
+	72  / true
+72 --> 
+	53  / true
+73 --> 
+	74  / true
+74 --> 
+	75  / true
+75 --> 
+	76  / true
+76 --> 
+	77  / true
+77 --> 
+	78  / true
+78 --> 
+	79  / true
+79 --> 
+	80  / true
+80 --> 
+	81  / true
+81 --> 
+	82  / true
+82 --> 
+	83  / true
+83 --> 
+	84  / true
+84 --> 
+	85  / true
+85 --> 
+	86  / true
+86 --> 
+	87  / true
+87 --> 
+	88  / true
+88 --> 
+	89  / true
+89 --> 
+	90  / true
+90 --> 
+	91  / true
+91 --> 
+	92  / true
+92 --> 
+	93  / true
+93 --> 
+	94  / true
+94 --> 
+	95  / true
+95 --> 
+	96  / true
+96 --> 
+	97  / true
+97 --> 
+	98  / true
+98 --> 
+	99  / true
+99 --> 
+	100  / true
+100 --> 
+	101  / true
+101 --> 
+	102  / true
+102 --> 
+	103  / true
+103 --> 
+	104  / true
+104 --> 
+	105  / true
+105 --> 
+	106  / true
+106 --> 
+	107  / true
+107 --> 
+	108  / true
+108 --> 
+	109  / true
+109 --> 
+	110  / true
+110 --> 
+	111  / true
+111 --> 
+	112  / true
+112 --> 
+	113  / true
+113 --> 
+	114  / true
+114 --> 
+	115  / true
+115 --> 
+	116  / true
+116 --> 
+	117  / true
+117 --> 
+	118  / true
+118 --> 
+	119  / true
+119 --> 
+	120  / true
+120 --> 
+	121  / true
+121 --> 
+	122  / true
+122 --> 
+	123  / true
+123 --> 
+	124  / true
+124 --> 
+	125  / true
+125 --> 
+	126  / true
+126 --> 
+	127  / true
+127 --> 
+	128  / true
+128 --> 
+	129  / true
+129 --> 
+	130  / true
+130 --> 
+	131  / true
+131 --> 
+	132  / true
+132 --> 
+	133  / true
+133 --> 
+	134  / true
+134 --> 
+	135  / true
+135 --> 
+	136  / true
+136 --> 
+	137  / true
+137 --> 
+	138  / true
+138 --> 
+	139  / true
+139 --> 
+	140  / true
+140 --> 
+	141  / true
+141 --> 
+	142  / true
+142 --> 
+	143  / true
+143 --> 
+	144  / true
+144 --> 
+	145  / true
+145 --> 
+	146  / true
+146 --> 
+	147  / true
+147 --> 
+	148  / true
+148 --> 
+	149  / true
+149 --> 
+	150  / true
+150 --> 
+	151  / true
+151 --> 
+* FSM state operations: 
+
+ <State 1>: 1.57ns
+ST_1: StgValue_152 (6)  [1/1] 0.00ns
+:0  call void (...)* @_ssdm_op_SpecBitsMap([1048576 x i8]* %input_r) nounwind, !map !1208
+
+ST_1: StgValue_153 (7)  [1/1] 0.00ns
+:1  call void (...)* @_ssdm_op_SpecBitsMap([1048576 x i8]* %output_r) nounwind, !map !1214
+
+ST_1: StgValue_154 (8)  [1/1] 0.00ns
+:2  call void (...)* @_ssdm_op_SpecBitsMap([1048576 x i8]* %golden) nounwind, !map !1218
+
+ST_1: StgValue_155 (9)  [1/1] 0.00ns
+:3  call void (...)* @_ssdm_op_SpecBitsMap(double 0.000000e+00) nounwind, !map !1222
+
+ST_1: StgValue_156 (10)  [1/1] 0.00ns
+:4  call void (...)* @_ssdm_op_SpecTopModule([6 x i8]* @sobel_str) nounwind
+
+ST_1: StgValue_157 (11)  [1/1] 1.57ns  loc: sobel_sw.c:62
+:5  br label %1
+
+
+ <State 2>: 2.71ns
+ST_2: i (13)  [1/1] 0.00ns
+:0  %i = phi i10 [ 1, %0 ], [ %i_1, %2 ]
+
+ST_2: exitcond5 (14)  [1/1] 2.07ns  loc: sobel_sw.c:62
+:1  %exitcond5 = icmp eq i10 %i, -1
+
+ST_2: empty (15)  [1/1] 0.00ns
+:2  %empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 1022, i64 1022, i64 1022) nounwind
+
+ST_2: StgValue_161 (16)  [1/1] 0.00ns  loc: sobel_sw.c:62
+:3  br i1 %exitcond5, label %.preheader8.preheader, label %2
+
+ST_2: tmp (18)  [1/1] 0.00ns  loc: sobel_sw.c:63
+:0  %tmp = call i20 @_ssdm_op_BitConcatenate.i20.i10.i10(i10 %i, i10 0)
+
+ST_2: tmp_cast (19)  [1/1] 0.00ns  loc: sobel_sw.c:63
+:1  %tmp_cast = zext i20 %tmp to i32
+
+ST_2: output_addr (20)  [1/1] 0.00ns  loc: sobel_sw.c:63
+:2  %output_addr = getelementptr [1048576 x i8]* %output_r, i32 0, i32 %tmp_cast
+
+ST_2: StgValue_165 (21)  [1/1] 2.71ns  loc: sobel_sw.c:63
+:3  store i8 0, i8* %output_addr, align 1
+
+ST_2: tmp_1 (22)  [1/1] 0.00ns  loc: sobel_sw.c:64
+:4  %tmp_1 = or i20 %tmp, 1023
+
+ST_2: tmp_1_cast (23)  [1/1] 0.00ns  loc: sobel_sw.c:64
+:5  %tmp_1_cast = zext i20 %tmp_1 to i32
+
+ST_2: output_addr_1 (24)  [1/1] 0.00ns  loc: sobel_sw.c:64
+:6  %output_addr_1 = getelementptr [1048576 x i8]* %output_r, i32 0, i32 %tmp_1_cast
+
+ST_2: StgValue_169 (25)  [1/1] 2.71ns  loc: sobel_sw.c:64
+:7  store i8 0, i8* %output_addr_1, align 1
+
+ST_2: i_1 (26)  [1/1] 1.84ns  loc: sobel_sw.c:62
+:8  %i_1 = add i10 %i, 1
+
+ST_2: StgValue_171 (27)  [1/1] 0.00ns  loc: sobel_sw.c:62
+:9  br label %1
+
+ST_2: StgValue_172 (29)  [1/1] 1.57ns  loc: sobel_sw.c:84
+.preheader8.preheader:0  br label %.preheader8
+
+
+ <State 3>: 2.07ns
+ST_3: j (31)  [1/1] 0.00ns
+.preheader8:0  %j = phi i10 [ %j_2, %7 ], [ 1, %.preheader8.preheader ]
+
+ST_3: exitcond3 (32)  [1/1] 2.07ns  loc: sobel_sw.c:84
+.preheader8:1  %exitcond3 = icmp eq i10 %j, -1
+
+ST_3: empty_9 (33)  [1/1] 0.00ns
+.preheader8:2  %empty_9 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 1022, i64 1022, i64 1022) nounwind
+
+ST_3: StgValue_176 (34)  [1/1] 0.00ns  loc: sobel_sw.c:84
+.preheader8:3  br i1 %exitcond3, label %.preheader6.preheader, label %.preheader7.preheader
+
+ST_3: StgValue_177 (36)  [1/1] 1.57ns  loc: sobel_sw.c:85
+.preheader7.preheader:0  br label %.preheader7
+
+ST_3: PSNR (96)  [1/1] 0.00ns
+.preheader6.preheader:0  %PSNR = alloca double
+
+ST_3: StgValue_179 (97)  [1/1] 1.57ns
+.preheader6.preheader:1  store double 0.000000e+00, double* %PSNR
+
+ST_3: StgValue_180 (98)  [1/1] 1.57ns  loc: sobel_sw.c:103
+.preheader6.preheader:2  br label %.preheader6
+
+
+ <State 4>: 2.07ns
+ST_4: i_2 (38)  [1/1] 0.00ns
+.preheader7:0  %i_2 = phi i10 [ %i_5, %6 ], [ 1, %.preheader7.preheader ]
+
+ST_4: exitcond2 (39)  [1/1] 2.07ns  loc: sobel_sw.c:85
+.preheader7:1  %exitcond2 = icmp eq i10 %i_2, -1
+
+ST_4: empty_10 (40)  [1/1] 0.00ns
+.preheader7:2  %empty_10 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 1022, i64 1022, i64 1022) nounwind
+
+ST_4: StgValue_184 (41)  [1/1] 0.00ns  loc: sobel_sw.c:85
+.preheader7:3  br i1 %exitcond2, label %7, label %3
+
+ST_4: tmp_2 (43)  [2/2] 1.57ns  loc: sobel_sw.c:88
+:0  %tmp_2 = call fastcc i32 @convolution2D(i10 %i_2, i10 %j, [1048576 x i8]* %input_r, [9 x i32]* @horiz_operator) nounwind
+
+ST_4: j_2 (93)  [1/1] 1.84ns  loc: sobel_sw.c:84
+:0  %j_2 = add i10 %j, 1
+
+ST_4: StgValue_187 (94)  [1/1] 0.00ns  loc: sobel_sw.c:84
+:1  br label %.preheader8
+
+
+ <State 5>: 0.00ns
+ST_5: tmp_2 (43)  [1/2] 0.00ns  loc: sobel_sw.c:88
+:0  %tmp_2 = call fastcc i32 @convolution2D(i10 %i_2, i10 %j, [1048576 x i8]* %input_r, [9 x i32]* @horiz_operator) nounwind
+
+
+ <State 6>: 1.57ns
+ST_6: tmp_4 (45)  [2/2] 1.57ns  loc: sobel_sw.c:89
+:2  %tmp_4 = call fastcc i32 @convolution2D(i10 %i_2, i10 %j, [1048576 x i8]* %input_r, [9 x i32]* @vert_operator) nounwind
+
+
+ <State 7>: 6.08ns
+ST_7: tmp_3 (44)  [6/6] 6.08ns  loc: sobel_sw.c:88
+:1  %tmp_3 = mul nsw i32 %tmp_2, %tmp_2
+
+ST_7: tmp_4 (45)  [1/2] 0.00ns  loc: sobel_sw.c:89
+:2  %tmp_4 = call fastcc i32 @convolution2D(i10 %i_2, i10 %j, [1048576 x i8]* %input_r, [9 x i32]* @vert_operator) nounwind
+
+ST_7: tmp_9 (46)  [6/6] 6.08ns  loc: sobel_sw.c:89
+:3  %tmp_9 = mul nsw i32 %tmp_4, %tmp_4
+
+
+ <State 8>: 6.08ns
+ST_8: tmp_3 (44)  [5/6] 6.08ns  loc: sobel_sw.c:88
+:1  %tmp_3 = mul nsw i32 %tmp_2, %tmp_2
+
+ST_8: tmp_9 (46)  [5/6] 6.08ns  loc: sobel_sw.c:89
+:3  %tmp_9 = mul nsw i32 %tmp_4, %tmp_4
+
+
+ <State 9>: 6.08ns
+ST_9: tmp_3 (44)  [4/6] 6.08ns  loc: sobel_sw.c:88
+:1  %tmp_3 = mul nsw i32 %tmp_2, %tmp_2
+
+ST_9: tmp_9 (46)  [4/6] 6.08ns  loc: sobel_sw.c:89
+:3  %tmp_9 = mul nsw i32 %tmp_4, %tmp_4
+
+
+ <State 10>: 6.08ns
+ST_10: tmp_3 (44)  [3/6] 6.08ns  loc: sobel_sw.c:88
+:1  %tmp_3 = mul nsw i32 %tmp_2, %tmp_2
+
+ST_10: tmp_9 (46)  [3/6] 6.08ns  loc: sobel_sw.c:89
+:3  %tmp_9 = mul nsw i32 %tmp_4, %tmp_4
+
+
+ <State 11>: 6.08ns
+ST_11: tmp_3 (44)  [2/6] 6.08ns  loc: sobel_sw.c:88
+:1  %tmp_3 = mul nsw i32 %tmp_2, %tmp_2
+
+ST_11: tmp_9 (46)  [2/6] 6.08ns  loc: sobel_sw.c:89
+:3  %tmp_9 = mul nsw i32 %tmp_4, %tmp_4
+
+
+ <State 12>: 8.52ns
+ST_12: tmp_3 (44)  [1/6] 6.08ns  loc: sobel_sw.c:88
+:1  %tmp_3 = mul nsw i32 %tmp_2, %tmp_2
+
+ST_12: tmp_9 (46)  [1/6] 6.08ns  loc: sobel_sw.c:89
+:3  %tmp_9 = mul nsw i32 %tmp_4, %tmp_4
+
+ST_12: p (47)  [1/1] 2.44ns  loc: sobel_sw.c:89
+:4  %p = add nsw i32 %tmp_9, %tmp_3
+
+
+ <State 13>: 6.28ns
+ST_13: tmp_s (48)  [6/6] 6.28ns  loc: sobel_sw.c:90
+:5  %tmp_s = uitofp i32 %p to double
+
+
+ <State 14>: 6.28ns
+ST_14: tmp_s (48)  [5/6] 6.28ns  loc: sobel_sw.c:90
+:5  %tmp_s = uitofp i32 %p to double
+
+
+ <State 15>: 6.28ns
+ST_15: tmp_s (48)  [4/6] 6.28ns  loc: sobel_sw.c:90
+:5  %tmp_s = uitofp i32 %p to double
+
+
+ <State 16>: 6.28ns
+ST_16: tmp_s (48)  [3/6] 6.28ns  loc: sobel_sw.c:90
+:5  %tmp_s = uitofp i32 %p to double
+
+
+ <State 17>: 6.28ns
+ST_17: tmp_s (48)  [2/6] 6.28ns  loc: sobel_sw.c:90
+:5  %tmp_s = uitofp i32 %p to double
+
+
+ <State 18>: 6.28ns
+ST_18: tmp_s (48)  [1/6] 6.28ns  loc: sobel_sw.c:90
+:5  %tmp_s = uitofp i32 %p to double
+
+
+ <State 19>: 8.62ns
+ST_19: x_assign_2 (49)  [31/31] 8.62ns  loc: sobel_sw.c:90
+:6  %x_assign_2 = call double @llvm.sqrt.f64(double %tmp_s)
+
+
+ <State 20>: 8.62ns
+ST_20: x_assign_2 (49)  [30/31] 8.62ns  loc: sobel_sw.c:90
+:6  %x_assign_2 = call double @llvm.sqrt.f64(double %tmp_s)
+
+
+ <State 21>: 8.62ns
+ST_21: x_assign_2 (49)  [29/31] 8.62ns  loc: sobel_sw.c:90
+:6  %x_assign_2 = call double @llvm.sqrt.f64(double %tmp_s)
+
+
+ <State 22>: 8.62ns
+ST_22: x_assign_2 (49)  [28/31] 8.62ns  loc: sobel_sw.c:90
+:6  %x_assign_2 = call double @llvm.sqrt.f64(double %tmp_s)
+
+
+ <State 23>: 8.62ns
+ST_23: x_assign_2 (49)  [27/31] 8.62ns  loc: sobel_sw.c:90
+:6  %x_assign_2 = call double @llvm.sqrt.f64(double %tmp_s)
+
+
+ <State 24>: 8.62ns
+ST_24: x_assign_2 (49)  [26/31] 8.62ns  loc: sobel_sw.c:90
+:6  %x_assign_2 = call double @llvm.sqrt.f64(double %tmp_s)
+
+
+ <State 25>: 8.62ns
+ST_25: x_assign_2 (49)  [25/31] 8.62ns  loc: sobel_sw.c:90
+:6  %x_assign_2 = call double @llvm.sqrt.f64(double %tmp_s)
+
+
+ <State 26>: 8.62ns
+ST_26: x_assign_2 (49)  [24/31] 8.62ns  loc: sobel_sw.c:90
+:6  %x_assign_2 = call double @llvm.sqrt.f64(double %tmp_s)
+
+
+ <State 27>: 8.62ns
+ST_27: x_assign_2 (49)  [23/31] 8.62ns  loc: sobel_sw.c:90
+:6  %x_assign_2 = call double @llvm.sqrt.f64(double %tmp_s)
+
+
+ <State 28>: 8.62ns
+ST_28: x_assign_2 (49)  [22/31] 8.62ns  loc: sobel_sw.c:90
+:6  %x_assign_2 = call double @llvm.sqrt.f64(double %tmp_s)
+
+
+ <State 29>: 8.62ns
+ST_29: x_assign_2 (49)  [21/31] 8.62ns  loc: sobel_sw.c:90
+:6  %x_assign_2 = call double @llvm.sqrt.f64(double %tmp_s)
+
+
+ <State 30>: 8.62ns
+ST_30: x_assign_2 (49)  [20/31] 8.62ns  loc: sobel_sw.c:90
+:6  %x_assign_2 = call double @llvm.sqrt.f64(double %tmp_s)
+
+
+ <State 31>: 8.62ns
+ST_31: x_assign_2 (49)  [19/31] 8.62ns  loc: sobel_sw.c:90
+:6  %x_assign_2 = call double @llvm.sqrt.f64(double %tmp_s)
+
+
+ <State 32>: 8.62ns
+ST_32: x_assign_2 (49)  [18/31] 8.62ns  loc: sobel_sw.c:90
+:6  %x_assign_2 = call double @llvm.sqrt.f64(double %tmp_s)
+
+
+ <State 33>: 8.62ns
+ST_33: x_assign_2 (49)  [17/31] 8.62ns  loc: sobel_sw.c:90
+:6  %x_assign_2 = call double @llvm.sqrt.f64(double %tmp_s)
+
+
+ <State 34>: 8.62ns
+ST_34: x_assign_2 (49)  [16/31] 8.62ns  loc: sobel_sw.c:90
+:6  %x_assign_2 = call double @llvm.sqrt.f64(double %tmp_s)
+
+
+ <State 35>: 8.62ns
+ST_35: x_assign_2 (49)  [15/31] 8.62ns  loc: sobel_sw.c:90
+:6  %x_assign_2 = call double @llvm.sqrt.f64(double %tmp_s)
+
+
+ <State 36>: 8.62ns
+ST_36: x_assign_2 (49)  [14/31] 8.62ns  loc: sobel_sw.c:90
+:6  %x_assign_2 = call double @llvm.sqrt.f64(double %tmp_s)
+
+
+ <State 37>: 8.62ns
+ST_37: x_assign_2 (49)  [13/31] 8.62ns  loc: sobel_sw.c:90
+:6  %x_assign_2 = call double @llvm.sqrt.f64(double %tmp_s)
+
+
+ <State 38>: 8.62ns
+ST_38: x_assign_2 (49)  [12/31] 8.62ns  loc: sobel_sw.c:90
+:6  %x_assign_2 = call double @llvm.sqrt.f64(double %tmp_s)
+
+
+ <State 39>: 8.62ns
+ST_39: x_assign_2 (49)  [11/31] 8.62ns  loc: sobel_sw.c:90
+:6  %x_assign_2 = call double @llvm.sqrt.f64(double %tmp_s)
+
+
+ <State 40>: 8.62ns
+ST_40: x_assign_2 (49)  [10/31] 8.62ns  loc: sobel_sw.c:90
+:6  %x_assign_2 = call double @llvm.sqrt.f64(double %tmp_s)
+
+
+ <State 41>: 8.62ns
+ST_41: x_assign_2 (49)  [9/31] 8.62ns  loc: sobel_sw.c:90
+:6  %x_assign_2 = call double @llvm.sqrt.f64(double %tmp_s)
+
+
+ <State 42>: 8.62ns
+ST_42: x_assign_2 (49)  [8/31] 8.62ns  loc: sobel_sw.c:90
+:6  %x_assign_2 = call double @llvm.sqrt.f64(double %tmp_s)
+
+
+ <State 43>: 8.62ns
+ST_43: x_assign_2 (49)  [7/31] 8.62ns  loc: sobel_sw.c:90
+:6  %x_assign_2 = call double @llvm.sqrt.f64(double %tmp_s)
+
+
+ <State 44>: 8.62ns
+ST_44: x_assign_2 (49)  [6/31] 8.62ns  loc: sobel_sw.c:90
+:6  %x_assign_2 = call double @llvm.sqrt.f64(double %tmp_s)
+
+
+ <State 45>: 8.62ns
+ST_45: x_assign_2 (49)  [5/31] 8.62ns  loc: sobel_sw.c:90
+:6  %x_assign_2 = call double @llvm.sqrt.f64(double %tmp_s)
+
+
+ <State 46>: 8.62ns
+ST_46: x_assign_2 (49)  [4/31] 8.62ns  loc: sobel_sw.c:90
+:6  %x_assign_2 = call double @llvm.sqrt.f64(double %tmp_s)
+
+
+ <State 47>: 8.62ns
+ST_47: x_assign_2 (49)  [3/31] 8.62ns  loc: sobel_sw.c:90
+:6  %x_assign_2 = call double @llvm.sqrt.f64(double %tmp_s)
+
+
+ <State 48>: 8.62ns
+ST_48: x_assign_2 (49)  [2/31] 8.62ns  loc: sobel_sw.c:90
+:6  %x_assign_2 = call double @llvm.sqrt.f64(double %tmp_s)
+
+
+ <State 49>: 8.62ns
+ST_49: x_assign_2 (49)  [1/31] 8.62ns  loc: sobel_sw.c:90
+:6  %x_assign_2 = call double @llvm.sqrt.f64(double %tmp_s)
+
+
+ <State 50>: 6.77ns
+ST_50: p_Val2_1 (50)  [1/1] 0.00ns  loc: r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls/utils/x_hls_utils.h:469->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls/utils/x_hls_utils.h:473->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls/hls_round.h:366->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_floatconversion.cpp:43->sobel_sw.c:90
+:7  %p_Val2_1 = bitcast double %x_assign_2 to i64
+
+ST_50: p_Result_s (51)  [1/1] 0.00ns  loc: r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls/utils/x_hls_utils.h:470->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls/utils/x_hls_utils.h:473->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls/hls_round.h:366->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_floatconversion.cpp:43->sobel_sw.c:90
+:8  %p_Result_s = call i1 @_ssdm_op_BitSelect.i1.i64.i32(i64 %p_Val2_1, i32 63)
+
+ST_50: loc_V (52)  [1/1] 0.00ns  loc: r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls/utils/x_hls_utils.h:471->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls/utils/x_hls_utils.h:473->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls/hls_round.h:366->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_floatconversion.cpp:43->sobel_sw.c:90
+:9  %loc_V = call i11 @_ssdm_op_PartSelect.i11.i64.i32.i32(i64 %p_Val2_1, i32 52, i32 62) nounwind
+
+ST_50: loc_V_1 (53)  [1/1] 0.00ns  loc: r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls/utils/x_hls_utils.h:472->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls/utils/x_hls_utils.h:473->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls/hls_round.h:366->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_floatconversion.cpp:43->sobel_sw.c:90
+:10  %loc_V_1 = trunc i64 %p_Val2_1 to i52
+
+ST_50: p_Result_1 (54)  [1/1] 0.00ns  loc: r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls/utils/x_hls_utils.h:516->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls/hls_round.h:368->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_floatconversion.cpp:43->sobel_sw.c:90
+:11  %p_Result_1 = call i53 @_ssdm_op_BitConcatenate.i53.i1.i52(i1 true, i52 %loc_V_1) nounwind
+
+ST_50: tmp_i_i (55)  [1/1] 0.00ns  loc: r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls/hls_round.h:368->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_floatconversion.cpp:43->sobel_sw.c:90 (grouped into LUT with out node p_Val2_4)
+:12  %tmp_i_i = zext i53 %p_Result_1 to i136
+
+ST_50: tmp_i_i_i_cast3 (56)  [1/1] 0.00ns  loc: r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls/utils/x_hls_utils.h:496->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls/hls_round.h:371->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_floatconversion.cpp:43->sobel_sw.c:90
+:13  %tmp_i_i_i_cast3 = zext i11 %loc_V to i12
+
+ST_50: sh_assign (57)  [1/1] 1.84ns  loc: r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls/utils/x_hls_utils.h:496->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls/hls_round.h:371->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_floatconversion.cpp:43->sobel_sw.c:90
+:14  %sh_assign = add i12 -1023, %tmp_i_i_i_cast3
+
+ST_50: isNeg (58)  [1/1] 0.00ns  loc: r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls/hls_round.h:371->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_floatconversion.cpp:43->sobel_sw.c:90
+:15  %isNeg = call i1 @_ssdm_op_BitSelect.i1.i12.i32(i12 %sh_assign, i32 11)
+
+ST_50: tmp_i_i_11 (59)  [1/1] 1.84ns  loc: r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls/hls_round.h:371->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_floatconversion.cpp:43->sobel_sw.c:90
+:16  %tmp_i_i_11 = sub i11 1023, %loc_V
+
+ST_50: tmp_i_i_cast (60)  [1/1] 0.00ns  loc: r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls/hls_round.h:371->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_floatconversion.cpp:43->sobel_sw.c:90
+:17  %tmp_i_i_cast = sext i11 %tmp_i_i_11 to i12
+
+ST_50: sh_assign_1 (61)  [1/1] 1.37ns  loc: r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls/hls_round.h:371->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_floatconversion.cpp:43->sobel_sw.c:90
+:18  %sh_assign_1 = select i1 %isNeg, i12 %tmp_i_i_cast, i12 %sh_assign
+
+ST_50: sh_assign_1_cast (62)  [1/1] 0.00ns  loc: r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls/hls_round.h:371->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_floatconversion.cpp:43->sobel_sw.c:90
+:19  %sh_assign_1_cast = sext i12 %sh_assign_1 to i32
+
+ST_50: tmp_18_i_i (63)  [1/1] 0.00ns  loc: r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls/hls_round.h:371->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_floatconversion.cpp:43->sobel_sw.c:90 (grouped into LUT with out node p_Val2_4)
+:20  %tmp_18_i_i = zext i32 %sh_assign_1_cast to i136
+
+ST_50: tmp_18_i_i_cast (64)  [1/1] 0.00ns  loc: r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls/hls_round.h:371->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_floatconversion.cpp:43->sobel_sw.c:90 (grouped into LUT with out node p_Val2_4)
+:21  %tmp_18_i_i_cast = zext i32 %sh_assign_1_cast to i53
+
+ST_50: tmp_19_i_i (65)  [1/1] 0.00ns  loc: r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls/hls_round.h:371->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_floatconversion.cpp:43->sobel_sw.c:90 (grouped into LUT with out node p_Val2_4)
+:22  %tmp_19_i_i = lshr i53 %p_Result_1, %tmp_18_i_i_cast
+
+ST_50: tmp_20_i_i (66)  [1/1] 0.00ns  loc: r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls/hls_round.h:371->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_floatconversion.cpp:43->sobel_sw.c:90 (grouped into LUT with out node p_Val2_4)
+:23  %tmp_20_i_i = shl i136 %tmp_i_i, %tmp_18_i_i
+
+ST_50: tmp_13 (67)  [1/1] 0.00ns  loc: r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls/hls_round.h:374->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_floatconversion.cpp:43->sobel_sw.c:90 (grouped into LUT with out node p_Val2_4)
+:24  %tmp_13 = call i1 @_ssdm_op_BitSelect.i1.i53.i32(i53 %tmp_19_i_i, i32 52)
+
+ST_50: tmp_5 (68)  [1/1] 0.00ns  loc: r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls/hls_round.h:374->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_floatconversion.cpp:43->sobel_sw.c:90 (grouped into LUT with out node p_Val2_4)
+:25  %tmp_5 = zext i1 %tmp_13 to i32
+
+ST_50: tmp_7 (69)  [1/1] 0.00ns  loc: r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls/hls_round.h:374->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_floatconversion.cpp:43->sobel_sw.c:90 (grouped into LUT with out node p_Val2_4)
+:26  %tmp_7 = call i32 @_ssdm_op_PartSelect.i32.i136.i32.i32(i136 %tmp_20_i_i, i32 52, i32 83)
+
+ST_50: p_Val2_4 (70)  [1/1] 3.56ns  loc: r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls/hls_round.h:371->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_floatconversion.cpp:43->sobel_sw.c:90 (out node of the LUT)
+:27  %p_Val2_4 = select i1 %isNeg, i32 %tmp_5, i32 %tmp_7
+
+
+ <State 51>: 6.52ns
+ST_51: p_Val2_7_i_i (71)  [1/1] 2.44ns  loc: r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls/hls_round.h:383->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_floatconversion.cpp:43->sobel_sw.c:90
+:28  %p_Val2_7_i_i = sub i32 0, %p_Val2_4
+
+ST_51: p_Val2_s (72)  [1/1] 1.37ns  loc: r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls/hls_round.h:383->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_floatconversion.cpp:43->sobel_sw.c:90
+:29  %p_Val2_s = select i1 %p_Result_s, i32 %p_Val2_7_i_i, i32 %p_Val2_4
+
+ST_51: tmp_14 (73)  [1/1] 0.00ns  loc: sobel_sw.c:91
+:30  %tmp_14 = call i24 @_ssdm_op_PartSelect.i24.i32.i32.i32(i32 %p_Val2_s, i32 8, i32 31)
+
+ST_51: icmp (74)  [1/1] 2.40ns  loc: sobel_sw.c:91
+:31  %icmp = icmp sgt i24 %tmp_14, 0
+
+ST_51: StgValue_266 (75)  [1/1] 0.00ns  loc: sobel_sw.c:91
+:32  br i1 %icmp, label %4, label %5
+
+ST_51: tmp_15 (77)  [1/1] 0.00ns  loc: sobel_sw.c:96
+:0  %tmp_15 = trunc i32 %p_Val2_s to i8
+
+ST_51: sum9 (78)  [1/1] 0.00ns  loc: sobel_sw.c:85
+:1  %sum9 = call i20 @_ssdm_op_BitConcatenate.i20.i10.i10(i10 %i_2, i10 %j)
+
+ST_51: sum9_cast (79)  [1/1] 0.00ns  loc: sobel_sw.c:85
+:2  %sum9_cast = zext i20 %sum9 to i32
+
+ST_51: output_addr_3 (80)  [1/1] 0.00ns  loc: sobel_sw.c:96
+:3  %output_addr_3 = getelementptr [1048576 x i8]* %output_r, i32 0, i32 %sum9_cast
+
+ST_51: StgValue_271 (81)  [1/1] 2.71ns  loc: sobel_sw.c:96
+:4  store i8 %tmp_15, i8* %output_addr_3, align 1
+
+ST_51: StgValue_272 (82)  [1/1] 0.00ns
+:5  br label %6
+
+ST_51: sum7 (84)  [1/1] 0.00ns  loc: sobel_sw.c:85
+:0  %sum7 = call i20 @_ssdm_op_BitConcatenate.i20.i10.i10(i10 %i_2, i10 %j)
+
+ST_51: sum7_cast (85)  [1/1] 0.00ns  loc: sobel_sw.c:85
+:1  %sum7_cast = zext i20 %sum7 to i32
+
+ST_51: output_addr_2 (86)  [1/1] 0.00ns  loc: sobel_sw.c:92
+:2  %output_addr_2 = getelementptr [1048576 x i8]* %output_r, i32 0, i32 %sum7_cast
+
+ST_51: StgValue_276 (87)  [1/1] 2.71ns  loc: sobel_sw.c:92
+:3  store i8 -1, i8* %output_addr_2, align 1
+
+ST_51: StgValue_277 (88)  [1/1] 0.00ns  loc: sobel_sw.c:94
+:4  br label %6
+
+ST_51: i_5 (90)  [1/1] 1.84ns  loc: sobel_sw.c:85
+:0  %i_5 = add i10 %i_2, 1
+
+ST_51: StgValue_279 (91)  [1/1] 0.00ns  loc: sobel_sw.c:85
+:1  br label %.preheader7
+
+
+ <State 52>: 7.79ns
+ST_52: i_3 (100)  [1/1] 0.00ns
+.preheader6:0  %i_3 = phi i10 [ %i_4, %9 ], [ 1, %.preheader6.preheader ]
+
+ST_52: exitcond1 (101)  [1/1] 2.07ns  loc: sobel_sw.c:103
+.preheader6:1  %exitcond1 = icmp eq i10 %i_3, -1
+
+ST_52: empty_12 (102)  [1/1] 0.00ns
+.preheader6:2  %empty_12 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 1022, i64 1022, i64 1022) nounwind
+
+ST_52: StgValue_283 (103)  [1/1] 0.00ns  loc: sobel_sw.c:103
+.preheader6:3  br i1 %exitcond1, label %10, label %.preheader.preheader
+
+ST_52: StgValue_284 (105)  [1/1] 1.57ns  loc: sobel_sw.c:104
+.preheader.preheader:0  br label %.preheader
+
+ST_52: PSNR_load (133)  [1/1] 0.00ns  loc: sobel_sw.c:109
+:0  %PSNR_load = load double* %PSNR
+
+ST_52: PSNR_1 (134)  [6/6] 7.79ns  loc: sobel_sw.c:109
+:1  %PSNR_1 = fmul double %PSNR_load, 0x3EB0000000000000
+
+
+ <State 53>: 2.71ns
+ST_53: j_1 (107)  [1/1] 0.00ns
+.preheader:0  %j_1 = phi i10 [ %j_3, %8 ], [ 1, %.preheader.preheader ]
+
+ST_53: exitcond (108)  [1/1] 2.07ns  loc: sobel_sw.c:104
+.preheader:1  %exitcond = icmp eq i10 %j_1, -1
+
+ST_53: empty_13 (109)  [1/1] 0.00ns
+.preheader:2  %empty_13 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 1022, i64 1022, i64 1022) nounwind
+
+ST_53: StgValue_290 (110)  [1/1] 0.00ns  loc: sobel_sw.c:104
+.preheader:3  br i1 %exitcond, label %9, label %8
+
+ST_53: sum (113)  [1/1] 0.00ns  loc: sobel_sw.c:103
+:1  %sum = call i20 @_ssdm_op_BitConcatenate.i20.i10.i10(i10 %i_3, i10 %j_1)
+
+ST_53: sum_cast (114)  [1/1] 0.00ns  loc: sobel_sw.c:103
+:2  %sum_cast = zext i20 %sum to i32
+
+ST_53: output_addr_4 (115)  [1/1] 0.00ns  loc: sobel_sw.c:105
+:3  %output_addr_4 = getelementptr [1048576 x i8]* %output_r, i32 0, i32 %sum_cast
+
+ST_53: output_load (116)  [2/2] 2.71ns  loc: sobel_sw.c:105
+:4  %output_load = load i8* %output_addr_4, align 1
+
+ST_53: golden_addr (118)  [1/1] 0.00ns  loc: sobel_sw.c:105
+:6  %golden_addr = getelementptr [1048576 x i8]* %golden, i32 0, i32 %sum_cast
+
+ST_53: golden_load (119)  [2/2] 2.71ns  loc: sobel_sw.c:105
+:7  %golden_load = load i8* %golden_addr, align 1
+
+ST_53: j_3 (126)  [1/1] 1.84ns  loc: sobel_sw.c:104
+:14  %j_3 = add i10 %j_1, 1
+
+ST_53: i_4 (130)  [1/1] 1.84ns  loc: sobel_sw.c:103
+:0  %i_4 = add i10 %i_3, 1
+
+ST_53: StgValue_299 (131)  [1/1] 0.00ns  loc: sobel_sw.c:103
+:1  br label %.preheader6
+
+
+ <State 54>: 4.43ns
+ST_54: output_load (116)  [1/2] 2.71ns  loc: sobel_sw.c:105
+:4  %output_load = load i8* %output_addr_4, align 1
+
+ST_54: tmp_11_cast (117)  [1/1] 0.00ns  loc: sobel_sw.c:105
+:5  %tmp_11_cast = zext i8 %output_load to i9
+
+ST_54: golden_load (119)  [1/2] 2.71ns  loc: sobel_sw.c:105
+:7  %golden_load = load i8* %golden_addr, align 1
+
+ST_54: tmp_12_cast (120)  [1/1] 0.00ns  loc: sobel_sw.c:105
+:8  %tmp_12_cast = zext i8 %golden_load to i9
+
+ST_54: tmp_6 (121)  [1/1] 1.72ns  loc: sobel_sw.c:105
+:9  %tmp_6 = sub i9 %tmp_11_cast, %tmp_12_cast
+
+
+ <State 55>: 6.28ns
+ST_55: tmp_10 (122)  [1/1] 0.00ns  loc: sobel_sw.c:105
+:10  %tmp_10 = sext i9 %tmp_6 to i32
+
+ST_55: tmp_8 (123)  [6/6] 6.28ns  loc: sobel_sw.c:105
+:11  %tmp_8 = sitofp i32 %tmp_10 to double
+
+
+ <State 56>: 6.28ns
+ST_56: tmp_8 (123)  [5/6] 6.28ns  loc: sobel_sw.c:105
+:11  %tmp_8 = sitofp i32 %tmp_10 to double
+
+
+ <State 57>: 6.28ns
+ST_57: tmp_8 (123)  [4/6] 6.28ns  loc: sobel_sw.c:105
+:11  %tmp_8 = sitofp i32 %tmp_10 to double
+
+
+ <State 58>: 6.28ns
+ST_58: tmp_8 (123)  [3/6] 6.28ns  loc: sobel_sw.c:105
+:11  %tmp_8 = sitofp i32 %tmp_10 to double
+
+
+ <State 59>: 6.28ns
+ST_59: tmp_8 (123)  [2/6] 6.28ns  loc: sobel_sw.c:105
+:11  %tmp_8 = sitofp i32 %tmp_10 to double
+
+
+ <State 60>: 6.28ns
+ST_60: tmp_8 (123)  [1/6] 6.28ns  loc: sobel_sw.c:105
+:11  %tmp_8 = sitofp i32 %tmp_10 to double
+
+
+ <State 61>: 7.79ns
+ST_61: t (124)  [6/6] 7.79ns  loc: sobel_sw.c:105
+:12  %t = fmul double %tmp_8, %tmp_8
+
+
+ <State 62>: 7.79ns
+ST_62: t (124)  [5/6] 7.79ns  loc: sobel_sw.c:105
+:12  %t = fmul double %tmp_8, %tmp_8
+
+
+ <State 63>: 7.79ns
+ST_63: t (124)  [4/6] 7.79ns  loc: sobel_sw.c:105
+:12  %t = fmul double %tmp_8, %tmp_8
+
+
+ <State 64>: 7.79ns
+ST_64: t (124)  [3/6] 7.79ns  loc: sobel_sw.c:105
+:12  %t = fmul double %tmp_8, %tmp_8
+
+
+ <State 65>: 7.79ns
+ST_65: t (124)  [2/6] 7.79ns  loc: sobel_sw.c:105
+:12  %t = fmul double %tmp_8, %tmp_8
+
+
+ <State 66>: 7.79ns
+ST_66: t (124)  [1/6] 7.79ns  loc: sobel_sw.c:105
+:12  %t = fmul double %tmp_8, %tmp_8
+
+
+ <State 67>: 8.23ns
+ST_67: PSNR_load_1 (112)  [1/1] 0.00ns  loc: sobel_sw.c:106
+:0  %PSNR_load_1 = load double* %PSNR
+
+ST_67: PSNR_3 (125)  [5/5] 8.23ns  loc: sobel_sw.c:106
+:13  %PSNR_3 = fadd double %PSNR_load_1, %t
+
+
+ <State 68>: 8.23ns
+ST_68: PSNR_3 (125)  [4/5] 8.23ns  loc: sobel_sw.c:106
+:13  %PSNR_3 = fadd double %PSNR_load_1, %t
+
+
+ <State 69>: 8.23ns
+ST_69: PSNR_3 (125)  [3/5] 8.23ns  loc: sobel_sw.c:106
+:13  %PSNR_3 = fadd double %PSNR_load_1, %t
+
+
+ <State 70>: 8.23ns
+ST_70: PSNR_3 (125)  [2/5] 8.23ns  loc: sobel_sw.c:106
+:13  %PSNR_3 = fadd double %PSNR_load_1, %t
+
+
+ <State 71>: 8.23ns
+ST_71: PSNR_3 (125)  [1/5] 8.23ns  loc: sobel_sw.c:106
+:13  %PSNR_3 = fadd double %PSNR_load_1, %t
+
+
+ <State 72>: 1.57ns
+ST_72: StgValue_324 (127)  [1/1] 1.57ns  loc: sobel_sw.c:106
+:15  store double %PSNR_3, double* %PSNR
+
+ST_72: StgValue_325 (128)  [1/1] 0.00ns  loc: sobel_sw.c:104
+:16  br label %.preheader
+
+
+ <State 73>: 7.79ns
+ST_73: PSNR_1 (134)  [5/6] 7.79ns  loc: sobel_sw.c:109
+:1  %PSNR_1 = fmul double %PSNR_load, 0x3EB0000000000000
+
+
+ <State 74>: 7.79ns
+ST_74: PSNR_1 (134)  [4/6] 7.79ns  loc: sobel_sw.c:109
+:1  %PSNR_1 = fmul double %PSNR_load, 0x3EB0000000000000
+
+
+ <State 75>: 7.79ns
+ST_75: PSNR_1 (134)  [3/6] 7.79ns  loc: sobel_sw.c:109
+:1  %PSNR_1 = fmul double %PSNR_load, 0x3EB0000000000000
+
+
+ <State 76>: 7.79ns
+ST_76: PSNR_1 (134)  [2/6] 7.79ns  loc: sobel_sw.c:109
+:1  %PSNR_1 = fmul double %PSNR_load, 0x3EB0000000000000
+
+
+ <State 77>: 7.79ns
+ST_77: PSNR_1 (134)  [1/6] 7.79ns  loc: sobel_sw.c:109
+:1  %PSNR_1 = fmul double %PSNR_load, 0x3EB0000000000000
+
+
+ <State 78>: 8.62ns
+ST_78: x_assign (135)  [31/31] 8.62ns  loc: sobel_sw.c:110
+:2  %x_assign = fdiv double 6.553600e+04, %PSNR_1
+
+
+ <State 79>: 8.62ns
+ST_79: x_assign (135)  [30/31] 8.62ns  loc: sobel_sw.c:110
+:2  %x_assign = fdiv double 6.553600e+04, %PSNR_1
+
+
+ <State 80>: 8.62ns
+ST_80: x_assign (135)  [29/31] 8.62ns  loc: sobel_sw.c:110
+:2  %x_assign = fdiv double 6.553600e+04, %PSNR_1
+
+
+ <State 81>: 8.62ns
+ST_81: x_assign (135)  [28/31] 8.62ns  loc: sobel_sw.c:110
+:2  %x_assign = fdiv double 6.553600e+04, %PSNR_1
+
+
+ <State 82>: 8.62ns
+ST_82: x_assign (135)  [27/31] 8.62ns  loc: sobel_sw.c:110
+:2  %x_assign = fdiv double 6.553600e+04, %PSNR_1
+
+
+ <State 83>: 8.62ns
+ST_83: x_assign (135)  [26/31] 8.62ns  loc: sobel_sw.c:110
+:2  %x_assign = fdiv double 6.553600e+04, %PSNR_1
+
+
+ <State 84>: 8.62ns
+ST_84: x_assign (135)  [25/31] 8.62ns  loc: sobel_sw.c:110
+:2  %x_assign = fdiv double 6.553600e+04, %PSNR_1
+
+
+ <State 85>: 8.62ns
+ST_85: x_assign (135)  [24/31] 8.62ns  loc: sobel_sw.c:110
+:2  %x_assign = fdiv double 6.553600e+04, %PSNR_1
+
+
+ <State 86>: 8.62ns
+ST_86: x_assign (135)  [23/31] 8.62ns  loc: sobel_sw.c:110
+:2  %x_assign = fdiv double 6.553600e+04, %PSNR_1
+
+
+ <State 87>: 8.62ns
+ST_87: x_assign (135)  [22/31] 8.62ns  loc: sobel_sw.c:110
+:2  %x_assign = fdiv double 6.553600e+04, %PSNR_1
+
+
+ <State 88>: 8.62ns
+ST_88: x_assign (135)  [21/31] 8.62ns  loc: sobel_sw.c:110
+:2  %x_assign = fdiv double 6.553600e+04, %PSNR_1
+
+
+ <State 89>: 8.62ns
+ST_89: x_assign (135)  [20/31] 8.62ns  loc: sobel_sw.c:110
+:2  %x_assign = fdiv double 6.553600e+04, %PSNR_1
+
+
+ <State 90>: 8.62ns
+ST_90: x_assign (135)  [19/31] 8.62ns  loc: sobel_sw.c:110
+:2  %x_assign = fdiv double 6.553600e+04, %PSNR_1
+
+
+ <State 91>: 8.62ns
+ST_91: x_assign (135)  [18/31] 8.62ns  loc: sobel_sw.c:110
+:2  %x_assign = fdiv double 6.553600e+04, %PSNR_1
+
+
+ <State 92>: 8.62ns
+ST_92: x_assign (135)  [17/31] 8.62ns  loc: sobel_sw.c:110
+:2  %x_assign = fdiv double 6.553600e+04, %PSNR_1
+
+
+ <State 93>: 8.62ns
+ST_93: x_assign (135)  [16/31] 8.62ns  loc: sobel_sw.c:110
+:2  %x_assign = fdiv double 6.553600e+04, %PSNR_1
+
+
+ <State 94>: 8.62ns
+ST_94: x_assign (135)  [15/31] 8.62ns  loc: sobel_sw.c:110
+:2  %x_assign = fdiv double 6.553600e+04, %PSNR_1
+
+
+ <State 95>: 8.62ns
+ST_95: x_assign (135)  [14/31] 8.62ns  loc: sobel_sw.c:110
+:2  %x_assign = fdiv double 6.553600e+04, %PSNR_1
+
+
+ <State 96>: 8.62ns
+ST_96: x_assign (135)  [13/31] 8.62ns  loc: sobel_sw.c:110
+:2  %x_assign = fdiv double 6.553600e+04, %PSNR_1
+
+
+ <State 97>: 8.62ns
+ST_97: x_assign (135)  [12/31] 8.62ns  loc: sobel_sw.c:110
+:2  %x_assign = fdiv double 6.553600e+04, %PSNR_1
+
+
+ <State 98>: 8.62ns
+ST_98: x_assign (135)  [11/31] 8.62ns  loc: sobel_sw.c:110
+:2  %x_assign = fdiv double 6.553600e+04, %PSNR_1
+
+
+ <State 99>: 8.62ns
+ST_99: x_assign (135)  [10/31] 8.62ns  loc: sobel_sw.c:110
+:2  %x_assign = fdiv double 6.553600e+04, %PSNR_1
+
+
+ <State 100>: 8.62ns
+ST_100: x_assign (135)  [9/31] 8.62ns  loc: sobel_sw.c:110
+:2  %x_assign = fdiv double 6.553600e+04, %PSNR_1
+
+
+ <State 101>: 8.62ns
+ST_101: x_assign (135)  [8/31] 8.62ns  loc: sobel_sw.c:110
+:2  %x_assign = fdiv double 6.553600e+04, %PSNR_1
+
+
+ <State 102>: 8.62ns
+ST_102: x_assign (135)  [7/31] 8.62ns  loc: sobel_sw.c:110
+:2  %x_assign = fdiv double 6.553600e+04, %PSNR_1
+
+
+ <State 103>: 8.62ns
+ST_103: x_assign (135)  [6/31] 8.62ns  loc: sobel_sw.c:110
+:2  %x_assign = fdiv double 6.553600e+04, %PSNR_1
+
+
+ <State 104>: 8.62ns
+ST_104: x_assign (135)  [5/31] 8.62ns  loc: sobel_sw.c:110
+:2  %x_assign = fdiv double 6.553600e+04, %PSNR_1
+
+
+ <State 105>: 8.62ns
+ST_105: x_assign (135)  [4/31] 8.62ns  loc: sobel_sw.c:110
+:2  %x_assign = fdiv double 6.553600e+04, %PSNR_1
+
+
+ <State 106>: 8.62ns
+ST_106: x_assign (135)  [3/31] 8.62ns  loc: sobel_sw.c:110
+:2  %x_assign = fdiv double 6.553600e+04, %PSNR_1
+
+
+ <State 107>: 8.62ns
+ST_107: x_assign (135)  [2/31] 8.62ns  loc: sobel_sw.c:110
+:2  %x_assign = fdiv double 6.553600e+04, %PSNR_1
+
+
+ <State 108>: 8.62ns
+ST_108: x_assign (135)  [1/31] 8.62ns  loc: sobel_sw.c:110
+:2  %x_assign = fdiv double 6.553600e+04, %PSNR_1
+
+
+ <State 109>: 7.39ns
+ST_109: tmp_i_i_i1 (136)  [31/31] 7.39ns  loc: r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:728->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:735->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_hlsm.cpp:251->sobel_sw.c:110
+:3  %tmp_i_i_i1 = call double @llvm.log.f64(double %x_assign) nounwind
+
+
+ <State 110>: 7.39ns
+ST_110: tmp_i_i_i1 (136)  [30/31] 7.39ns  loc: r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:728->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:735->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_hlsm.cpp:251->sobel_sw.c:110
+:3  %tmp_i_i_i1 = call double @llvm.log.f64(double %x_assign) nounwind
+
+
+ <State 111>: 7.39ns
+ST_111: tmp_i_i_i1 (136)  [29/31] 7.39ns  loc: r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:728->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:735->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_hlsm.cpp:251->sobel_sw.c:110
+:3  %tmp_i_i_i1 = call double @llvm.log.f64(double %x_assign) nounwind
+
+
+ <State 112>: 7.39ns
+ST_112: tmp_i_i_i1 (136)  [28/31] 7.39ns  loc: r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:728->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:735->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_hlsm.cpp:251->sobel_sw.c:110
+:3  %tmp_i_i_i1 = call double @llvm.log.f64(double %x_assign) nounwind
+
+
+ <State 113>: 7.39ns
+ST_113: tmp_i_i_i1 (136)  [27/31] 7.39ns  loc: r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:728->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:735->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_hlsm.cpp:251->sobel_sw.c:110
+:3  %tmp_i_i_i1 = call double @llvm.log.f64(double %x_assign) nounwind
+
+
+ <State 114>: 7.39ns
+ST_114: tmp_i_i_i1 (136)  [26/31] 7.39ns  loc: r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:728->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:735->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_hlsm.cpp:251->sobel_sw.c:110
+:3  %tmp_i_i_i1 = call double @llvm.log.f64(double %x_assign) nounwind
+
+
+ <State 115>: 7.39ns
+ST_115: tmp_i_i_i1 (136)  [25/31] 7.39ns  loc: r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:728->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:735->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_hlsm.cpp:251->sobel_sw.c:110
+:3  %tmp_i_i_i1 = call double @llvm.log.f64(double %x_assign) nounwind
+
+
+ <State 116>: 7.39ns
+ST_116: tmp_i_i_i1 (136)  [24/31] 7.39ns  loc: r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:728->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:735->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_hlsm.cpp:251->sobel_sw.c:110
+:3  %tmp_i_i_i1 = call double @llvm.log.f64(double %x_assign) nounwind
+
+
+ <State 117>: 7.39ns
+ST_117: tmp_i_i_i1 (136)  [23/31] 7.39ns  loc: r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:728->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:735->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_hlsm.cpp:251->sobel_sw.c:110
+:3  %tmp_i_i_i1 = call double @llvm.log.f64(double %x_assign) nounwind
+
+
+ <State 118>: 7.39ns
+ST_118: tmp_i_i_i1 (136)  [22/31] 7.39ns  loc: r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:728->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:735->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_hlsm.cpp:251->sobel_sw.c:110
+:3  %tmp_i_i_i1 = call double @llvm.log.f64(double %x_assign) nounwind
+
+
+ <State 119>: 7.39ns
+ST_119: tmp_i_i_i1 (136)  [21/31] 7.39ns  loc: r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:728->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:735->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_hlsm.cpp:251->sobel_sw.c:110
+:3  %tmp_i_i_i1 = call double @llvm.log.f64(double %x_assign) nounwind
+
+
+ <State 120>: 7.39ns
+ST_120: tmp_i_i_i1 (136)  [20/31] 7.39ns  loc: r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:728->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:735->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_hlsm.cpp:251->sobel_sw.c:110
+:3  %tmp_i_i_i1 = call double @llvm.log.f64(double %x_assign) nounwind
+
+
+ <State 121>: 7.39ns
+ST_121: tmp_i_i_i1 (136)  [19/31] 7.39ns  loc: r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:728->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:735->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_hlsm.cpp:251->sobel_sw.c:110
+:3  %tmp_i_i_i1 = call double @llvm.log.f64(double %x_assign) nounwind
+
+
+ <State 122>: 7.39ns
+ST_122: tmp_i_i_i1 (136)  [18/31] 7.39ns  loc: r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:728->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:735->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_hlsm.cpp:251->sobel_sw.c:110
+:3  %tmp_i_i_i1 = call double @llvm.log.f64(double %x_assign) nounwind
+
+
+ <State 123>: 7.39ns
+ST_123: tmp_i_i_i1 (136)  [17/31] 7.39ns  loc: r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:728->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:735->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_hlsm.cpp:251->sobel_sw.c:110
+:3  %tmp_i_i_i1 = call double @llvm.log.f64(double %x_assign) nounwind
+
+
+ <State 124>: 7.39ns
+ST_124: tmp_i_i_i1 (136)  [16/31] 7.39ns  loc: r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:728->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:735->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_hlsm.cpp:251->sobel_sw.c:110
+:3  %tmp_i_i_i1 = call double @llvm.log.f64(double %x_assign) nounwind
+
+
+ <State 125>: 7.39ns
+ST_125: tmp_i_i_i1 (136)  [15/31] 7.39ns  loc: r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:728->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:735->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_hlsm.cpp:251->sobel_sw.c:110
+:3  %tmp_i_i_i1 = call double @llvm.log.f64(double %x_assign) nounwind
+
+
+ <State 126>: 7.39ns
+ST_126: tmp_i_i_i1 (136)  [14/31] 7.39ns  loc: r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:728->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:735->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_hlsm.cpp:251->sobel_sw.c:110
+:3  %tmp_i_i_i1 = call double @llvm.log.f64(double %x_assign) nounwind
+
+
+ <State 127>: 7.39ns
+ST_127: tmp_i_i_i1 (136)  [13/31] 7.39ns  loc: r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:728->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:735->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_hlsm.cpp:251->sobel_sw.c:110
+:3  %tmp_i_i_i1 = call double @llvm.log.f64(double %x_assign) nounwind
+
+
+ <State 128>: 7.39ns
+ST_128: tmp_i_i_i1 (136)  [12/31] 7.39ns  loc: r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:728->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:735->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_hlsm.cpp:251->sobel_sw.c:110
+:3  %tmp_i_i_i1 = call double @llvm.log.f64(double %x_assign) nounwind
+
+
+ <State 129>: 7.39ns
+ST_129: tmp_i_i_i1 (136)  [11/31] 7.39ns  loc: r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:728->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:735->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_hlsm.cpp:251->sobel_sw.c:110
+:3  %tmp_i_i_i1 = call double @llvm.log.f64(double %x_assign) nounwind
+
+
+ <State 130>: 7.39ns
+ST_130: tmp_i_i_i1 (136)  [10/31] 7.39ns  loc: r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:728->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:735->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_hlsm.cpp:251->sobel_sw.c:110
+:3  %tmp_i_i_i1 = call double @llvm.log.f64(double %x_assign) nounwind
+
+
+ <State 131>: 7.39ns
+ST_131: tmp_i_i_i1 (136)  [9/31] 7.39ns  loc: r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:728->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:735->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_hlsm.cpp:251->sobel_sw.c:110
+:3  %tmp_i_i_i1 = call double @llvm.log.f64(double %x_assign) nounwind
+
+
+ <State 132>: 7.39ns
+ST_132: tmp_i_i_i1 (136)  [8/31] 7.39ns  loc: r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:728->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:735->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_hlsm.cpp:251->sobel_sw.c:110
+:3  %tmp_i_i_i1 = call double @llvm.log.f64(double %x_assign) nounwind
+
+
+ <State 133>: 7.39ns
+ST_133: tmp_i_i_i1 (136)  [7/31] 7.39ns  loc: r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:728->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:735->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_hlsm.cpp:251->sobel_sw.c:110
+:3  %tmp_i_i_i1 = call double @llvm.log.f64(double %x_assign) nounwind
+
+
+ <State 134>: 7.39ns
+ST_134: tmp_i_i_i1 (136)  [6/31] 7.39ns  loc: r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:728->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:735->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_hlsm.cpp:251->sobel_sw.c:110
+:3  %tmp_i_i_i1 = call double @llvm.log.f64(double %x_assign) nounwind
+
+
+ <State 135>: 7.39ns
+ST_135: tmp_i_i_i1 (136)  [5/31] 7.39ns  loc: r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:728->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:735->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_hlsm.cpp:251->sobel_sw.c:110
+:3  %tmp_i_i_i1 = call double @llvm.log.f64(double %x_assign) nounwind
+
+
+ <State 136>: 7.39ns
+ST_136: tmp_i_i_i1 (136)  [4/31] 7.39ns  loc: r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:728->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:735->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_hlsm.cpp:251->sobel_sw.c:110
+:3  %tmp_i_i_i1 = call double @llvm.log.f64(double %x_assign) nounwind
+
+
+ <State 137>: 7.39ns
+ST_137: tmp_i_i_i1 (136)  [3/31] 7.39ns  loc: r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:728->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:735->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_hlsm.cpp:251->sobel_sw.c:110
+:3  %tmp_i_i_i1 = call double @llvm.log.f64(double %x_assign) nounwind
+
+
+ <State 138>: 7.39ns
+ST_138: tmp_i_i_i1 (136)  [2/31] 7.39ns  loc: r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:728->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:735->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_hlsm.cpp:251->sobel_sw.c:110
+:3  %tmp_i_i_i1 = call double @llvm.log.f64(double %x_assign) nounwind
+
+
+ <State 139>: 7.39ns
+ST_139: tmp_i_i_i1 (136)  [1/31] 7.39ns  loc: r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:728->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:735->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_hlsm.cpp:251->sobel_sw.c:110
+:3  %tmp_i_i_i1 = call double @llvm.log.f64(double %x_assign) nounwind
+
+
+ <State 140>: 7.79ns
+ST_140: tmp_i_i1 (137)  [6/6] 7.79ns  loc: r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:735->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_hlsm.cpp:251->sobel_sw.c:110
+:4  %tmp_i_i1 = fmul double %tmp_i_i_i1, 0x3FDBCB7B1526E50E
+
+
+ <State 141>: 7.79ns
+ST_141: tmp_i_i1 (137)  [5/6] 7.79ns  loc: r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:735->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_hlsm.cpp:251->sobel_sw.c:110
+:4  %tmp_i_i1 = fmul double %tmp_i_i_i1, 0x3FDBCB7B1526E50E
+
+
+ <State 142>: 7.79ns
+ST_142: tmp_i_i1 (137)  [4/6] 7.79ns  loc: r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:735->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_hlsm.cpp:251->sobel_sw.c:110
+:4  %tmp_i_i1 = fmul double %tmp_i_i_i1, 0x3FDBCB7B1526E50E
+
+
+ <State 143>: 7.79ns
+ST_143: tmp_i_i1 (137)  [3/6] 7.79ns  loc: r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:735->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_hlsm.cpp:251->sobel_sw.c:110
+:4  %tmp_i_i1 = fmul double %tmp_i_i_i1, 0x3FDBCB7B1526E50E
+
+
+ <State 144>: 7.79ns
+ST_144: tmp_i_i1 (137)  [2/6] 7.79ns  loc: r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:735->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_hlsm.cpp:251->sobel_sw.c:110
+:4  %tmp_i_i1 = fmul double %tmp_i_i_i1, 0x3FDBCB7B1526E50E
+
+
+ <State 145>: 7.79ns
+ST_145: tmp_i_i1 (137)  [1/6] 7.79ns  loc: r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:735->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_hlsm.cpp:251->sobel_sw.c:110
+:4  %tmp_i_i1 = fmul double %tmp_i_i_i1, 0x3FDBCB7B1526E50E
+
+
+ <State 146>: 7.79ns
+ST_146: PSNR_2 (138)  [6/6] 7.79ns  loc: sobel_sw.c:110
+:5  %PSNR_2 = fmul double %tmp_i_i1, 1.000000e+01
+
+
+ <State 147>: 7.79ns
+ST_147: PSNR_2 (138)  [5/6] 7.79ns  loc: sobel_sw.c:110
+:5  %PSNR_2 = fmul double %tmp_i_i1, 1.000000e+01
+
+
+ <State 148>: 7.79ns
+ST_148: PSNR_2 (138)  [4/6] 7.79ns  loc: sobel_sw.c:110
+:5  %PSNR_2 = fmul double %tmp_i_i1, 1.000000e+01
+
+
+ <State 149>: 7.79ns
+ST_149: PSNR_2 (138)  [3/6] 7.79ns  loc: sobel_sw.c:110
+:5  %PSNR_2 = fmul double %tmp_i_i1, 1.000000e+01
+
+
+ <State 150>: 7.79ns
+ST_150: PSNR_2 (138)  [2/6] 7.79ns  loc: sobel_sw.c:110
+:5  %PSNR_2 = fmul double %tmp_i_i1, 1.000000e+01
+
+
+ <State 151>: 7.79ns
+ST_151: PSNR_2 (138)  [1/6] 7.79ns  loc: sobel_sw.c:110
+:5  %PSNR_2 = fmul double %tmp_i_i1, 1.000000e+01
+
+ST_151: StgValue_405 (139)  [1/1] 0.00ns  loc: sobel_sw.c:111
+:6  ret double %PSNR_2
+
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 1.57ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('i') with incoming values : ('i', sobel_sw.c:62) [13]  (1.57 ns)
+
+ <State 2>: 2.71ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', sobel_sw.c:62) [13]  (0 ns)
+	'getelementptr' operation ('output_addr', sobel_sw.c:63) [20]  (0 ns)
+	'store' operation (sobel_sw.c:63) of constant 0 on array 'output_r' [21]  (2.71 ns)
+
+ <State 3>: 2.07ns
+The critical path consists of the following:
+	'phi' operation ('j') with incoming values : ('j', sobel_sw.c:84) [31]  (0 ns)
+	'icmp' operation ('exitcond3', sobel_sw.c:84) [32]  (2.07 ns)
+
+ <State 4>: 2.07ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', sobel_sw.c:85) [38]  (0 ns)
+	'icmp' operation ('exitcond2', sobel_sw.c:85) [39]  (2.07 ns)
+
+ <State 5>: 0ns
+The critical path consists of the following:
+
+ <State 6>: 1.57ns
+The critical path consists of the following:
+	'call' operation ('tmp_4', sobel_sw.c:89) to 'convolution2D' [45]  (1.57 ns)
+
+ <State 7>: 6.08ns
+The critical path consists of the following:
+	'mul' operation ('tmp_3', sobel_sw.c:88) [44]  (6.08 ns)
+
+ <State 8>: 6.08ns
+The critical path consists of the following:
+	'mul' operation ('tmp_3', sobel_sw.c:88) [44]  (6.08 ns)
+
+ <State 9>: 6.08ns
+The critical path consists of the following:
+	'mul' operation ('tmp_3', sobel_sw.c:88) [44]  (6.08 ns)
+
+ <State 10>: 6.08ns
+The critical path consists of the following:
+	'mul' operation ('tmp_3', sobel_sw.c:88) [44]  (6.08 ns)
+
+ <State 11>: 6.08ns
+The critical path consists of the following:
+	'mul' operation ('tmp_3', sobel_sw.c:88) [44]  (6.08 ns)
+
+ <State 12>: 8.52ns
+The critical path consists of the following:
+	'mul' operation ('tmp_3', sobel_sw.c:88) [44]  (6.08 ns)
+	'add' operation ('p', sobel_sw.c:89) [47]  (2.44 ns)
+
+ <State 13>: 6.28ns
+The critical path consists of the following:
+	'uitodp' operation ('tmp_s', sobel_sw.c:90) [48]  (6.28 ns)
+
+ <State 14>: 6.28ns
+The critical path consists of the following:
+	'uitodp' operation ('tmp_s', sobel_sw.c:90) [48]  (6.28 ns)
+
+ <State 15>: 6.28ns
+The critical path consists of the following:
+	'uitodp' operation ('tmp_s', sobel_sw.c:90) [48]  (6.28 ns)
+
+ <State 16>: 6.28ns
+The critical path consists of the following:
+	'uitodp' operation ('tmp_s', sobel_sw.c:90) [48]  (6.28 ns)
+
+ <State 17>: 6.28ns
+The critical path consists of the following:
+	'uitodp' operation ('tmp_s', sobel_sw.c:90) [48]  (6.28 ns)
+
+ <State 18>: 6.28ns
+The critical path consists of the following:
+	'uitodp' operation ('tmp_s', sobel_sw.c:90) [48]  (6.28 ns)
+
+ <State 19>: 8.62ns
+The critical path consists of the following:
+	'dsqrt' operation ('x', sobel_sw.c:90) [49]  (8.62 ns)
+
+ <State 20>: 8.62ns
+The critical path consists of the following:
+	'dsqrt' operation ('x', sobel_sw.c:90) [49]  (8.62 ns)
+
+ <State 21>: 8.62ns
+The critical path consists of the following:
+	'dsqrt' operation ('x', sobel_sw.c:90) [49]  (8.62 ns)
+
+ <State 22>: 8.62ns
+The critical path consists of the following:
+	'dsqrt' operation ('x', sobel_sw.c:90) [49]  (8.62 ns)
+
+ <State 23>: 8.62ns
+The critical path consists of the following:
+	'dsqrt' operation ('x', sobel_sw.c:90) [49]  (8.62 ns)
+
+ <State 24>: 8.62ns
+The critical path consists of the following:
+	'dsqrt' operation ('x', sobel_sw.c:90) [49]  (8.62 ns)
+
+ <State 25>: 8.62ns
+The critical path consists of the following:
+	'dsqrt' operation ('x', sobel_sw.c:90) [49]  (8.62 ns)
+
+ <State 26>: 8.62ns
+The critical path consists of the following:
+	'dsqrt' operation ('x', sobel_sw.c:90) [49]  (8.62 ns)
+
+ <State 27>: 8.62ns
+The critical path consists of the following:
+	'dsqrt' operation ('x', sobel_sw.c:90) [49]  (8.62 ns)
+
+ <State 28>: 8.62ns
+The critical path consists of the following:
+	'dsqrt' operation ('x', sobel_sw.c:90) [49]  (8.62 ns)
+
+ <State 29>: 8.62ns
+The critical path consists of the following:
+	'dsqrt' operation ('x', sobel_sw.c:90) [49]  (8.62 ns)
+
+ <State 30>: 8.62ns
+The critical path consists of the following:
+	'dsqrt' operation ('x', sobel_sw.c:90) [49]  (8.62 ns)
+
+ <State 31>: 8.62ns
+The critical path consists of the following:
+	'dsqrt' operation ('x', sobel_sw.c:90) [49]  (8.62 ns)
+
+ <State 32>: 8.62ns
+The critical path consists of the following:
+	'dsqrt' operation ('x', sobel_sw.c:90) [49]  (8.62 ns)
+
+ <State 33>: 8.62ns
+The critical path consists of the following:
+	'dsqrt' operation ('x', sobel_sw.c:90) [49]  (8.62 ns)
+
+ <State 34>: 8.62ns
+The critical path consists of the following:
+	'dsqrt' operation ('x', sobel_sw.c:90) [49]  (8.62 ns)
+
+ <State 35>: 8.62ns
+The critical path consists of the following:
+	'dsqrt' operation ('x', sobel_sw.c:90) [49]  (8.62 ns)
+
+ <State 36>: 8.62ns
+The critical path consists of the following:
+	'dsqrt' operation ('x', sobel_sw.c:90) [49]  (8.62 ns)
+
+ <State 37>: 8.62ns
+The critical path consists of the following:
+	'dsqrt' operation ('x', sobel_sw.c:90) [49]  (8.62 ns)
+
+ <State 38>: 8.62ns
+The critical path consists of the following:
+	'dsqrt' operation ('x', sobel_sw.c:90) [49]  (8.62 ns)
+
+ <State 39>: 8.62ns
+The critical path consists of the following:
+	'dsqrt' operation ('x', sobel_sw.c:90) [49]  (8.62 ns)
+
+ <State 40>: 8.62ns
+The critical path consists of the following:
+	'dsqrt' operation ('x', sobel_sw.c:90) [49]  (8.62 ns)
+
+ <State 41>: 8.62ns
+The critical path consists of the following:
+	'dsqrt' operation ('x', sobel_sw.c:90) [49]  (8.62 ns)
+
+ <State 42>: 8.62ns
+The critical path consists of the following:
+	'dsqrt' operation ('x', sobel_sw.c:90) [49]  (8.62 ns)
+
+ <State 43>: 8.62ns
+The critical path consists of the following:
+	'dsqrt' operation ('x', sobel_sw.c:90) [49]  (8.62 ns)
+
+ <State 44>: 8.62ns
+The critical path consists of the following:
+	'dsqrt' operation ('x', sobel_sw.c:90) [49]  (8.62 ns)
+
+ <State 45>: 8.62ns
+The critical path consists of the following:
+	'dsqrt' operation ('x', sobel_sw.c:90) [49]  (8.62 ns)
+
+ <State 46>: 8.62ns
+The critical path consists of the following:
+	'dsqrt' operation ('x', sobel_sw.c:90) [49]  (8.62 ns)
+
+ <State 47>: 8.62ns
+The critical path consists of the following:
+	'dsqrt' operation ('x', sobel_sw.c:90) [49]  (8.62 ns)
+
+ <State 48>: 8.62ns
+The critical path consists of the following:
+	'dsqrt' operation ('x', sobel_sw.c:90) [49]  (8.62 ns)
+
+ <State 49>: 8.62ns
+The critical path consists of the following:
+	'dsqrt' operation ('x', sobel_sw.c:90) [49]  (8.62 ns)
+
+ <State 50>: 6.77ns
+The critical path consists of the following:
+	'sub' operation ('tmp_i_i_11', r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls/hls_round.h:371->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_floatconversion.cpp:43->sobel_sw.c:90) [59]  (1.84 ns)
+	'select' operation ('sh', r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls/hls_round.h:371->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_floatconversion.cpp:43->sobel_sw.c:90) [61]  (1.37 ns)
+	'lshr' operation ('tmp_19_i_i', r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls/hls_round.h:371->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_floatconversion.cpp:43->sobel_sw.c:90) [65]  (0 ns)
+	'select' operation ('__Val2__', r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls/hls_round.h:371->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_floatconversion.cpp:43->sobel_sw.c:90) [70]  (3.56 ns)
+
+ <State 51>: 6.52ns
+The critical path consists of the following:
+	'sub' operation ('p_Val2_7_i_i', r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls/hls_round.h:383->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_floatconversion.cpp:43->sobel_sw.c:90) [71]  (2.44 ns)
+	'select' operation ('__Val2__', r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls/hls_round.h:383->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_floatconversion.cpp:43->sobel_sw.c:90) [72]  (1.37 ns)
+	'store' operation (sobel_sw.c:96) of variable 'tmp_15', sobel_sw.c:96 on array 'output_r' [81]  (2.71 ns)
+
+ <State 52>: 7.79ns
+The critical path consists of the following:
+	'load' operation ('PSNR_load', sobel_sw.c:109) on local variable 'PSNR' [133]  (0 ns)
+	'dmul' operation ('PSNR', sobel_sw.c:109) [134]  (7.79 ns)
+
+ <State 53>: 2.71ns
+The critical path consists of the following:
+	'phi' operation ('j') with incoming values : ('j', sobel_sw.c:104) [107]  (0 ns)
+	'getelementptr' operation ('output_addr_4', sobel_sw.c:105) [115]  (0 ns)
+	'load' operation ('output_load', sobel_sw.c:105) on array 'output_r' [116]  (2.71 ns)
+
+ <State 54>: 4.43ns
+The critical path consists of the following:
+	'load' operation ('output_load', sobel_sw.c:105) on array 'output_r' [116]  (2.71 ns)
+	'sub' operation ('tmp_6', sobel_sw.c:105) [121]  (1.72 ns)
+
+ <State 55>: 6.28ns
+The critical path consists of the following:
+	'sitodp' operation ('tmp_8', sobel_sw.c:105) [123]  (6.28 ns)
+
+ <State 56>: 6.28ns
+The critical path consists of the following:
+	'sitodp' operation ('tmp_8', sobel_sw.c:105) [123]  (6.28 ns)
+
+ <State 57>: 6.28ns
+The critical path consists of the following:
+	'sitodp' operation ('tmp_8', sobel_sw.c:105) [123]  (6.28 ns)
+
+ <State 58>: 6.28ns
+The critical path consists of the following:
+	'sitodp' operation ('tmp_8', sobel_sw.c:105) [123]  (6.28 ns)
+
+ <State 59>: 6.28ns
+The critical path consists of the following:
+	'sitodp' operation ('tmp_8', sobel_sw.c:105) [123]  (6.28 ns)
+
+ <State 60>: 6.28ns
+The critical path consists of the following:
+	'sitodp' operation ('tmp_8', sobel_sw.c:105) [123]  (6.28 ns)
+
+ <State 61>: 7.79ns
+The critical path consists of the following:
+	'dmul' operation ('t', sobel_sw.c:105) [124]  (7.79 ns)
+
+ <State 62>: 7.79ns
+The critical path consists of the following:
+	'dmul' operation ('t', sobel_sw.c:105) [124]  (7.79 ns)
+
+ <State 63>: 7.79ns
+The critical path consists of the following:
+	'dmul' operation ('t', sobel_sw.c:105) [124]  (7.79 ns)
+
+ <State 64>: 7.79ns
+The critical path consists of the following:
+	'dmul' operation ('t', sobel_sw.c:105) [124]  (7.79 ns)
+
+ <State 65>: 7.79ns
+The critical path consists of the following:
+	'dmul' operation ('t', sobel_sw.c:105) [124]  (7.79 ns)
+
+ <State 66>: 7.79ns
+The critical path consists of the following:
+	'dmul' operation ('t', sobel_sw.c:105) [124]  (7.79 ns)
+
+ <State 67>: 8.23ns
+The critical path consists of the following:
+	'load' operation ('PSNR_load_1', sobel_sw.c:106) on local variable 'PSNR' [112]  (0 ns)
+	'dadd' operation ('PSNR', sobel_sw.c:106) [125]  (8.23 ns)
+
+ <State 68>: 8.23ns
+The critical path consists of the following:
+	'dadd' operation ('PSNR', sobel_sw.c:106) [125]  (8.23 ns)
+
+ <State 69>: 8.23ns
+The critical path consists of the following:
+	'dadd' operation ('PSNR', sobel_sw.c:106) [125]  (8.23 ns)
+
+ <State 70>: 8.23ns
+The critical path consists of the following:
+	'dadd' operation ('PSNR', sobel_sw.c:106) [125]  (8.23 ns)
+
+ <State 71>: 8.23ns
+The critical path consists of the following:
+	'dadd' operation ('PSNR', sobel_sw.c:106) [125]  (8.23 ns)
+
+ <State 72>: 1.57ns
+The critical path consists of the following:
+	'store' operation (sobel_sw.c:106) of variable 'PSNR', sobel_sw.c:106 on local variable 'PSNR' [127]  (1.57 ns)
+
+ <State 73>: 7.79ns
+The critical path consists of the following:
+	'dmul' operation ('PSNR', sobel_sw.c:109) [134]  (7.79 ns)
+
+ <State 74>: 7.79ns
+The critical path consists of the following:
+	'dmul' operation ('PSNR', sobel_sw.c:109) [134]  (7.79 ns)
+
+ <State 75>: 7.79ns
+The critical path consists of the following:
+	'dmul' operation ('PSNR', sobel_sw.c:109) [134]  (7.79 ns)
+
+ <State 76>: 7.79ns
+The critical path consists of the following:
+	'dmul' operation ('PSNR', sobel_sw.c:109) [134]  (7.79 ns)
+
+ <State 77>: 7.79ns
+The critical path consists of the following:
+	'dmul' operation ('PSNR', sobel_sw.c:109) [134]  (7.79 ns)
+
+ <State 78>: 8.62ns
+The critical path consists of the following:
+	'ddiv' operation ('x', sobel_sw.c:110) [135]  (8.62 ns)
+
+ <State 79>: 8.62ns
+The critical path consists of the following:
+	'ddiv' operation ('x', sobel_sw.c:110) [135]  (8.62 ns)
+
+ <State 80>: 8.62ns
+The critical path consists of the following:
+	'ddiv' operation ('x', sobel_sw.c:110) [135]  (8.62 ns)
+
+ <State 81>: 8.62ns
+The critical path consists of the following:
+	'ddiv' operation ('x', sobel_sw.c:110) [135]  (8.62 ns)
+
+ <State 82>: 8.62ns
+The critical path consists of the following:
+	'ddiv' operation ('x', sobel_sw.c:110) [135]  (8.62 ns)
+
+ <State 83>: 8.62ns
+The critical path consists of the following:
+	'ddiv' operation ('x', sobel_sw.c:110) [135]  (8.62 ns)
+
+ <State 84>: 8.62ns
+The critical path consists of the following:
+	'ddiv' operation ('x', sobel_sw.c:110) [135]  (8.62 ns)
+
+ <State 85>: 8.62ns
+The critical path consists of the following:
+	'ddiv' operation ('x', sobel_sw.c:110) [135]  (8.62 ns)
+
+ <State 86>: 8.62ns
+The critical path consists of the following:
+	'ddiv' operation ('x', sobel_sw.c:110) [135]  (8.62 ns)
+
+ <State 87>: 8.62ns
+The critical path consists of the following:
+	'ddiv' operation ('x', sobel_sw.c:110) [135]  (8.62 ns)
+
+ <State 88>: 8.62ns
+The critical path consists of the following:
+	'ddiv' operation ('x', sobel_sw.c:110) [135]  (8.62 ns)
+
+ <State 89>: 8.62ns
+The critical path consists of the following:
+	'ddiv' operation ('x', sobel_sw.c:110) [135]  (8.62 ns)
+
+ <State 90>: 8.62ns
+The critical path consists of the following:
+	'ddiv' operation ('x', sobel_sw.c:110) [135]  (8.62 ns)
+
+ <State 91>: 8.62ns
+The critical path consists of the following:
+	'ddiv' operation ('x', sobel_sw.c:110) [135]  (8.62 ns)
+
+ <State 92>: 8.62ns
+The critical path consists of the following:
+	'ddiv' operation ('x', sobel_sw.c:110) [135]  (8.62 ns)
+
+ <State 93>: 8.62ns
+The critical path consists of the following:
+	'ddiv' operation ('x', sobel_sw.c:110) [135]  (8.62 ns)
+
+ <State 94>: 8.62ns
+The critical path consists of the following:
+	'ddiv' operation ('x', sobel_sw.c:110) [135]  (8.62 ns)
+
+ <State 95>: 8.62ns
+The critical path consists of the following:
+	'ddiv' operation ('x', sobel_sw.c:110) [135]  (8.62 ns)
+
+ <State 96>: 8.62ns
+The critical path consists of the following:
+	'ddiv' operation ('x', sobel_sw.c:110) [135]  (8.62 ns)
+
+ <State 97>: 8.62ns
+The critical path consists of the following:
+	'ddiv' operation ('x', sobel_sw.c:110) [135]  (8.62 ns)
+
+ <State 98>: 8.62ns
+The critical path consists of the following:
+	'ddiv' operation ('x', sobel_sw.c:110) [135]  (8.62 ns)
+
+ <State 99>: 8.62ns
+The critical path consists of the following:
+	'ddiv' operation ('x', sobel_sw.c:110) [135]  (8.62 ns)
+
+ <State 100>: 8.62ns
+The critical path consists of the following:
+	'ddiv' operation ('x', sobel_sw.c:110) [135]  (8.62 ns)
+
+ <State 101>: 8.62ns
+The critical path consists of the following:
+	'ddiv' operation ('x', sobel_sw.c:110) [135]  (8.62 ns)
+
+ <State 102>: 8.62ns
+The critical path consists of the following:
+	'ddiv' operation ('x', sobel_sw.c:110) [135]  (8.62 ns)
+
+ <State 103>: 8.62ns
+The critical path consists of the following:
+	'ddiv' operation ('x', sobel_sw.c:110) [135]  (8.62 ns)
+
+ <State 104>: 8.62ns
+The critical path consists of the following:
+	'ddiv' operation ('x', sobel_sw.c:110) [135]  (8.62 ns)
+
+ <State 105>: 8.62ns
+The critical path consists of the following:
+	'ddiv' operation ('x', sobel_sw.c:110) [135]  (8.62 ns)
+
+ <State 106>: 8.62ns
+The critical path consists of the following:
+	'ddiv' operation ('x', sobel_sw.c:110) [135]  (8.62 ns)
+
+ <State 107>: 8.62ns
+The critical path consists of the following:
+	'ddiv' operation ('x', sobel_sw.c:110) [135]  (8.62 ns)
+
+ <State 108>: 8.62ns
+The critical path consists of the following:
+	'ddiv' operation ('x', sobel_sw.c:110) [135]  (8.62 ns)
+
+ <State 109>: 7.39ns
+The critical path consists of the following:
+	'dlog' operation ('tmp_i_i_i1', r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:728->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:735->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_hlsm.cpp:251->sobel_sw.c:110) [136]  (7.39 ns)
+
+ <State 110>: 7.39ns
+The critical path consists of the following:
+	'dlog' operation ('tmp_i_i_i1', r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:728->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:735->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_hlsm.cpp:251->sobel_sw.c:110) [136]  (7.39 ns)
+
+ <State 111>: 7.39ns
+The critical path consists of the following:
+	'dlog' operation ('tmp_i_i_i1', r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:728->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:735->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_hlsm.cpp:251->sobel_sw.c:110) [136]  (7.39 ns)
+
+ <State 112>: 7.39ns
+The critical path consists of the following:
+	'dlog' operation ('tmp_i_i_i1', r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:728->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:735->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_hlsm.cpp:251->sobel_sw.c:110) [136]  (7.39 ns)
+
+ <State 113>: 7.39ns
+The critical path consists of the following:
+	'dlog' operation ('tmp_i_i_i1', r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:728->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:735->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_hlsm.cpp:251->sobel_sw.c:110) [136]  (7.39 ns)
+
+ <State 114>: 7.39ns
+The critical path consists of the following:
+	'dlog' operation ('tmp_i_i_i1', r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:728->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:735->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_hlsm.cpp:251->sobel_sw.c:110) [136]  (7.39 ns)
+
+ <State 115>: 7.39ns
+The critical path consists of the following:
+	'dlog' operation ('tmp_i_i_i1', r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:728->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:735->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_hlsm.cpp:251->sobel_sw.c:110) [136]  (7.39 ns)
+
+ <State 116>: 7.39ns
+The critical path consists of the following:
+	'dlog' operation ('tmp_i_i_i1', r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:728->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:735->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_hlsm.cpp:251->sobel_sw.c:110) [136]  (7.39 ns)
+
+ <State 117>: 7.39ns
+The critical path consists of the following:
+	'dlog' operation ('tmp_i_i_i1', r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:728->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:735->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_hlsm.cpp:251->sobel_sw.c:110) [136]  (7.39 ns)
+
+ <State 118>: 7.39ns
+The critical path consists of the following:
+	'dlog' operation ('tmp_i_i_i1', r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:728->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:735->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_hlsm.cpp:251->sobel_sw.c:110) [136]  (7.39 ns)
+
+ <State 119>: 7.39ns
+The critical path consists of the following:
+	'dlog' operation ('tmp_i_i_i1', r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:728->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:735->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_hlsm.cpp:251->sobel_sw.c:110) [136]  (7.39 ns)
+
+ <State 120>: 7.39ns
+The critical path consists of the following:
+	'dlog' operation ('tmp_i_i_i1', r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:728->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:735->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_hlsm.cpp:251->sobel_sw.c:110) [136]  (7.39 ns)
+
+ <State 121>: 7.39ns
+The critical path consists of the following:
+	'dlog' operation ('tmp_i_i_i1', r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:728->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:735->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_hlsm.cpp:251->sobel_sw.c:110) [136]  (7.39 ns)
+
+ <State 122>: 7.39ns
+The critical path consists of the following:
+	'dlog' operation ('tmp_i_i_i1', r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:728->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:735->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_hlsm.cpp:251->sobel_sw.c:110) [136]  (7.39 ns)
+
+ <State 123>: 7.39ns
+The critical path consists of the following:
+	'dlog' operation ('tmp_i_i_i1', r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:728->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:735->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_hlsm.cpp:251->sobel_sw.c:110) [136]  (7.39 ns)
+
+ <State 124>: 7.39ns
+The critical path consists of the following:
+	'dlog' operation ('tmp_i_i_i1', r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:728->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:735->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_hlsm.cpp:251->sobel_sw.c:110) [136]  (7.39 ns)
+
+ <State 125>: 7.39ns
+The critical path consists of the following:
+	'dlog' operation ('tmp_i_i_i1', r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:728->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:735->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_hlsm.cpp:251->sobel_sw.c:110) [136]  (7.39 ns)
+
+ <State 126>: 7.39ns
+The critical path consists of the following:
+	'dlog' operation ('tmp_i_i_i1', r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:728->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:735->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_hlsm.cpp:251->sobel_sw.c:110) [136]  (7.39 ns)
+
+ <State 127>: 7.39ns
+The critical path consists of the following:
+	'dlog' operation ('tmp_i_i_i1', r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:728->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:735->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_hlsm.cpp:251->sobel_sw.c:110) [136]  (7.39 ns)
+
+ <State 128>: 7.39ns
+The critical path consists of the following:
+	'dlog' operation ('tmp_i_i_i1', r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:728->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:735->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_hlsm.cpp:251->sobel_sw.c:110) [136]  (7.39 ns)
+
+ <State 129>: 7.39ns
+The critical path consists of the following:
+	'dlog' operation ('tmp_i_i_i1', r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:728->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:735->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_hlsm.cpp:251->sobel_sw.c:110) [136]  (7.39 ns)
+
+ <State 130>: 7.39ns
+The critical path consists of the following:
+	'dlog' operation ('tmp_i_i_i1', r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:728->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:735->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_hlsm.cpp:251->sobel_sw.c:110) [136]  (7.39 ns)
+
+ <State 131>: 7.39ns
+The critical path consists of the following:
+	'dlog' operation ('tmp_i_i_i1', r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:728->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:735->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_hlsm.cpp:251->sobel_sw.c:110) [136]  (7.39 ns)
+
+ <State 132>: 7.39ns
+The critical path consists of the following:
+	'dlog' operation ('tmp_i_i_i1', r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:728->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:735->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_hlsm.cpp:251->sobel_sw.c:110) [136]  (7.39 ns)
+
+ <State 133>: 7.39ns
+The critical path consists of the following:
+	'dlog' operation ('tmp_i_i_i1', r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:728->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:735->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_hlsm.cpp:251->sobel_sw.c:110) [136]  (7.39 ns)
+
+ <State 134>: 7.39ns
+The critical path consists of the following:
+	'dlog' operation ('tmp_i_i_i1', r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:728->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:735->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_hlsm.cpp:251->sobel_sw.c:110) [136]  (7.39 ns)
+
+ <State 135>: 7.39ns
+The critical path consists of the following:
+	'dlog' operation ('tmp_i_i_i1', r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:728->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:735->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_hlsm.cpp:251->sobel_sw.c:110) [136]  (7.39 ns)
+
+ <State 136>: 7.39ns
+The critical path consists of the following:
+	'dlog' operation ('tmp_i_i_i1', r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:728->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:735->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_hlsm.cpp:251->sobel_sw.c:110) [136]  (7.39 ns)
+
+ <State 137>: 7.39ns
+The critical path consists of the following:
+	'dlog' operation ('tmp_i_i_i1', r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:728->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:735->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_hlsm.cpp:251->sobel_sw.c:110) [136]  (7.39 ns)
+
+ <State 138>: 7.39ns
+The critical path consists of the following:
+	'dlog' operation ('tmp_i_i_i1', r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:728->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:735->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_hlsm.cpp:251->sobel_sw.c:110) [136]  (7.39 ns)
+
+ <State 139>: 7.39ns
+The critical path consists of the following:
+	'dlog' operation ('tmp_i_i_i1', r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:728->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:735->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_hlsm.cpp:251->sobel_sw.c:110) [136]  (7.39 ns)
+
+ <State 140>: 7.79ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_i_i1', r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:735->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_hlsm.cpp:251->sobel_sw.c:110) [137]  (7.79 ns)
+
+ <State 141>: 7.79ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_i_i1', r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:735->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_hlsm.cpp:251->sobel_sw.c:110) [137]  (7.79 ns)
+
+ <State 142>: 7.79ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_i_i1', r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:735->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_hlsm.cpp:251->sobel_sw.c:110) [137]  (7.79 ns)
+
+ <State 143>: 7.79ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_i_i1', r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:735->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_hlsm.cpp:251->sobel_sw.c:110) [137]  (7.79 ns)
+
+ <State 144>: 7.79ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_i_i1', r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:735->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_hlsm.cpp:251->sobel_sw.c:110) [137]  (7.79 ns)
+
+ <State 145>: 7.79ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_i_i1', r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/hls_math.h:735->r:/builds/2016.4/nightly/2017_01_23_1756540/src/products/hls/hls_lib/src/lib_hlsm.cpp:251->sobel_sw.c:110) [137]  (7.79 ns)
+
+ <State 146>: 7.79ns
+The critical path consists of the following:
+	'dmul' operation ('PSNR', sobel_sw.c:110) [138]  (7.79 ns)
+
+ <State 147>: 7.79ns
+The critical path consists of the following:
+	'dmul' operation ('PSNR', sobel_sw.c:110) [138]  (7.79 ns)
+
+ <State 148>: 7.79ns
+The critical path consists of the following:
+	'dmul' operation ('PSNR', sobel_sw.c:110) [138]  (7.79 ns)
+
+ <State 149>: 7.79ns
+The critical path consists of the following:
+	'dmul' operation ('PSNR', sobel_sw.c:110) [138]  (7.79 ns)
+
+ <State 150>: 7.79ns
+The critical path consists of the following:
+	'dmul' operation ('PSNR', sobel_sw.c:110) [138]  (7.79 ns)
+
+ <State 151>: 7.79ns
+The critical path consists of the following:
+	'dmul' operation ('PSNR', sobel_sw.c:110) [138]  (7.79 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+	State 30
+	State 31
+	State 32
+	State 33
+	State 34
+	State 35
+	State 36
+	State 37
+	State 38
+	State 39
+	State 40
+	State 41
+	State 42
+	State 43
+	State 44
+	State 45
+	State 46
+	State 47
+	State 48
+	State 49
+	State 50
+	State 51
+	State 52
+	State 53
+	State 54
+	State 55
+	State 56
+	State 57
+	State 58
+	State 59
+	State 60
+	State 61
+	State 62
+	State 63
+	State 64
+	State 65
+	State 66
+	State 67
+	State 68
+	State 69
+	State 70
+	State 71
+	State 72
+	State 73
+	State 74
+	State 75
+	State 76
+	State 77
+	State 78
+	State 79
+	State 80
+	State 81
+	State 82
+	State 83
+	State 84
+	State 85
+	State 86
+	State 87
+	State 88
+	State 89
+	State 90
+	State 91
+	State 92
+	State 93
+	State 94
+	State 95
+	State 96
+	State 97
+	State 98
+	State 99
+	State 100
+	State 101
+	State 102
+	State 103
+	State 104
+	State 105
+	State 106
+	State 107
+	State 108
+	State 109
+	State 110
+	State 111
+	State 112
+	State 113
+	State 114
+	State 115
+	State 116
+	State 117
+	State 118
+	State 119
+	State 120
+	State 121
+	State 122
+	State 123
+	State 124
+	State 125
+	State 126
+	State 127
+	State 128
+	State 129
+	State 130
+	State 131
+	State 132
+	State 133
+	State 134
+	State 135
+	State 136
+	State 137
+	State 138
+	State 139
+	State 140
+	State 141
+	State 142
+	State 143
+	State 144
+	State 145
+	State 146
+	State 147
+	State 148
+	State 149
+	State 150
+	State 151
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A
