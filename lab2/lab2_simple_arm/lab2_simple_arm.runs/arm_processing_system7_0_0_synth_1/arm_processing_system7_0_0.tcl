@@ -13,10 +13,11 @@ set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
 set_property webtalk.parent_dir C:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.cache/wt [current_project]
 set_property parent.project_path C:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.xpr [current_project]
-set_property XPM_LIBRARIES XPM_CDC [current_project]
+set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part em.avnet.com:zed:part0:1.3 [current_project]
+set_property ip_repo_paths c:/Users/konto/Documents/Embedded_Systems_Sobel_Filter_HLS/IP_1/0_axi4/impl/ip [current_project]
 set_property ip_output_repo c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_ip -quiet C:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ip/arm_processing_system7_0_0/arm_processing_system7_0_0.xci

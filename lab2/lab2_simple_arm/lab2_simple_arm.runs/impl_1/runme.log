@@ -9,57 +9,47 @@
     ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 
 source arm_wrapper.tcl -notrace
+create_project: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 239.656 ; gain = 29.063
 Design is defaulting to srcset: sources_1
 Design is defaulting to constrset: constrs_1
-INFO: [Project 1-454] Reading design checkpoint 'c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ip/arm_axi_gpio_0_2/arm_axi_gpio_0_2.dcp' for cell 'arm_i/btns_5bit'
-INFO: [Project 1-454] Reading design checkpoint 'C:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ip/arm_processing_system7_0_0/arm_processing_system7_0_0.dcp' for cell 'arm_i/processing_system7_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ip/arm_processing_system7_0_0/arm_processing_system7_0_0.dcp' for cell 'arm_i/processing_system7_0'
 INFO: [Project 1-454] Reading design checkpoint 'c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ip/arm_rst_ps7_0_100M_0/arm_rst_ps7_0_100M_0.dcp' for cell 'arm_i/rst_ps7_0_100M'
-INFO: [Project 1-454] Reading design checkpoint 'c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ip/arm_axi_gpio_0_0/arm_axi_gpio_0_0.dcp' for cell 'arm_i/sw_8bit'
-INFO: [Project 1-454] Reading design checkpoint 'c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ip/arm_xbar_0/arm_xbar_0.dcp' for cell 'arm_i/ps7_0_axi_periph/xbar'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ip/arm_sobel_0_1/arm_sobel_0_1.dcp' for cell 'arm_i/sobel_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ip/arm_xbar_1/arm_xbar_1.dcp' for cell 'arm_i/axi_mem_intercon/xbar'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ip/arm_auto_pc_1/arm_auto_pc_1.dcp' for cell 'arm_i/axi_mem_intercon/m00_couplers/auto_pc'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ip/arm_auto_us_0/arm_auto_us_0.dcp' for cell 'arm_i/axi_mem_intercon/s00_couplers/auto_us'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ip/arm_auto_us_1/arm_auto_us_1.dcp' for cell 'arm_i/axi_mem_intercon/s01_couplers/auto_us'
 INFO: [Project 1-454] Reading design checkpoint 'c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ip/arm_auto_pc_0/arm_auto_pc_0.dcp' for cell 'arm_i/ps7_0_axi_periph/s00_couplers/auto_pc'
-INFO: [Netlist 29-17] Analyzing 31 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 648 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2016.4
 INFO: [Device 21-403] Loading part xc7z020clg484-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
-WARNING: [Constraints 18-550] Could not create 'IOSTANDARD' constraint because net 'arm_i/btns_5bit/gpio_io_i[0]' is not directly connected to top level port. 'IOSTANDARD' is ignored by Vivado but preserved for implementation tool. [C:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.runs/impl_1/.Xil/Vivado-5968-chris/dcp_5/arm_axi_gpio_0_2.edf:4128]
-WARNING: [Constraints 18-550] Could not create 'IOSTANDARD' constraint because net 'arm_i/btns_5bit/gpio_io_i[1]' is not directly connected to top level port. 'IOSTANDARD' is ignored by Vivado but preserved for implementation tool. [C:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.runs/impl_1/.Xil/Vivado-5968-chris/dcp_5/arm_axi_gpio_0_2.edf:4135]
-WARNING: [Constraints 18-550] Could not create 'IOSTANDARD' constraint because net 'arm_i/btns_5bit/gpio_io_i[2]' is not directly connected to top level port. 'IOSTANDARD' is ignored by Vivado but preserved for implementation tool. [C:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.runs/impl_1/.Xil/Vivado-5968-chris/dcp_5/arm_axi_gpio_0_2.edf:4142]
-WARNING: [Constraints 18-550] Could not create 'IOSTANDARD' constraint because net 'arm_i/btns_5bit/gpio_io_i[3]' is not directly connected to top level port. 'IOSTANDARD' is ignored by Vivado but preserved for implementation tool. [C:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.runs/impl_1/.Xil/Vivado-5968-chris/dcp_5/arm_axi_gpio_0_2.edf:4149]
-WARNING: [Constraints 18-550] Could not create 'IOSTANDARD' constraint because net 'arm_i/btns_5bit/gpio_io_i[4]' is not directly connected to top level port. 'IOSTANDARD' is ignored by Vivado but preserved for implementation tool. [C:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.runs/impl_1/.Xil/Vivado-5968-chris/dcp_5/arm_axi_gpio_0_2.edf:4156]
-WARNING: [Constraints 18-550] Could not create 'IOSTANDARD' constraint because net 'arm_i/sw_8bit/gpio_io_i[0]' is not directly connected to top level port. 'IOSTANDARD' is ignored by Vivado but preserved for implementation tool. [C:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.runs/impl_1/.Xil/Vivado-5968-chris/dcp_3/arm_axi_gpio_0_0.edf:5151]
-WARNING: [Constraints 18-550] Could not create 'IOSTANDARD' constraint because net 'arm_i/sw_8bit/gpio_io_i[1]' is not directly connected to top level port. 'IOSTANDARD' is ignored by Vivado but preserved for implementation tool. [C:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.runs/impl_1/.Xil/Vivado-5968-chris/dcp_3/arm_axi_gpio_0_0.edf:5158]
-WARNING: [Constraints 18-550] Could not create 'IOSTANDARD' constraint because net 'arm_i/sw_8bit/gpio_io_i[2]' is not directly connected to top level port. 'IOSTANDARD' is ignored by Vivado but preserved for implementation tool. [C:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.runs/impl_1/.Xil/Vivado-5968-chris/dcp_3/arm_axi_gpio_0_0.edf:5165]
-WARNING: [Constraints 18-550] Could not create 'IOSTANDARD' constraint because net 'arm_i/sw_8bit/gpio_io_i[3]' is not directly connected to top level port. 'IOSTANDARD' is ignored by Vivado but preserved for implementation tool. [C:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.runs/impl_1/.Xil/Vivado-5968-chris/dcp_3/arm_axi_gpio_0_0.edf:5172]
-WARNING: [Constraints 18-550] Could not create 'IOSTANDARD' constraint because net 'arm_i/sw_8bit/gpio_io_i[4]' is not directly connected to top level port. 'IOSTANDARD' is ignored by Vivado but preserved for implementation tool. [C:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.runs/impl_1/.Xil/Vivado-5968-chris/dcp_3/arm_axi_gpio_0_0.edf:5179]
-WARNING: [Constraints 18-550] Could not create 'IOSTANDARD' constraint because net 'arm_i/sw_8bit/gpio_io_i[5]' is not directly connected to top level port. 'IOSTANDARD' is ignored by Vivado but preserved for implementation tool. [C:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.runs/impl_1/.Xil/Vivado-5968-chris/dcp_3/arm_axi_gpio_0_0.edf:5186]
-WARNING: [Constraints 18-550] Could not create 'IOSTANDARD' constraint because net 'arm_i/sw_8bit/gpio_io_i[6]' is not directly connected to top level port. 'IOSTANDARD' is ignored by Vivado but preserved for implementation tool. [C:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.runs/impl_1/.Xil/Vivado-5968-chris/dcp_3/arm_axi_gpio_0_0.edf:5193]
-WARNING: [Constraints 18-550] Could not create 'IOSTANDARD' constraint because net 'arm_i/sw_8bit/gpio_io_i[7]' is not directly connected to top level port. 'IOSTANDARD' is ignored by Vivado but preserved for implementation tool. [C:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.runs/impl_1/.Xil/Vivado-5968-chris/dcp_3/arm_axi_gpio_0_0.edf:5200]
 Parsing XDC File [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ip/arm_processing_system7_0_0/arm_processing_system7_0_0.xdc] for cell 'arm_i/processing_system7_0/inst'
 Finished Parsing XDC File [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ip/arm_processing_system7_0_0/arm_processing_system7_0_0.xdc] for cell 'arm_i/processing_system7_0/inst'
-Parsing XDC File [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ip/arm_axi_gpio_0_0/arm_axi_gpio_0_0_board.xdc] for cell 'arm_i/sw_8bit/U0'
-Finished Parsing XDC File [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ip/arm_axi_gpio_0_0/arm_axi_gpio_0_0_board.xdc] for cell 'arm_i/sw_8bit/U0'
-Parsing XDC File [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ip/arm_axi_gpio_0_0/arm_axi_gpio_0_0.xdc] for cell 'arm_i/sw_8bit/U0'
-Finished Parsing XDC File [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ip/arm_axi_gpio_0_0/arm_axi_gpio_0_0.xdc] for cell 'arm_i/sw_8bit/U0'
 Parsing XDC File [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ip/arm_rst_ps7_0_100M_0/arm_rst_ps7_0_100M_0_board.xdc] for cell 'arm_i/rst_ps7_0_100M/U0'
 Finished Parsing XDC File [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ip/arm_rst_ps7_0_100M_0/arm_rst_ps7_0_100M_0_board.xdc] for cell 'arm_i/rst_ps7_0_100M/U0'
 Parsing XDC File [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ip/arm_rst_ps7_0_100M_0/arm_rst_ps7_0_100M_0.xdc] for cell 'arm_i/rst_ps7_0_100M/U0'
 Finished Parsing XDC File [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ip/arm_rst_ps7_0_100M_0/arm_rst_ps7_0_100M_0.xdc] for cell 'arm_i/rst_ps7_0_100M/U0'
-Parsing XDC File [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ip/arm_axi_gpio_0_2/arm_axi_gpio_0_2_board.xdc] for cell 'arm_i/btns_5bit/U0'
-Finished Parsing XDC File [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ip/arm_axi_gpio_0_2/arm_axi_gpio_0_2_board.xdc] for cell 'arm_i/btns_5bit/U0'
-Parsing XDC File [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ip/arm_axi_gpio_0_2/arm_axi_gpio_0_2.xdc] for cell 'arm_i/btns_5bit/U0'
-Finished Parsing XDC File [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ip/arm_axi_gpio_0_2/arm_axi_gpio_0_2.xdc] for cell 'arm_i/btns_5bit/U0'
-INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp 'C:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ip/arm_processing_system7_0_0/arm_processing_system7_0_0.dcp'
-INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp 'c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ip/arm_axi_gpio_0_0/arm_axi_gpio_0_0.dcp'
+INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp 'c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ip/arm_processing_system7_0_0/arm_processing_system7_0_0.dcp'
 INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp 'c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ip/arm_rst_ps7_0_100M_0/arm_rst_ps7_0_100M_0.dcp'
-INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp 'c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ip/arm_axi_gpio_0_2/arm_axi_gpio_0_2.dcp'
-INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp 'c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ip/arm_xbar_0/arm_xbar_0.dcp'
+INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp 'c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ip/arm_sobel_0_1/arm_sobel_0_1.dcp'
+INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp 'c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ip/arm_xbar_1/arm_xbar_1.dcp'
 INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp 'c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ip/arm_auto_pc_0/arm_auto_pc_0.dcp'
+INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp 'c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ip/arm_auto_pc_1/arm_auto_pc_1.dcp'
+INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp 'c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ip/arm_auto_us_0/arm_auto_us_0.dcp'
+INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp 'c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ip/arm_auto_us_1/arm_auto_us_1.dcp'
+Parsing XDC File [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ip/arm_auto_us_0/arm_auto_us_0_clocks.xdc] for cell 'arm_i/axi_mem_intercon/s00_couplers/auto_us/inst'
+Finished Parsing XDC File [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ip/arm_auto_us_0/arm_auto_us_0_clocks.xdc] for cell 'arm_i/axi_mem_intercon/s00_couplers/auto_us/inst'
+Parsing XDC File [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ip/arm_auto_us_1/arm_auto_us_1_clocks.xdc] for cell 'arm_i/axi_mem_intercon/s01_couplers/auto_us/inst'
+Finished Parsing XDC File [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ip/arm_auto_us_1/arm_auto_us_1_clocks.xdc] for cell 'arm_i/axi_mem_intercon/s01_couplers/auto_us/inst'
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
+  A total of 3 instances were transformed.
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 2 instances
+  RAM32X1D => RAM32X1D (RAMD32, RAMD32): 1 instances
 
-link_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 547.148 ; gain = 300.738
+link_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:32 . Memory (MB): peak = 578.859 ; gain = 332.461
 Command: opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
@@ -70,65 +60,80 @@ INFO: [DRC 23-27] Running DRC with 2 threads
 INFO: [Project 1-461] DRC finished with 0 Errors
 INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 557.902 ; gain = 10.754
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 586.293 ; gain = 7.434
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 
 Starting Logic Optimization Task
-Implement Debug Cores | Checksum: 279fecd4c
+Implement Debug Cores | Checksum: 14caf3346
 
 Phase 1 Retarget
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Opt 31-49] Retargeted 0 cell(s).
-Phase 1 Retarget | Checksum: 2433b92c8
+Phase 1 Retarget | Checksum: 1858e5d16
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.967 . Memory (MB): peak = 1040.691 ; gain = 0.000
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1062.500 ; gain = 0.000
 
 Phase 2 Constant propagation
-INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-INFO: [Opt 31-10] Eliminated 122 cells.
-Phase 2 Constant propagation | Checksum: 211c052ad
+INFO: [Opt 31-138] Pushed 11 inverter(s) to 12 load pin(s).
+INFO: [Opt 31-10] Eliminated 1431 cells.
+Phase 2 Constant propagation | Checksum: 129ea4050
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 1040.691 ; gain = 0.000
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1062.500 ; gain = 0.000
 
 Phase 3 Sweep
-INFO: [Opt 31-12] Eliminated 189 unconnected nets.
-INFO: [Opt 31-11] Eliminated 216 unconnected cells.
-Phase 3 Sweep | Checksum: 1f2787708
+INFO: [Opt 31-12] Eliminated 3754 unconnected nets.
+INFO: [Opt 31-11] Eliminated 1453 unconnected cells.
+Phase 3 Sweep | Checksum: 154082d23
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1040.691 ; gain = 0.000
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1062.500 ; gain = 0.000
 
 Phase 4 BUFG optimization
 INFO: [Opt 31-12] Eliminated 0 unconnected nets.
 INFO: [Opt 31-11] Eliminated 0 unconnected cells.
-Phase 4 BUFG optimization | Checksum: 1b085c59d
+Phase 4 BUFG optimization | Checksum: 18620aa38
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1040.691 ; gain = 0.000
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1062.500 ; gain = 0.000
 
 Starting Connectivity Check Task
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.063 . Memory (MB): peak = 1040.691 ; gain = 0.000
-Ending Logic Optimization Task | Checksum: 1b085c59d
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.070 . Memory (MB): peak = 1062.500 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: 18620aa38
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1040.691 ; gain = 0.000
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1062.500 ; gain = 0.000
 
 Starting Power Optimization Task
 INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
-Ending Power Optimization Task | Checksum: 1b085c59d
+INFO: [Pwropt 34-9] Applying IDT optimizations ...
+INFO: [Pwropt 34-10] Applying ODC optimizations ...
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.615 . Memory (MB): peak = 1040.691 ; gain = 0.000
+Finished Running Vector-less Activity Propagation
+
+
+Starting PowerOpt Patch Enables Task
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 2 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
+Number of BRAM Ports augmented: 1 newly gated: 2 Total Ports: 4
+Ending PowerOpt Patch Enables Task | Checksum: 1e6379672
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.120 . Memory (MB): peak = 1202.199 ; gain = 0.000
+Ending Power Optimization Task | Checksum: 1e6379672
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1202.199 ; gain = 139.699
 INFO: [Common 17-83] Releasing license: Implementation
-34 Infos, 13 Warnings, 0 Critical Warnings and 0 Errors encountered.
+43 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 opt_design completed successfully
-opt_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:36 . Memory (MB): peak = 1040.691 ; gain = 493.543
+opt_design: Time (s): cpu = 00:00:38 ; elapsed = 00:00:58 . Memory (MB): peak = 1202.199 ; gain = 623.340
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.704 . Memory (MB): peak = 1040.691 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.615 . Memory (MB): peak = 1202.199 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.runs/impl_1/arm_wrapper_opt.dcp' has been generated.
 INFO: [DRC 23-27] Running DRC with 2 threads
 INFO: [Coretcl 2-168] The results of DRC are in file C:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.runs/impl_1/arm_wrapper_drc_opted.rpt.
-report_drc: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1040.691 ; gain = 0.000
+report_drc: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1202.199 ; gain = 0.000
 INFO: [Chipscope 16-241] No debug cores found in the current design.
 Before running the implement_debug_core command, either use the Set Up Debug wizard (GUI mode)
 or use the create_debug_core and connect_debug_core Tcl commands to insert debug cores into the design.
@@ -140,84 +145,107 @@ INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
 INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
 Running DRC as a precondition to command place_design
 INFO: [DRC 23-27] Running DRC with 2 threads
-INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+WARNING: [DRC 23-20] Rule violation (CHECK-3) Report rule limit reached - REQP-1840 rule limit reached: 20 violations have been found.
+WARNING: [DRC 23-20] Rule violation (REQP-1840) RAMB18 async control check - The RAMB18E1 arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/mem_reg has an input control pin arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/mem_reg/ADDRBWRADDR[10] (net: arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/rnext[6]) which is driven by a register (arm_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1840) RAMB18 async control check - The RAMB18E1 arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/mem_reg has an input control pin arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/mem_reg/ADDRBWRADDR[10] (net: arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/rnext[6]) which is driven by a register (arm_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1840) RAMB18 async control check - The RAMB18E1 arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/mem_reg has an input control pin arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/mem_reg/ADDRBWRADDR[10] (net: arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/rnext[6]) which is driven by a register (arm_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1840) RAMB18 async control check - The RAMB18E1 arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/mem_reg has an input control pin arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/mem_reg/ADDRBWRADDR[10] (net: arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/rnext[6]) which is driven by a register (arm_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1840) RAMB18 async control check - The RAMB18E1 arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/mem_reg has an input control pin arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/mem_reg/ADDRBWRADDR[10] (net: arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/rnext[6]) which is driven by a register (arm_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1840) RAMB18 async control check - The RAMB18E1 arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/mem_reg has an input control pin arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/mem_reg/ADDRBWRADDR[11] (net: arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/rnext[7]) which is driven by a register (arm_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1840) RAMB18 async control check - The RAMB18E1 arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/mem_reg has an input control pin arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/mem_reg/ADDRBWRADDR[11] (net: arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/rnext[7]) which is driven by a register (arm_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1840) RAMB18 async control check - The RAMB18E1 arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/mem_reg has an input control pin arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/mem_reg/ADDRBWRADDR[11] (net: arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/rnext[7]) which is driven by a register (arm_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1840) RAMB18 async control check - The RAMB18E1 arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/mem_reg has an input control pin arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/mem_reg/ADDRBWRADDR[11] (net: arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/rnext[7]) which is driven by a register (arm_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1840) RAMB18 async control check - The RAMB18E1 arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/mem_reg has an input control pin arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/mem_reg/ADDRBWRADDR[11] (net: arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/rnext[7]) which is driven by a register (arm_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1840) RAMB18 async control check - The RAMB18E1 arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/mem_reg has an input control pin arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/mem_reg/ADDRBWRADDR[8] (net: arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/rnext[4]) which is driven by a register (arm_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1840) RAMB18 async control check - The RAMB18E1 arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/mem_reg has an input control pin arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/mem_reg/ADDRBWRADDR[8] (net: arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/rnext[4]) which is driven by a register (arm_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1840) RAMB18 async control check - The RAMB18E1 arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/mem_reg has an input control pin arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/mem_reg/ADDRBWRADDR[8] (net: arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/rnext[4]) which is driven by a register (arm_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1840) RAMB18 async control check - The RAMB18E1 arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/mem_reg has an input control pin arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/mem_reg/ADDRBWRADDR[8] (net: arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/rnext[4]) which is driven by a register (arm_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1840) RAMB18 async control check - The RAMB18E1 arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/mem_reg has an input control pin arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/mem_reg/ADDRBWRADDR[8] (net: arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/rnext[4]) which is driven by a register (arm_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1840) RAMB18 async control check - The RAMB18E1 arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/mem_reg has an input control pin arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/mem_reg/ADDRBWRADDR[9] (net: arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/rnext[5]) which is driven by a register (arm_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1840) RAMB18 async control check - The RAMB18E1 arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/mem_reg has an input control pin arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/mem_reg/ADDRBWRADDR[9] (net: arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/rnext[5]) which is driven by a register (arm_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1840) RAMB18 async control check - The RAMB18E1 arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/mem_reg has an input control pin arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/mem_reg/ADDRBWRADDR[9] (net: arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/rnext[5]) which is driven by a register (arm_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1840) RAMB18 async control check - The RAMB18E1 arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/mem_reg has an input control pin arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/mem_reg/ADDRBWRADDR[9] (net: arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/rnext[5]) which is driven by a register (arm_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1840) RAMB18 async control check - The RAMB18E1 arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/mem_reg has an input control pin arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/mem_reg/ADDRBWRADDR[9] (net: arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/rnext[5]) which is driven by a register (arm_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors, 21 Warnings
 INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
 
 Starting Placer Task
 INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 2 CPUs
 
 Phase 1 Placer Initialization
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1040.691 ; gain = 0.000
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1040.691 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.107 . Memory (MB): peak = 1202.199 ; gain = 0.000
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.039 . Memory (MB): peak = 1202.199 ; gain = 0.000
 
 Phase 1.1 IO Placement/ Clock Placement/ Build Placer Device
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-Phase 1.1 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 1c88004c8
+Phase 1.1 IO Placement/ Clock Placement/ Build Placer Device | Checksum: b6ea47be
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1066.379 ; gain = 25.688
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:13 . Memory (MB): peak = 1202.199 ; gain = 0.000
 
 Phase 1.2 Build Placer Netlist Model
-Phase 1.2 Build Placer Netlist Model | Checksum: 211d940fa
+Phase 1.2 Build Placer Netlist Model | Checksum: e3920b39
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 1066.379 ; gain = 25.688
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:22 . Memory (MB): peak = 1202.199 ; gain = 0.000
 
 Phase 1.3 Constrain Clocks/Macros
-Phase 1.3 Constrain Clocks/Macros | Checksum: 211d940fa
+Phase 1.3 Constrain Clocks/Macros | Checksum: e3920b39
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 1066.379 ; gain = 25.688
-Phase 1 Placer Initialization | Checksum: 211d940fa
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:22 . Memory (MB): peak = 1202.199 ; gain = 0.000
+Phase 1 Placer Initialization | Checksum: e3920b39
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 1066.379 ; gain = 25.688
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:24 . Memory (MB): peak = 1202.199 ; gain = 0.000
 
 Phase 2 Global Placement
-Phase 2 Global Placement | Checksum: 15d1a685a
+Phase 2 Global Placement | Checksum: 241cfcc59
 
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:13 . Memory (MB): peak = 1066.379 ; gain = 25.688
+Time (s): cpu = 00:00:35 ; elapsed = 00:00:42 . Memory (MB): peak = 1202.199 ; gain = 0.000
 
 Phase 3 Detail Placement
 
 Phase 3.1 Commit Multi Column Macros
-Phase 3.1 Commit Multi Column Macros | Checksum: 15d1a685a
+Phase 3.1 Commit Multi Column Macros | Checksum: 241cfcc59
 
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:13 . Memory (MB): peak = 1066.379 ; gain = 25.688
+Time (s): cpu = 00:00:36 ; elapsed = 00:00:42 . Memory (MB): peak = 1202.199 ; gain = 0.000
 
 Phase 3.2 Commit Most Macros & LUTRAMs
-Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: b4009f5b
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 17c996a0a
 
-Time (s): cpu = 00:00:10 ; elapsed = 00:00:14 . Memory (MB): peak = 1066.379 ; gain = 25.688
+Time (s): cpu = 00:00:41 ; elapsed = 00:00:48 . Memory (MB): peak = 1202.199 ; gain = 0.000
 
 Phase 3.3 Area Swap Optimization
-Phase 3.3 Area Swap Optimization | Checksum: ffa7512d
+Phase 3.3 Area Swap Optimization | Checksum: 1d41fa92f
 
-Time (s): cpu = 00:00:10 ; elapsed = 00:00:14 . Memory (MB): peak = 1066.379 ; gain = 25.688
+Time (s): cpu = 00:00:42 ; elapsed = 00:00:49 . Memory (MB): peak = 1202.199 ; gain = 0.000
 
 Phase 3.4 Pipeline Register Optimization
-Phase 3.4 Pipeline Register Optimization | Checksum: ffa7512d
+Phase 3.4 Pipeline Register Optimization | Checksum: 1d41fa92f
 
-Time (s): cpu = 00:00:10 ; elapsed = 00:00:14 . Memory (MB): peak = 1066.379 ; gain = 25.688
+Time (s): cpu = 00:00:42 ; elapsed = 00:00:49 . Memory (MB): peak = 1202.199 ; gain = 0.000
 
 Phase 3.5 Timing Path Optimizer
-Phase 3.5 Timing Path Optimizer | Checksum: a1c825af
+Phase 3.5 Timing Path Optimizer | Checksum: 181f8cb8c
 
-Time (s): cpu = 00:00:10 ; elapsed = 00:00:14 . Memory (MB): peak = 1066.379 ; gain = 25.688
+Time (s): cpu = 00:00:43 ; elapsed = 00:00:50 . Memory (MB): peak = 1202.199 ; gain = 0.000
 
 Phase 3.6 Small Shape Detail Placement
-Phase 3.6 Small Shape Detail Placement | Checksum: 14fb38ee9
+Phase 3.6 Small Shape Detail Placement | Checksum: 1b2197f50
 
-Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 1066.379 ; gain = 25.688
+Time (s): cpu = 00:00:47 ; elapsed = 00:00:56 . Memory (MB): peak = 1202.199 ; gain = 0.000
 
 Phase 3.7 Re-assign LUT pins
-Phase 3.7 Re-assign LUT pins | Checksum: 16ec8b454
+Phase 3.7 Re-assign LUT pins | Checksum: 1df1e0cb3
 
-Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 1066.379 ; gain = 25.688
+Time (s): cpu = 00:00:48 ; elapsed = 00:00:56 . Memory (MB): peak = 1202.199 ; gain = 0.000
 
 Phase 3.8 Pipeline Register Optimization
-Phase 3.8 Pipeline Register Optimization | Checksum: 16ec8b454
+Phase 3.8 Pipeline Register Optimization | Checksum: 1df1e0cb3
 
-Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 1066.379 ; gain = 25.688
-Phase 3 Detail Placement | Checksum: 16ec8b454
+Time (s): cpu = 00:00:48 ; elapsed = 00:00:56 . Memory (MB): peak = 1202.199 ; gain = 0.000
+Phase 3 Detail Placement | Checksum: 1df1e0cb3
 
-Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 1066.379 ; gain = 25.688
+Time (s): cpu = 00:00:48 ; elapsed = 00:00:57 . Memory (MB): peak = 1202.199 ; gain = 0.000
 
 Phase 4 Post Placement Optimization and Clean-Up
 
@@ -225,47 +253,47 @@ Phase 4.1 Post Commit Optimization
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 
 Phase 4.1.1 Post Placement Optimization
-INFO: [Place 30-746] Post Placement Timing Summary WNS=3.995. For the most accurate timing information please run report_timing.
-Phase 4.1.1 Post Placement Optimization | Checksum: 1ac2e01da
+INFO: [Place 30-746] Post Placement Timing Summary WNS=1.278. For the most accurate timing information please run report_timing.
+Phase 4.1.1 Post Placement Optimization | Checksum: 22690ca8d
 
-Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 1066.379 ; gain = 25.688
-Phase 4.1 Post Commit Optimization | Checksum: 1ac2e01da
+Time (s): cpu = 00:00:54 ; elapsed = 00:01:02 . Memory (MB): peak = 1202.199 ; gain = 0.000
+Phase 4.1 Post Commit Optimization | Checksum: 22690ca8d
 
-Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 1066.379 ; gain = 25.688
+Time (s): cpu = 00:00:54 ; elapsed = 00:01:02 . Memory (MB): peak = 1202.199 ; gain = 0.000
 
 Phase 4.2 Post Placement Cleanup
-Phase 4.2 Post Placement Cleanup | Checksum: 1ac2e01da
+Phase 4.2 Post Placement Cleanup | Checksum: 22690ca8d
 
-Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 1066.379 ; gain = 25.688
+Time (s): cpu = 00:00:55 ; elapsed = 00:01:03 . Memory (MB): peak = 1202.199 ; gain = 0.000
 
 Phase 4.3 Placer Reporting
-Phase 4.3 Placer Reporting | Checksum: 1ac2e01da
+Phase 4.3 Placer Reporting | Checksum: 22690ca8d
 
-Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 1066.379 ; gain = 25.688
+Time (s): cpu = 00:00:55 ; elapsed = 00:01:04 . Memory (MB): peak = 1202.199 ; gain = 0.000
 
 Phase 4.4 Final Placement Cleanup
-Phase 4.4 Final Placement Cleanup | Checksum: 1927ae050
+Phase 4.4 Final Placement Cleanup | Checksum: 19e2b145e
 
-Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 1066.379 ; gain = 25.688
-Phase 4 Post Placement Optimization and Clean-Up | Checksum: 1927ae050
+Time (s): cpu = 00:00:55 ; elapsed = 00:01:04 . Memory (MB): peak = 1202.199 ; gain = 0.000
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 19e2b145e
 
-Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 1066.379 ; gain = 25.688
-Ending Placer Task | Checksum: b8049521
+Time (s): cpu = 00:00:55 ; elapsed = 00:01:04 . Memory (MB): peak = 1202.199 ; gain = 0.000
+Ending Placer Task | Checksum: ec7c2a14
 
-Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 1066.379 ; gain = 25.688
+Time (s): cpu = 00:00:55 ; elapsed = 00:01:05 . Memory (MB): peak = 1202.199 ; gain = 0.000
 INFO: [Common 17-83] Releasing license: Implementation
-50 Infos, 13 Warnings, 0 Critical Warnings and 0 Errors encountered.
+61 Infos, 21 Warnings, 0 Critical Warnings and 0 Errors encountered.
 place_design completed successfully
-place_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1066.379 ; gain = 25.688
+place_design: Time (s): cpu = 00:01:01 ; elapsed = 00:01:09 . Memory (MB): peak = 1202.199 ; gain = 0.000
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.658 . Memory (MB): peak = 1066.379 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:08 ; elapsed = 00:00:03 . Memory (MB): peak = 1202.199 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.runs/impl_1/arm_wrapper_placed.dcp' has been generated.
-report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.402 . Memory (MB): peak = 1066.379 ; gain = 0.000
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.227 . Memory (MB): peak = 1066.379 ; gain = 0.000
-report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.066 . Memory (MB): peak = 1066.379 ; gain = 0.000
+report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:03 . Memory (MB): peak = 1202.199 ; gain = 0.000
+report_utilization: Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 1202.199 ; gain = 0.000
+report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.547 . Memory (MB): peak = 1202.199 ; gain = 0.000
 Command: route_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
@@ -277,155 +305,120 @@ INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more in
 
 Starting Routing Task
 INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
-Checksum: PlaceDB: 987fb779 ConstDB: 0 ShapeSum: 1f84dda8 RouteDB: 0
+Checksum: PlaceDB: 9a2e414b ConstDB: 0 ShapeSum: 524de8c9 RouteDB: 0
 
 Phase 1 Build RT Design
-Phase 1 Build RT Design | Checksum: 101302fd5
+Phase 1 Build RT Design | Checksum: c0da5208
 
-Time (s): cpu = 00:00:56 ; elapsed = 00:00:53 . Memory (MB): peak = 1202.699 ; gain = 136.320
+Time (s): cpu = 00:00:53 ; elapsed = 00:00:58 . Memory (MB): peak = 1251.086 ; gain = 48.887
 
 Phase 2 Router Initialization
 
 Phase 2.1 Create Timer
-Phase 2.1 Create Timer | Checksum: 101302fd5
+Phase 2.1 Create Timer | Checksum: c0da5208
 
-Time (s): cpu = 00:00:56 ; elapsed = 00:00:53 . Memory (MB): peak = 1202.699 ; gain = 136.320
+Time (s): cpu = 00:00:53 ; elapsed = 00:01:03 . Memory (MB): peak = 1251.086 ; gain = 48.887
 
 Phase 2.2 Fix Topology Constraints
-Phase 2.2 Fix Topology Constraints | Checksum: 101302fd5
+Phase 2.2 Fix Topology Constraints | Checksum: c0da5208
 
-Time (s): cpu = 00:00:56 ; elapsed = 00:00:53 . Memory (MB): peak = 1202.699 ; gain = 136.320
+Time (s): cpu = 00:00:53 ; elapsed = 00:01:08 . Memory (MB): peak = 1251.086 ; gain = 48.887
 
 Phase 2.3 Pre Route Cleanup
-Phase 2.3 Pre Route Cleanup | Checksum: 101302fd5
+Phase 2.3 Pre Route Cleanup | Checksum: c0da5208
 
-Time (s): cpu = 00:00:56 ; elapsed = 00:00:53 . Memory (MB): peak = 1202.699 ; gain = 136.320
+Time (s): cpu = 00:00:54 ; elapsed = 00:01:08 . Memory (MB): peak = 1251.086 ; gain = 48.887
  Number of Nodes with overlaps = 0
 
 Phase 2.4 Update Timing
-Phase 2.4 Update Timing | Checksum: 1e101bd87
+Phase 2.4 Update Timing | Checksum: 19ca6e511
 
-Time (s): cpu = 00:00:58 ; elapsed = 00:00:55 . Memory (MB): peak = 1210.770 ; gain = 144.391
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=3.992  | TNS=0.000  | WHS=-0.167 | THS=-19.046|
+Time (s): cpu = 00:01:02 ; elapsed = 00:01:19 . Memory (MB): peak = 1271.316 ; gain = 69.117
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=1.512  | TNS=0.000  | WHS=-0.173 | THS=-110.881|
 
-Phase 2 Router Initialization | Checksum: 1170f0dec
+Phase 2 Router Initialization | Checksum: 197edf71d
 
-Time (s): cpu = 00:00:58 ; elapsed = 00:00:56 . Memory (MB): peak = 1210.770 ; gain = 144.391
+Time (s): cpu = 00:01:05 ; elapsed = 00:01:22 . Memory (MB): peak = 1283.352 ; gain = 81.152
 
 Phase 3 Initial Routing
-Phase 3 Initial Routing | Checksum: 1899cb3f1
+Phase 3 Initial Routing | Checksum: 173e8eab2
 
-Time (s): cpu = 00:00:59 ; elapsed = 00:00:56 . Memory (MB): peak = 1210.770 ; gain = 144.391
+Time (s): cpu = 00:01:08 ; elapsed = 00:01:25 . Memory (MB): peak = 1283.352 ; gain = 81.152
 
 Phase 4 Rip-up And Reroute
 
 Phase 4.1 Global Iteration 0
- Number of Nodes with overlaps = 80
+ Number of Nodes with overlaps = 640
+ Number of Nodes with overlaps = 50
+ Number of Nodes with overlaps = 6
+ Number of Nodes with overlaps = 2
  Number of Nodes with overlaps = 0
 
 Phase 4.1.1 Update Timing
-Phase 4.1.1 Update Timing | Checksum: 19e397a59
+Phase 4.1.1 Update Timing | Checksum: 1005ca5f5
 
-Time (s): cpu = 00:01:00 ; elapsed = 00:00:57 . Memory (MB): peak = 1210.770 ; gain = 144.391
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=3.423  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+Time (s): cpu = 00:01:16 ; elapsed = 00:01:29 . Memory (MB): peak = 1283.352 ; gain = 81.152
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=1.237  | TNS=0.000  | WHS=N/A    | THS=N/A    |
 
-Phase 4.1 Global Iteration 0 | Checksum: 18f162546
+Phase 4.1 Global Iteration 0 | Checksum: 15a34c64a
 
-Time (s): cpu = 00:01:00 ; elapsed = 00:00:57 . Memory (MB): peak = 1210.770 ; gain = 144.391
+Time (s): cpu = 00:01:16 ; elapsed = 00:01:30 . Memory (MB): peak = 1283.352 ; gain = 81.152
 
 Phase 4.2 Global Iteration 1
+ Number of Nodes with overlaps = 5
  Number of Nodes with overlaps = 1
  Number of Nodes with overlaps = 0
 
 Phase 4.2.1 Update Timing
-Phase 4.2.1 Update Timing | Checksum: 20f5379cc
+Phase 4.2.1 Update Timing | Checksum: 1f450c2f1
 
-Time (s): cpu = 00:01:00 ; elapsed = 00:00:57 . Memory (MB): peak = 1210.770 ; gain = 144.391
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=3.423  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+Time (s): cpu = 00:01:17 ; elapsed = 00:01:30 . Memory (MB): peak = 1283.352 ; gain = 81.152
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=1.237  | TNS=0.000  | WHS=N/A    | THS=N/A    |
 
-Phase 4.2 Global Iteration 1 | Checksum: e2203ba6
+Phase 4.2 Global Iteration 1 | Checksum: 19acd34c9
 
-Time (s): cpu = 00:01:00 ; elapsed = 00:00:57 . Memory (MB): peak = 1210.770 ; gain = 144.391
+Time (s): cpu = 00:01:17 ; elapsed = 00:01:30 . Memory (MB): peak = 1283.352 ; gain = 81.152
+Phase 4 Rip-up And Reroute | Checksum: 19acd34c9
 
-Phase 4.3 Global Iteration 2
- Number of Nodes with overlaps = 0
-
-Phase 4.3.1 Update Timing
-Phase 4.3.1 Update Timing | Checksum: 1654c4281
-
-Time (s): cpu = 00:01:00 ; elapsed = 00:00:57 . Memory (MB): peak = 1210.770 ; gain = 144.391
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=3.423  | TNS=0.000  | WHS=N/A    | THS=N/A    |
-
-Phase 4.3 Global Iteration 2 | Checksum: 1c912a2ea
-
-Time (s): cpu = 00:01:00 ; elapsed = 00:00:57 . Memory (MB): peak = 1210.770 ; gain = 144.391
-
-Phase 4.4 Global Iteration 3
- Number of Nodes with overlaps = 0
-
-Phase 4.4.1 Update Timing
-Phase 4.4.1 Update Timing | Checksum: edaa2e4d
-
-Time (s): cpu = 00:01:00 ; elapsed = 00:00:57 . Memory (MB): peak = 1210.770 ; gain = 144.391
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=3.423  | TNS=0.000  | WHS=N/A    | THS=N/A    |
-
-Phase 4.4 Global Iteration 3 | Checksum: 1a19876aa
-
-Time (s): cpu = 00:01:01 ; elapsed = 00:00:57 . Memory (MB): peak = 1210.770 ; gain = 144.391
-
-Phase 4.5 Global Iteration 4
- Number of Nodes with overlaps = 0
-
-Phase 4.5.1 Update Timing
-Phase 4.5.1 Update Timing | Checksum: 125ab94b9
-
-Time (s): cpu = 00:01:01 ; elapsed = 00:00:57 . Memory (MB): peak = 1210.770 ; gain = 144.391
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=3.423  | TNS=0.000  | WHS=N/A    | THS=N/A    |
-
-Phase 4.5 Global Iteration 4 | Checksum: 125ab94b9
-
-Time (s): cpu = 00:01:01 ; elapsed = 00:00:57 . Memory (MB): peak = 1210.770 ; gain = 144.391
-Phase 4 Rip-up And Reroute | Checksum: 125ab94b9
-
-Time (s): cpu = 00:01:01 ; elapsed = 00:00:57 . Memory (MB): peak = 1210.770 ; gain = 144.391
+Time (s): cpu = 00:01:17 ; elapsed = 00:01:30 . Memory (MB): peak = 1283.352 ; gain = 81.152
 
 Phase 5 Delay and Skew Optimization
 
 Phase 5.1 Delay CleanUp
-Phase 5.1 Delay CleanUp | Checksum: 125ab94b9
+Phase 5.1 Delay CleanUp | Checksum: 19acd34c9
 
-Time (s): cpu = 00:01:01 ; elapsed = 00:00:57 . Memory (MB): peak = 1210.770 ; gain = 144.391
+Time (s): cpu = 00:01:17 ; elapsed = 00:01:30 . Memory (MB): peak = 1283.352 ; gain = 81.152
 
 Phase 5.2 Clock Skew Optimization
-Phase 5.2 Clock Skew Optimization | Checksum: 125ab94b9
+Phase 5.2 Clock Skew Optimization | Checksum: 19acd34c9
 
-Time (s): cpu = 00:01:01 ; elapsed = 00:00:57 . Memory (MB): peak = 1210.770 ; gain = 144.391
-Phase 5 Delay and Skew Optimization | Checksum: 125ab94b9
+Time (s): cpu = 00:01:17 ; elapsed = 00:01:31 . Memory (MB): peak = 1283.352 ; gain = 81.152
+Phase 5 Delay and Skew Optimization | Checksum: 19acd34c9
 
-Time (s): cpu = 00:01:01 ; elapsed = 00:00:57 . Memory (MB): peak = 1210.770 ; gain = 144.391
+Time (s): cpu = 00:01:17 ; elapsed = 00:01:31 . Memory (MB): peak = 1283.352 ; gain = 81.152
 
 Phase 6 Post Hold Fix
 
 Phase 6.1 Hold Fix Iter
 
 Phase 6.1.1 Update Timing
-Phase 6.1.1 Update Timing | Checksum: aa081fc0
+Phase 6.1.1 Update Timing | Checksum: 1d8e15018
 
-Time (s): cpu = 00:01:01 ; elapsed = 00:00:57 . Memory (MB): peak = 1210.770 ; gain = 144.391
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=3.538  | TNS=0.000  | WHS=0.075  | THS=0.000  |
+Time (s): cpu = 00:01:19 ; elapsed = 00:01:32 . Memory (MB): peak = 1283.352 ; gain = 81.152
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=1.405  | TNS=0.000  | WHS=0.018  | THS=0.000  |
 
-Phase 6.1 Hold Fix Iter | Checksum: 1367d57d0
+Phase 6.1 Hold Fix Iter | Checksum: 15e3d084a
 
-Time (s): cpu = 00:01:01 ; elapsed = 00:00:57 . Memory (MB): peak = 1210.770 ; gain = 144.391
-Phase 6 Post Hold Fix | Checksum: 1367d57d0
+Time (s): cpu = 00:01:19 ; elapsed = 00:01:32 . Memory (MB): peak = 1283.352 ; gain = 81.152
+Phase 6 Post Hold Fix | Checksum: 15e3d084a
 
-Time (s): cpu = 00:01:01 ; elapsed = 00:00:57 . Memory (MB): peak = 1210.770 ; gain = 144.391
+Time (s): cpu = 00:01:19 ; elapsed = 00:01:32 . Memory (MB): peak = 1283.352 ; gain = 81.152
 
 Phase 7 Route finalize
 
 Router Utilization Summary
-  Global Vertical Routing Utilization    = 0.182873 %
-  Global Horizontal Routing Utilization  = 0.263776 %
+  Global Vertical Routing Utilization    = 1.18903 %
+  Global Horizontal Routing Utilization  = 1.51817 %
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
@@ -434,49 +427,52 @@ Router Utilization Summary
   Number of Partially Routed Nets     = 0
   Number of Node Overlaps             = 0
 
-Phase 7 Route finalize | Checksum: 98a2b0c4
+Phase 7 Route finalize | Checksum: 1e23710b0
 
-Time (s): cpu = 00:01:01 ; elapsed = 00:00:57 . Memory (MB): peak = 1210.770 ; gain = 144.391
+Time (s): cpu = 00:01:19 ; elapsed = 00:01:32 . Memory (MB): peak = 1283.352 ; gain = 81.152
 
 Phase 8 Verifying routed nets
 
  Verification completed successfully
-Phase 8 Verifying routed nets | Checksum: 98a2b0c4
+Phase 8 Verifying routed nets | Checksum: 1e23710b0
 
-Time (s): cpu = 00:01:01 ; elapsed = 00:00:57 . Memory (MB): peak = 1210.770 ; gain = 144.391
+Time (s): cpu = 00:01:19 ; elapsed = 00:01:32 . Memory (MB): peak = 1283.352 ; gain = 81.152
 
 Phase 9 Depositing Routes
-Phase 9 Depositing Routes | Checksum: cf7a4470
+Phase 9 Depositing Routes | Checksum: 21a0dd393
 
-Time (s): cpu = 00:01:01 ; elapsed = 00:00:58 . Memory (MB): peak = 1210.770 ; gain = 144.391
+Time (s): cpu = 00:01:21 ; elapsed = 00:01:34 . Memory (MB): peak = 1283.352 ; gain = 81.152
 
 Phase 10 Post Router Timing
-INFO: [Route 35-57] Estimated Timing Summary | WNS=3.538  | TNS=0.000  | WHS=0.075  | THS=0.000  |
+INFO: [Route 35-57] Estimated Timing Summary | WNS=1.405  | TNS=0.000  | WHS=0.018  | THS=0.000  |
 
 INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
-Phase 10 Post Router Timing | Checksum: cf7a4470
+Phase 10 Post Router Timing | Checksum: 21a0dd393
 
-Time (s): cpu = 00:01:01 ; elapsed = 00:00:58 . Memory (MB): peak = 1210.770 ; gain = 144.391
+Time (s): cpu = 00:01:21 ; elapsed = 00:01:34 . Memory (MB): peak = 1283.352 ; gain = 81.152
 INFO: [Route 35-16] Router Completed Successfully
 
-Time (s): cpu = 00:01:02 ; elapsed = 00:00:58 . Memory (MB): peak = 1210.770 ; gain = 144.391
+Time (s): cpu = 00:01:22 ; elapsed = 00:01:35 . Memory (MB): peak = 1283.352 ; gain = 81.152
 
 Routing Is Done.
 INFO: [Common 17-83] Releasing license: Implementation
-67 Infos, 13 Warnings, 0 Critical Warnings and 0 Errors encountered.
+75 Infos, 21 Warnings, 0 Critical Warnings and 0 Errors encountered.
 route_design completed successfully
-route_design: Time (s): cpu = 00:01:06 ; elapsed = 00:01:01 . Memory (MB): peak = 1210.770 ; gain = 144.391
+route_design: Time (s): cpu = 00:01:28 ; elapsed = 00:01:40 . Memory (MB): peak = 1283.352 ; gain = 81.152
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.937 . Memory (MB): peak = 1210.770 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:10 ; elapsed = 00:00:04 . Memory (MB): peak = 1283.352 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.runs/impl_1/arm_wrapper_routed.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:10 ; elapsed = 00:00:07 . Memory (MB): peak = 1283.352 ; gain = 0.000
 INFO: [DRC 23-27] Running DRC with 2 threads
 INFO: [Coretcl 2-168] The results of DRC are in file C:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.runs/impl_1/arm_wrapper_drc_routed.rpt.
+report_drc: Time (s): cpu = 00:00:12 ; elapsed = 00:00:08 . Memory (MB): peak = 1283.352 ; gain = 0.000
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [DRC 23-133] Running Methodology with 2 threads
 INFO: [Coretcl 2-1520] The results of Report Methodology are in file C:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.runs/impl_1/arm_wrapper_methodology_drc_routed.rpt.
+report_methodology: Time (s): cpu = 00:00:12 ; elapsed = 00:00:10 . Memory (MB): peak = 1286.949 ; gain = 3.598
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
 INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
@@ -485,14 +481,42 @@ Command: report_power -file arm_wrapper_power_routed.rpt -pb arm_wrapper_power_s
 Running Vector-less Activity Propagation...
 
 Finished Running Vector-less Activity Propagation
-77 Infos, 13 Warnings, 0 Critical Warnings and 0 Errors encountered.
+85 Infos, 21 Warnings, 0 Critical Warnings and 0 Errors encountered.
 report_power completed successfully
+report_power: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1332.832 ; gain = 43.160
 Command: write_bitstream -force -no_partial_bitfile arm_wrapper.bit
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
 Running DRC as a precondition to command write_bitstream
 INFO: [DRC 23-27] Running DRC with 2 threads
-INFO: [Vivado 12-3199] DRC finished with 0 Errors
+WARNING: [DRC 23-20] Rule violation (CHECK-3) Report rule limit reached - REQP-1840 rule limit reached: 20 violations have been found.
+WARNING: [DRC 23-20] Rule violation (DPOP-1) PREG Output pipelining - DSP arm_i/sobel_0/inst/grp_convolution2D_fu_156/sobel_mul_8ns_32sbkb_U0/sobel_mul_8ns_32sbkb_Mul3S_0_U/tmp_product output arm_i/sobel_0/inst/grp_convolution2D_fu_156/sobel_mul_8ns_32sbkb_U0/sobel_mul_8ns_32sbkb_Mul3S_0_U/tmp_product/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC 23-20] Rule violation (DPOP-1) PREG Output pipelining - DSP arm_i/sobel_0/inst/sobel_mul_32s_32sfYi_U8/sobel_mul_32s_32sfYi_MulnS_0_U/buff0_reg output arm_i/sobel_0/inst/sobel_mul_32s_32sfYi_U8/sobel_mul_32s_32sfYi_MulnS_0_U/buff0_reg/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC 23-20] Rule violation (DPOP-1) PREG Output pipelining - DSP arm_i/sobel_0/inst/sobel_mul_32s_32sfYi_U9/sobel_mul_32s_32sfYi_MulnS_0_U/buff0_reg output arm_i/sobel_0/inst/sobel_mul_32s_32sfYi_U9/sobel_mul_32s_32sfYi_MulnS_0_U/buff0_reg/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC 23-20] Rule violation (DPOP-2) MREG Output pipelining - DSP arm_i/sobel_0/inst/grp_convolution2D_fu_156/sobel_mul_8ns_32sbkb_U0/sobel_mul_8ns_32sbkb_Mul3S_0_U/buff0_reg__0 multiplier stage arm_i/sobel_0/inst/grp_convolution2D_fu_156/sobel_mul_8ns_32sbkb_U0/sobel_mul_8ns_32sbkb_Mul3S_0_U/buff0_reg__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC 23-20] Rule violation (DPOP-2) MREG Output pipelining - DSP arm_i/sobel_0/inst/grp_convolution2D_fu_156/sobel_mul_8ns_32sbkb_U0/sobel_mul_8ns_32sbkb_Mul3S_0_U/tmp_product multiplier stage arm_i/sobel_0/inst/grp_convolution2D_fu_156/sobel_mul_8ns_32sbkb_U0/sobel_mul_8ns_32sbkb_Mul3S_0_U/tmp_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC 23-20] Rule violation (REQP-1840) RAMB18 async control check - The RAMB18E1 arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/mem_reg has an input control pin arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/mem_reg/ADDRBWRADDR[10] (net: arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/rnext[6]) which is driven by a register (arm_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1840) RAMB18 async control check - The RAMB18E1 arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/mem_reg has an input control pin arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/mem_reg/ADDRBWRADDR[10] (net: arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/rnext[6]) which is driven by a register (arm_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1840) RAMB18 async control check - The RAMB18E1 arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/mem_reg has an input control pin arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/mem_reg/ADDRBWRADDR[10] (net: arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/rnext[6]) which is driven by a register (arm_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1840) RAMB18 async control check - The RAMB18E1 arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/mem_reg has an input control pin arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/mem_reg/ADDRBWRADDR[10] (net: arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/rnext[6]) which is driven by a register (arm_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1840) RAMB18 async control check - The RAMB18E1 arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/mem_reg has an input control pin arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/mem_reg/ADDRBWRADDR[10] (net: arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/rnext[6]) which is driven by a register (arm_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1840) RAMB18 async control check - The RAMB18E1 arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/mem_reg has an input control pin arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/mem_reg/ADDRBWRADDR[11] (net: arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/rnext[7]) which is driven by a register (arm_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1840) RAMB18 async control check - The RAMB18E1 arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/mem_reg has an input control pin arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/mem_reg/ADDRBWRADDR[11] (net: arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/rnext[7]) which is driven by a register (arm_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1840) RAMB18 async control check - The RAMB18E1 arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/mem_reg has an input control pin arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/mem_reg/ADDRBWRADDR[11] (net: arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/rnext[7]) which is driven by a register (arm_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1840) RAMB18 async control check - The RAMB18E1 arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/mem_reg has an input control pin arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/mem_reg/ADDRBWRADDR[11] (net: arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/rnext[7]) which is driven by a register (arm_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1840) RAMB18 async control check - The RAMB18E1 arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/mem_reg has an input control pin arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/mem_reg/ADDRBWRADDR[11] (net: arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/rnext[7]) which is driven by a register (arm_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1840) RAMB18 async control check - The RAMB18E1 arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/mem_reg has an input control pin arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/mem_reg/ADDRBWRADDR[8] (net: arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/rnext[4]) which is driven by a register (arm_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1840) RAMB18 async control check - The RAMB18E1 arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/mem_reg has an input control pin arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/mem_reg/ADDRBWRADDR[8] (net: arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/rnext[4]) which is driven by a register (arm_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1840) RAMB18 async control check - The RAMB18E1 arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/mem_reg has an input control pin arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/mem_reg/ADDRBWRADDR[8] (net: arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/rnext[4]) which is driven by a register (arm_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1840) RAMB18 async control check - The RAMB18E1 arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/mem_reg has an input control pin arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/mem_reg/ADDRBWRADDR[8] (net: arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/rnext[4]) which is driven by a register (arm_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1840) RAMB18 async control check - The RAMB18E1 arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/mem_reg has an input control pin arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/mem_reg/ADDRBWRADDR[8] (net: arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/rnext[4]) which is driven by a register (arm_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1840) RAMB18 async control check - The RAMB18E1 arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/mem_reg has an input control pin arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/mem_reg/ADDRBWRADDR[9] (net: arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/rnext[5]) which is driven by a register (arm_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1840) RAMB18 async control check - The RAMB18E1 arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/mem_reg has an input control pin arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/mem_reg/ADDRBWRADDR[9] (net: arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/rnext[5]) which is driven by a register (arm_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1840) RAMB18 async control check - The RAMB18E1 arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/mem_reg has an input control pin arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/mem_reg/ADDRBWRADDR[9] (net: arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/rnext[5]) which is driven by a register (arm_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1840) RAMB18 async control check - The RAMB18E1 arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/mem_reg has an input control pin arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/mem_reg/ADDRBWRADDR[9] (net: arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/rnext[5]) which is driven by a register (arm_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1840) RAMB18 async control check - The RAMB18E1 arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/mem_reg has an input control pin arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/mem_reg/ADDRBWRADDR[9] (net: arm_i/sobel_0/inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/rnext[5]) which is driven by a register (arm_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (RTSTAT-10) No routable loads - 21 net(s) have no routable loads. The problem bus(es) and/or net(s) are arm_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, arm_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, arm_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, arm_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_fb, arm_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_fb, arm_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_fb, arm_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_i, arm_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_i, arm_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_i, arm_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i, arm_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i, arm_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i, arm_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg[1], arm_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg[1], arm_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg[1] (the first 15 of 21 listed).
+INFO: [Vivado 12-3199] DRC finished with 0 Errors, 27 Warnings
 INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
 Loading data files...
 Loading site data...
@@ -503,9 +527,9 @@ Creating bitstream...
 Writing bitstream ./arm_wrapper.bit...
 INFO: [Vivado 12-1842] Bitgen Completed Successfully.
 INFO: [Project 1-120] WebTalk data collection is mandatory when using a WebPACK part without a full Vivado license. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
-INFO: [Common 17-186] 'C:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.runs/impl_1/usage_statistics_webtalk.xml' has been successfully sent to Xilinx on Wed May 24 21:39:07 2017. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx2/Vivado/2016.4/doc/webtalk_introduction.html.
+INFO: [Common 17-186] 'C:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.runs/impl_1/usage_statistics_webtalk.xml' has been successfully sent to Xilinx on Wed Jun 14 15:52:00 2017. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx2/Vivado/2016.4/doc/webtalk_introduction.html.
 INFO: [Common 17-83] Releasing license: Implementation
-85 Infos, 13 Warnings, 0 Critical Warnings and 0 Errors encountered.
+93 Infos, 48 Warnings, 0 Critical Warnings and 0 Errors encountered.
 write_bitstream completed successfully
-write_bitstream: Time (s): cpu = 00:00:34 ; elapsed = 00:00:43 . Memory (MB): peak = 1575.547 ; gain = 352.121
-INFO: [Common 17-206] Exiting Vivado at Wed May 24 21:39:08 2017...
+write_bitstream: Time (s): cpu = 00:00:40 ; elapsed = 00:01:13 . Memory (MB): peak = 1707.504 ; gain = 374.672
+INFO: [Common 17-206] Exiting Vivado at Wed Jun 14 15:52:02 2017...

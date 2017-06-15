@@ -1,7 +1,7 @@
 //Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
-//Date        : Wed May 24 21:29:24 2017
+//Date        : Wed Jun 14 15:39:58 2017
 //Host        : chris running 64-bit major release  (build 9200)
 //Command     : generate_target arm_wrapper.bd
 //Design      : arm_wrapper
@@ -30,9 +30,7 @@ module arm_wrapper
     FIXED_IO_mio,
     FIXED_IO_ps_clk,
     FIXED_IO_ps_porb,
-    FIXED_IO_ps_srstb,
-    btns_5bits_tri_i,
-    sw_8bits_tri_i);
+    FIXED_IO_ps_srstb);
   inout [14:0]DDR_addr;
   inout [2:0]DDR_ba;
   inout DDR_cas_n;
@@ -54,8 +52,6 @@ module arm_wrapper
   inout FIXED_IO_ps_clk;
   inout FIXED_IO_ps_porb;
   inout FIXED_IO_ps_srstb;
-  input [4:0]btns_5bits_tri_i;
-  input [7:0]sw_8bits_tri_i;
 
   wire [14:0]DDR_addr;
   wire [2:0]DDR_ba;
@@ -78,8 +74,6 @@ module arm_wrapper
   wire FIXED_IO_ps_clk;
   wire FIXED_IO_ps_porb;
   wire FIXED_IO_ps_srstb;
-  wire [4:0]btns_5bits_tri_i;
-  wire [7:0]sw_8bits_tri_i;
 
   arm arm_i
        (.DDR_addr(DDR_addr),
@@ -102,7 +96,5 @@ module arm_wrapper
         .FIXED_IO_mio(FIXED_IO_mio),
         .FIXED_IO_ps_clk(FIXED_IO_ps_clk),
         .FIXED_IO_ps_porb(FIXED_IO_ps_porb),
-        .FIXED_IO_ps_srstb(FIXED_IO_ps_srstb),
-        .btns_5bits_tri_i(btns_5bits_tri_i),
-        .sw_8bits_tri_i(sw_8bits_tri_i));
+        .FIXED_IO_ps_srstb(FIXED_IO_ps_srstb));
 endmodule

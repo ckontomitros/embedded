@@ -12,7 +12,7 @@
 #include "xtmrctr.h"
 #include "xscutimer.h"
 #include <sys/time.h>
-
+#include "xsobel.h"
 //timer info
 #define TIMER_DEVICE_ID		XPAR_XSCUTIMER_0_DEVICE_ID
 #define INTC_DEVICE_ID		XPAR_SCUGIC_SINGLE_DEVICE_ID
@@ -66,7 +66,25 @@ int convolution2D(int posy, int posx, const unsigned char *input, int operator[]
 	return(res);
 }
 
+void sobel_hls(unsigned char *input, unsigned char *output){
+	int status;
+	char * kati;
+	printf("PSNR of original Sobel and computed Sobel image, PSNR1");
+	status=XSobel_Initialize(XPAR_XSOBEL_0_S_AXI_AXILITES_BASEADDR, XPAR_SOBEL_0_DEVICE_ID);
+	printf("PSNR of original Sobel and computed Sobel image, PSNR2");
+	XSobel_Set_input_r(XPAR_XSOBEL_0_S_AXI_AXILITES_BASEADDR,(u32)input);
+	printf("PSNR of original Sobel and computed Sobel image, PSNR3");
+	XSobel_Start(XPAR_XSOBEL_0_S_AXI_AXILITES_BASEADDR);
+	printf("PSNR of original Sobel and computed Sobel image, PSNR");
+	do {
 
+	 } while (XSobel_IsDone(XPAR_XSOBEL_0_S_AXI_AXILITES_BASEADDR));
+
+	kati=XSobel_Get_output_r(XPAR_XSOBEL_0_S_AXI_AXILITES_BASEADDR);
+	printf("PSNR %d",kati[44]);
+
+}
+XSobel InstancePtr;
 /* The main computational function of the program. The input, output and *
  * golden arguments are pointers to the arrays used to store the input   *
  * image, the output produced by the algorithm and the output used as    *
@@ -87,6 +105,7 @@ double sobel(unsigned char *input, unsigned char *output, unsigned char *golden)
 	//load the timer
 	XScuTimer_LoadTimer(&Timer, TIMER_LOAD_VALUE);
 	int tick;
+	char  *routput;
 	/* The first and last row of the output array, as well as the first  *
      * and last element of each column are not going to be filled by the *
      * algorithm, therefore make sure to initialize them with 0s.		 */
@@ -183,29 +202,69 @@ double sobel(unsigned char *input, unsigned char *output, unsigned char *golden)
 	printf("Ended with %.6lf secs\r\n",(double)(-1*tick)/XPAR_PS7_CORTEXA9_0_CPU_CLK_FREQ_HZ);
 
 	printf("Sobel done with ones:%d and twos:%d\n",one,two);
+	//sobel_hls(input,output);
+	//XSobel_DisableAutoRestart(&InstancePtr);
+	int status;
+	XScuTimer_Start(&Timer);
+	printf("PSNR of original Sobel and computed Sobel image, PSNR1\n");
+	status=XSobel_Initialize(&InstancePtr, XPAR_SOBEL_0_DEVICE_ID);
+		if(status!=XST_SUCCESS)
+			exit(-1);
+		printf("PSNR of original Sobel and computed Sobel image, PSNR2 \n");
+		XSobel_Set_input_r(&InstancePtr,(u32)input);
+		XSobel_Set_output_r(&InstancePtr,(u32)routput);
+		printf("PSNR of original Sobel and computed Sobel image, PSNR3\n");
+		if (XSobel_IsReady(&InstancePtr))
+		      print("HLS peripheral is ready.  Starting... ");
+		   else {
+		      print("!!! HLS peripheral is not ready! Exiting...\n\r");
+		      exit(-1);
+		   }
+
+		XSobel_Start(&InstancePtr);
+		printf("PSNR of original Sobel and computed Sobel image, PSNR\n");
+		do {
+
+		 } while (!XSobel_IsDone(&InstancePtr));
+
+		printf("PSNR of orig333inal Sobel and computed Sobel image, PSNR\n");
+
 
 	/* Now run through the output and the golden output to calculate *
 	 * the MSE and then the PSNR.									 */
-	for (i=1; i<SIZE-1; i++) {
+	for (i=1022; i<SIZE-1; i++) {
 		for ( j=1; j<SIZE-1; j++ ) {
-			t = pow((output[i*SIZE+j] - golden[i*SIZE+j]),2);
+
+			t = pow((routput[i*SIZE+j] - output[i*SIZE+j]),2);
+			//printf("PSNR size %d input  %d  golden  %d  output %d\n",i*SIZE+j,input[i*SIZE+j],output[i*SIZE+j],routput[i*SIZE+j]);
 			PSNR += t;
 		}
 	}
 
-	PSNR /= (double)(SIZE*SIZE);
+	printf("PSN1R:%f\n", PSNR);
+	PSNR = (double)(SIZE*SIZE);
 	PSNR = 10*log10(65536/PSNR);
 	printf("PSNR:%g\n", PSNR);
-
+	printf("i ekatosti timi einai %d output %d golden %d input\n",routput[100],golden[100], input[100]);
 	/* This is the end of the main computation. Take the end time,  *
 	 * calculate the duration of the computation and report it. 	*/
+	XScuTimer_Stop(&Timer);
+		printf("Measure timer\r\n");
 
+		printf("Measured\r\n");
+
+		tick = XScuTimer_GetCounterValue(&Timer);
+
+		printf("Ended with %.6lf secs\r\n",(double)(-1*tick)/XPAR_PS7_CORTEXA9_0_CPU_CLK_FREQ_HZ);
+
+		printf("Sobel done with ones:%d and twos:%d\n",one,two);
 	/* Write the output file */
 	res = f_lseek(&file3, 0);
 	if (res!= FR_OK) {
 		return XST_FAILURE;
 	}
 	off =0;
+	printf("PSN1R:%f\n", PSNR);
 	uint writtenBytes=0;
 	while(writtenBytes!=SIZE*SIZE) {
 		f_out = f_write(&file3,&output[off],SIZE*SIZE,&writtenBytes);
@@ -216,7 +275,7 @@ double sobel(unsigned char *input, unsigned char *output, unsigned char *golden)
 		off+=writtenBytes;
 
 	}
-
+	printf("PSN21R:%f\n", PSNR);
 	if (f_out!=FR_OK) {
 			xil_printf(" ERROR: f_write2 returned %d\r\n",f_out);
 
@@ -237,7 +296,7 @@ double sobel(unsigned char *input, unsigned char *output, unsigned char *golden)
 int main(int argc, char* argv[])
 {
 
-    init_platform();
+
 
     static FATFS  FS_instance;
     const char *Path = "0:/";
@@ -252,7 +311,6 @@ int main(int argc, char* argv[])
 	PSNR = sobel(input, output, golden);
 	printf("PSNR of original Sobel and computed Sobel image: %g\n", PSNR);
 	printf("Create the output image with:$convert -depth 8 -size 1024x1024 GRAY:output_sobel.grey output_sobel.jpg\n");
-    cleanup_platform();
 
 	return 0;
 }

@@ -22,7 +22,9 @@ src/helloworld.o src/helloworld.o: ../src/helloworld.c ../src/platform.h \
  ../../standalone_bsp_0/ps7_cortexa9_0/include/xil_assert.h \
  ../../standalone_bsp_0/ps7_cortexa9_0/include/xstatus.h \
  ../../standalone_bsp_0/ps7_cortexa9_0/include/xscutimer.h \
- ../../standalone_bsp_0/ps7_cortexa9_0/include/xscutimer_hw.h
+ ../../standalone_bsp_0/ps7_cortexa9_0/include/xscutimer_hw.h \
+ ../../standalone_bsp_0/ps7_cortexa9_0/include/xsobel.h \
+ ../../standalone_bsp_0/ps7_cortexa9_0/include/xsobel_hw.h
 
 ../src/platform.h:
 
@@ -73,3 +75,7 @@ src/helloworld.o src/helloworld.o: ../src/helloworld.c ../src/platform.h \
 ../../standalone_bsp_0/ps7_cortexa9_0/include/xscutimer.h:
 
 ../../standalone_bsp_0/ps7_cortexa9_0/include/xscutimer_hw.h:
+
+../../standalone_bsp_0/ps7_cortexa9_0/include/xsobel.h:
+
+../../standalone_bsp_0/ps7_cortexa9_0/include/xsobel_hw.h:

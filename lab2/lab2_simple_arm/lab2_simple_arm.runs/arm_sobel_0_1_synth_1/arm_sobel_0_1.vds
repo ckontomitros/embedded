@@ -1,0 +1,814 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
+# IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+# Start of session at: Mon Jun 12 17:51:20 2017
+# Process ID: 9128
+# Current directory: C:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.runs/arm_sobel_0_1_synth_1
+# Command line: vivado.exe -log arm_sobel_0_1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source arm_sobel_0_1.tcl
+# Log file: C:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.runs/arm_sobel_0_1_synth_1/arm_sobel_0_1.vds
+# Journal file: C:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.runs/arm_sobel_0_1_synth_1\vivado.jou
+#-----------------------------------------------------------
+source arm_sobel_0_1.tcl -notrace
+Command: synth_design -top arm_sobel_0_1 -part xc7z020clg484-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 1816 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:17 ; elapsed = 00:00:57 . Memory (MB): peak = 346.418 ; gain = 135.699
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'arm_sobel_0_1' [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ip/arm_sobel_0_1/synth/arm_sobel_0_1.v:59]
+INFO: [Synth 8-638] synthesizing module 'sobel' [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel.v:12]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel.v:375]
+INFO: [Synth 8-638] synthesizing module 'sobel_horiz_operacud' [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_horiz_operacud.v:43]
+INFO: [Synth 8-638] synthesizing module 'sobel_horiz_operacud_rom' [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_horiz_operacud.v:9]
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "distributed" *) [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_horiz_operacud.v:21]
+INFO: [Synth 8-3876] $readmem data file './sobel_horiz_operacud_rom.dat' is read successfully [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_horiz_operacud.v:24]
+INFO: [Synth 8-256] done synthesizing module 'sobel_horiz_operacud_rom' (1#1) [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_horiz_operacud.v:9]
+INFO: [Synth 8-256] done synthesizing module 'sobel_horiz_operacud' (2#1) [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_horiz_operacud.v:43]
+INFO: [Synth 8-638] synthesizing module 'sobel_vert_operator' [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_vert_operator.v:43]
+INFO: [Synth 8-638] synthesizing module 'sobel_vert_operator_rom' [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_vert_operator.v:9]
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "distributed" *) [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_vert_operator.v:21]
+INFO: [Synth 8-3876] $readmem data file './sobel_vert_operator_rom.dat' is read successfully [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_vert_operator.v:24]
+INFO: [Synth 8-256] done synthesizing module 'sobel_vert_operator_rom' (3#1) [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_vert_operator.v:9]
+INFO: [Synth 8-256] done synthesizing module 'sobel_vert_operator' (4#1) [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_vert_operator.v:43]
+INFO: [Synth 8-638] synthesizing module 'sobel_AXILiteS_s_axi' [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_AXILiteS_s_axi.v:9]
+INFO: [Synth 8-155] case statement is not full and has no default [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_AXILiteS_s_axi.v:201]
+INFO: [Synth 8-256] done synthesizing module 'sobel_AXILiteS_s_axi' (5#1) [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_AXILiteS_s_axi.v:9]
+INFO: [Synth 8-638] synthesizing module 'sobel_INPUT_BUNDLE_m_axi' [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_INPUT_BUNDLE_m_axi.v:10]
+INFO: [Synth 8-638] synthesizing module 'sobel_INPUT_BUNDLE_m_axi_throttl' [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_INPUT_BUNDLE_m_axi.v:687]
+INFO: [Synth 8-256] done synthesizing module 'sobel_INPUT_BUNDLE_m_axi_throttl' (6#1) [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_INPUT_BUNDLE_m_axi.v:687]
+INFO: [Synth 8-638] synthesizing module 'sobel_INPUT_BUNDLE_m_axi_write' [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_INPUT_BUNDLE_m_axi.v:1491]
+INFO: [Synth 8-638] synthesizing module 'sobel_INPUT_BUNDLE_m_axi_fifo' [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_INPUT_BUNDLE_m_axi.v:397]
+INFO: [Synth 8-256] done synthesizing module 'sobel_INPUT_BUNDLE_m_axi_fifo' (7#1) [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_INPUT_BUNDLE_m_axi.v:397]
+INFO: [Synth 8-638] synthesizing module 'sobel_INPUT_BUNDLE_m_axi_decoder' [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_INPUT_BUNDLE_m_axi.v:671]
+INFO: [Synth 8-256] done synthesizing module 'sobel_INPUT_BUNDLE_m_axi_decoder' (8#1) [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_INPUT_BUNDLE_m_axi.v:671]
+INFO: [Synth 8-638] synthesizing module 'sobel_INPUT_BUNDLE_m_axi_fifo__parameterized0' [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_INPUT_BUNDLE_m_axi.v:397]
+INFO: [Synth 8-256] done synthesizing module 'sobel_INPUT_BUNDLE_m_axi_fifo__parameterized0' (8#1) [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_INPUT_BUNDLE_m_axi.v:397]
+INFO: [Synth 8-638] synthesizing module 'sobel_INPUT_BUNDLE_m_axi_buffer' [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_INPUT_BUNDLE_m_axi.v:506]
+INFO: [Synth 8-256] done synthesizing module 'sobel_INPUT_BUNDLE_m_axi_buffer' (9#1) [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_INPUT_BUNDLE_m_axi.v:506]
+INFO: [Synth 8-638] synthesizing module 'sobel_INPUT_BUNDLE_m_axi_fifo__parameterized1' [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_INPUT_BUNDLE_m_axi.v:397]
+INFO: [Synth 8-256] done synthesizing module 'sobel_INPUT_BUNDLE_m_axi_fifo__parameterized1' (9#1) [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_INPUT_BUNDLE_m_axi.v:397]
+INFO: [Synth 8-638] synthesizing module 'sobel_INPUT_BUNDLE_m_axi_fifo__parameterized2' [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_INPUT_BUNDLE_m_axi.v:397]
+INFO: [Synth 8-256] done synthesizing module 'sobel_INPUT_BUNDLE_m_axi_fifo__parameterized2' (9#1) [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_INPUT_BUNDLE_m_axi.v:397]
+WARNING: [Synth 8-3848] Net AWREGION in module/entity sobel_INPUT_BUNDLE_m_axi_write does not have driver. [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_INPUT_BUNDLE_m_axi.v:1523]
+WARNING: [Synth 8-3848] Net WID in module/entity sobel_INPUT_BUNDLE_m_axi_write does not have driver. [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_INPUT_BUNDLE_m_axi.v:1528]
+WARNING: [Synth 8-3848] Net WUSER in module/entity sobel_INPUT_BUNDLE_m_axi_write does not have driver. [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_INPUT_BUNDLE_m_axi.v:1532]
+INFO: [Synth 8-256] done synthesizing module 'sobel_INPUT_BUNDLE_m_axi_write' (10#1) [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_INPUT_BUNDLE_m_axi.v:1491]
+INFO: [Synth 8-638] synthesizing module 'sobel_INPUT_BUNDLE_m_axi_read' [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_INPUT_BUNDLE_m_axi.v:739]
+INFO: [Synth 8-638] synthesizing module 'sobel_INPUT_BUNDLE_m_axi_fifo__parameterized3' [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_INPUT_BUNDLE_m_axi.v:397]
+INFO: [Synth 8-256] done synthesizing module 'sobel_INPUT_BUNDLE_m_axi_fifo__parameterized3' (10#1) [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_INPUT_BUNDLE_m_axi.v:397]
+INFO: [Synth 8-638] synthesizing module 'sobel_INPUT_BUNDLE_m_axi_buffer__parameterized0' [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_INPUT_BUNDLE_m_axi.v:506]
+INFO: [Synth 8-256] done synthesizing module 'sobel_INPUT_BUNDLE_m_axi_buffer__parameterized0' (10#1) [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_INPUT_BUNDLE_m_axi.v:506]
+INFO: [Synth 8-638] synthesizing module 'sobel_INPUT_BUNDLE_m_axi_reg_slice' [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_INPUT_BUNDLE_m_axi.v:293]
+INFO: [Synth 8-256] done synthesizing module 'sobel_INPUT_BUNDLE_m_axi_reg_slice' (11#1) [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_INPUT_BUNDLE_m_axi.v:293]
+INFO: [Synth 8-638] synthesizing module 'sobel_INPUT_BUNDLE_m_axi_fifo__parameterized4' [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_INPUT_BUNDLE_m_axi.v:397]
+INFO: [Synth 8-256] done synthesizing module 'sobel_INPUT_BUNDLE_m_axi_fifo__parameterized4' (11#1) [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_INPUT_BUNDLE_m_axi.v:397]
+WARNING: [Synth 8-3848] Net ARREGION in module/entity sobel_INPUT_BUNDLE_m_axi_read does not have driver. [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_INPUT_BUNDLE_m_axi.v:770]
+INFO: [Synth 8-256] done synthesizing module 'sobel_INPUT_BUNDLE_m_axi_read' (12#1) [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_INPUT_BUNDLE_m_axi.v:739]
+INFO: [Synth 8-256] done synthesizing module 'sobel_INPUT_BUNDLE_m_axi' (13#1) [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_INPUT_BUNDLE_m_axi.v:10]
+INFO: [Synth 8-638] synthesizing module 'sobel_OUTPUT_BUNDLE_m_axi' [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_OUTPUT_BUNDLE_m_axi.v:10]
+INFO: [Synth 8-638] synthesizing module 'sobel_OUTPUT_BUNDLE_m_axi_throttl' [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_OUTPUT_BUNDLE_m_axi.v:687]
+INFO: [Synth 8-256] done synthesizing module 'sobel_OUTPUT_BUNDLE_m_axi_throttl' (14#1) [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_OUTPUT_BUNDLE_m_axi.v:687]
+INFO: [Synth 8-638] synthesizing module 'sobel_OUTPUT_BUNDLE_m_axi_write' [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_OUTPUT_BUNDLE_m_axi.v:1491]
+INFO: [Synth 8-638] synthesizing module 'sobel_OUTPUT_BUNDLE_m_axi_fifo' [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_OUTPUT_BUNDLE_m_axi.v:397]
+INFO: [Synth 8-256] done synthesizing module 'sobel_OUTPUT_BUNDLE_m_axi_fifo' (15#1) [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_OUTPUT_BUNDLE_m_axi.v:397]
+INFO: [Synth 8-638] synthesizing module 'sobel_OUTPUT_BUNDLE_m_axi_decoder' [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_OUTPUT_BUNDLE_m_axi.v:671]
+INFO: [Synth 8-256] done synthesizing module 'sobel_OUTPUT_BUNDLE_m_axi_decoder' (16#1) [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_OUTPUT_BUNDLE_m_axi.v:671]
+INFO: [Synth 8-638] synthesizing module 'sobel_OUTPUT_BUNDLE_m_axi_fifo__parameterized0' [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_OUTPUT_BUNDLE_m_axi.v:397]
+INFO: [Synth 8-256] done synthesizing module 'sobel_OUTPUT_BUNDLE_m_axi_fifo__parameterized0' (16#1) [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_OUTPUT_BUNDLE_m_axi.v:397]
+INFO: [Synth 8-638] synthesizing module 'sobel_OUTPUT_BUNDLE_m_axi_buffer' [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_OUTPUT_BUNDLE_m_axi.v:506]
+INFO: [Synth 8-256] done synthesizing module 'sobel_OUTPUT_BUNDLE_m_axi_buffer' (17#1) [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_OUTPUT_BUNDLE_m_axi.v:506]
+INFO: [Synth 8-638] synthesizing module 'sobel_OUTPUT_BUNDLE_m_axi_fifo__parameterized1' [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_OUTPUT_BUNDLE_m_axi.v:397]
+INFO: [Synth 8-256] done synthesizing module 'sobel_OUTPUT_BUNDLE_m_axi_fifo__parameterized1' (17#1) [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_OUTPUT_BUNDLE_m_axi.v:397]
+INFO: [Synth 8-638] synthesizing module 'sobel_OUTPUT_BUNDLE_m_axi_fifo__parameterized2' [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_OUTPUT_BUNDLE_m_axi.v:397]
+INFO: [Synth 8-256] done synthesizing module 'sobel_OUTPUT_BUNDLE_m_axi_fifo__parameterized2' (17#1) [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_OUTPUT_BUNDLE_m_axi.v:397]
+WARNING: [Synth 8-3848] Net AWREGION in module/entity sobel_OUTPUT_BUNDLE_m_axi_write does not have driver. [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_OUTPUT_BUNDLE_m_axi.v:1523]
+WARNING: [Synth 8-3848] Net WID in module/entity sobel_OUTPUT_BUNDLE_m_axi_write does not have driver. [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_OUTPUT_BUNDLE_m_axi.v:1528]
+WARNING: [Synth 8-3848] Net WUSER in module/entity sobel_OUTPUT_BUNDLE_m_axi_write does not have driver. [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_OUTPUT_BUNDLE_m_axi.v:1532]
+INFO: [Synth 8-256] done synthesizing module 'sobel_OUTPUT_BUNDLE_m_axi_write' (18#1) [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_OUTPUT_BUNDLE_m_axi.v:1491]
+INFO: [Synth 8-638] synthesizing module 'sobel_OUTPUT_BUNDLE_m_axi_read' [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_OUTPUT_BUNDLE_m_axi.v:739]
+INFO: [Synth 8-638] synthesizing module 'sobel_OUTPUT_BUNDLE_m_axi_fifo__parameterized3' [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_OUTPUT_BUNDLE_m_axi.v:397]
+INFO: [Synth 8-256] done synthesizing module 'sobel_OUTPUT_BUNDLE_m_axi_fifo__parameterized3' (18#1) [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_OUTPUT_BUNDLE_m_axi.v:397]
+INFO: [Synth 8-638] synthesizing module 'sobel_OUTPUT_BUNDLE_m_axi_buffer__parameterized0' [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_OUTPUT_BUNDLE_m_axi.v:506]
+INFO: [Synth 8-256] done synthesizing module 'sobel_OUTPUT_BUNDLE_m_axi_buffer__parameterized0' (18#1) [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_OUTPUT_BUNDLE_m_axi.v:506]
+INFO: [Synth 8-638] synthesizing module 'sobel_OUTPUT_BUNDLE_m_axi_reg_slice' [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_OUTPUT_BUNDLE_m_axi.v:293]
+INFO: [Synth 8-256] done synthesizing module 'sobel_OUTPUT_BUNDLE_m_axi_reg_slice' (19#1) [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_OUTPUT_BUNDLE_m_axi.v:293]
+INFO: [Synth 8-638] synthesizing module 'sobel_OUTPUT_BUNDLE_m_axi_fifo__parameterized4' [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_OUTPUT_BUNDLE_m_axi.v:397]
+INFO: [Synth 8-256] done synthesizing module 'sobel_OUTPUT_BUNDLE_m_axi_fifo__parameterized4' (19#1) [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_OUTPUT_BUNDLE_m_axi.v:397]
+WARNING: [Synth 8-3848] Net ARREGION in module/entity sobel_OUTPUT_BUNDLE_m_axi_read does not have driver. [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_OUTPUT_BUNDLE_m_axi.v:770]
+INFO: [Synth 8-256] done synthesizing module 'sobel_OUTPUT_BUNDLE_m_axi_read' (20#1) [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_OUTPUT_BUNDLE_m_axi.v:739]
+INFO: [Synth 8-256] done synthesizing module 'sobel_OUTPUT_BUNDLE_m_axi' (21#1) [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_OUTPUT_BUNDLE_m_axi.v:10]
+INFO: [Synth 8-638] synthesizing module 'convolution2D' [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/convolution2D.v:10]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/convolution2D.v:168]
+INFO: [Synth 8-638] synthesizing module 'sobel_mul_8ns_32sbkb' [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_mul_8ns_32sbkb.v:35]
+INFO: [Synth 8-638] synthesizing module 'sobel_mul_8ns_32sbkb_Mul3S_0' [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_mul_8ns_32sbkb.v:11]
+INFO: [Synth 8-256] done synthesizing module 'sobel_mul_8ns_32sbkb_Mul3S_0' (22#1) [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_mul_8ns_32sbkb.v:11]
+INFO: [Synth 8-256] done synthesizing module 'sobel_mul_8ns_32sbkb' (23#1) [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_mul_8ns_32sbkb.v:35]
+INFO: [Synth 8-256] done synthesizing module 'convolution2D' (24#1) [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/convolution2D.v:10]
+INFO: [Synth 8-638] synthesizing module 'sobel_sitodp_32nsdEe' [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_sitodp_32nsdEe.v:11]
+INFO: [Synth 8-638] synthesizing module 'sobel_ap_sitodp_4_no_dsp_32' [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/ip/sobel_ap_sitodp_4_no_dsp_32.vhd:70]
+INFO: [Synth 8-3491] module 'floating_point_v7_1_3' declared at 'c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/ad02/hdl/floating_point_v7_1_vh_rfs.vhd:91604' bound to instance 'U0' of component 'floating_point_v7_1_3' [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/ip/sobel_ap_sitodp_4_no_dsp_32.vhd:193]
+INFO: [Synth 8-256] done synthesizing module 'sobel_ap_sitodp_4_no_dsp_32' (38#1) [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/ip/sobel_ap_sitodp_4_no_dsp_32.vhd:70]
+INFO: [Synth 8-256] done synthesizing module 'sobel_sitodp_32nsdEe' (39#1) [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_sitodp_32nsdEe.v:11]
+INFO: [Synth 8-638] synthesizing module 'sobel_dsqrt_64ns_eOg' [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_dsqrt_64ns_eOg.v:11]
+INFO: [Synth 8-638] synthesizing module 'sobel_ap_dsqrt_29_no_dsp_64' [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/ip/sobel_ap_dsqrt_29_no_dsp_64.vhd:70]
+INFO: [Synth 8-3491] module 'floating_point_v7_1_3' declared at 'c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/ad02/hdl/floating_point_v7_1_vh_rfs.vhd:91604' bound to instance 'U0' of component 'floating_point_v7_1_3' [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/ip/sobel_ap_dsqrt_29_no_dsp_64.vhd:193]
+INFO: [Synth 8-256] done synthesizing module 'sobel_ap_dsqrt_29_no_dsp_64' (45#1) [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/ip/sobel_ap_dsqrt_29_no_dsp_64.vhd:70]
+INFO: [Synth 8-256] done synthesizing module 'sobel_dsqrt_64ns_eOg' (46#1) [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_dsqrt_64ns_eOg.v:11]
+INFO: [Synth 8-638] synthesizing module 'sobel_mul_32s_32sfYi' [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_mul_32s_32sfYi.v:41]
+INFO: [Synth 8-638] synthesizing module 'sobel_mul_32s_32sfYi_MulnS_0' [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_mul_32s_32sfYi.v:11]
+INFO: [Synth 8-256] done synthesizing module 'sobel_mul_32s_32sfYi_MulnS_0' (47#1) [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_mul_32s_32sfYi.v:11]
+INFO: [Synth 8-256] done synthesizing module 'sobel_mul_32s_32sfYi' (48#1) [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_mul_32s_32sfYi.v:41]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel.v:1551]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel.v:1555]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel.v:1559]
+INFO: [Synth 8-256] done synthesizing module 'sobel' (49#1) [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel.v:12]
+INFO: [Synth 8-256] done synthesizing module 'arm_sobel_0_1' (50#1) [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ip/arm_sobel_0_1/synth/arm_sobel_0_1.v:59]
+WARNING: [Synth 8-3331] design sobel_mul_32s_32sfYi has unconnected port reset
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized113 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized113 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized113 has unconnected port SINIT
+WARNING: [Synth 8-3331] design flt_dec_op has unconnected port DEC_OP_STATE[11]
+WARNING: [Synth 8-3331] design flt_dec_op has unconnected port DEC_OP_STATE[10]
+WARNING: [Synth 8-3331] design flt_dec_op has unconnected port DEC_OP_STATE[9]
+WARNING: [Synth 8-3331] design flt_dec_op has unconnected port DEC_OP_STATE[8]
+WARNING: [Synth 8-3331] design flt_dec_op has unconnected port DIVIDE_BY_ZERO_IN
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized686 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized686 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized686 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized686 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized686 has unconnected port SINIT
+WARNING: [Synth 8-3331] design carry_chain__parameterized61 has unconnected port B[26]
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized684 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized684 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized684 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized684 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized684 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized672 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized672 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized672 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized672 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized672 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized670 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized670 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized670 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized670 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized670 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized668 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized668 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized668 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized668 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized668 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized666 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized666 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized666 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized666 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized666 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized682 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized682 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized682 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized682 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized682 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized680 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized680 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized680 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized680 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized680 has unconnected port SINIT
+WARNING: [Synth 8-3331] design flt_round_bit__parameterized0 has unconnected port NORMALIZE[1]
+WARNING: [Synth 8-3331] design flt_round_bit__parameterized0 has unconnected port FIXED_POINT
+WARNING: [Synth 8-3331] design flt_round_bit__parameterized0 has unconnected port FIX_MANT_SIGN
+WARNING: [Synth 8-3331] design flt_round_bit__parameterized0 has unconnected port SIGN
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized678 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized678 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized678 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized678 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized678 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized676 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized676 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized676 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized676 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized676 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized674 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized674 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized674 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized674 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized674 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized664 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized664 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized664 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized664 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized664 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized662 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized662 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized662 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized662 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized662 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized660 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized660 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized660 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized660 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized660 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized658 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized658 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized658 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized658 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized658 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized656 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized656 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized656 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized656 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized656 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized654 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized654 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized654 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized654 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized654 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized652 has unconnected port CLK
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:40 ; elapsed = 00:01:21 . Memory (MB): peak = 519.211 ; gain = 308.492
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:42 ; elapsed = 00:01:23 . Memory (MB): peak = 519.211 ; gain = 308.492
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 3657 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ip/arm_sobel_0_1/constraints/sobel_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ip/arm_sobel_0_1/constraints/sobel_ooc.xdc] for cell 'inst'
+Parsing XDC File [C:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.runs/arm_sobel_0_1_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.runs/arm_sobel_0_1_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 16 instances were transformed.
+  FDE => FDRE: 16 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 809.105 ; gain = 3.117
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:01:07 ; elapsed = 00:02:01 . Memory (MB): peak = 809.105 ; gain = 598.387
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:07 ; elapsed = 00:02:01 . Memory (MB): peak = 809.105 ; gain = 598.387
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for inst. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:07 ; elapsed = 00:02:02 . Memory (MB): peak = 809.105 ; gain = 598.387
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "ram". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "ram". This will be implemented in logic
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_INPUT_BUNDLE_m_axi.v:589]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_INPUT_BUNDLE_m_axi.v:485]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_INPUT_BUNDLE_m_axi.v:589]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_INPUT_BUNDLE_m_axi.v:485]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_OUTPUT_BUNDLE_m_axi.v:589]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_OUTPUT_BUNDLE_m_axi.v:485]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_OUTPUT_BUNDLE_m_axi.v:589]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_OUTPUT_BUNDLE_m_axi.v:485]
+INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/convolution2D.v:554]
+INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/convolution2D.v:554]
+WARNING: [Synth 8-3936] Found unconnected internal register 'tmp_1_reg_297_reg' and it is trimmed from '5' to '4' bits. [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/convolution2D.v:286]
+INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/convolution2D.v:554]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-5544] ROM "exitcond1_fu_129_p2" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "exitcond_fu_145_p2" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5545] ROM "chunk_is_zero_ip" won't be mapped to RAM because address size (36) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "chunk_is_zero_ip" won't be mapped to RAM because address size (36) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-5546] ROM "exitcond_fu_185_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond1_fu_179_p2" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:25 ; elapsed = 00:02:24 . Memory (MB): peak = 809.105 ; gain = 598.387
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "exitcond_fu_185_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond1_fu_179_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/convolution2D.v:554]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 2 [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ipshared/42f1/hdl/verilog/sobel_mul_8ns_32sbkb.v:24]
+INFO: [Synth 8-5546] ROM "SQRT_OP.SPD.OP/i_mant_calc.EXP/COND_DET_A/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "SQRT_OP.SPD.OP/i_mant_calc.EXP/COND_DET_A/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+warning: Removed RAM bus_write/buff_wdata/mem_reg due to inactive write enable
+WARNING: [Synth 8-5730] RAM bus_write/buff_wdata/mem_reg got removed due to cross hierarchy optimization. 
+INFO: [Synth 8-3886] merging instance 'inst/grp_convolution2D_fu_156/j_2_cast_reg_278_reg[4]' (FD) to 'inst/grp_convolution2D_fu_156/j_2_cast_reg_278_reg[3]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/grp_convolution2D_fu_156/\j_2_cast_reg_278_reg[3] )
+INFO: [Synth 8-3886] merging instance 'inst/grp_convolution2D_fu_156/j_2_cast_reg_278_reg[2]' (FDE) to 'inst/grp_convolution2D_fu_156/j_2_reg_273_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/grp_convolution2D_fu_156/j_2_cast_reg_278_reg[1]' (FDE) to 'inst/grp_convolution2D_fu_156/j_2_reg_273_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/grp_convolution2D_fu_156/j_2_cast_reg_278_reg[0]' (FDE) to 'inst/grp_convolution2D_fu_156/j_2_reg_273_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/vert_operator_U/sobel_vert_operator_rom_U/q0_reg[2]' (FDE) to 'inst/vert_operator_U/sobel_vert_operator_rom_U/q0_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/horiz_operator_U/sobel_horiz_operacud_rom_U/q0_reg[2]' (FDE) to 'inst/horiz_operator_U/sobel_horiz_operacud_rom_U/q0_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/vert_operator_U/sobel_vert_operator_rom_U/q0_reg[3]' (FDE) to 'inst/vert_operator_U/sobel_vert_operator_rom_U/q0_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/horiz_operator_U/sobel_horiz_operacud_rom_U/q0_reg[3]' (FDE) to 'inst/horiz_operator_U/sobel_horiz_operacud_rom_U/q0_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/vert_operator_U/sobel_vert_operator_rom_U/q0_reg[4]' (FDE) to 'inst/vert_operator_U/sobel_vert_operator_rom_U/q0_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/horiz_operator_U/sobel_horiz_operacud_rom_U/q0_reg[4]' (FDE) to 'inst/horiz_operator_U/sobel_horiz_operacud_rom_U/q0_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/vert_operator_U/sobel_vert_operator_rom_U/q0_reg[5]' (FDE) to 'inst/vert_operator_U/sobel_vert_operator_rom_U/q0_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/horiz_operator_U/sobel_horiz_operacud_rom_U/q0_reg[5]' (FDE) to 'inst/horiz_operator_U/sobel_horiz_operacud_rom_U/q0_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/vert_operator_U/sobel_vert_operator_rom_U/q0_reg[6]' (FDE) to 'inst/vert_operator_U/sobel_vert_operator_rom_U/q0_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/horiz_operator_U/sobel_horiz_operacud_rom_U/q0_reg[6]' (FDE) to 'inst/horiz_operator_U/sobel_horiz_operacud_rom_U/q0_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/vert_operator_U/sobel_vert_operator_rom_U/q0_reg[7]' (FDE) to 'inst/vert_operator_U/sobel_vert_operator_rom_U/q0_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/horiz_operator_U/sobel_horiz_operacud_rom_U/q0_reg[7]' (FDE) to 'inst/horiz_operator_U/sobel_horiz_operacud_rom_U/q0_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/vert_operator_U/sobel_vert_operator_rom_U/q0_reg[8]' (FDE) to 'inst/vert_operator_U/sobel_vert_operator_rom_U/q0_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/horiz_operator_U/sobel_horiz_operacud_rom_U/q0_reg[8]' (FDE) to 'inst/horiz_operator_U/sobel_horiz_operacud_rom_U/q0_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/vert_operator_U/sobel_vert_operator_rom_U/q0_reg[9]' (FDE) to 'inst/vert_operator_U/sobel_vert_operator_rom_U/q0_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/horiz_operator_U/sobel_horiz_operacud_rom_U/q0_reg[9]' (FDE) to 'inst/horiz_operator_U/sobel_horiz_operacud_rom_U/q0_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/vert_operator_U/sobel_vert_operator_rom_U/q0_reg[10]' (FDE) to 'inst/vert_operator_U/sobel_vert_operator_rom_U/q0_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/horiz_operator_U/sobel_horiz_operacud_rom_U/q0_reg[10]' (FDE) to 'inst/horiz_operator_U/sobel_horiz_operacud_rom_U/q0_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/vert_operator_U/sobel_vert_operator_rom_U/q0_reg[11]' (FDE) to 'inst/vert_operator_U/sobel_vert_operator_rom_U/q0_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/horiz_operator_U/sobel_horiz_operacud_rom_U/q0_reg[11]' (FDE) to 'inst/horiz_operator_U/sobel_horiz_operacud_rom_U/q0_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/vert_operator_U/sobel_vert_operator_rom_U/q0_reg[12]' (FDE) to 'inst/vert_operator_U/sobel_vert_operator_rom_U/q0_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/horiz_operator_U/sobel_horiz_operacud_rom_U/q0_reg[12]' (FDE) to 'inst/horiz_operator_U/sobel_horiz_operacud_rom_U/q0_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/vert_operator_U/sobel_vert_operator_rom_U/q0_reg[13]' (FDE) to 'inst/vert_operator_U/sobel_vert_operator_rom_U/q0_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/horiz_operator_U/sobel_horiz_operacud_rom_U/q0_reg[13]' (FDE) to 'inst/horiz_operator_U/sobel_horiz_operacud_rom_U/q0_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/vert_operator_U/sobel_vert_operator_rom_U/q0_reg[14]' (FDE) to 'inst/vert_operator_U/sobel_vert_operator_rom_U/q0_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/horiz_operator_U/sobel_horiz_operacud_rom_U/q0_reg[14]' (FDE) to 'inst/horiz_operator_U/sobel_horiz_operacud_rom_U/q0_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/vert_operator_U/sobel_vert_operator_rom_U/q0_reg[15]' (FDE) to 'inst/vert_operator_U/sobel_vert_operator_rom_U/q0_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/horiz_operator_U/sobel_horiz_operacud_rom_U/q0_reg[15]' (FDE) to 'inst/horiz_operator_U/sobel_horiz_operacud_rom_U/q0_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/vert_operator_U/sobel_vert_operator_rom_U/q0_reg[16]' (FDE) to 'inst/vert_operator_U/sobel_vert_operator_rom_U/q0_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/horiz_operator_U/sobel_horiz_operacud_rom_U/q0_reg[16]' (FDE) to 'inst/horiz_operator_U/sobel_horiz_operacud_rom_U/q0_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/vert_operator_U/sobel_vert_operator_rom_U/q0_reg[17]' (FDE) to 'inst/vert_operator_U/sobel_vert_operator_rom_U/q0_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/horiz_operator_U/sobel_horiz_operacud_rom_U/q0_reg[17]' (FDE) to 'inst/horiz_operator_U/sobel_horiz_operacud_rom_U/q0_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/vert_operator_U/sobel_vert_operator_rom_U/q0_reg[18]' (FDE) to 'inst/vert_operator_U/sobel_vert_operator_rom_U/q0_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/horiz_operator_U/sobel_horiz_operacud_rom_U/q0_reg[18]' (FDE) to 'inst/horiz_operator_U/sobel_horiz_operacud_rom_U/q0_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/vert_operator_U/sobel_vert_operator_rom_U/q0_reg[19]' (FDE) to 'inst/vert_operator_U/sobel_vert_operator_rom_U/q0_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/horiz_operator_U/sobel_horiz_operacud_rom_U/q0_reg[19]' (FDE) to 'inst/horiz_operator_U/sobel_horiz_operacud_rom_U/q0_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/vert_operator_U/sobel_vert_operator_rom_U/q0_reg[20]' (FDE) to 'inst/vert_operator_U/sobel_vert_operator_rom_U/q0_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/horiz_operator_U/sobel_horiz_operacud_rom_U/q0_reg[20]' (FDE) to 'inst/horiz_operator_U/sobel_horiz_operacud_rom_U/q0_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/vert_operator_U/sobel_vert_operator_rom_U/q0_reg[21]' (FDE) to 'inst/vert_operator_U/sobel_vert_operator_rom_U/q0_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/horiz_operator_U/sobel_horiz_operacud_rom_U/q0_reg[21]' (FDE) to 'inst/horiz_operator_U/sobel_horiz_operacud_rom_U/q0_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/vert_operator_U/sobel_vert_operator_rom_U/q0_reg[22]' (FDE) to 'inst/vert_operator_U/sobel_vert_operator_rom_U/q0_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/horiz_operator_U/sobel_horiz_operacud_rom_U/q0_reg[22]' (FDE) to 'inst/horiz_operator_U/sobel_horiz_operacud_rom_U/q0_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/vert_operator_U/sobel_vert_operator_rom_U/q0_reg[23]' (FDE) to 'inst/vert_operator_U/sobel_vert_operator_rom_U/q0_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/horiz_operator_U/sobel_horiz_operacud_rom_U/q0_reg[23]' (FDE) to 'inst/horiz_operator_U/sobel_horiz_operacud_rom_U/q0_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/vert_operator_U/sobel_vert_operator_rom_U/q0_reg[24]' (FDE) to 'inst/vert_operator_U/sobel_vert_operator_rom_U/q0_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/horiz_operator_U/sobel_horiz_operacud_rom_U/q0_reg[24]' (FDE) to 'inst/horiz_operator_U/sobel_horiz_operacud_rom_U/q0_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/vert_operator_U/sobel_vert_operator_rom_U/q0_reg[25]' (FDE) to 'inst/vert_operator_U/sobel_vert_operator_rom_U/q0_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/horiz_operator_U/sobel_horiz_operacud_rom_U/q0_reg[25]' (FDE) to 'inst/horiz_operator_U/sobel_horiz_operacud_rom_U/q0_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/vert_operator_U/sobel_vert_operator_rom_U/q0_reg[26]' (FDE) to 'inst/vert_operator_U/sobel_vert_operator_rom_U/q0_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/horiz_operator_U/sobel_horiz_operacud_rom_U/q0_reg[26]' (FDE) to 'inst/horiz_operator_U/sobel_horiz_operacud_rom_U/q0_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/vert_operator_U/sobel_vert_operator_rom_U/q0_reg[27]' (FDE) to 'inst/vert_operator_U/sobel_vert_operator_rom_U/q0_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/horiz_operator_U/sobel_horiz_operacud_rom_U/q0_reg[27]' (FDE) to 'inst/horiz_operator_U/sobel_horiz_operacud_rom_U/q0_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/vert_operator_U/sobel_vert_operator_rom_U/q0_reg[28]' (FDE) to 'inst/vert_operator_U/sobel_vert_operator_rom_U/q0_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/horiz_operator_U/sobel_horiz_operacud_rom_U/q0_reg[28]' (FDE) to 'inst/horiz_operator_U/sobel_horiz_operacud_rom_U/q0_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/vert_operator_U/sobel_vert_operator_rom_U/q0_reg[29]' (FDE) to 'inst/vert_operator_U/sobel_vert_operator_rom_U/q0_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/horiz_operator_U/sobel_horiz_operacud_rom_U/q0_reg[29]' (FDE) to 'inst/horiz_operator_U/sobel_horiz_operacud_rom_U/q0_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/vert_operator_U/sobel_vert_operator_rom_U/q0_reg[30]' (FDE) to 'inst/vert_operator_U/sobel_vert_operator_rom_U/q0_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/horiz_operator_U/sobel_horiz_operacud_rom_U/q0_reg[30]' (FDE) to 'inst/horiz_operator_U/sobel_horiz_operacud_rom_U/q0_reg[31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\sobel_dsqrt_64ns_eOg_U7/sobel_ap_dsqrt_29_no_dsp_64_u/U0 /i_synth/\SQRT_OP.SPD.OP/i_mant_calc.MANT_SQRT /\RT[1].MA_DEL.MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\sobel_dsqrt_64ns_eOg_U7/sobel_ap_dsqrt_29_no_dsp_64_u/U0 /i_synth/\SQRT_OP.SPD.OP/i_mant_calc.MANT_SQRT /\RT[1].MA_DEL.MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\sobel_dsqrt_64ns_eOg_U7/sobel_ap_dsqrt_29_no_dsp_64_u/U0 /i_synth/\SQRT_OP.SPD.OP/i_mant_calc.MANT_SQRT /\RT[3].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\sobel_dsqrt_64ns_eOg_U7/sobel_ap_dsqrt_29_no_dsp_64_u/U0 /i_synth/\SQRT_OP.SPD.OP/i_mant_calc.MANT_SQRT /\RT[3].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[4] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/sobel_OUTPUT_BUNDLE_m_axi_U/\bus_read/fifo_rreq/full_n_reg )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/sobel_INPUT_BUNDLE_m_axi_U/\bus_write/fifo_wreq/full_n_reg )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/sobel_OUTPUT_BUNDLE_m_axi_U/\bus_read/fifo_rreq/data_vld_reg )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/sobel_INPUT_BUNDLE_m_axi_U/\bus_write/fifo_wreq/data_vld_reg )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/sobel_INPUT_BUNDLE_m_axi_U/\bus_write/buff_wdata/full_n_reg )
+INFO: [Synth 8-3886] merging instance 'inst/sobel_INPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/q_tmp_reg[8]' (FDRE) to 'inst/sobel_INPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/q_tmp_reg[7]'
+INFO: [Synth 8-3886] merging instance 'inst/sobel_INPUT_BUNDLE_m_axi_U/i_3_2/bus_write/buff_wdata/q_buf_reg[8]' (FD) to 'inst/sobel_INPUT_BUNDLE_m_axi_U/i_3_2/bus_write/buff_wdata/q_buf_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/sobel_INPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/q_tmp_reg[0]' (FDRE) to 'inst/sobel_INPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/q_tmp_reg[7]'
+INFO: [Synth 8-3886] merging instance 'inst/sobel_INPUT_BUNDLE_m_axi_U/i_3_2/bus_write/buff_wdata/q_buf_reg[0]' (FD) to 'inst/sobel_INPUT_BUNDLE_m_axi_U/i_3_2/bus_write/buff_wdata/q_buf_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/sobel_INPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/q_tmp_reg[1]' (FDRE) to 'inst/sobel_INPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/q_tmp_reg[7]'
+INFO: [Synth 8-3886] merging instance 'inst/sobel_INPUT_BUNDLE_m_axi_U/i_3_2/bus_write/buff_wdata/q_buf_reg[1]' (FD) to 'inst/sobel_INPUT_BUNDLE_m_axi_U/i_3_2/bus_write/buff_wdata/q_buf_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/sobel_INPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/q_tmp_reg[2]' (FDRE) to 'inst/sobel_INPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/q_tmp_reg[7]'
+INFO: [Synth 8-3886] merging instance 'inst/sobel_INPUT_BUNDLE_m_axi_U/i_3_2/bus_write/buff_wdata/q_buf_reg[2]' (FD) to 'inst/sobel_INPUT_BUNDLE_m_axi_U/i_3_2/bus_write/buff_wdata/q_buf_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/sobel_INPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/q_tmp_reg[3]' (FDRE) to 'inst/sobel_INPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/q_tmp_reg[7]'
+INFO: [Synth 8-3886] merging instance 'inst/sobel_INPUT_BUNDLE_m_axi_U/i_3_2/bus_write/buff_wdata/q_buf_reg[3]' (FD) to 'inst/sobel_INPUT_BUNDLE_m_axi_U/i_3_2/bus_write/buff_wdata/q_buf_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/sobel_INPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/q_tmp_reg[4]' (FDRE) to 'inst/sobel_INPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/q_tmp_reg[7]'
+INFO: [Synth 8-3886] merging instance 'inst/sobel_INPUT_BUNDLE_m_axi_U/i_3_2/bus_write/buff_wdata/q_buf_reg[4]' (FD) to 'inst/sobel_INPUT_BUNDLE_m_axi_U/i_3_2/bus_write/buff_wdata/q_buf_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/sobel_INPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/q_tmp_reg[5]' (FDRE) to 'inst/sobel_INPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/q_tmp_reg[7]'
+INFO: [Synth 8-3886] merging instance 'inst/sobel_INPUT_BUNDLE_m_axi_U/i_3_2/bus_write/buff_wdata/q_buf_reg[5]' (FD) to 'inst/sobel_INPUT_BUNDLE_m_axi_U/i_3_2/bus_write/buff_wdata/q_buf_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/sobel_INPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/q_tmp_reg[6]' (FDRE) to 'inst/sobel_INPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/q_tmp_reg[7]'
+INFO: [Synth 8-3886] merging instance 'inst/sobel_INPUT_BUNDLE_m_axi_U/i_3_2/bus_write/buff_wdata/q_buf_reg[6]' (FD) to 'inst/sobel_INPUT_BUNDLE_m_axi_U/i_3_2/bus_write/buff_wdata/q_buf_reg[7]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/sobel_INPUT_BUNDLE_m_axi_U/\bus_write/buff_wdata/q_tmp_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/sobel_INPUT_BUNDLE_m_axi_U/\bus_write/buff_wdata/show_ahead_reg )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/sobel_INPUT_BUNDLE_m_axi_U/i_3_2/\bus_write/buff_wdata/q_buf_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/sobel_OUTPUT_BUNDLE_m_axi_U/\bus_write/bus_wide_gen.pad_oh_reg_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/sobel_INPUT_BUNDLE_m_axi_U/\bus_write/bus_wide_gen.pad_oh_reg_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/sobel_OUTPUT_BUNDLE_m_axi_U/\bus_read/could_multi_bursts.arlen_buf_reg[4] )
+INFO: [Synth 8-3886] merging instance 'inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_read/could_multi_bursts.arlen_buf_reg[5]' (FDRE) to 'inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_read/could_multi_bursts.arlen_buf_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_read/could_multi_bursts.arlen_buf_reg[6]' (FDRE) to 'inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_read/could_multi_bursts.arlen_buf_reg[7]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/sobel_OUTPUT_BUNDLE_m_axi_U/\bus_read/could_multi_bursts.arlen_buf_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/sobel_OUTPUT_BUNDLE_m_axi_U/\bus_write/could_multi_bursts.awlen_buf_reg[4] )
+INFO: [Synth 8-3886] merging instance 'inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/could_multi_bursts.awlen_buf_reg[5]' (FDRE) to 'inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/could_multi_bursts.awlen_buf_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/could_multi_bursts.awlen_buf_reg[6]' (FDRE) to 'inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/could_multi_bursts.awlen_buf_reg[7]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/sobel_OUTPUT_BUNDLE_m_axi_U/\bus_write/could_multi_bursts.awlen_buf_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/sobel_INPUT_BUNDLE_m_axi_U/\bus_read/could_multi_bursts.arlen_buf_reg[4] )
+INFO: [Synth 8-3886] merging instance 'inst/sobel_INPUT_BUNDLE_m_axi_U/bus_read/could_multi_bursts.arlen_buf_reg[5]' (FDRE) to 'inst/sobel_INPUT_BUNDLE_m_axi_U/bus_read/could_multi_bursts.arlen_buf_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/sobel_INPUT_BUNDLE_m_axi_U/bus_read/could_multi_bursts.arlen_buf_reg[6]' (FDRE) to 'inst/sobel_INPUT_BUNDLE_m_axi_U/bus_read/could_multi_bursts.arlen_buf_reg[7]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/sobel_INPUT_BUNDLE_m_axi_U/\bus_read/could_multi_bursts.arlen_buf_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/sobel_INPUT_BUNDLE_m_axi_U/\bus_write/could_multi_bursts.awlen_buf_reg[4] )
+INFO: [Synth 8-3886] merging instance 'inst/sobel_INPUT_BUNDLE_m_axi_U/bus_write/could_multi_bursts.awlen_buf_reg[5]' (FDRE) to 'inst/sobel_INPUT_BUNDLE_m_axi_U/bus_write/could_multi_bursts.awlen_buf_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/sobel_INPUT_BUNDLE_m_axi_U/bus_write/could_multi_bursts.awlen_buf_reg[6]' (FDRE) to 'inst/sobel_INPUT_BUNDLE_m_axi_U/bus_write/could_multi_bursts.awlen_buf_reg[7]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/sobel_INPUT_BUNDLE_m_axi_U/\bus_write/could_multi_bursts.awlen_buf_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\sobel_dsqrt_64ns_eOg_U7/sobel_ap_dsqrt_29_no_dsp_64_u/U0 /i_synth/\SQRT_OP.SPD.OP/i_mant_calc.MANT_SQRT /\RT[3].MA_DEL.MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\sobel_dsqrt_64ns_eOg_U7/sobel_ap_dsqrt_29_no_dsp_64_u/U0 /i_synth/\SQRT_OP.SPD.OP/i_mant_calc.MANT_SQRT /\RT[3].MA_DEL.MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\sobel_dsqrt_64ns_eOg_U7/sobel_ap_dsqrt_29_no_dsp_64_u/U0 /i_synth/\SQRT_OP.SPD.OP/i_mant_calc.MANT_SQRT /\RT[5].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\sobel_dsqrt_64ns_eOg_U7/sobel_ap_dsqrt_29_no_dsp_64_u/U0 /i_synth/\SQRT_OP.SPD.OP/i_mant_calc.MANT_SQRT /\RT[5].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/sobel_OUTPUT_BUNDLE_m_axi_U/\bus_read/start_addr_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/sobel_OUTPUT_BUNDLE_m_axi_U/\bus_read/align_len_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/sobel_OUTPUT_BUNDLE_m_axi_U/\bus_read/start_addr_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/sobel_OUTPUT_BUNDLE_m_axi_U/\bus_read/align_len_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/sobel_OUTPUT_BUNDLE_m_axi_U/\bus_read/start_addr_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/sobel_OUTPUT_BUNDLE_m_axi_U/\bus_read/align_len_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/sobel_OUTPUT_BUNDLE_m_axi_U/\bus_read/start_addr_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/sobel_OUTPUT_BUNDLE_m_axi_U/\bus_read/align_len_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/sobel_OUTPUT_BUNDLE_m_axi_U/\bus_read/start_addr_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/sobel_OUTPUT_BUNDLE_m_axi_U/\bus_read/align_len_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/sobel_OUTPUT_BUNDLE_m_axi_U/\bus_read/start_addr_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/sobel_OUTPUT_BUNDLE_m_axi_U/\bus_read/align_len_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/sobel_OUTPUT_BUNDLE_m_axi_U/\bus_read/start_addr_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/sobel_OUTPUT_BUNDLE_m_axi_U/\bus_read/align_len_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/sobel_OUTPUT_BUNDLE_m_axi_U/\bus_read/start_addr_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/sobel_OUTPUT_BUNDLE_m_axi_U/\bus_read/align_len_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/sobel_OUTPUT_BUNDLE_m_axi_U/\bus_read/start_addr_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/sobel_OUTPUT_BUNDLE_m_axi_U/\bus_read/align_len_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/sobel_OUTPUT_BUNDLE_m_axi_U/\bus_read/start_addr_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/sobel_OUTPUT_BUNDLE_m_axi_U/\bus_read/align_len_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/sobel_OUTPUT_BUNDLE_m_axi_U/\bus_read/align_len_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/sobel_OUTPUT_BUNDLE_m_axi_U/\bus_read/align_len_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/sobel_OUTPUT_BUNDLE_m_axi_U/\bus_read/align_len_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/sobel_INPUT_BUNDLE_m_axi_U/\bus_write/start_addr_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/sobel_INPUT_BUNDLE_m_axi_U/\bus_write/align_len_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/sobel_INPUT_BUNDLE_m_axi_U/\bus_write/start_addr_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/sobel_INPUT_BUNDLE_m_axi_U/\bus_write/align_len_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/sobel_INPUT_BUNDLE_m_axi_U/\bus_write/start_addr_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/sobel_INPUT_BUNDLE_m_axi_U/\bus_write/align_len_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/sobel_INPUT_BUNDLE_m_axi_U/\bus_write/start_addr_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/sobel_INPUT_BUNDLE_m_axi_U/\bus_write/align_len_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/sobel_INPUT_BUNDLE_m_axi_U/\bus_write/start_addr_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/sobel_INPUT_BUNDLE_m_axi_U/\bus_write/align_len_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/sobel_INPUT_BUNDLE_m_axi_U/\bus_write/start_addr_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/sobel_INPUT_BUNDLE_m_axi_U/\bus_write/align_len_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/sobel_INPUT_BUNDLE_m_axi_U/\bus_write/start_addr_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/sobel_INPUT_BUNDLE_m_axi_U/\bus_write/align_len_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/sobel_INPUT_BUNDLE_m_axi_U/\bus_write/start_addr_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/sobel_INPUT_BUNDLE_m_axi_U/\bus_write/align_len_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/sobel_INPUT_BUNDLE_m_axi_U/\bus_write/start_addr_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/sobel_INPUT_BUNDLE_m_axi_U/\bus_write/align_len_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/sobel_INPUT_BUNDLE_m_axi_U/\bus_write/start_addr_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/sobel_INPUT_BUNDLE_m_axi_U/\bus_write/align_len_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/sobel_INPUT_BUNDLE_m_axi_U/\bus_write/start_addr_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/sobel_INPUT_BUNDLE_m_axi_U/\bus_write/align_len_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/sobel_INPUT_BUNDLE_m_axi_U/\bus_write/start_addr_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/sobel_INPUT_BUNDLE_m_axi_U/\bus_write/align_len_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/sobel_INPUT_BUNDLE_m_axi_U/\bus_write/align_len_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/sobel_INPUT_BUNDLE_m_axi_U/\bus_write/align_len_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/sobel_INPUT_BUNDLE_m_axi_U/\bus_write/align_len_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/sobel_OUTPUT_BUNDLE_m_axi_U/\bus_read/align_len_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/sobel_OUTPUT_BUNDLE_m_axi_U/\bus_read/align_len_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/sobel_OUTPUT_BUNDLE_m_axi_U/\bus_read/end_addr_buf_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/sobel_OUTPUT_BUNDLE_m_axi_U/\bus_read/end_addr_buf_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/sobel_OUTPUT_BUNDLE_m_axi_U/\bus_read/end_addr_buf_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/sobel_OUTPUT_BUNDLE_m_axi_U/\bus_read/start_addr_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/sobel_OUTPUT_BUNDLE_m_axi_U/\bus_read/start_addr_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/sobel_OUTPUT_BUNDLE_m_axi_U/i_3_98/\bus_read/sect_cnt_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/sobel_OUTPUT_BUNDLE_m_axi_U/\bus_read/start_addr_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/sobel_OUTPUT_BUNDLE_m_axi_U/i_3_98/\bus_read/sect_cnt_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/sobel_OUTPUT_BUNDLE_m_axi_U/\bus_read/start_addr_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/sobel_OUTPUT_BUNDLE_m_axi_U/i_3_98/\bus_read/sect_cnt_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/sobel_OUTPUT_BUNDLE_m_axi_U/\bus_read/start_addr_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/sobel_OUTPUT_BUNDLE_m_axi_U/\bus_read/start_addr_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/sobel_OUTPUT_BUNDLE_m_axi_U/\bus_read/start_addr_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/sobel_OUTPUT_BUNDLE_m_axi_U/\bus_read/start_addr_reg[18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/sobel_OUTPUT_BUNDLE_m_axi_U/\bus_read/start_addr_reg[19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/sobel_OUTPUT_BUNDLE_m_axi_U/\bus_read/start_addr_reg[20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/sobel_OUTPUT_BUNDLE_m_axi_U/\bus_read/start_addr_reg[21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/sobel_OUTPUT_BUNDLE_m_axi_U/\bus_read/start_addr_reg[22] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/sobel_OUTPUT_BUNDLE_m_axi_U/\bus_read/start_addr_reg[23] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/sobel_OUTPUT_BUNDLE_m_axi_U/\bus_read/start_addr_reg[24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/sobel_OUTPUT_BUNDLE_m_axi_U/\bus_read/start_addr_reg[25] )
+INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3886] merging instance 'inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_read/sect_addr_buf_reg[11]' (FDRE) to 'inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_read/start_addr_buf_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_read/sect_addr_buf_reg[10]' (FDRE) to 'inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_read/start_addr_buf_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_read/sect_addr_buf_reg[9]' (FDRE) to 'inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_read/start_addr_buf_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_read/sect_addr_buf_reg[8]' (FDRE) to 'inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_read/start_addr_buf_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_read/sect_addr_buf_reg[7]' (FDRE) to 'inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_read/start_addr_buf_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_read/sect_addr_buf_reg[6]' (FDRE) to 'inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_read/start_addr_buf_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_read/sect_addr_buf_reg[5]' (FDRE) to 'inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_read/start_addr_buf_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_read/sect_addr_buf_reg[4]' (FDRE) to 'inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_read/start_addr_buf_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_read/sect_addr_buf_reg[3]' (FDRE) to 'inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_read/start_addr_buf_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_read/sect_addr_buf_reg[2]' (FDRE) to 'inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_read/start_addr_buf_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_read/could_multi_bursts.arlen_buf_reg[4]' (FDRE) to 'inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_read/start_addr_buf_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_read/could_multi_bursts.araddr_buf_reg[4]' (FDRE) to 'inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_read/start_addr_buf_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_read/could_multi_bursts.araddr_buf_reg[5]' (FDRE) to 'inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_read/start_addr_buf_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_read/could_multi_bursts.araddr_buf_reg[6]' (FDRE) to 'inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_read/start_addr_buf_reg[0]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-3332] Sequential element (bus_write/buff_wdata/q_buf_reg[7]) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/buff_wdata/waddr_reg[7]) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/buff_wdata/waddr_reg[6]) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/buff_wdata/waddr_reg[5]) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/buff_wdata/waddr_reg[4]) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/buff_wdata/waddr_reg[3]) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/buff_wdata/waddr_reg[2]) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/buff_wdata/waddr_reg[1]) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/buff_wdata/waddr_reg[0]) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/could_multi_bursts.awlen_buf_reg[7]) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/could_multi_bursts.awlen_buf_reg[3]) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/could_multi_bursts.awlen_buf_reg[2]) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/could_multi_bursts.awlen_buf_reg[1]) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/could_multi_bursts.awlen_buf_reg[0]) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+WARNING: [Synth 8-3332] Sequential element (wreq_throttl/throttl_cnt_reg[7]) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+WARNING: [Synth 8-3332] Sequential element (wreq_throttl/throttl_cnt_reg[6]) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+WARNING: [Synth 8-3332] Sequential element (wreq_throttl/throttl_cnt_reg[5]) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+WARNING: [Synth 8-3332] Sequential element (wreq_throttl/throttl_cnt_reg[4]) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+WARNING: [Synth 8-3332] Sequential element (wreq_throttl/throttl_cnt_reg[3]) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+WARNING: [Synth 8-3332] Sequential element (wreq_throttl/throttl_cnt_reg[2]) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+WARNING: [Synth 8-3332] Sequential element (wreq_throttl/throttl_cnt_reg[1]) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+WARNING: [Synth 8-3332] Sequential element (wreq_throttl/throttl_cnt_reg[0]) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/bus_wide_gen.fifo_burst/pout_reg[2]) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/bus_wide_gen.fifo_burst/pout_reg[1]) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/bus_wide_gen.fifo_burst/pout_reg[0]) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/bus_wide_gen.fifo_burst/full_n_reg) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/bus_wide_gen.fifo_burst/data_vld_reg) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/bus_wide_gen.fifo_burst/empty_n_reg) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/bus_wide_gen.fifo_burst/q_reg[11]) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/bus_wide_gen.fifo_burst/q_reg[10]) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/bus_wide_gen.fifo_burst/q_reg[9]) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/bus_wide_gen.fifo_burst/q_reg[8]) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/bus_wide_gen.fifo_burst/q_reg[7]) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/bus_wide_gen.fifo_burst/q_reg[6]) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/bus_wide_gen.fifo_burst/q_reg[5]) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/bus_wide_gen.fifo_burst/q_reg[4]) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/bus_wide_gen.fifo_burst/q_reg[3]) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/bus_wide_gen.fifo_burst/q_reg[2]) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/bus_wide_gen.fifo_burst/q_reg[1]) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/bus_wide_gen.fifo_burst/q_reg[0]) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/fifo_wreq/pout_reg[2]) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/fifo_wreq/pout_reg[1]) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/fifo_wreq/pout_reg[0]) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/fifo_wreq/full_n_reg) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/fifo_wreq/data_vld_reg) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/fifo_wreq/empty_n_reg) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/fifo_wreq/q_reg[63]) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/fifo_wreq/q_reg[62]) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/fifo_wreq/q_reg[61]) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/fifo_wreq/q_reg[60]) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/fifo_wreq/q_reg[59]) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/fifo_wreq/q_reg[58]) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/fifo_wreq/q_reg[57]) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/fifo_wreq/q_reg[56]) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/fifo_wreq/q_reg[55]) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/fifo_wreq/q_reg[54]) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/fifo_wreq/q_reg[53]) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/fifo_wreq/q_reg[52]) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/fifo_wreq/q_reg[51]) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/fifo_wreq/q_reg[50]) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/fifo_wreq/q_reg[49]) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/fifo_wreq/q_reg[48]) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/fifo_wreq/q_reg[47]) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/fifo_wreq/q_reg[46]) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/fifo_wreq/q_reg[45]) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/fifo_wreq/q_reg[44]) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/fifo_wreq/q_reg[43]) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/fifo_wreq/q_reg[42]) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/fifo_wreq/q_reg[41]) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/fifo_wreq/q_reg[40]) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/fifo_wreq/q_reg[39]) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/fifo_wreq/q_reg[38]) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/fifo_wreq/q_reg[37]) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/fifo_wreq/q_reg[36]) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/fifo_wreq/q_reg[35]) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/fifo_wreq/q_reg[34]) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/fifo_wreq/q_reg[33]) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/fifo_wreq/q_reg[32]) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/fifo_wreq/q_reg[31]) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/fifo_wreq/q_reg[30]) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/fifo_wreq/q_reg[29]) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/fifo_wreq/q_reg[28]) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/fifo_wreq/q_reg[27]) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/fifo_wreq/q_reg[26]) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/fifo_wreq/q_reg[25]) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/fifo_wreq/q_reg[24]) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/fifo_wreq/q_reg[23]) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/fifo_wreq/q_reg[22]) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/fifo_wreq/q_reg[21]) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/fifo_wreq/q_reg[20]) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/fifo_wreq/q_reg[19]) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/fifo_wreq/q_reg[18]) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/fifo_wreq/q_reg[17]) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/fifo_wreq/q_reg[16]) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/fifo_wreq/q_reg[15]) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/fifo_wreq/q_reg[14]) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/fifo_wreq/q_reg[13]) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/fifo_wreq/q_reg[12]) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/fifo_wreq/q_reg[11]) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/fifo_wreq/q_reg[10]) is unused and will be removed from module sobel_INPUT_BUNDLE_m_axi.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:08 ; elapsed = 00:03:09 . Memory (MB): peak = 809.105 ; gain = 598.387
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:31 ; elapsed = 00:03:34 . Memory (MB): peak = 809.105 ; gain = 598.387
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:02:33 ; elapsed = 00:03:36 . Memory (MB): peak = 809.105 ; gain = 598.387
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4480] The timing for the instance inst/sobel_INPUT_BUNDLE_m_axi_U/bus_read/buff_rdata/mem_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/sobel_OUTPUT_BUNDLE_m_axi_U/bus_write/buff_wdata/mem_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:02:40 ; elapsed = 00:03:44 . Memory (MB): peak = 829.492 ; gain = 618.773
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:02:42 ; elapsed = 00:03:45 . Memory (MB): peak = 829.492 ; gain = 618.773
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:42 ; elapsed = 00:03:46 . Memory (MB): peak = 829.492 ; gain = 618.773
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:44 ; elapsed = 00:03:48 . Memory (MB): peak = 829.492 ; gain = 618.773
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:44 ; elapsed = 00:03:48 . Memory (MB): peak = 829.492 ; gain = 618.773
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:45 ; elapsed = 00:03:48 . Memory (MB): peak = 829.492 ; gain = 618.773
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:45 ; elapsed = 00:03:48 . Memory (MB): peak = 829.492 ; gain = 618.773
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----------+------+
+|      |Cell       |Count |
++------+-----------+------+
+|1     |CARRY4     |   117|
+|2     |DSP48E1    |     1|
+|3     |DSP48E1_2  |     2|
+|4     |DSP48E1_4  |     2|
+|5     |DSP48E1_5  |     2|
+|6     |DSP48E1_6  |     1|
+|7     |LUT1       |   231|
+|8     |LUT2       |   473|
+|9     |LUT3       |  1953|
+|10    |LUT4       |   203|
+|11    |LUT5       |   222|
+|12    |LUT6       |   392|
+|13    |MUXCY      |  1801|
+|14    |MUXF7      |     4|
+|15    |RAMB18E1   |     1|
+|16    |RAMB18E1_1 |     1|
+|17    |SRL16E     |   161|
+|18    |SRLC32E    |    14|
+|19    |XORCY      |  1811|
+|20    |FDE        |    16|
+|21    |FDRE       |  3700|
+|22    |FDSE       |     7|
++------+-----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:45 ; elapsed = 00:03:48 . Memory (MB): peak = 829.492 ; gain = 618.773
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1628 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:44 ; elapsed = 00:02:39 . Memory (MB): peak = 829.492 ; gain = 273.957
+Synthesis Optimization Complete : Time (s): cpu = 00:02:45 ; elapsed = 00:03:49 . Memory (MB): peak = 829.492 ; gain = 618.773
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 3755 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ip/arm_sobel_0_1/constraints/sobel_ooc.xdc] for cell 'inst'
+INFO: [Vivado 12-4761] HD.CLK_SRC property is set on port ap_clk. The net connecting to the port drives either clock PIN or hierarchical black box. Use the create_clock constraint to create a clock on this port prior to setting HD.CLK_SRC.  [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ip/arm_sobel_0_1/constraints/sobel_ooc.xdc:6]
+Finished Parsing XDC File [c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ip/arm_sobel_0_1/constraints/sobel_ooc.xdc] for cell 'inst'
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 502 instances were transformed.
+  (MUXCY,XORCY) => CARRY4: 486 instances
+  FDE => FDRE: 16 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+346 Infos, 213 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:02:47 ; elapsed = 00:03:35 . Memory (MB): peak = 829.492 ; gain = 564.461
+INFO: [Common 17-1381] The checkpoint 'C:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.runs/arm_sobel_0_1_synth_1/arm_sobel_0_1.dcp' has been generated.
+INFO: [Coretcl 2-1482] Added synthesis output to IP cache for IP c:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ip/arm_sobel_0_1/arm_sobel_0_1.xci
+INFO: [Coretcl 2-1174] Renamed 337 cell refs.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.runs/arm_sobel_0_1_synth_1/arm_sobel_0_1.dcp' has been generated.
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.502 . Memory (MB): peak = 829.492 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Mon Jun 12 17:55:50 2017...

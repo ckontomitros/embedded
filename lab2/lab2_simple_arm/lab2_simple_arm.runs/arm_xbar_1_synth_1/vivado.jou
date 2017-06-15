@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
+# IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+# Start of session at: Mon Jun 12 16:54:51 2017
+# Process ID: 1772
+# Current directory: C:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.runs/arm_xbar_1_synth_1
+# Command line: vivado.exe -log arm_xbar_1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source arm_xbar_1.tcl
+# Log file: C:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.runs/arm_xbar_1_synth_1/arm_xbar_1.vds
+# Journal file: C:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.runs/arm_xbar_1_synth_1\vivado.jou
+#-----------------------------------------------------------
+source arm_xbar_1.tcl -notrace

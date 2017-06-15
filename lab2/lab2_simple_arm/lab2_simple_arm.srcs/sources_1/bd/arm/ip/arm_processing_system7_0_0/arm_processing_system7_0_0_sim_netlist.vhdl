@@ -1,7 +1,7 @@
 -- Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
--- Date        : Wed May 24 21:32:47 2017
+-- Date        : Mon Jun 12 17:03:41 2017
 -- Host        : chris running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
 --               C:/Users/konto/Documents/embeded/lab2/lab2_simple_arm/lab2_simple_arm.srcs/sources_1/bd/arm/ip/arm_processing_system7_0_0/arm_processing_system7_0_0_sim_netlist.vhdl
@@ -799,7 +799,7 @@ entity arm_processing_system7_0_0_processing_system7_v5_5_processing_system7 is
   attribute C_USE_M_AXI_GP1 : integer;
   attribute C_USE_M_AXI_GP1 of arm_processing_system7_0_0_processing_system7_v5_5_processing_system7 : entity is 0;
   attribute C_USE_S_AXI_ACP : integer;
-  attribute C_USE_S_AXI_ACP of arm_processing_system7_0_0_processing_system7_v5_5_processing_system7 : entity is 0;
+  attribute C_USE_S_AXI_ACP of arm_processing_system7_0_0_processing_system7_v5_5_processing_system7 : entity is 1;
   attribute C_USE_S_AXI_GP0 : integer;
   attribute C_USE_S_AXI_GP0 of arm_processing_system7_0_0_processing_system7_v5_5_processing_system7 : entity is 0;
   attribute C_USE_S_AXI_GP1 : integer;
@@ -817,7 +817,7 @@ entity arm_processing_system7_0_0_processing_system7_v5_5_processing_system7 is
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of arm_processing_system7_0_0_processing_system7_v5_5_processing_system7 : entity is "processing_system7_v5_5_processing_system7";
   attribute POWER : string;
-  attribute POWER of arm_processing_system7_0_0_processing_system7_v5_5_processing_system7 : entity is "<PROCESSOR name={system} numA9Cores={2} clockFreq={666.666667} load={0.5} /><MEMORY name={code} memType={DDR3} dataWidth={32} clockFreq={533.333313} readRate={0.5} writeRate={0.5} /><IO interface={UART} ioStandard={LVCMOS18} bidis={2} ioBank={Vcco_p1} clockFreq={50.000000} usageRate={0.5} /><IO interface={SD} ioStandard={LVCMOS18} bidis={8} ioBank={Vcco_p1} clockFreq={50.000000} usageRate={0.5} /><PLL domain={Processor} vco={1333.333} /><PLL domain={Memory} vco={1066.667} /><PLL domain={IO} vco={1600.000} /><AXI interface={M_AXI_GP0} dataWidth={32} clockFreq={100} usageRate={0.5} />/>";
+  attribute POWER of arm_processing_system7_0_0_processing_system7_v5_5_processing_system7 : entity is "<PROCESSOR name={system} numA9Cores={2} clockFreq={666.666667} load={0.5} /><MEMORY name={code} memType={DDR3} dataWidth={32} clockFreq={533.333313} readRate={0.5} writeRate={0.5} /><IO interface={UART} ioStandard={LVCMOS18} bidis={2} ioBank={Vcco_p1} clockFreq={50.000000} usageRate={0.5} /><IO interface={SD} ioStandard={LVCMOS18} bidis={8} ioBank={Vcco_p1} clockFreq={50.000000} usageRate={0.5} /><PLL domain={Processor} vco={1333.333} /><PLL domain={Memory} vco={1066.667} /><PLL domain={IO} vco={1600.000} /><AXI interface={S_AXI_ACP} dataWidth={32} clockFreq={100} usageRate={0.5} /><AXI interface={M_AXI_GP0} dataWidth={32} clockFreq={100} usageRate={0.5} />/>";
   attribute USE_TRACE_DATA_EDGE_DETECTOR : integer;
   attribute USE_TRACE_DATA_EDGE_DETECTOR of arm_processing_system7_0_0_processing_system7_v5_5_processing_system7 : entity is 0;
 end arm_processing_system7_0_0_processing_system7_v5_5_processing_system7;
@@ -3365,6 +3365,47 @@ entity arm_processing_system7_0_0 is
     M_AXI_GP0_BRESP : in STD_LOGIC_VECTOR ( 1 downto 0 );
     M_AXI_GP0_RRESP : in STD_LOGIC_VECTOR ( 1 downto 0 );
     M_AXI_GP0_RDATA : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    S_AXI_ACP_ARREADY : out STD_LOGIC;
+    S_AXI_ACP_AWREADY : out STD_LOGIC;
+    S_AXI_ACP_BVALID : out STD_LOGIC;
+    S_AXI_ACP_RLAST : out STD_LOGIC;
+    S_AXI_ACP_RVALID : out STD_LOGIC;
+    S_AXI_ACP_WREADY : out STD_LOGIC;
+    S_AXI_ACP_BRESP : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    S_AXI_ACP_RRESP : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    S_AXI_ACP_BID : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    S_AXI_ACP_RID : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    S_AXI_ACP_RDATA : out STD_LOGIC_VECTOR ( 63 downto 0 );
+    S_AXI_ACP_ACLK : in STD_LOGIC;
+    S_AXI_ACP_ARVALID : in STD_LOGIC;
+    S_AXI_ACP_AWVALID : in STD_LOGIC;
+    S_AXI_ACP_BREADY : in STD_LOGIC;
+    S_AXI_ACP_RREADY : in STD_LOGIC;
+    S_AXI_ACP_WLAST : in STD_LOGIC;
+    S_AXI_ACP_WVALID : in STD_LOGIC;
+    S_AXI_ACP_ARID : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    S_AXI_ACP_ARPROT : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    S_AXI_ACP_AWID : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    S_AXI_ACP_AWPROT : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    S_AXI_ACP_WID : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    S_AXI_ACP_ARADDR : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    S_AXI_ACP_AWADDR : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    S_AXI_ACP_ARCACHE : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    S_AXI_ACP_ARLEN : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    S_AXI_ACP_ARQOS : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    S_AXI_ACP_AWCACHE : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    S_AXI_ACP_AWLEN : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    S_AXI_ACP_AWQOS : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    S_AXI_ACP_ARBURST : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    S_AXI_ACP_ARLOCK : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    S_AXI_ACP_ARSIZE : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    S_AXI_ACP_AWBURST : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    S_AXI_ACP_AWLOCK : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    S_AXI_ACP_AWSIZE : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    S_AXI_ACP_ARUSER : in STD_LOGIC_VECTOR ( 4 downto 0 );
+    S_AXI_ACP_AWUSER : in STD_LOGIC_VECTOR ( 4 downto 0 );
+    S_AXI_ACP_WDATA : in STD_LOGIC_VECTOR ( 63 downto 0 );
+    S_AXI_ACP_WSTRB : in STD_LOGIC_VECTOR ( 7 downto 0 );
     FCLK_CLK0 : out STD_LOGIC;
     FCLK_RESET0_N : out STD_LOGIC;
     MIO : inout STD_LOGIC_VECTOR ( 53 downto 0 );
@@ -3536,12 +3577,6 @@ architecture STRUCTURE of arm_processing_system7_0_0 is
   signal NLW_inst_SPI1_SS_O_UNCONNECTED : STD_LOGIC;
   signal NLW_inst_SPI1_SS_T_UNCONNECTED : STD_LOGIC;
   signal NLW_inst_S_AXI_ACP_ARESETN_UNCONNECTED : STD_LOGIC;
-  signal NLW_inst_S_AXI_ACP_ARREADY_UNCONNECTED : STD_LOGIC;
-  signal NLW_inst_S_AXI_ACP_AWREADY_UNCONNECTED : STD_LOGIC;
-  signal NLW_inst_S_AXI_ACP_BVALID_UNCONNECTED : STD_LOGIC;
-  signal NLW_inst_S_AXI_ACP_RLAST_UNCONNECTED : STD_LOGIC;
-  signal NLW_inst_S_AXI_ACP_RVALID_UNCONNECTED : STD_LOGIC;
-  signal NLW_inst_S_AXI_ACP_WREADY_UNCONNECTED : STD_LOGIC;
   signal NLW_inst_S_AXI_GP0_ARESETN_UNCONNECTED : STD_LOGIC;
   signal NLW_inst_S_AXI_GP0_ARREADY_UNCONNECTED : STD_LOGIC;
   signal NLW_inst_S_AXI_GP0_AWREADY_UNCONNECTED : STD_LOGIC;
@@ -3639,11 +3674,6 @@ architecture STRUCTURE of arm_processing_system7_0_0 is
   signal NLW_inst_SDIO1_BUSVOLT_UNCONNECTED : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal NLW_inst_SDIO1_DATA_O_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal NLW_inst_SDIO1_DATA_T_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
-  signal NLW_inst_S_AXI_ACP_BID_UNCONNECTED : STD_LOGIC_VECTOR ( 2 downto 0 );
-  signal NLW_inst_S_AXI_ACP_BRESP_UNCONNECTED : STD_LOGIC_VECTOR ( 1 downto 0 );
-  signal NLW_inst_S_AXI_ACP_RDATA_UNCONNECTED : STD_LOGIC_VECTOR ( 63 downto 0 );
-  signal NLW_inst_S_AXI_ACP_RID_UNCONNECTED : STD_LOGIC_VECTOR ( 2 downto 0 );
-  signal NLW_inst_S_AXI_ACP_RRESP_UNCONNECTED : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal NLW_inst_S_AXI_GP0_BID_UNCONNECTED : STD_LOGIC_VECTOR ( 5 downto 0 );
   signal NLW_inst_S_AXI_GP0_BRESP_UNCONNECTED : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal NLW_inst_S_AXI_GP0_RDATA_UNCONNECTED : STD_LOGIC_VECTOR ( 31 downto 0 );
@@ -3790,7 +3820,7 @@ architecture STRUCTURE of arm_processing_system7_0_0 is
   attribute C_USE_M_AXI_GP1 : integer;
   attribute C_USE_M_AXI_GP1 of inst : label is 0;
   attribute C_USE_S_AXI_ACP : integer;
-  attribute C_USE_S_AXI_ACP of inst : label is 0;
+  attribute C_USE_S_AXI_ACP of inst : label is 1;
   attribute C_USE_S_AXI_GP0 : integer;
   attribute C_USE_S_AXI_GP0 of inst : label is 0;
   attribute C_USE_S_AXI_GP1 : integer;
@@ -3806,7 +3836,7 @@ architecture STRUCTURE of arm_processing_system7_0_0 is
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of inst : label is "arm_processing_system7_0_0.hwdef";
   attribute POWER : string;
-  attribute POWER of inst : label is "<PROCESSOR name={system} numA9Cores={2} clockFreq={666.666667} load={0.5} /><MEMORY name={code} memType={DDR3} dataWidth={32} clockFreq={533.333313} readRate={0.5} writeRate={0.5} /><IO interface={UART} ioStandard={LVCMOS18} bidis={2} ioBank={Vcco_p1} clockFreq={50.000000} usageRate={0.5} /><IO interface={SD} ioStandard={LVCMOS18} bidis={8} ioBank={Vcco_p1} clockFreq={50.000000} usageRate={0.5} /><PLL domain={Processor} vco={1333.333} /><PLL domain={Memory} vco={1066.667} /><PLL domain={IO} vco={1600.000} /><AXI interface={M_AXI_GP0} dataWidth={32} clockFreq={100} usageRate={0.5} />/>";
+  attribute POWER of inst : label is "<PROCESSOR name={system} numA9Cores={2} clockFreq={666.666667} load={0.5} /><MEMORY name={code} memType={DDR3} dataWidth={32} clockFreq={533.333313} readRate={0.5} writeRate={0.5} /><IO interface={UART} ioStandard={LVCMOS18} bidis={2} ioBank={Vcco_p1} clockFreq={50.000000} usageRate={0.5} /><IO interface={SD} ioStandard={LVCMOS18} bidis={8} ioBank={Vcco_p1} clockFreq={50.000000} usageRate={0.5} /><PLL domain={Processor} vco={1333.333} /><PLL domain={Memory} vco={1066.667} /><PLL domain={IO} vco={1600.000} /><AXI interface={S_AXI_ACP} dataWidth={32} clockFreq={100} usageRate={0.5} /><AXI interface={M_AXI_GP0} dataWidth={32} clockFreq={100} usageRate={0.5} />/>";
   attribute USE_TRACE_DATA_EDGE_DETECTOR : integer;
   attribute USE_TRACE_DATA_EDGE_DETECTOR of inst : label is 0;
 begin
@@ -4159,48 +4189,48 @@ inst: entity work.arm_processing_system7_0_0_processing_system7_v5_5_processing_
       SPI1_SS_O => NLW_inst_SPI1_SS_O_UNCONNECTED,
       SPI1_SS_T => NLW_inst_SPI1_SS_T_UNCONNECTED,
       SRAM_INTIN => '0',
-      S_AXI_ACP_ACLK => '0',
-      S_AXI_ACP_ARADDR(31 downto 0) => B"00000000000000000000000000000000",
-      S_AXI_ACP_ARBURST(1 downto 0) => B"00",
-      S_AXI_ACP_ARCACHE(3 downto 0) => B"0000",
+      S_AXI_ACP_ACLK => S_AXI_ACP_ACLK,
+      S_AXI_ACP_ARADDR(31 downto 0) => S_AXI_ACP_ARADDR(31 downto 0),
+      S_AXI_ACP_ARBURST(1 downto 0) => S_AXI_ACP_ARBURST(1 downto 0),
+      S_AXI_ACP_ARCACHE(3 downto 0) => S_AXI_ACP_ARCACHE(3 downto 0),
       S_AXI_ACP_ARESETN => NLW_inst_S_AXI_ACP_ARESETN_UNCONNECTED,
-      S_AXI_ACP_ARID(2 downto 0) => B"000",
-      S_AXI_ACP_ARLEN(3 downto 0) => B"0000",
-      S_AXI_ACP_ARLOCK(1 downto 0) => B"00",
-      S_AXI_ACP_ARPROT(2 downto 0) => B"000",
-      S_AXI_ACP_ARQOS(3 downto 0) => B"0000",
-      S_AXI_ACP_ARREADY => NLW_inst_S_AXI_ACP_ARREADY_UNCONNECTED,
-      S_AXI_ACP_ARSIZE(2 downto 0) => B"000",
-      S_AXI_ACP_ARUSER(4 downto 0) => B"00000",
-      S_AXI_ACP_ARVALID => '0',
-      S_AXI_ACP_AWADDR(31 downto 0) => B"00000000000000000000000000000000",
-      S_AXI_ACP_AWBURST(1 downto 0) => B"00",
-      S_AXI_ACP_AWCACHE(3 downto 0) => B"0000",
-      S_AXI_ACP_AWID(2 downto 0) => B"000",
-      S_AXI_ACP_AWLEN(3 downto 0) => B"0000",
-      S_AXI_ACP_AWLOCK(1 downto 0) => B"00",
-      S_AXI_ACP_AWPROT(2 downto 0) => B"000",
-      S_AXI_ACP_AWQOS(3 downto 0) => B"0000",
-      S_AXI_ACP_AWREADY => NLW_inst_S_AXI_ACP_AWREADY_UNCONNECTED,
-      S_AXI_ACP_AWSIZE(2 downto 0) => B"000",
-      S_AXI_ACP_AWUSER(4 downto 0) => B"00000",
-      S_AXI_ACP_AWVALID => '0',
-      S_AXI_ACP_BID(2 downto 0) => NLW_inst_S_AXI_ACP_BID_UNCONNECTED(2 downto 0),
-      S_AXI_ACP_BREADY => '0',
-      S_AXI_ACP_BRESP(1 downto 0) => NLW_inst_S_AXI_ACP_BRESP_UNCONNECTED(1 downto 0),
-      S_AXI_ACP_BVALID => NLW_inst_S_AXI_ACP_BVALID_UNCONNECTED,
-      S_AXI_ACP_RDATA(63 downto 0) => NLW_inst_S_AXI_ACP_RDATA_UNCONNECTED(63 downto 0),
-      S_AXI_ACP_RID(2 downto 0) => NLW_inst_S_AXI_ACP_RID_UNCONNECTED(2 downto 0),
-      S_AXI_ACP_RLAST => NLW_inst_S_AXI_ACP_RLAST_UNCONNECTED,
-      S_AXI_ACP_RREADY => '0',
-      S_AXI_ACP_RRESP(1 downto 0) => NLW_inst_S_AXI_ACP_RRESP_UNCONNECTED(1 downto 0),
-      S_AXI_ACP_RVALID => NLW_inst_S_AXI_ACP_RVALID_UNCONNECTED,
-      S_AXI_ACP_WDATA(63 downto 0) => B"0000000000000000000000000000000000000000000000000000000000000000",
-      S_AXI_ACP_WID(2 downto 0) => B"000",
-      S_AXI_ACP_WLAST => '0',
-      S_AXI_ACP_WREADY => NLW_inst_S_AXI_ACP_WREADY_UNCONNECTED,
-      S_AXI_ACP_WSTRB(7 downto 0) => B"00000000",
-      S_AXI_ACP_WVALID => '0',
+      S_AXI_ACP_ARID(2 downto 0) => S_AXI_ACP_ARID(2 downto 0),
+      S_AXI_ACP_ARLEN(3 downto 0) => S_AXI_ACP_ARLEN(3 downto 0),
+      S_AXI_ACP_ARLOCK(1 downto 0) => S_AXI_ACP_ARLOCK(1 downto 0),
+      S_AXI_ACP_ARPROT(2 downto 0) => S_AXI_ACP_ARPROT(2 downto 0),
+      S_AXI_ACP_ARQOS(3 downto 0) => S_AXI_ACP_ARQOS(3 downto 0),
+      S_AXI_ACP_ARREADY => S_AXI_ACP_ARREADY,
+      S_AXI_ACP_ARSIZE(2 downto 0) => S_AXI_ACP_ARSIZE(2 downto 0),
+      S_AXI_ACP_ARUSER(4 downto 0) => S_AXI_ACP_ARUSER(4 downto 0),
+      S_AXI_ACP_ARVALID => S_AXI_ACP_ARVALID,
+      S_AXI_ACP_AWADDR(31 downto 0) => S_AXI_ACP_AWADDR(31 downto 0),
+      S_AXI_ACP_AWBURST(1 downto 0) => S_AXI_ACP_AWBURST(1 downto 0),
+      S_AXI_ACP_AWCACHE(3 downto 0) => S_AXI_ACP_AWCACHE(3 downto 0),
+      S_AXI_ACP_AWID(2 downto 0) => S_AXI_ACP_AWID(2 downto 0),
+      S_AXI_ACP_AWLEN(3 downto 0) => S_AXI_ACP_AWLEN(3 downto 0),
+      S_AXI_ACP_AWLOCK(1 downto 0) => S_AXI_ACP_AWLOCK(1 downto 0),
+      S_AXI_ACP_AWPROT(2 downto 0) => S_AXI_ACP_AWPROT(2 downto 0),
+      S_AXI_ACP_AWQOS(3 downto 0) => S_AXI_ACP_AWQOS(3 downto 0),
+      S_AXI_ACP_AWREADY => S_AXI_ACP_AWREADY,
+      S_AXI_ACP_AWSIZE(2 downto 0) => S_AXI_ACP_AWSIZE(2 downto 0),
+      S_AXI_ACP_AWUSER(4 downto 0) => S_AXI_ACP_AWUSER(4 downto 0),
+      S_AXI_ACP_AWVALID => S_AXI_ACP_AWVALID,
+      S_AXI_ACP_BID(2 downto 0) => S_AXI_ACP_BID(2 downto 0),
+      S_AXI_ACP_BREADY => S_AXI_ACP_BREADY,
+      S_AXI_ACP_BRESP(1 downto 0) => S_AXI_ACP_BRESP(1 downto 0),
+      S_AXI_ACP_BVALID => S_AXI_ACP_BVALID,
+      S_AXI_ACP_RDATA(63 downto 0) => S_AXI_ACP_RDATA(63 downto 0),
+      S_AXI_ACP_RID(2 downto 0) => S_AXI_ACP_RID(2 downto 0),
+      S_AXI_ACP_RLAST => S_AXI_ACP_RLAST,
+      S_AXI_ACP_RREADY => S_AXI_ACP_RREADY,
+      S_AXI_ACP_RRESP(1 downto 0) => S_AXI_ACP_RRESP(1 downto 0),
+      S_AXI_ACP_RVALID => S_AXI_ACP_RVALID,
+      S_AXI_ACP_WDATA(63 downto 0) => S_AXI_ACP_WDATA(63 downto 0),
+      S_AXI_ACP_WID(2 downto 0) => S_AXI_ACP_WID(2 downto 0),
+      S_AXI_ACP_WLAST => S_AXI_ACP_WLAST,
+      S_AXI_ACP_WREADY => S_AXI_ACP_WREADY,
+      S_AXI_ACP_WSTRB(7 downto 0) => S_AXI_ACP_WSTRB(7 downto 0),
+      S_AXI_ACP_WVALID => S_AXI_ACP_WVALID,
       S_AXI_GP0_ACLK => '0',
       S_AXI_GP0_ARADDR(31 downto 0) => B"00000000000000000000000000000000",
       S_AXI_GP0_ARBURST(1 downto 0) => B"00",

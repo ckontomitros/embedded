@@ -2,7 +2,7 @@
 <section name="Workbench">
 	<section name="viewer_state_section">
 		<item value="0" key="horizontal_position"/>
-		<item value="0" key="vertical_position"/>
+		<item value="1" key="vertical_position"/>
 		<list key="column_order">
 			<item value="0"/>
 			<item value="1"/>

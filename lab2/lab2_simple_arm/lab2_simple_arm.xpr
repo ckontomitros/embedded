@@ -20,6 +20,7 @@
     <Option Name="BoardPart" Val="em.avnet.com:zed:part0:1.3"/>
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../../../Embedded_Systems_Sobel_Filter_HLS/IP_1/0_axi4/impl/ip"/>
     <Option Name="IPOutputRepo" Val="$PCACHEDIR/ip"/>
     <Option Name="IPCachePermission" Val="read"/>
     <Option Name="IPCachePermission" Val="write"/>
@@ -59,28 +60,29 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="arm.bd" FileRelPathName="ip/arm_processing_system7_0_0/arm_processing_system7_0_0.xci">
-          <Proxy FileSetName="arm_processing_system7_0_0"/>
+        <CompFileExtendedInfo CompFileName="arm.bd" FileRelPathName="ip/arm_sobel_0_1/arm_sobel_0_1.xci">
+          <Proxy FileSetName="arm_sobel_0_1"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="arm.bd" FileRelPathName="hdl/arm.v"/>
-        <CompFileExtendedInfo CompFileName="arm.bd" FileRelPathName="ip/arm_xbar_0/arm_xbar_0.xci">
-          <Proxy FileSetName="arm_xbar_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="arm.bd" FileRelPathName="ip/arm_axi_gpio_0_2/arm_axi_gpio_0_2.xci">
-          <Proxy FileSetName="arm_axi_gpio_0_2"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="arm.bd" FileRelPathName="ip/arm_rst_ps7_0_100M_0/arm_rst_ps7_0_100M_0.xci">
           <Proxy FileSetName="arm_rst_ps7_0_100M_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="arm.bd" FileRelPathName="ip/arm_ps7_0_axi_periph_0/arm_ps7_0_axi_periph_0.xci"/>
-        <CompFileExtendedInfo CompFileName="arm.bd" FileRelPathName="ip/arm_axi_gpio_0_0/arm_axi_gpio_0_0.xci">
-          <Proxy FileSetName="arm_axi_gpio_0_0"/>
+        <CompFileExtendedInfo CompFileName="arm.bd" FileRelPathName="ip/arm_processing_system7_0_0/arm_processing_system7_0_0.xci">
+          <Proxy FileSetName="arm_processing_system7_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="arm.bd" FileRelPathName="ip/arm_auto_pc_0/arm_auto_pc_0.xci"/>
-        <CompFileExtendedInfo CompFileName="arm.bd" FileRelPathName="hw_handoff/arm.hwh"/>
-        <CompFileExtendedInfo CompFileName="arm.bd" FileRelPathName="hw_handoff/arm_bd.tcl"/>
-        <CompFileExtendedInfo CompFileName="arm.bd" FileRelPathName="hdl/arm.hwdef"/>
+        <CompFileExtendedInfo CompFileName="arm.bd" FileRelPathName="ip/arm_xbar_1/arm_xbar_1.xci">
+          <Proxy FileSetName="arm_xbar_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="arm.bd" FileRelPathName="ip/arm_axi_mem_intercon_0/arm_axi_mem_intercon_0.xci"/>
+        <CompFileExtendedInfo CompFileName="arm.bd" FileRelPathName="ip/arm_ps7_0_axi_periph_1/arm_ps7_0_axi_periph_1.xci"/>
         <CompFileExtendedInfo CompFileName="arm.bd" FileRelPathName="arm_ooc.xdc"/>
+        <CompFileExtendedInfo CompFileName="arm.bd" FileRelPathName="ip/arm_auto_us_0/arm_auto_us_0.xci"/>
+        <CompFileExtendedInfo CompFileName="arm.bd" FileRelPathName="ip/arm_auto_pc_1/arm_auto_pc_1.xci"/>
+        <CompFileExtendedInfo CompFileName="arm.bd" FileRelPathName="ip/arm_auto_pc_0/arm_auto_pc_0.xci"/>
+        <CompFileExtendedInfo CompFileName="arm.bd" FileRelPathName="hdl/arm.hwdef"/>
+        <CompFileExtendedInfo CompFileName="arm.bd" FileRelPathName="hw_handoff/arm_bd.tcl"/>
+        <CompFileExtendedInfo CompFileName="arm.bd" FileRelPathName="hw_handoff/arm.hwh"/>
+        <CompFileExtendedInfo CompFileName="arm.bd" FileRelPathName="ip/arm_auto_us_1/arm_auto_us_1.xci"/>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/arm/hdl/arm_wrapper.v">
         <FileInfo>
@@ -113,21 +115,9 @@
         <Option Name="SrcSet" Val="sources_1"/>
       </Config>
     </FileSet>
-    <FileSet Name="arm_axi_gpio_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/arm_axi_gpio_0_0">
-      <Config>
-        <Option Name="TopModule" Val="arm_axi_gpio_0_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
     <FileSet Name="arm_processing_system7_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/arm_processing_system7_0_0">
       <Config>
         <Option Name="TopModule" Val="arm_processing_system7_0_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="arm_axi_gpio_0_2" Type="BlockSrcs" RelSrcDir="$PSRCDIR/arm_axi_gpio_0_2">
-      <Config>
-        <Option Name="TopModule" Val="arm_axi_gpio_0_2"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -137,9 +127,15 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="arm_xbar_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/arm_xbar_0">
+    <FileSet Name="arm_xbar_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/arm_xbar_1">
       <Config>
-        <Option Name="TopModule" Val="arm_xbar_0"/>
+        <Option Name="TopModule" Val="arm_xbar_1"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="arm_sobel_0_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/arm_sobel_0_1">
+      <Config>
+        <Option Name="TopModule" Val="arm_sobel_0_1"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -171,23 +167,7 @@
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="arm_axi_gpio_0_0_synth_1" Type="Ft3:Synth" SrcSet="arm_axi_gpio_0_0" Part="xc7z020clg484-1" ConstrsSet="arm_axi_gpio_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/arm_axi_gpio_0_0_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
     <Run Id="arm_processing_system7_0_0_synth_1" Type="Ft3:Synth" SrcSet="arm_processing_system7_0_0" Part="xc7z020clg484-1" ConstrsSet="arm_processing_system7_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/arm_processing_system7_0_0_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="arm_axi_gpio_0_2_synth_1" Type="Ft3:Synth" SrcSet="arm_axi_gpio_0_2" Part="xc7z020clg484-1" ConstrsSet="arm_axi_gpio_0_2" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/arm_axi_gpio_0_2_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
         <Step Id="synth_design"/>
@@ -203,7 +183,15 @@
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="arm_xbar_0_synth_1" Type="Ft3:Synth" SrcSet="arm_xbar_0" Part="xc7z020clg484-1" ConstrsSet="arm_xbar_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/arm_xbar_0_synth_1" IncludeInArchive="true">
+    <Run Id="arm_xbar_1_synth_1" Type="Ft3:Synth" SrcSet="arm_xbar_1" Part="xc7z020clg484-1" ConstrsSet="arm_xbar_1" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/arm_xbar_1_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="arm_sobel_0_1_synth_1" Type="Ft3:Synth" SrcSet="arm_sobel_0_1" Part="xc7z020clg484-1" ConstrsSet="arm_sobel_0_1" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/arm_sobel_0_1_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
         <Step Id="synth_design"/>
@@ -227,37 +215,7 @@
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="arm_axi_gpio_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="arm_axi_gpio_0_0" Description="Default settings for Implementation." SynthRun="arm_axi_gpio_0_0_synth_1" IncludeInArchive="false">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
     <Run Id="arm_processing_system7_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="arm_processing_system7_0_0" Description="Default settings for Implementation." SynthRun="arm_processing_system7_0_0_synth_1" IncludeInArchive="false">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="arm_axi_gpio_0_2_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="arm_axi_gpio_0_2" Description="Default settings for Implementation." SynthRun="arm_axi_gpio_0_2_synth_1" IncludeInArchive="false">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016"/>
         <Step Id="init_design"/>
@@ -287,7 +245,22 @@
       </Strategy>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="arm_xbar_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="arm_xbar_0" Description="Default settings for Implementation." SynthRun="arm_xbar_0_synth_1" IncludeInArchive="false">
+    <Run Id="arm_xbar_1_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="arm_xbar_1" Description="Default settings for Implementation." SynthRun="arm_xbar_1_synth_1" IncludeInArchive="false">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="arm_sobel_0_1_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="arm_sobel_0_1" Description="Default settings for Implementation." SynthRun="arm_sobel_0_1_synth_1" IncludeInArchive="false">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016"/>
         <Step Id="init_design"/>
